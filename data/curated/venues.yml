@@ -1,7 +1,9 @@
 # Hand-checked venues; format in README.md. Every date is copied from the page in `url`.
-# National-level series (KSE, SoICT, FAIR, RIVF, NICS, ATC, MAPR) had no open call on
-# 2026-11-22: their 2026 deadlines had passed and no 2027 call was published. Add them
-# here when their next call appears.
+# Past editions stay here as history: when a series has no open call, its latest
+# edition moved forward one year is published as an estimate.
+# 2026-11-22: national-level series added from their official pages, found by the weekly
+# watcher (data/watch/). Earlier note "no national series has an open call" was wrong
+# for FJCAI 2027, whose call was already open.
 
 - acronym: ICIIT
   full_name: "International Conference on Intelligent Information Technology"
@@ -73,4 +75,106 @@
   date: "Aug 27, 2027"
   place: "Da Nang, Vietnam"
   keywords: [educational technology, artificial intelligence in education, learning analytics]
+  checked: 2026-11-22
+
+# ---- National and Vietnam-based series (history and open calls), checked 2026-11-22 ----
+
+- acronym: FJCAI
+  full_name: "National Conference on Artificial Intelligence (FJCAI)"
+  year: 2027
+  scope: national
+  sub: AI
+  url: https://fjcai.vn/
+  timezone: unstated
+  deadlines:
+    - {type: paper, date: "2026-12-15", comment: "extended from 2026-11-15"}
+    - {type: notification, date: "2027-01-15", comment: "extended from 2027-01-10"}
+  date: "Apr 8-9, 2027"
+  place: "Da Nang, Vietnam"
+  keywords: [artificial intelligence]
+  checked: 2026-11-22
+
+- acronym: SoICT
+  full_name: "International Symposium on Information and Communication Technology"
+  year: 2026
+  scope: international
+  sub: MX
+  url: https://soict.org/
+  timezone: unstated
+  deadlines:
+    - {type: abstract, date: "2026-09-20", comment: "extended from 2026-09-09"}
+    - {type: paper, date: "2026-09-20", comment: "extended from 2026-09-16"}
+    - {type: notification, date: "2026-10-18"}
+  date: "Dec 4-5, 2026"
+  place: "Ho Chi Minh City, Vietnam"
+  checked: 2026-11-22
+
+- acronym: RIVF
+  full_name: "International Conference on Computing and Communication Technologies"
+  year: 2026
+  scope: international
+  sub: MX
+  url: https://rivf2026.org/
+  timezone: unstated
+  deadlines:
+    - {type: paper, date: "2026-09-15", comment: "extended from 2026-08-31; hard deadline"}
+  date: "TBD"
+  place: "TBD"
+  checked: 2026-11-22
+
+- acronym: FAIR
+  full_name: "Fundamental and Applied IT Research (national conference)"
+  year: 2026
+  scope: national
+  sub: MX
+  url: https://fair.conf.vn/
+  timezone: unstated
+  deadlines:
+    - {type: paper, date: "2026-08-31"}
+    - {type: notification, date: "2026-09-21"}
+  date: "Oct 8-9, 2026"
+  place: "Ho Chi Minh City, Vietnam"
+  checked: 2026-11-22
+
+- acronym: REV-ECIT
+  full_name: "National Conference on Electronics, Communications and Information Technology"
+  year: 2026
+  scope: national
+  sub: NW
+  url: https://rev-ecit.vn/
+  timezone: unstated
+  deadlines:
+    - {type: paper, date: "2026-10-15"}
+    - {type: notification, date: "2026-11-20"}
+  date: "Dec 19, 2026"
+  place: "Vietnam"
+  checked: 2026-11-22
+
+- acronym: VNICT
+  full_name: "National Workshop on Selected Problems of Information and Communication Technology"
+  year: 2026
+  scope: national
+  sub: MX
+  url: https://vnict.vn/
+  timezone: unstated
+  deadlines:
+    - {type: paper, date: "2026-08-15", comment: "full paper, extended"}
+    - {type: notification, date: "2026-09-15", comment: "acceptance for the proceedings"}
+  date: "Nov 7-8, 2026"
+  place: "Hanoi, Vietnam"
+  checked: 2026-11-22
+
+- acronym: MAPR
+  full_name: "International Conference on Multimedia Analysis and Pattern Recognition"
+  year: 2026
+  scope: international
+  sub: CG
+  url: https://mapr.uit.edu.vn/
+  timezone: unstated
+  deadlines:
+    - {type: abstract, date: "2026-05-10"}
+    - {type: paper, date: "2026-05-15"}
+    - {type: notification, date: "2026-07-06", comment: "extended from 2026-06-30"}
+  date: "Aug 13-14, 2026"
+  place: "Hue, Vietnam"
   checked: 2026-11-22

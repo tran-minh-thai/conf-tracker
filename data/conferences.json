@@ -1,11 +1,11 @@
 {
  "schema_version": 2,
- "last_updated": "2026-11-22T14:00:07+00:00",
- "total": 537,
+ "last_updated": "2026-11-22T14:18:57+00:00",
+ "total": 546,
  "counts": {
-  "total": 537,
-  "open_confirmed": 187,
-  "estimated": 263,
+  "total": 546,
+  "open_confirmed": 188,
+  "estimated": 269,
   "ranked": 430,
   "ccfddl": 464,
   "wikicfp": 69
@@ -23,16 +23,17 @@
    "errors": []
   },
   "curated": {
-   "entries": 4,
-   "kept": 4,
-   "past": 0
+   "entries": 11,
+   "kept": 7,
+   "past": 4,
+   "estimated": 6
   },
   "merge": {
    "wikicfp_dup": 11,
    "wikicfp_inherited": 0,
    "wikicfp_replaced_estimate": 0,
    "wikicfp_added": 69,
-   "curated_added": 4,
+   "curated_added": 13,
    "curated_replaced_estimate": 0,
    "curated_skipped_confirmed": 0,
    "fees_attached": 0
@@ -4395,6 +4396,57 @@
    "checked": null
   },
   {
+   "id": "curated_soict2026",
+   "acronym": "SoICT",
+   "full_name": "International Symposium on Information and Communication Technology",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "https://soict.org/",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "abstract",
+     "iso": "2026-09-21T11:59:59Z",
+     "comment": "extended from 2026-09-09"
+    },
+    {
+     "type": "paper",
+     "iso": "2026-09-21T11:59:59Z",
+     "comment": "extended from 2026-09-16"
+    },
+    {
+     "type": "notification",
+     "iso": "2026-10-19T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 4-5, 2026",
+   "event_start": "2026-12-04",
+   "event_end": "2026-12-05",
+   "place": "Ho Chi Minh City, Vietnam",
+   "city": "Ho Chi Minh City",
+   "country": "Vietnam",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "curated",
+   "scope": "international",
+   "publisher": null,
+   "checked": "2026-11-22",
+   "fees": null,
+   "keywords": []
+  },
+  {
    "id": "ecir27",
    "acronym": "ECIR",
    "full_name": "European Conference on Information Retrieval",
@@ -6122,6 +6174,52 @@
    "keywords": [],
    "publisher": null,
    "checked": null
+  },
+  {
+   "id": "curated_revecit2026",
+   "acronym": "REV-ECIT",
+   "full_name": "National Conference on Electronics, Communications and Information Technology",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "NW",
+   "topic": "Computer Networks",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "https://rev-ecit.vn/",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-10-16T11:59:59Z",
+     "comment": ""
+    },
+    {
+     "type": "notification",
+     "iso": "2026-11-21T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 19, 2026",
+   "event_start": "2026-12-19",
+   "event_end": "2026-12-19",
+   "place": "Vietnam",
+   "city": "",
+   "country": "Vietnam",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "curated",
+   "scope": "national",
+   "publisher": null,
+   "checked": "2026-11-22",
+   "fees": null,
+   "keywords": []
   },
   {
    "id": "www27",
@@ -13157,6 +13255,54 @@
    "keywords": [],
    "publisher": null,
    "checked": null
+  },
+  {
+   "id": "curated_fjcai2027",
+   "acronym": "FJCAI",
+   "full_name": "National Conference on Artificial Intelligence (FJCAI)",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "https://fjcai.vn/",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-12-16T11:59:59Z",
+     "comment": "extended from 2026-11-15"
+    },
+    {
+     "type": "notification",
+     "iso": "2027-01-16T11:59:59Z",
+     "comment": "extended from 2027-01-10"
+    }
+   ],
+   "date": "Apr 8-9, 2027",
+   "event_start": "2027-04-08",
+   "event_end": "2027-04-09",
+   "place": "Da Nang, Vietnam",
+   "city": "Da Nang",
+   "country": "Vietnam",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "curated",
+   "scope": "national",
+   "publisher": null,
+   "checked": "2026-11-22",
+   "fees": null,
+   "keywords": [
+    "artificial intelligence"
+   ]
   },
   {
    "id": "icdf2c27",
@@ -25006,6 +25152,57 @@
    "checked": null
   },
   {
+   "id": "curated_mapr2027-est",
+   "acronym": "MAPR",
+   "full_name": "International Conference on Multimedia Analysis and Pattern Recognition",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "CG",
+   "topic": "Computer Graphics & Multimedia",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "https://mapr.uit.edu.vn/",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "abstract",
+     "iso": "2027-05-11T11:59:59Z",
+     "comment": ""
+    },
+    {
+     "type": "paper",
+     "iso": "2027-05-16T11:59:59Z",
+     "comment": ""
+    },
+    {
+     "type": "notification",
+     "iso": "2027-07-07T11:59:59Z",
+     "comment": "extended from 2026-06-30"
+    }
+   ],
+   "date": "TBD",
+   "event_start": null,
+   "event_end": null,
+   "place": "TBD",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "estimated",
+   "estimated_from": 2026,
+   "accept_rates": [],
+   "source": "curated",
+   "scope": "international",
+   "publisher": null,
+   "checked": "2026-11-22",
+   "fees": null,
+   "keywords": []
+  },
+  {
    "id": "esem27-est",
    "acronym": "ESEM",
    "full_name": "International Symposium on Empirical Software Engineering and Measurement",
@@ -31170,6 +31367,52 @@
    "checked": null
   },
   {
+   "id": "curated_vnict2027-est",
+   "acronym": "VNICT",
+   "full_name": "National Workshop on Selected Problems of Information and Communication Technology",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "https://vnict.vn/",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2027-08-16T11:59:59Z",
+     "comment": "full paper, extended"
+    },
+    {
+     "type": "notification",
+     "iso": "2027-09-16T11:59:59Z",
+     "comment": "acceptance for the proceedings"
+    }
+   ],
+   "date": "TBD",
+   "event_start": null,
+   "event_end": null,
+   "place": "TBD",
+   "city": "",
+   "country": "Vietnam",
+   "mode": "tbd",
+   "status": "estimated",
+   "estimated_from": 2026,
+   "accept_rates": [],
+   "source": "curated",
+   "scope": "national",
+   "publisher": null,
+   "checked": "2026-11-22",
+   "fees": null,
+   "keywords": []
+  },
+  {
    "id": "pkc28-est",
    "acronym": "PKC",
    "full_name": "International Conference on Practice and Theory of Public-Key Cryptography",
@@ -31780,6 +32023,52 @@
    "checked": null
   },
   {
+   "id": "curated_fair2027-est",
+   "acronym": "FAIR",
+   "full_name": "Fundamental and Applied IT Research (national conference)",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "https://fair.conf.vn/",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2027-09-01T11:59:59Z",
+     "comment": ""
+    },
+    {
+     "type": "notification",
+     "iso": "2027-09-22T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "TBD",
+   "event_start": null,
+   "event_end": null,
+   "place": "TBD",
+   "city": "",
+   "country": "Vietnam",
+   "mode": "tbd",
+   "status": "estimated",
+   "estimated_from": 2026,
+   "accept_rates": [],
+   "source": "curated",
+   "scope": "national",
+   "publisher": null,
+   "checked": "2026-11-22",
+   "fees": null,
+   "keywords": []
+  },
+  {
    "id": "cvc28-est",
    "acronym": "CVC",
    "full_name": "Computer Vision Conference",
@@ -32302,6 +32591,47 @@
    "checked": null
   },
   {
+   "id": "curated_rivf2027-est",
+   "acronym": "RIVF",
+   "full_name": "International Conference on Computing and Communication Technologies",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "https://rivf2026.org/",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2027-09-16T11:59:59Z",
+     "comment": "extended from 2026-08-31; hard deadline"
+    }
+   ],
+   "date": "TBD",
+   "event_start": null,
+   "event_end": null,
+   "place": "TBD",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "estimated",
+   "estimated_from": 2026,
+   "accept_rates": [],
+   "source": "curated",
+   "scope": "international",
+   "publisher": null,
+   "checked": "2026-11-22",
+   "fees": null,
+   "keywords": []
+  },
+  {
    "id": "wcnc28-est",
    "acronym": "WCNC",
    "full_name": "IEEE Wireless Communications and Networking Conference",
@@ -32715,6 +33045,57 @@
    "keywords": [],
    "publisher": null,
    "checked": null
+  },
+  {
+   "id": "curated_soict2027-est",
+   "acronym": "SoICT",
+   "full_name": "International Symposium on Information and Communication Technology",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "https://soict.org/",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "abstract",
+     "iso": "2027-09-21T11:59:59Z",
+     "comment": "extended from 2026-09-09"
+    },
+    {
+     "type": "paper",
+     "iso": "2027-09-21T11:59:59Z",
+     "comment": "extended from 2026-09-16"
+    },
+    {
+     "type": "notification",
+     "iso": "2027-10-19T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "TBD",
+   "event_start": null,
+   "event_end": null,
+   "place": "TBD",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "estimated",
+   "estimated_from": 2026,
+   "accept_rates": [],
+   "source": "curated",
+   "scope": "international",
+   "publisher": null,
+   "checked": "2026-11-22",
+   "fees": null,
+   "keywords": []
   },
   {
    "id": "ecir28-est",
@@ -34019,6 +34400,52 @@
    "keywords": [],
    "publisher": null,
    "checked": null
+  },
+  {
+   "id": "curated_revecit2027-est",
+   "acronym": "REV-ECIT",
+   "full_name": "National Conference on Electronics, Communications and Information Technology",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "NW",
+   "topic": "Computer Networks",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "https://rev-ecit.vn/",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2027-10-16T11:59:59Z",
+     "comment": ""
+    },
+    {
+     "type": "notification",
+     "iso": "2027-11-21T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "TBD",
+   "event_start": null,
+   "event_end": null,
+   "place": "TBD",
+   "city": "",
+   "country": "Vietnam",
+   "mode": "tbd",
+   "status": "estimated",
+   "estimated_from": 2026,
+   "accept_rates": [],
+   "source": "curated",
+   "scope": "national",
+   "publisher": null,
+   "checked": "2026-11-22",
+   "fees": null,
+   "keywords": []
   },
   {
    "id": "www28-est",

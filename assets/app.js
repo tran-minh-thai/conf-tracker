@@ -55,6 +55,7 @@ const app = {
   open: new Set(),
   loc: { country: "", city: "", source: "" },
   profile: { interests: "", learn: true, abstract: "", contrib: "", target: "venues" },
+  watch: {},               // acronym -> watched pages (data/watch/status.json)
   journals: null,          // journal topic profiles, loaded on demand
   journalsState: "idle",
   activity: { searches: [], opened: [] },
@@ -587,8 +588,21 @@ function detailsHtml(c) {
     ${rates.length ? `<div><strong>${h(t("acceptanceHistory"))}</strong>
       <div class="rates">${rates.map((r) => `<span class="rate-bar" title="${h(r.accepted ?? "?")}/${h(r.submitted ?? "?")}">
         ${(r.rate * 100).toFixed(1)}%<i style="height:${Math.round((r.rate / max) * 46) + 4}px"></i>${h(r.year)}</span>`).join("")}</div></div>` : ""}
+    ${watchLine(c)}
     <div>${h(t("source"))}: ${h({ ccfddl: "ccfddl/ccf-deadlines", wikicfp: "WikiCFP", curated: `hand-checked list (${c.checked || ""})` }[c.source] || c.source)}${c.publisher ? ` · ${h(c.publisher)}` : ""}${c.place && c.place !== "TBD" ? ` · ${h(c.place)}` : ""}${c.date && c.date !== "TBD" ? ` · ${h(c.date)}` : ""}</div>
   </div>`;
+}
+
+/** "Website checked weekly" line for venues whose site the watcher follows. */
+function watchLine(c) {
+  const w = app.watch[String(c.acronym || "").toUpperCase()];
+  if (!w) return "";
+  const pages = Object.entries(w.pages || {}).filter(([, p]) => p.status === 200);
+  if (!pages.length) return "";
+  const latest = (k) => pages.map(([, p]) => p[k]).sort().slice(-1)[0];
+  const day = (iso) => new Intl.DateTimeFormat(locale(), { dateStyle: "medium" }).format(new Date(iso));
+  return `<div>🔁 ${h(app.t("watchStatus", { checked: day(latest("last_checked")), changed: day(latest("last_changed")) }))}
+    ${pages.map(([url]) => `<a href="${h(safeUrl(url))}" target="_blank" rel="noopener">${h(new URL(url).host)}</a>`).join(" · ")}</div>`;
 }
 
 function toolbar(items, extraButtons = "") {
@@ -1074,6 +1088,10 @@ async function init() {
     return;
   }
   app.confs = app.data.conferences || [];
+  try {
+    const ws = await (await fetch("data/watch/status.json", { cache: "no-cache" })).json();
+    for (const v of Object.values(ws)) app.watch[String(v.acronym || "").toUpperCase()] = v;
+  } catch { /* the watch status is optional */ }
   app.areas = app.data.areas || {};
   for (const c of app.confs) app.byId.set(c.id, c);
   loadPlan();

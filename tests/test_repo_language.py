@@ -10,6 +10,7 @@ ALLOWED = {
     "tests/fixtures/tokenize_cases.json": "tokenizer case with Vietnamese diacritics",
     "tests/test_repo_language.py": "contains the detection pattern itself",
     "tests/rules.test.js": "test data quoting Vietnamese official documents",
+    "tests/test_watch.py": "test pages in Vietnamese for the website watcher",
 }
 SKIP_DIRS = {".git", "data", "evaluation", "__pycache__", ".venv"}
 SUFFIXES = {".py", ".js", ".html", ".css", ".md", ".yml", ".yaml", ".json", ".txt", ".sh", ".ps1", ".bat"}

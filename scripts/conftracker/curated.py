@@ -18,7 +18,7 @@ from pathlib import Path
 import yaml
 
 from .ccfddl import KEEP_PAST
-from .parsing import parse_deadline, parse_event_dates, parse_place, parse_tz, to_utc_iso
+from .parsing import parse_deadline, parse_event_dates, parse_place, parse_tz, shift_year, to_utc_iso
 from .topics import AREAS
 
 DEADLINE_TYPES = ("abstract", "paper", "rebuttal", "notification")
@@ -95,8 +95,14 @@ def load_fees(path: Path) -> dict:
 
 
 def load_venues(path: Path, now: datetime):
-    """Return (editions, stats) for curated venues with a deadline still relevant."""
-    eds, stats = [], {"entries": 0, "kept": 0, "past": 0}
+    """Return (editions, stats).
+
+    Every entry is validated. Editions whose dates are recent or ahead are published as
+    confirmed. Older editions stay in the file as history: when a series has no edition
+    with a paper deadline ahead, its latest edition is moved forward one year and
+    published as an estimate (the same rule as for ccfddl series).
+    """
+    records, stats = [], {"entries": 0, "kept": 0, "past": 0, "estimated": 0}
     for i, e in enumerate(_load(path)):
         where = f"venues.yml[{i}] ({e.get('acronym', '?') if isinstance(e, dict) else '?'})"
         if not isinstance(e, dict):
@@ -126,9 +132,6 @@ def load_venues(path: Path, now: datetime):
         deadlines.sort(key=lambda d: d["dt"])
         if not any(d["type"] == "paper" for d in deadlines):
             raise CuratedError(f"{where}: needs a paper deadline")
-        if max(d["dt"] for d in deadlines) < now - KEEP_PAST:
-            stats["past"] += 1  # reported, so stale entries get noticed and removed
-            continue
         place_raw = str(e.get("place") or "TBD")
         place = parse_place(place_raw)
         start, end = parse_event_dates(str(e.get("date") or ""))
@@ -136,7 +139,7 @@ def load_venues(path: Path, now: datetime):
         slug = "".join(ch for ch in str(e["acronym"]).lower() if ch.isalnum())
         fees = parse_fees(e.get("fees"), where)
         rank = e.get("rank") or {}
-        eds.append({
+        rec = {
             "id": f"curated_{slug}{year}",
             "acronym": str(e["acronym"]).strip(),
             "full_name": str(e["full_name"]).strip(),
@@ -167,8 +170,39 @@ def load_venues(path: Path, now: datetime):
             "fees": {"items": fees, "url": _url(e["fees_url"], where, "fees_url"),
                      "checked": _checked(e["checked"], where), "note": ""} if fees else None,
             "keywords": [str(k).strip().lower() for k in (e.get("keywords") or []) if str(k).strip()],
+        }
+        records.append((slug, rec, deadlines))
+
+    eds = []
+    for slug, rec, dls in records:
+        if max(d["dt"] for d in dls) >= now - KEEP_PAST:
+            eds.append(rec)
+            stats["kept"] += 1
+        else:
+            stats["past"] += 1  # kept as history for the estimate below
+
+    for slug in dict.fromkeys(s for s, _, _ in records):
+        series = sorted(((r, d) for s, r, d in records if s == slug), key=lambda x: x[0]["year"])
+        if any(d["type"] == "paper" and d["dt"] > now for _, dls in series for d in dls):
+            continue
+        base, base_dls = series[-1]
+        projected = [{**d, "dt": shift_year(d["dt"])} for d in base_dls]
+        if not any(d["type"] == "paper" and d["dt"] > now for d in projected):
+            continue  # biennial or discontinued: no estimate
+        est = dict(base)
+        est.update({
+            "id": f"curated_{slug}{base['year'] + 1}-est",
+            "year": base["year"] + 1,
+            "status": "estimated",
+            "estimated_from": base["year"],
+            "deadlines": [{"type": d["type"], "iso": to_utc_iso(d["dt"]), "comment": d["comment"]} for d in projected],
+            "date": "TBD", "event_start": None, "event_end": None, "place": "TBD", "city": "",
+            # A national series stays in its country; an international one may move.
+            "country": base["country"] if base["scope"] == "national" else "TBD",
+            "mode": "tbd", "fees": None,
         })
-        stats["kept"] += 1
+        eds.append(est)
+        stats["estimated"] += 1
     return eds, stats
 
 

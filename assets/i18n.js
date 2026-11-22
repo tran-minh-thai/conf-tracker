@@ -122,7 +122,7 @@ export const STRINGS = {
     contribPlaceholder: "Main contributions (optional): one per line", targetVenues: "Conferences", targetJournals: "Journals",
     journalResults: "Best-matching journals", journalsLoading: "Loading journal topic profiles…", journalsError: "Could not load data/journal_profiles.json.",
     journalNoSjr: "Import a Scimago file in Publications & points to see quartiles and estimated points.",
-    journalTitles: "{n} articles {from}-{to} in DBLP", journalSjrMatch: "quartile from Scimago {year}, matched by journal name: check it", journalSjrIssn: "quartile from Scimago {year}, matched by ISSN",
+    journalTitles: "{n} articles {from}-{to} in DBLP", journalSjrMatch: "quartile from Scimago {year}, matched by journal name: check it", journalSjrIssn: "quartile from Scimago {year}, matched by ISSN", watchStatus: "Website checked weekly: last checked {checked}, last changed {changed}:",
     journalEstimate: "Estimate with your rule files, Web of Science and IF unknown: {parts}",
   },
   vi: {
@@ -245,7 +245,7 @@ export const STRINGS = {
     contribPlaceholder: "Đóng góp chính (không bắt buộc): mỗi đóng góp một dòng", targetVenues: "Hội nghị", targetJournals: "Tạp chí",
     journalResults: "Các tạp chí phù hợp nhất", journalsLoading: "Đang tải hồ sơ chủ đề của tạp chí…", journalsError: "Không tải được data/journal_profiles.json.",
     journalNoSjr: "Nạp tệp Scimago ở tab Công bố & điểm để xem hạng Q và điểm ước tính.",
-    journalTitles: "{n} bài {from}-{to} trong DBLP", journalSjrMatch: "hạng Q từ Scimago {year}, khớp theo tên tạp chí: hãy kiểm lại", journalSjrIssn: "hạng Q từ Scimago {year}, khớp theo ISSN",
+    journalTitles: "{n} bài {from}-{to} trong DBLP", journalSjrMatch: "hạng Q từ Scimago {year}, khớp theo tên tạp chí: hãy kiểm lại", journalSjrIssn: "hạng Q từ Scimago {year}, khớp theo ISSN", watchStatus: "Trang hội nghị được kiểm hằng tuần: kiểm lần cuối {checked}, thay đổi lần cuối {changed}:",
     journalEstimate: "Ước tính theo văn bản của bạn, chưa biết Web of Science và IF: {parts}",
   },
 };

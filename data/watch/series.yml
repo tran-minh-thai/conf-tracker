@@ -1,0 +1,77 @@
+# Conference series watched weekly by scripts/watch_series.py (format: see data/watch/README.md).
+# Only addresses that answered with the right site on 2026-11-22 are listed.
+# Not yet listed (no working address found on 2026-11-22): NICS (nafosted-nics.org fails TLS),
+# KSE, ICTA. Add them here when an address is confirmed.
+
+- id: soict
+  acronym: SoICT
+  full_name: International Symposium on Information and Communication Technology
+  scope: international
+  urls: [https://soict.org/]
+
+- id: rivf
+  acronym: RIVF
+  full_name: International Conference on Computing and Communication Technologies
+  scope: international
+  url_templates: ["https://rivf{year}.org/"]
+  note: rivf.org itself redirects to an unrelated site; each edition has its own domain.
+
+- id: atc
+  acronym: ATC
+  full_name: International Conference on Advanced Technologies for Communications
+  scope: international
+  urls: [https://atc-conf.org/]
+
+- id: mapr
+  acronym: MAPR
+  full_name: International Conference on Multimedia Analysis and Pattern Recognition
+  scope: international
+  urls: [https://mapr.uit.edu.vn/]
+
+- id: fair
+  acronym: FAIR
+  full_name: Fundamental and Applied IT Research (national conference)
+  scope: national
+  urls: [https://fair.conf.vn/]
+
+- id: rev-ecit
+  acronym: REV-ECIT
+  full_name: National Conference on Electronics, Communications and Information Technology
+  scope: national
+  urls: [https://rev-ecit.vn/]
+
+- id: vnict
+  acronym: VNICT
+  full_name: National Workshop on Selected Problems of Information and Communication Technology
+  scope: national
+  urls: [https://vnict.vn/]
+
+- id: fjcai
+  acronym: FJCAI
+  full_name: Future of Joint Conference on Artificial Intelligence (national AI conference)
+  scope: national
+  urls: [https://fjcai.vn/]
+
+- id: iciit
+  acronym: ICIIT
+  full_name: International Conference on Intelligent Information Technology
+  scope: international
+  urls: [https://www.iciit.org/]
+
+- id: ismsi
+  acronym: ISMSI
+  full_name: International Conference on Intelligent Systems, Metaheuristics & Swarm Intelligence
+  scope: international
+  urls: [https://ismsi.org/]
+
+- id: raids
+  acronym: RAIDS
+  full_name: EAI International Conference on Responsible Artificial Intelligence and Data Science
+  scope: international
+  url_templates: ["https://raids.eai-conferences.org/{year}/"]
+
+- id: icetai
+  acronym: ICETAI
+  full_name: International Conference on Educational Technology and Artificial Intelligence
+  scope: international
+  url_templates: ["https://icetai.neu.edu.vn/{year}/important-dates"]

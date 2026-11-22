@@ -71,7 +71,8 @@ def main(argv=None) -> int:
         return 5
     print(f"3. curated: {cur_stats}, fee records {len(fees)}")
     if cur_stats["past"]:
-        print(f"   [warn] {cur_stats['past']} curated venue(s) have only old deadlines; update or remove them")
+        print(f"   {cur_stats['past']} past curated edition(s) kept as history; "
+              f"{cur_stats['estimated']} next-edition estimate(s) published from them")
     base, cur_merge = build.merge_curated(ccf_eds, cur_eds)
     merged, merge_stats = build.merge(base, wiki_eds)
     merge_stats.update(cur_merge)

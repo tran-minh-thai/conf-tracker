@@ -1,0 +1,56 @@
+name: Watch conference websites
+
+on:
+  schedule:
+    - cron: "0 2 * * 1"   # every Monday
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: data-update
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Run tests
+        run: python -m pytest -q tests
+
+      - name: Check watched websites
+        run: python scripts/watch_series.py --issue "$RUNNER_TEMP/watch-issue.md"
+
+      - name: Commit history and status
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/watch
+          git diff --staged --quiet || git commit -m "chore: record conference website changes"
+          git pull --rebase
+          git push
+
+      - name: Open a review issue for changed pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -s "$RUNNER_TEMP/watch-issue.md" ]; then
+            gh label create watch --color 1d76db --description "Conference website changes to review" --force
+            gh issue create --title "Conference websites changed ($(date -u +%Y-%m-%d))" \
+              --label watch --body-file "$RUNNER_TEMP/watch-issue.md"
+          else
+            echo "No changed pages: no issue."
+          fi

@@ -41,6 +41,11 @@ Live site: <https://tran-minh-thai.github.io/conf-tracker/>
   automatically. A domestic journal list can be replaced by pasting the table from
   the official document; a Scimago CSV that the user downloads fills Scopus
   quartiles by ISSN.
+- **Recurring national conferences:** a weekly watcher checks the websites of
+  series that no feed covers (FAIR, SoICT, RIVF, VNICT, REV-ECIT, FJCAI, ...),
+  keeps an append-only history of every change with the dates it found as evidence,
+  and opens a review issue. Confirmed editions go to `data/curated/venues.yml`;
+  past editions give next-year estimates. See `data/watch/README.md`.
 - **Journal finder:** paste an abstract and main contributions to rank journals by
   topical similarity to what they published, with full titles and ISSNs, and an
   estimate of points and bonus under your rule files when a quartile is known.
@@ -105,6 +110,7 @@ data/venue_profiles.json   conference topic profiles, rebuilt monthly
 data/journal_profiles.json journal topic profiles with titles and ISSNs, rebuilt monthly
 data/rules/                sample rule files (state council points, a university bonus table)
 data/curated/              hand-checked venues and fees (see its README)
+data/watch/                watched conference websites: series list, change history, status
 scripts/                   data pipeline (Python)
 tests/                     pytest suite; tests/core.test.html runs the browser tests
 evaluation/                matcher evaluation results with provenance
@@ -137,6 +143,8 @@ malformed, or when the venue count drops below half of the previous run
 ## Automation
 
 - `update-data.yml`: daily; runs the tests, fetches deadlines, commits the data.
+- `watch-series.yml`: weekly; checks watched conference websites, appends changes
+  to `data/watch/history/`, and opens a review issue when pages changed.
 - `update-profiles.yml`: monthly; downloads the DBLP dump, rebuilds profiles and
   the evaluation.
 
