@@ -1,0 +1,336 @@
+{
+ "schema_version": 1,
+ "id": "sample-university-bonus",
+ "kind": "bonus",
+ "unit": "VND",
+ "unit_label": "đồng",
+ "title": "Bảng thưởng công bố minh hoạ (số liệu giả định)",
+ "source": {
+  "document": "Bảng giả định 12 mục để minh hoạ cách tính thưởng; không phải văn bản của trường nào (tạo ngày 2026-11-22)",
+  "checked": "2026-11-22",
+  "warning": "Số liệu giả định, chỉ để thử ứng dụng. Hãy nạp văn bản hiện hành của trường bạn."
+ },
+ "policy": "max",
+ "value_note": "Mỗi bài nhận mức cao nhất mà nó đạt. Bảng không nói cách chia cho đồng tác giả; ứng dụng hiện toàn bộ mức thưởng của bài.",
+ "depends_on": [
+  "points"
+ ],
+ "ambiguities": [
+  "Bảng không quy định chia thưởng giữa các đồng tác giả, nên ứng dụng chưa chia.",
+  "“Scopus Qx theo phân loại Scimago”: bảng không nói dùng hạng tốt nhất hay hạng theo chuyên ngành; hãy nhập hạng mà trường chấp nhận.",
+  "Mục 11 dùng điểm HĐGSNN tối đa ≥ 0,75 theo gói điểm HĐGSNN đang chọn (ngành của bạn)."
+ ],
+ "rules": [
+  {
+   "id": "1",
+   "label": "Bài báo thuộc SCI, SCIE, SSCI (WoS), IF ≥ 3.0",
+   "value": 32000000,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "journal"
+     },
+     {
+      "fact": "wos_index",
+      "in": [
+       "SCI",
+       "SCIE",
+       "SSCI"
+      ]
+     },
+     {
+      "fact": "impact_factor",
+      "gte": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": "2",
+   "label": "Bài báo thuộc SCI, SCIE, SSCI (WoS), 2.0 ≤ IF < 3.0",
+   "value": 22000000,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "journal"
+     },
+     {
+      "fact": "wos_index",
+      "in": [
+       "SCI",
+       "SCIE",
+       "SSCI"
+      ]
+     },
+     {
+      "fact": "impact_factor",
+      "gte": 2
+     },
+     {
+      "fact": "impact_factor",
+      "lt": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": "3",
+   "label": "Bài báo thuộc SCI, SCIE, SSCI (WoS), 1.0 ≤ IF < 2.0",
+   "value": 16000000,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "journal"
+     },
+     {
+      "fact": "wos_index",
+      "in": [
+       "SCI",
+       "SCIE",
+       "SSCI"
+      ]
+     },
+     {
+      "fact": "impact_factor",
+      "gte": 1
+     },
+     {
+      "fact": "impact_factor",
+      "lt": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": "4",
+   "label": "Bài báo hạng Q1 thuộc Scopus (Scimago)",
+   "value": 16000000,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "journal"
+     },
+     {
+      "fact": "scopus_quartile",
+      "eq": "Q1"
+     }
+    ]
+   }
+  },
+  {
+   "id": "5",
+   "label": "SCI, SCIE, SSCI với 0 < IF < 1.0, hoặc Scopus Q2",
+   "value": 12000000,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "journal"
+     },
+     {
+      "any": [
+       {
+        "all": [
+         {
+          "fact": "wos_index",
+          "in": [
+           "SCI",
+           "SCIE",
+           "SSCI"
+          ]
+         },
+         {
+          "fact": "impact_factor",
+          "gt": 0
+         },
+         {
+          "fact": "impact_factor",
+          "lt": 1
+         }
+        ]
+       },
+       {
+        "fact": "scopus_quartile",
+        "eq": "Q2"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "6",
+   "label": "Bài báo thuộc Scopus nhóm Q3",
+   "value": 9000000,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "journal"
+     },
+     {
+      "fact": "scopus_quartile",
+      "eq": "Q3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "7",
+   "label": "Scopus Q4, hoặc ESCI, hoặc trong danh sách NAFOSTED",
+   "value": 6000000,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "journal"
+     },
+     {
+      "any": [
+       {
+        "fact": "scopus_quartile",
+        "eq": "Q4"
+       },
+       {
+        "fact": "wos_index",
+        "eq": "ESCI"
+       },
+       {
+        "fact": "nafosted_list",
+        "eq": true
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "8",
+   "label": "Toàn văn trong kỷ yếu hội nghị quốc tế thuộc Scopus Q4 (Scimago)",
+   "value": 6000000,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "conference"
+     },
+     {
+      "fact": "conference_scope",
+      "eq": "international"
+     },
+     {
+      "fact": "full_paper",
+      "eq": true
+     },
+     {
+      "fact": "scopus_indexed",
+      "eq": true
+     },
+     {
+      "fact": "scopus_quartile",
+      "eq": "Q4"
+     }
+    ]
+   }
+  },
+  {
+   "id": "9",
+   "label": "Toàn văn trong kỷ yếu hội nghị quốc tế thuộc Scopus",
+   "value": 4000000,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "conference"
+     },
+     {
+      "fact": "conference_scope",
+      "eq": "international"
+     },
+     {
+      "fact": "full_paper",
+      "eq": true
+     },
+     {
+      "fact": "scopus_indexed",
+      "eq": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "10",
+   "label": "Chương sách thuộc ISI/Scopus hoặc NXB uy tín theo danh mục NAFOSTED",
+   "value": 4000000,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "book_chapter"
+     },
+     {
+      "any": [
+       {
+        "fact": "wos_index",
+        "in": [
+         "SCI",
+         "SCIE",
+         "SSCI",
+         "AHCI",
+         "ESCI"
+        ]
+       },
+       {
+        "fact": "scopus_indexed",
+        "eq": true
+       },
+       {
+        "fact": "reputable_publisher",
+        "eq": true
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "11",
+   "label": "Tạp chí được HĐGSNN tính điểm tối đa ≥ 0,75, hoặc tạp chí khoa học của trường",
+   "value": 1500000,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "journal"
+     },
+     {
+      "any": [
+       {
+        "fact": "hdgsnn_max",
+        "gte": 0.75
+       },
+       {
+        "fact": "institution_journal",
+        "eq": true
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "12",
+   "label": "Giảng viên vượt định mức giờ nghiên cứu trong năm",
+   "manual": true,
+   "range": {
+    "min": 500000,
+    "max": 2000000
+   },
+   "note": "Thưởng theo cá nhân, không theo bài; bảng không nêu cách chọn mức trong khoảng."
+  }
+ ]
+}

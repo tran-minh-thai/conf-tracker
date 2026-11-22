@@ -1,0 +1,113 @@
+{
+  "note": "Shared by tests/test_profiles.py and tests/core.test.js: the Python and JS tokenizers must agree.",
+  "cases": [
+    {
+      "text": "Graph Neural Networks for Fraud Detection",
+      "tokens": [
+        "graph",
+        "neural",
+        "network",
+        "fraud",
+        "detection",
+        "graph_neural",
+        "neural_network",
+        "fraud_detection"
+      ]
+    },
+    {
+      "text": "Mining High-Utility Sequential Patterns",
+      "tokens": [
+        "mining",
+        "high",
+        "utility",
+        "sequential",
+        "pattern",
+        "mining_high",
+        "high_utility",
+        "utility_sequential",
+        "sequential_pattern"
+      ]
+    },
+    {
+      "text": "Queries, Indexes and Boxes",
+      "tokens": [
+        "query",
+        "index",
+        "box",
+        "query_index"
+      ]
+    },
+    {
+      "text": "Privacy-preserving analysis of the 2025 census",
+      "tokens": [
+        "privacy",
+        "preserving",
+        "census",
+        "privacy_preserving"
+      ]
+    },
+    {
+      "text": "Khai phá dữ liệu Đồ thị",
+      "tokens": [
+        "khai",
+        "pha",
+        "du",
+        "lieu",
+        "thi",
+        "khai_pha",
+        "pha_du",
+        "du_lieu"
+      ]
+    },
+    {
+      "text": "Status of class process analysis bus",
+      "tokens": [
+        "status",
+        "class",
+        "process",
+        "bus",
+        "class_process"
+      ]
+    },
+    {
+      "text": "Hypothesis testing on a basis",
+      "tokens": [
+        "hypothesis",
+        "testing",
+        "basis",
+        "hypothesis_testing"
+      ]
+    },
+    {
+      "text": "Đà Nẵng đồ thị",
+      "tokens": [
+        "da",
+        "nang",
+        "thi",
+        "da_nang"
+      ]
+    },
+    {
+      "text": "tìm đường đi",
+      "tokens": [
+        "tim",
+        "duong",
+        "di",
+        "tim_duong",
+        "duong_di"
+      ]
+    },
+    {
+      "text": "Databases and processes in a database",
+      "tokens": [
+        "database",
+        "process",
+        "database"
+      ]
+    },
+    {
+      "text": "",
+      "tokens": []
+    }
+  ]
+}

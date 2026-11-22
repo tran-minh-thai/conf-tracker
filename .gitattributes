@@ -1,0 +1,10 @@
+# Calendar files must keep CRLF line endings (RFC 5545): store them byte for byte.
+*.ics -text
+# Source and data in LF everywhere, so file hashes do not depend on the OS.
+*.py text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.md text eol=lf
+*.html text eol=lf
+*.css text eol=lf

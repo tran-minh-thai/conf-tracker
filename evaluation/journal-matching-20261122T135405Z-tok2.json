@@ -1,0 +1,58 @@
+{
+ "kind": "data property: journal matcher accuracy on held-out titles (machine independent)",
+ "command": "python build_journal_profiles.py --dump dblp.xml.gz --year 2025",
+ "started": "2026-11-22T13:54:05+00:00",
+ "python": "3.14.6",
+ "dump_sha256": "f511276a7c78ecade7eae4004f1fd5088b946fe3bebdf9e19e669e647043bb6b",
+ "tokenizer_version": 2,
+ "tool_sha256": {
+  "scripts/build_journal_profiles.py": "12444267cd768e847796560bf74ee707307ab60d18a0584767edeade8ff28663",
+  "scripts/build_profiles.py": "40c93f3af40dcd504b11e1a9da73bf78e815e328f3b871c01453cc22616327c8",
+  "scripts/conftracker/__init__.py": "79825b33a58bb61f326f23082d9a6e058f471df66005edde6363f9b2fc38f093",
+  "scripts/conftracker/build.py": "d8883ba74f68dadeadc7e12992aaa23c64b1fe89122114894c07f19d68134219",
+  "scripts/conftracker/ccfddl.py": "133b212b04f10344d8fb07c986010249aae43d36601603cf2082790e5bd9d6f4",
+  "scripts/conftracker/crossref_meta.py": "7c197752d680e2c5dbbedd6741bc42bccf3a509dec4eda9e3e03fbe856bf7eee",
+  "scripts/conftracker/curated.py": "6e27e4f56d785e575434b6b0285bd2fa93c896a211c5e9f578f41e123fe76226",
+  "scripts/conftracker/ics.py": "55f3dbf7882039ae779db7a510314812e4c430226b92cd9301def0c7de45f8d6",
+  "scripts/conftracker/parsing.py": "d930aaeab2718b3faad93faec498ae474ab06573732de4124542da8a08aacd81",
+  "scripts/conftracker/profiles.py": "9f27ddfd71504773f1087b3caeafbe4a0f0351def7ef57d7a4e4692a3764ff98",
+  "scripts/conftracker/topics.py": "181136cd63cce4980e6df0dab833bcf90ad829e987a712f6379513f227983b0e",
+  "scripts/conftracker/wikicfp.py": "c528709864b5c8877c497008062071c9be43f6c6acc69f81dd78d368d51b6354",
+  "scripts/fetch_conferences.py": "35aa0260cd050053e50f05fb3ed460bd5c7628c16e53269d770764dd39fa14fd"
+ },
+ "train_years": [
+  2020,
+  2024
+ ],
+ "test_year": 2025,
+ "min_titles": 50,
+ "top_k": 80,
+ "crossref_meta": {
+  "cached": 1067,
+  "queried": 22,
+  "resolved": 0,
+  "failed_count": 22
+ },
+ "result": {
+  "venues_ranked": 1089,
+  "venues_queried": 969,
+  "queries": 25202,
+  "title_profiles": {
+   "recall@1": 0.1089,
+   "recall@5": 0.2638,
+   "recall@10": 0.3573,
+   "mrr": 0.1899
+  },
+  "name_only_baseline": {
+   "recall@1": 0.0163,
+   "recall@5": 0.0476,
+   "recall@10": 0.0648,
+   "mrr": 0.0342
+  },
+  "random_baseline": {
+   "recall@1": 0.0009,
+   "recall@5": 0.0046,
+   "recall@10": 0.0092
+  }
+ }
+}

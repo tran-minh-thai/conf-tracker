@@ -1,0 +1,12 @@
+{
+ "packs": [
+  {
+   "file": "hdgsnn-cntt-2025.json",
+   "role": "points"
+  },
+  {
+   "file": "sample-university-bonus.json",
+   "role": "bonus"
+  }
+ ]
+}

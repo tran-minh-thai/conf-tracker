@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>core.js tests</title>
+  <style>body { font: 14px system-ui, sans-serif; margin: 24px; } .fail { color: #c62828; } .pass { color: #2e7d4f; }</style>
+</head>
+<body>
+  <h1>core.js tests</h1>
+  <p id="summary">running…</p>
+  <ul id="out"></ul>
+  <script type="module">
+    import { run } from "./core.test.js";
+    // ?core=<path> runs the suite against another copy of the module (used for fault injection).
+    const target = new URLSearchParams(location.search).get("core") || "../assets/core.js";
+    const shared = await (await fetch("./fixtures/tokenize_cases.json", { cache: "no-cache" })).json();
+    // Stopwords come from the published profiles, so a drift between Python and JS fails here.
+    const prof = await (await fetch("../data/venue_profiles.json", { cache: "no-cache" })).json();
+    const results = run(await import(target), await import("../assets/match.js"),
+      { cases: shared.cases, stopwords: prof.stopwords });
+    const failed = results.filter((r) => !r.pass);
+    document.getElementById("summary").textContent = `${results.length - failed.length}/${results.length} passed`;
+    document.getElementById("out").innerHTML = results.map((r) =>
+      `<li class="${r.pass ? "pass" : "fail"}">${r.pass ? "PASS" : "FAIL"} ${r.name}${r.error ? `: ${r.error.replace(/</g, "&lt;")}` : ""}</li>`).join("");
+    // Rule engine tests run against the published sample packs.
+    const { run: runRules } = await import("./rules.test.js");
+    const packs = {
+      points: await (await fetch("../data/rules/hdgsnn-cntt-2025.json", { cache: "no-cache" })).json(),
+      bonus: await (await fetch("../data/rules/sample-university-bonus.json", { cache: "no-cache" })).json(),
+    };
+    const ruleResults = runRules(await import("../assets/rules.js"), packs).map((r) => ({ ...r, name: `rules: ${r.name}` }));
+    results.push(...ruleResults);
+    const { run: runScholar } = await import("./scholar.test.js");
+    results.push(...runScholar(await import("../assets/scholar.js")).map((r) => ({ ...r, name: `scholar: ${r.name}` })));
+    const failedAll = results.filter((r) => !r.pass);
+    document.getElementById("summary").textContent = `${results.length - failedAll.length}/${results.length} passed`;
+    document.getElementById("out").innerHTML = results.map((r) =>
+      `<li class="${r.pass ? "pass" : "fail"}">${r.pass ? "PASS" : "FAIL"} ${r.name}${r.error ? `: ${r.error.replace(/</g, "&lt;")}` : ""}</li>`).join("");
+    window.__results = results;
+  </script>
+</body>
+</html>

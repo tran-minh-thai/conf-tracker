@@ -1,0 +1,53 @@
+name: Update venue topic profiles
+
+on:
+  schedule:
+    - cron: "0 3 5 * *"   # monthly, after the DBLP release at the start of the month
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-update
+  cancel-in-progress: false
+
+jobs:
+  profiles:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Run tests
+        run: python -m pytest -q tests
+
+      - name: Download the DBLP dump (CC0, Dagstuhl mirror; dblp.org throttles bulk downloads)
+        run: |
+          curl -sS -L -A "conf-tracker (+https://github.com/${{ github.repository }})" -o "$RUNNER_TEMP/dblp.xml.gz" https://dblp.dagstuhl.de/xml/dblp.xml.gz
+          gzip -t "$RUNNER_TEMP/dblp.xml.gz"
+          ls -l "$RUNNER_TEMP/dblp.xml.gz"
+
+      - name: Build conference profiles and evaluate the matcher
+        run: python scripts/build_profiles.py --dump "$RUNNER_TEMP/dblp.xml.gz"
+
+      - name: Build journal profiles (titles and ISSNs via Crossref, cached) and evaluate
+        run: python scripts/build_journal_profiles.py --dump "$RUNNER_TEMP/dblp.xml.gz"
+
+      - name: Commit profiles and evaluation
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/venue_profiles.json data/journal_profiles.json data/journal_meta_cache.json evaluation/
+          git diff --staged --quiet || git commit -m "chore: update venue topic profiles"
+          git pull --rebase
+          git push

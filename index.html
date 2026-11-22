@@ -1,310 +1,82 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CS Conference Deadlines</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>conf-tMtTracker</title>
+  <meta name="description" content="Computer science calls for papers with CCF and CORE ranks, acceptance rates, calendar export and a personal submission plan." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f5bd3'/%3E%3Cpath d='M9 8h14v3H9zM9 14h14v3H9zM9 20h9v3H9z' fill='white'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="assets/styles.css?v=4" />
+  <link rel="alternate" type="text/calendar" title="conf-tMtTracker: ranked conference deadlines" href="data/deadlines.ics" />
+  <script>
+    // Apply the saved theme before first paint to avoid a flash.
+    try { const t = localStorage.getItem("conf_tracker_theme"); if (t) document.documentElement.dataset.theme = t; } catch {}
+  </script>
 </head>
-<body class="bg-slate-50 text-slate-800 min-h-screen">
-  <header class="bg-white border-b border-slate-200 sticky top-0 z-10">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-      <div>
-        <h1 class="text-2xl font-bold text-slate-900">Hội nghị Khoa học Quốc tế CNTT &amp; KHMT</h1>
-        <p id="meta-info" class="text-sm text-slate-500">Đang tải dữ liệu...</p>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <h1 id="app-name">conf-tMtTracker</h1>
+        <p id="tagline"></p>
       </div>
-      <button id="btn-bookmarks" class="px-3 py-1.5 text-sm font-medium rounded-lg border border-slate-300 hover:bg-slate-100 self-start sm:self-auto">
-        ★ Đang theo dõi (<span id="bm-count">0</span>)
-      </button>
+      <div class="top-actions">
+        <span id="fresh" class="fresh" aria-live="polite"></span>
+        <button id="btn-loc" class="btn" type="button"></button>
+        <button id="btn-subscribe" class="btn" type="button"></button>
+        <label class="sr-only" for="lang">Language</label>
+        <select id="lang" class="btn" aria-label="Language">
+          <option value="en">EN</option>
+          <option value="vi">VI</option>
+        </select>
+        <button id="btn-theme" class="btn" type="button" aria-label="Theme">◐</button>
+      </div>
     </div>
+    <nav class="tabs" role="tablist" aria-label="Views">
+      <button class="tab" role="tab" data-view="list" id="tab-list"></button>
+      <button class="tab" role="tab" data-view="foryou" id="tab-foryou"></button>
+      <button class="tab" role="tab" data-view="calendar" id="tab-calendar"></button>
+      <button class="tab" role="tab" data-view="plan" id="tab-plan"></button>
+      <button class="tab" role="tab" data-view="pubs" id="tab-pubs"></button>
+    </nav>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 py-6">
-    <!-- Khu vực bộ lọc -->
-    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 mb-4 space-y-3">
-      <!-- Hàng 1: Tìm kiếm, Lĩnh vực, Xếp hạng -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
-        <input id="search" type="text" placeholder="Tìm tên hội nghị, thành phố, quốc gia..."
-          class="md:col-span-2 px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        <select id="filter-sub" class="px-3 py-2 border border-slate-300 rounded-lg text-sm bg-white">
-          <option value="">Tất cả lĩnh vực</option>
-        </select>
-        <select id="filter-rank" class="px-3 py-2 border border-slate-300 rounded-lg text-sm bg-white">
-          <option value="">Tất cả hạng CCF</option>
-          <option value="A">CCF A</option>
-          <option value="B">CCF B</option>
-          <option value="C">CCF C</option>
-          <option value="RANKED">Chỉ hiện hội nghị có hạng CCF</option>
-        </select>
-      </div>
-
-      <!-- Hàng 2: Quốc gia, Thành phố, Năm, Khoảng thời gian tổ chức -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3 items-end">
-        <div>
-          <label class="block text-xs font-medium text-slate-500 mb-1">Quốc gia</label>
-          <select id="filter-country" class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm bg-white">
-            <option value="">Tất cả quốc gia</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-xs font-medium text-slate-500 mb-1">Thành phố</label>
-          <select id="filter-city" class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm bg-white">
-            <option value="">Tất cả thành phố</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-xs font-medium text-slate-500 mb-1">Năm tổ chức</label>
-          <select id="filter-year" class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm bg-white">
-            <option value="">Tất cả các năm</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-xs font-medium text-slate-500 mb-1">Tổ chức từ ngày</label>
-          <input id="filter-date-from" type="date" class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm bg-white" />
-        </div>
-        <div>
-          <label class="block text-xs font-medium text-slate-500 mb-1">Đến ngày</label>
-          <input id="filter-date-to" type="date" class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm bg-white" />
-        </div>
-        <div>
-          <button id="btn-reset" class="w-full px-3 py-2 text-sm font-medium text-slate-600 bg-slate-100 hover:bg-slate-200 rounded-lg transition">
-            Xóa bộ lọc
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Thanh kết quả -->
-    <div id="result-count" class="text-sm text-slate-600 mb-3 font-medium"></div>
-
-    <!-- Danh sách hội nghị -->
-    <div id="conf-list" class="space-y-3"></div>
+  <main id="layout" class="layout">
+    <aside id="filters" class="panel" aria-label="Filters"></aside>
+    <section id="view" aria-live="polite">
+      <p class="empty" id="loading">Loading…</p>
+    </section>
   </main>
 
-  <script>
-    let allConfs = [];
-    let showBookmarksOnly = false;
-    let bookmarks = new Set(JSON.parse(localStorage.getItem("cs_conf_bookmarks") || "[]"));
+  <footer id="footer"></footer>
 
-    function saveBookmarks() {
-      localStorage.setItem("cs_conf_bookmarks", JSON.stringify([...bookmarks]));
-      document.getElementById("bm-count").textContent = bookmarks.size;
-    }
+  <dialog id="dlg-subscribe">
+    <h2 id="sub-title"></h2>
+    <p id="sub-body"></p>
+    <div class="copy-row">
+      <input id="sub-url" readonly aria-label="Feed URL" />
+      <button class="btn" type="button" data-action="copy-feed" id="sub-copy"></button>
+    </div>
+    <p><a id="sub-download" href="data/deadlines.ics" download>deadlines.ics</a></p>
+    <form method="dialog"><button class="btn" id="sub-close"></button></form>
+  </dialog>
 
-    function formatCountdown(isoStr) {
-      const diff = new Date(isoStr) - new Date();
-      if (diff <= 0) return "Đã hết hạn";
-      const days = Math.floor(diff / 86400000);
-      const hours = Math.floor((diff % 86400000) / 3600000);
-      const mins = Math.floor((diff % 3600000) / 60000);
-      return `${days} ngày ${hours} giờ ${mins} phút`;
-    }
+  <dialog id="dlg-loc">
+    <h2 id="loc-title"></h2>
+    <label class="field"><span id="loc-country-label"></span><select id="loc-country"></select></label>
+    <label class="field"><span id="loc-city-label"></span><select id="loc-city"></select></label>
+    <p><button class="btn" type="button" id="loc-precise"></button></p>
+    <p class="hint" id="loc-note"></p>
+    <p class="hint" id="loc-status" role="status"></p>
+    <form method="dialog" class="dlg-actions">
+      <button class="btn primary" id="loc-save"></button>
+      <button class="btn" id="loc-close"></button>
+    </form>
+  </dialog>
 
-    window.downloadICS = (id) => {
-      const conf = allConfs.find(c => c.id === id);
-      if (!conf) return;
-      const dt = new Date(conf.deadline_iso).toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
-      const ics = [
-        "BEGIN:VCALENDAR", "VERSION:2.0", "BEGIN:VEVENT",
-        `SUMMARY:[Deadline] ${conf.acronym} ${conf.year}`,
-        `DTSTART:${dt}`, `DTEND:${dt}`,
-        `DESCRIPTION:${conf.full_name}\\nLink: ${conf.url}`,
-        `LOCATION:${conf.place}`,
-        "END:VEVENT", "END:VCALENDAR"
-      ].join("\r\n");
-      const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
-      const a = document.createElement("a");
-      a.href = URL.createObjectURL(blob);
-      a.download = `${conf.acronym}_${conf.year}_deadline.ics`;
-      a.click();
-    };
+  <input type="file" id="plan-file" accept="application/json,.json" hidden />
+  <div id="toast" class="toast" role="status"></div>
 
-    function populateCityDropdown(selectedCountry) {
-      const citySelect = document.getElementById("filter-city");
-      const prevCity = citySelect.value;
-      const cities = [...new Set(
-        allConfs
-          .filter(c => (!selectedCountry || c.country === selectedCountry) && c.city)
-          .map(c => c.city)
-      )].sort((a, b) => a.localeCompare(b));
-
-      citySelect.innerHTML = `<option value="">Tất cả thành phố</option>` +
-        cities.map(city => `<option value="${city}">${city}</option>`).join("");
-
-      if (cities.includes(prevCity)) {
-        citySelect.value = prevCity;
-      }
-    }
-
-    function render() {
-      const q = document.getElementById("search").value.toLowerCase().trim();
-      const sub = document.getElementById("filter-sub").value;
-      const rank = document.getElementById("filter-rank").value;
-      const country = document.getElementById("filter-country").value;
-      const city = document.getElementById("filter-city").value;
-      const year = document.getElementById("filter-year").value;
-      const dateFrom = document.getElementById("filter-date-from").value;
-      const dateTo = document.getElementById("filter-date-to").value;
-
-      const filtered = allConfs.filter(c => {
-        if (showBookmarksOnly && !bookmarks.has(c.id)) return false;
-        if (sub && c.sub !== sub) return false;
-        if (rank === "RANKED") {
-          if (!["A", "B", "C"].includes(c.rank_ccf)) return false;
-        } else if (rank && c.rank_ccf !== rank) {
-          return false;
-        }
-        if (country && c.country !== country) return false;
-        if (city && c.city !== city) return false;
-        if (year && String(c.year) !== year) return false;
-
-        // Lọc theo khoảng thời gian tổ chức (kiểm tra giao nhau giữa 2 khoảng ngày)
-        if (dateFrom || dateTo) {
-          if (!c.event_start) return false;
-          const evEnd = c.event_end || c.event_start;
-          if (dateFrom && evEnd < dateFrom) return false;
-          if (dateTo && c.event_start > dateTo) return false;
-        }
-
-        if (q) {
-          const haystack = `${c.acronym} ${c.full_name} ${c.place} ${c.city || ""} ${c.country || ""}`.toLowerCase();
-          if (!haystack.includes(q)) return false;
-        }
-        return true;
-      });
-
-      document.getElementById("result-count").textContent =
-        `Đang hiển thị ${filtered.length} / ${allConfs.length} hội nghị`;
-
-      const container = document.getElementById("conf-list");
-      if (!filtered.length) {
-        container.innerHTML = `<div class="text-center py-12 text-slate-500 bg-white rounded-xl border border-slate-200">Không tìm thấy hội nghị phù hợp với bộ lọc hiện tại.</div>`;
-        return;
-      }
-
-      container.innerHTML = filtered.map(c => {
-        const isBm = bookmarks.has(c.id);
-        const localDeadline = new Date(c.deadline_iso).toLocaleString("vi-VN", {
-          dateStyle: "medium", timeStyle: "short"
-        });
-        const badgeColor = c.rank_ccf === "A" ? "bg-rose-100 text-rose-700"
-                         : c.rank_ccf === "B" ? "bg-amber-100 text-amber-700"
-                         : "bg-slate-100 text-slate-700";
-
-        return `
-          <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:border-blue-300 transition flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div class="space-y-1">
-              <div class="flex flex-wrap items-center gap-2">
-                <a href="${c.url}" target="_blank" rel="noopener" class="text-lg font-bold text-blue-700 hover:underline">
-                  ${c.acronym} ${c.year}
-                </a>
-                <span class="px-2 py-0.5 text-xs font-semibold rounded ${badgeColor}">CCF ${c.rank_ccf}</span>
-                ${c.rank_core && c.rank_core !== "N/A" ? `<span class="px-2 py-0.5 text-xs font-semibold rounded bg-indigo-100 text-indigo-700">CORE ${c.rank_core}</span>` : ""}
-                <span class="px-2 py-0.5 text-xs rounded bg-slate-100 text-slate-600">${c.topic}</span>
-              </div>
-              <p class="text-sm text-slate-700">${c.full_name}</p>
-              <p class="text-xs text-slate-500">
-                📅 ${c.date} &nbsp;|&nbsp; 📍 ${c.place}
-                ${c.comment ? `&nbsp;|&nbsp; ℹ️ ${c.comment}` : ""}
-              </p>
-            </div>
-            <div class="md:text-right shrink-0 flex flex-col md:items-end gap-1.5">
-              <div class="text-sm font-bold text-emerald-700 countdown" data-iso="${c.deadline_iso}">
-                ⏳ ${formatCountdown(c.deadline_iso)}
-              </div>
-              <div class="text-xs text-slate-500">Hạn nộp (giờ máy bạn): ${localDeadline}</div>
-              <div class="flex items-center gap-2 mt-1">
-                <button onclick="toggleBm('${c.id}')" class="px-2.5 py-1 text-xs rounded border ${isBm ? 'bg-amber-50 border-amber-400 text-amber-700 font-semibold' : 'border-slate-300 text-slate-600 hover:bg-slate-50'}">
-                  ${isBm ? "★ Đã lưu" : "☆ Theo dõi"}
-                </button>
-                <button onclick="downloadICS('${c.id}')" class="px-2.5 py-1 text-xs rounded border border-slate-300 text-slate-600 hover:bg-slate-50">
-                  + Lịch (.ics)
-                </button>
-              </div>
-            </div>
-          </div>`;
-      }).join("");
-    }
-
-    window.toggleBm = (id) => {
-      bookmarks.has(id) ? bookmarks.delete(id) : bookmarks.add(id);
-      saveBookmarks();
-      render();
-    };
-
-    async function init() {
-      saveBookmarks();
-      try {
-        const res = await fetch("./data/conferences.json");
-        const data = await res.json();
-        allConfs = data.conferences || [];
-        const updated = new Date(data.last_updated).toLocaleString("vi-VN");
-        document.getElementById("meta-info").textContent =
-          `Tổng cộng ${allConfs.length} hội nghị sắp hết hạn • Cập nhật: ${updated}`;
-
-        // 1. Điền Lĩnh vực
-        const subSelect = document.getElementById("filter-sub");
-        const topics = [...new Map(allConfs.map(c => [c.sub, c.topic])).entries()]
-          .sort((a, b) => a[1].localeCompare(b[1]));
-        topics.forEach(([code, name]) => {
-          subSelect.insertAdjacentHTML("beforeend", `<option value="${code}">${name}</option>`);
-        });
-
-        // 2. Điền Quốc gia
-        const countrySelect = document.getElementById("filter-country");
-        const countries = [...new Set(allConfs.map(c => c.country).filter(Boolean))]
-          .sort((a, b) => a.localeCompare(b));
-        countries.forEach(ct => {
-          countrySelect.insertAdjacentHTML("beforeend", `<option value="${ct}">${ct}</option>`);
-        });
-
-        // 3. Điền Thành phố ban đầu
-        populateCityDropdown("");
-
-        // 4. Điền Năm tổ chức
-        const yearSelect = document.getElementById("filter-year");
-        const years = [...new Set(allConfs.map(c => c.year).filter(Boolean))].sort((a, b) => a - b);
-        years.forEach(y => {
-          yearSelect.insertAdjacentHTML("beforeend", `<option value="${y}">${y}</option>`);
-        });
-
-        render();
-        setInterval(() => {
-          document.querySelectorAll(".countdown").forEach(el => {
-            el.textContent = "⏳ " + formatCountdown(el.dataset.iso);
-          });
-        }, 60000);
-      } catch (err) {
-        document.getElementById("meta-info").textContent =
-          "Chưa có file data/conferences.json. Hãy chạy GitHub Actions trước.";
-      }
-    }
-
-    document.getElementById("filter-country").addEventListener("change", (e) => {
-      populateCityDropdown(e.target.value);
-      render();
-    });
-
-    ["search", "filter-sub", "filter-rank", "filter-city", "filter-year", "filter-date-from", "filter-date-to"]
-      .forEach(id => document.getElementById(id).addEventListener("input", render));
-
-    document.getElementById("btn-reset").addEventListener("click", () => {
-      ["search", "filter-sub", "filter-rank", "filter-country", "filter-city", "filter-year", "filter-date-from", "filter-date-to"]
-        .forEach(id => document.getElementById(id).value = "");
-      populateCityDropdown("");
-      showBookmarksOnly = false;
-      document.getElementById("btn-bookmarks").classList.remove("bg-amber-50", "border-amber-400");
-      render();
-    });
-
-    document.getElementById("btn-bookmarks").addEventListener("click", (e) => {
-      showBookmarksOnly = !showBookmarksOnly;
-      e.currentTarget.classList.toggle("bg-amber-50", showBookmarksOnly);
-      e.currentTarget.classList.toggle("border-amber-400", showBookmarksOnly);
-      render();
-    });
-
-    init();
-  </script>
+  <script type="module" src="assets/app.js?v=4"></script>
 </body>
 </html>

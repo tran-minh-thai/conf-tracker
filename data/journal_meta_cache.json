@@ -1,0 +1,9206 @@
+{
+"4or": {
+"title": "4OR",
+"issn": [
+"1614-2411",
+"1619-4500"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10288-025-00586-y"
+},
+"aaecc": {
+"title": "Applicable Algebra in Engineering, Communication and Computing",
+"issn": [
+"0938-1279",
+"1432-0622"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00200-023-00631-5"
+},
+"aai": {
+"title": "Applied Artificial Intelligence",
+"issn": [
+"0883-9514",
+"1087-6545"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/08839514.2024.2440837"
+},
+"aaiml": {
+"title": "Advances in Artificial Intelligence and Machine Learning",
+"issn": [
+"2582-9793"
+],
+"publisher": "Advances in Artificial Intelligence and Machine Learning",
+"doi": "10.54364/aaiml.2025.53240"
+},
+"aam": {
+"title": "Advances in Applied Mathematics",
+"issn": [
+"0196-8858"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.aam.2025.102902"
+},
+"aamas": {
+"title": "Autonomous Agents and Multi-Agent Systems",
+"issn": [
+"1387-2532",
+"1573-7454"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10458-025-09705-9"
+},
+"aarc": {
+"title": "Automation and Remote Control",
+"issn": [
+"0005-1179",
+"1608-3032"
+],
+"publisher": "Pleiades Publishing Ltd",
+"doi": "10.1134/S0005117925600636"
+},
+"access": {
+"title": "IEEE Access",
+"issn": [
+"2169-3536"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/ACCESS.2025.3599723"
+},
+"accs": {
+"title": "Automatic Control and Computer Sciences",
+"issn": [
+"0146-4116",
+"1558-108X"
+],
+"publisher": "Allerton Press",
+"doi": "10.3103/S0146411625701068"
+},
+"aci": {
+"title": "Applied Clinical Informatics",
+"issn": [
+"1869-0327"
+],
+"publisher": "Georg Thieme Verlag KG",
+"doi": "10.1055/a-2750-4422"
+},
+"acisc": {
+"title": "Applied Computational Intelligence and Soft Computing",
+"issn": [
+"1687-9724",
+"1687-9732"
+],
+"publisher": "Wiley",
+"doi": "10.1155/acis/8883527"
+},
+"acmjcss": {
+"title": "ACM Journal on Computing and Sustainable Societies",
+"issn": [
+"2834-5533"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3724409"
+},
+"adac": {
+"title": "Advances in Data Analysis and Classification",
+"issn": [
+"1862-5347",
+"1862-5355"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11634-024-00595-5"
+},
+"adam": {
+"title": "The Art of Discrete and Applied Mathematics",
+"issn": [
+"2590-9770"
+],
+"publisher": "University of Primorska Press",
+"doi": "10.26493/2590-9770.1782.ec6"
+},
+"adb": {
+"title": "Adaptive Behavior",
+"issn": [
+"1059-7123",
+"1741-2633"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/10597123241299462"
+},
+"adcm": {
+"title": "Advances in Computational Mathematics",
+"issn": [
+"1019-7168",
+"1572-9044"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10444-025-10260-w"
+},
+"adhoc": {
+"title": "Ad Hoc Networks",
+"issn": [
+"1570-8705"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.adhoc.2024.103750"
+},
+"adt": {
+"title": "Annals of Telecommunications",
+"issn": [
+"0003-4347",
+"1958-9395"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s12243-025-01141-w"
+},
+"aei": {
+"title": "Advanced Engineering Informatics",
+"issn": [
+"1474-0346"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.aei.2025.103245"
+},
+"aeog": {
+"title": "International Journal of Applied Earth Observation and Geoinformation",
+"issn": [
+"1569-8432"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.jag.2025.104819"
+},
+"aes": {
+"title": "Advances in Engineering Software",
+"issn": [
+"0965-9978"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.advengsoft.2025.104017"
+},
+"agis": {
+"title": "Annals of GIS",
+"issn": [
+"1947-5683",
+"1947-5691"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/19475683.2025.2523737"
+},
+"ai": {
+"title": "Artificial Intelligence",
+"issn": [
+"0004-3702"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.artint.2025.104291"
+},
+"aicom": {
+"title": "AI Communications",
+"issn": [
+"0921-7126",
+"1875-8452"
+],
+"publisher": "SAGE Publications",
+"doi": "10.3233/AIC-239001"
+},
+"aiedu": {
+"title": "International Journal of Artificial Intelligence in Education",
+"issn": [
+"1560-4292"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1007/s40593-025-00504-7"
+},
+"aiethics": {
+"title": "AI and Ethics",
+"issn": [
+"2730-5953",
+"2730-5961"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s43681-025-00740-6"
+},
+"ail": {
+"title": "Artificial Intelligence and Law",
+"issn": [
+"0924-8463",
+"1572-8382"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10506-023-09380-9"
+},
+"aiopen": {
+"title": "AI Open",
+"issn": [
+"2666-6510"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.aiopen.2025.01.001"
+},
+"air": {
+"title": "Artificial Intelligence Review",
+"issn": [
+"1573-7462"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10462-024-11092-8"
+},
+"ais": {
+"title": "AI &amp; SOCIETY",
+"issn": [
+"0951-5666",
+"1435-5655"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00146-025-02404-9"
+},
+"aisthci": {
+"title": "AIS Transactions on Human-Computer Interaction",
+"issn": [
+"1944-3900"
+],
+"publisher": "Association for Information Systems",
+"doi": "10.17705/1thci.00098"
+},
+"aisy": {
+"title": "Advanced Intelligent Systems",
+"issn": [
+"2640-4567"
+],
+"publisher": "Wiley",
+"doi": "10.1002/aisy.202570001"
+},
+"ajis": {
+"title": "Australasian Journal of Information Systems",
+"issn": [
+"1326-2238"
+],
+"publisher": "Australasian Association for Information Systems",
+"doi": "10.3127/ajis.v29.4793"
+},
+"akcej": {
+"title": "AKCE International Journal of Graphs and Combinatorics",
+"issn": [
+"0972-8600",
+"2543-3474"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/09728600.2024.2368126"
+},
+"algorithmica": {
+"title": "Algorithmica",
+"issn": [
+"0178-4617",
+"1432-0541"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00453-025-01299-8"
+},
+"algorithms": {
+"title": "Algorithms",
+"issn": [
+"1999-4893"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/a18100629"
+},
+"alr": {
+"title": "Artificial Life and Robotics",
+"issn": [
+"1433-5298",
+"1614-7456"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10015-025-01026-0"
+},
+"amai": {
+"title": "Annals of Mathematics and Artificial Intelligence",
+"issn": [
+"1012-2443",
+"1573-7470"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10472-023-09876-9"
+},
+"amc": {
+"title": "Applied Mathematics and Computation",
+"issn": [
+"0096-3003"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.amc.2025.129472"
+},
+"amco": {
+"title": "Advances in Mathematics of Communications",
+"issn": [
+"1930-5338",
+"1930-5346"
+],
+"publisher": "American Institute of Mathematical Sciences (AIMS)",
+"doi": "10.3934/amc.2024019"
+},
+"amcs": {
+"title": "International Journal of Applied Mathematics and Computer Science",
+"issn": [
+"1641-876X",
+"2083-8492"
+],
+"publisher": "University of Zielona Góra, Poland",
+"doi": "10.61822/amcs-2025-0022"
+},
+"amses": {
+"title": "Advanced Modeling and Simulation in Engineering Sciences",
+"issn": [
+"2213-7467"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1186/s40323-025-00297-3"
+},
+"annals": {
+"title": "IEEE Annals of the History of Computing",
+"issn": [
+"1058-6180",
+"1934-1547"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MAHC.2025.3629438"
+},
+"anor": {
+"title": "Annals of Operations Research",
+"issn": [
+"0254-5330",
+"1572-9338"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10479-024-06450-2"
+},
+"ans": {
+"title": "Applied Network Science",
+"issn": [
+"2364-8228"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s41109-025-00723-w"
+},
+"apal": {
+"title": "Annals of Pure and Applied Logic",
+"issn": [
+"0168-0072"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.apal.2024.103489"
+},
+"apin": {
+"title": "Applied Intelligence",
+"issn": [
+"0924-669X",
+"1573-7497"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10489-025-06381-w"
+},
+"apjor": {
+"title": "Asia-Pacific Journal of Operational Research",
+"issn": [
+"0217-5959",
+"1793-7019"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/S0217595924400104"
+},
+"appml": {
+"title": "Applied Mathematics Letters",
+"issn": [
+"0893-9659"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.aml.2025.109655"
+},
+"ar": {
+"title": "Advanced Robotics",
+"issn": [
+"0169-1864",
+"1568-5535"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/01691864.2025.2496677"
+},
+"arc": {
+"title": "Annual Reviews in Control",
+"issn": [
+"1367-5788"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.arcontrol.2025.101027"
+},
+"arcras": {
+"title": "Annual Review of Control, Robotics, and Autonomous Systems",
+"issn": [
+"2573-5144"
+],
+"publisher": "Annual Reviews",
+"doi": "10.1146/annurev-control-030323-024047"
+},
+"arobots": {
+"title": "Autonomous Robots",
+"issn": [
+"0929-5593",
+"1573-7527"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10514-025-10201-y"
+},
+"array": {
+"title": "Array",
+"issn": [
+"2590-0056"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.array.2025.100508"
+},
+"arscom": {
+"title": "Ars Combinatoria",
+"issn": [
+"0381-7032",
+"2817-5204"
+],
+"publisher": "Combinatorial Press",
+"doi": "10.61091/ars162-13"
+},
+"arsmc": {
+"title": "Ars Mathematica Contemporanea",
+"issn": [
+"1855-3966",
+"1855-3974"
+],
+"publisher": "University of Primorska Press",
+"doi": "10.26493/1855-3974.3023.c45"
+},
+"artmed": {
+"title": "Artificial Intelligence in Medicine",
+"issn": [
+"0933-3657"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.artmed.2025.103222"
+},
+"asc": {
+"title": "Applied Soft Computing",
+"issn": [
+"1568-4946"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.asoc.2025.113391"
+},
+"ascom": {
+"title": "Astronomy and Computing",
+"issn": [
+"2213-1337"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.ascom.2024.100896"
+},
+"ase": {
+"title": "Automated Software Engineering",
+"issn": [
+"0928-8910",
+"1573-7535"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10515-025-00538-0"
+},
+"aslib": {
+"title": "Aslib Journal of Information Management",
+"issn": [
+"2050-3806",
+"2050-3814"
+],
+"publisher": "Emerald",
+"doi": "10.1108/AJIM-05-2023-0155"
+},
+"at": {
+"title": "at - Automatisierungstechnik",
+"issn": [
+"0178-2312",
+"2196-677X"
+],
+"publisher": "Walter de Gruyter GmbH",
+"doi": "10.1515/auto-2024-0162"
+},
+"auinsy": {
+"title": "Autonomous Intelligent Systems",
+"issn": [
+"2730-616X"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s43684-025-00098-w"
+},
+"automatica": {
+"title": "Automatica",
+"issn": [
+"0005-1098"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.automatica.2025.112437"
+},
+"axioms": {
+"title": "Axioms",
+"issn": [
+"2075-1680"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/axioms14080583"
+},
+"bams": {
+"title": "Bio-Algorithms and Med-Systems",
+"issn": [
+"1895-9091",
+"1896-530X"
+],
+"publisher": "Index Copernicus",
+"doi": "10.5604/01.3001.0055.1198"
+},
+"bcds": {
+"title": "Bulletin of Computer and Data Sciences",
+"issn": [
+"3072-2926"
+],
+"publisher": "TechForum Publishing Group",
+"doi": "10.71448/bcds2561-5"
+},
+"bcra": {
+"title": "Blockchain: Research and Applications",
+"issn": [
+"2096-7209"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.bcra.2024.100258"
+},
+"bdcc": {
+"title": "Big Data and Cognitive Computing",
+"issn": [
+"2504-2289"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/bdcc9050118"
+},
+"bdr": {
+"title": "Big Data Research",
+"issn": [
+"2214-5796"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.bdr.2025.100539"
+},
+"behaviourIT": {
+"title": "Behaviour &amp; Information Technology",
+"issn": [
+"0144-929X",
+"1362-3001"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/0144929x.2025.2481640"
+},
+"bib": {
+"title": "Briefings in Bioinformatics",
+"issn": [
+"1467-5463",
+"1477-4054"
+],
+"publisher": "Oxford University Press (OUP)",
+"doi": "10.1093/bib/bbaf156"
+},
+"bigdata": {
+"title": "Big Data",
+"issn": [
+"2167-6461",
+"2167-647X"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1089/big.2023.0134"
+},
+"bigdatama": {
+"title": "Big Data Mining and Analytics",
+"issn": [
+"2096-0654",
+"2097-406X"
+],
+"publisher": "Tsinghua University Press",
+"doi": "10.26599/bdma.2024.9020087"
+},
+"bigdatasociety": {
+"title": "Big Data &amp; Society",
+"issn": [
+"2053-9517"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/20539517251398719"
+},
+"biodatamining": {
+"title": "BioData Mining",
+"issn": [
+"1756-0381"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1186/s13040-025-00450-z"
+},
+"biodb": {
+"title": "Database",
+"issn": [
+"1758-0463"
+],
+"publisher": "Oxford University Press (OUP)",
+"doi": "10.1093/database/baaf015"
+},
+"bioinformatics": {
+"title": "Bioinformatics",
+"issn": [
+"1367-4803",
+"1367-4811"
+],
+"publisher": "Oxford University Press (OUP)",
+"doi": "10.1093/bioinformatics/btaf362"
+},
+"biosystems": {
+"title": "BioSystems",
+"issn": [
+"0303-2647"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.biosystems.2025.105466"
+},
+"bise": {
+"title": "Business &amp; Information Systems Engineering",
+"issn": [
+"1867-0202",
+"2363-7005"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s12599-024-00911-5"
+},
+"bjet": {
+"title": "British Journal of Educational Technology",
+"issn": [
+"0007-1013",
+"1467-8535"
+],
+"publisher": "Wiley",
+"doi": "10.1111/bjet.13611"
+},
+"bjmc": {
+"title": "Baltic Journal of Modern Computing",
+"issn": [
+"2255-8950"
+],
+"publisher": "University of Latvia",
+"doi": "10.22364/bjmc.2025.13.4.05"
+},
+"bmcbi": {
+"title": "BMC Bioinformatics",
+"issn": [
+"1471-2105"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1186/s12859-025-06054-y"
+},
+"bmcmi": {
+"title": "BMC Medical Imaging",
+"issn": [
+"1471-2342"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1186/s12880-025-01744-8"
+},
+"bpmj": {
+"title": "Business Process Management Journal",
+"issn": [
+"1463-7154",
+"1758-4116"
+],
+"publisher": "Emerald",
+"doi": "10.1108/BPMJ-01-2024-0003"
+},
+"brain": {
+"title": "Brain Connectivity",
+"issn": [
+"2158-0014",
+"2158-0022"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1089/brain.2025.0010"
+},
+"braininf": {
+"title": "Brain Informatics",
+"issn": [
+"2198-4018",
+"2198-4026"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1186/s40708-025-00275-w"
+},
+"bsl": {
+"title": "The Bulletin of Symbolic Logic",
+"issn": [
+"1079-8986",
+"1943-5894"
+],
+"publisher": "Cambridge University Press (CUP)",
+"doi": "10.1017/bsl.2025.9"
+},
+"bspc": {
+"title": "Biomedical Signal Processing and Control",
+"issn": [
+"1746-8094"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.bspc.2024.106948"
+},
+"caaitrit": {
+"title": "CAAI Transactions on Intelligence Technology",
+"issn": [
+"2468-2322",
+"2468-6557"
+],
+"publisher": "Institution of Engineering and Technology (IET)",
+"doi": "10.1049/cit2.70041"
+},
+"cacie": {
+"title": "Computer-Aided Civil and Infrastructure Engineering",
+"issn": [
+"1093-9687"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1111/mice.70008"
+},
+"cacm": {
+"title": "Communications of the ACM",
+"issn": [
+"0001-0782",
+"1557-7317"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3722138"
+},
+"cad": {
+"title": "Computer-Aided Design",
+"issn": [
+"0010-4485"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.cad.2024.103836"
+},
+"caeai": {
+"title": "Computers and Education: Artificial Intelligence",
+"issn": [
+"2666-920X"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.caeai.2025.100424"
+},
+"caee": {
+"title": "Computer Applications in Engineering Education",
+"issn": [
+"1061-3773",
+"1099-0542"
+],
+"publisher": "Wiley",
+"doi": "10.1002/cae.70069"
+},
+"cagd": {
+"title": "Computer Aided Geometric Design",
+"issn": [
+"0167-8396"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.cagd.2025.102457"
+},
+"cai": {
+"title": "Computing and Informatics",
+"issn": [
+"2585-8807"
+],
+"publisher": "Central Library of the Slovak Academy of Sciences",
+"doi": "10.31577/cai_2025_5_1101"
+},
+"cais": {
+"title": "Communications of the Association for Information Systems",
+"issn": [
+"1529-3181"
+],
+"publisher": "Association for Information Systems",
+"doi": "10.17705/1cais.04929"
+},
+"cal": {
+"title": "IEEE Computer Architecture Letters",
+"issn": [
+"1556-6056",
+"1556-6064",
+"2473-2575"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/LCA.2024.3522777"
+},
+"cam": {
+"title": "Computational and Applied Mathematics",
+"issn": [
+"1807-0302",
+"2238-3603"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s40314-025-03093-2"
+},
+"candc": {
+"title": "Computational Biology and Chemistry",
+"issn": [
+"1476-9271"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.compbiolchem.2025.108357"
+},
+"candie": {
+"title": "Computers &amp; Industrial Engineering",
+"issn": [
+"0360-8352"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.cie.2025.111392"
+},
+"cars": {
+"title": "International Journal of Computer Assisted Radiology and Surgery",
+"issn": [
+"1861-6429"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11548-025-03331-2"
+},
+"cartographica": {
+"title": "Cartographica",
+"issn": [
+"0317-7173",
+"1911-9925"
+],
+"publisher": "University of Toronto Press Inc. (UTPress)",
+"doi": "10.3138/cart-2024-0033"
+},
+"cas": {
+"title": "Cybernetics and Systems",
+"issn": [
+"0196-9722",
+"1087-6553"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/01969722.2023.2296251"
+},
+"cbm": {
+"title": "Computers in Biology and Medicine",
+"issn": [
+"0010-4825"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.compbiomed.2025.109912"
+},
+"cbsn": {
+"title": "Cyberpsychology, Behavior, and Social Networking",
+"issn": [
+"2152-2715",
+"2152-2723"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/21522715251399256"
+},
+"ccds": {
+"title": "Cryptography and Communications",
+"issn": [
+"1936-2447",
+"1936-2455"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s12095-024-00762-7"
+},
+"cce": {
+"title": "Computers &amp; Chemical Engineering",
+"issn": [
+"0098-1354"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.compchemeng.2025.109012"
+},
+"ccfthpc": {
+"title": "CCF Transactions on High Performance Computing",
+"issn": [
+"2524-4922",
+"2524-4930"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s42514-025-00217-2"
+},
+"ccftpci": {
+"title": "CCF Transactions on Pervasive Computing and Interaction",
+"issn": [
+"2524-521X",
+"2524-5228"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s42486-024-00169-6"
+},
+"ccs": {
+"title": "Cognitive Computation and Systems",
+"issn": [
+"2517-7567"
+],
+"publisher": "Institution of Engineering and Technology (IET)",
+"doi": "10.1049/ccs2.12116"
+},
+"ce": {
+"title": "Computers &amp; Education",
+"issn": [
+"0360-1315"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.compedu.2025.105419"
+},
+"cea": {
+"title": "Computers and Electronics in Agriculture",
+"issn": [
+"0168-1699"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.compag.2025.110016"
+},
+"cee": {
+"title": "Computers and Electrical Engineering",
+"issn": [
+"0045-7906"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.compeleceng.2025.110405"
+},
+"cejcs": {
+"title": "Open Computer Science",
+"issn": [
+"2299-1093"
+],
+"publisher": "Walter de Gruyter GmbH",
+"doi": "10.1515/comp-2024-0020"
+},
+"cejor": {
+"title": "Central European Journal of Operations Research",
+"issn": [
+"1435-246X",
+"1613-9178"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10100-025-00981-0"
+},
+"cem": {
+"title": "IEEE Consumer Electronics Magazine",
+"issn": [
+"2162-2248",
+"2162-2256"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MCE.2024.3405109"
+},
+"cexr": {
+"title": "Computers &amp; Education: X Reality",
+"issn": [
+"2949-6780"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.cexr.2025.100118"
+},
+"cg": {
+"title": "Computers &amp; Graphics",
+"issn": [
+"0097-8493"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.cag.2025.104327"
+},
+"cga": {
+"title": "IEEE Computer Graphics and Applications",
+"issn": [
+"0272-1716",
+"1558-1756"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MCG.2024.3462926"
+},
+"cgf": {
+"title": "Computer Graphics Forum",
+"issn": [
+"0167-7055",
+"1467-8659"
+],
+"publisher": "Wiley",
+"doi": "10.1111/cgf.70026"
+},
+"chb": {
+"title": "Computers in Human Behavior",
+"issn": [
+"0747-5632"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.chb.2025.108649"
+},
+"chbah": {
+"title": "Computers in Human Behavior: Artificial Humans",
+"issn": [
+"2949-8821"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.chbah.2025.100210"
+},
+"chinaf": {
+"title": "Science China Information Sciences",
+"issn": [
+"1674-733X",
+"1869-1919"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11432-024-4333-7"
+},
+"ci": {
+"title": "Computational Intelligence",
+"issn": [
+"0824-7935",
+"1467-8640"
+],
+"publisher": "Wiley",
+"doi": "10.1111/coin.70128"
+},
+"cic": {
+"title": "IACR Communications in Cryptology",
+"issn": [
+"3006-5496"
+],
+"publisher": "International Association for Cryptologic Research",
+"doi": "10.62056/abksdk5vt"
+},
+"cii": {
+"title": "Computers in Industry",
+"issn": [
+"0166-3615"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.compind.2025.104318"
+},
+"cim": {
+"title": "IEEE Computational Intelligence Magazine",
+"issn": [
+"1556-603X",
+"1556-6048"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MCI.2024.3505352"
+},
+"cin": {
+"title": "Computational Intelligence and Neuroscience",
+"issn": [
+"1687-5265",
+"1687-5273"
+],
+"publisher": "Wiley",
+"doi": "10.1155/2022/9670191"
+},
+"cis": {
+"title": "Mechatronic Systems and Control",
+"issn": [
+"2561-178X"
+],
+"publisher": "ACTA Press",
+"doi": "10.2316/J.2025.201-0488"
+},
+"cj": {
+"title": "The Computer Journal",
+"issn": [
+"0010-4620",
+"1460-2067"
+],
+"publisher": "Oxford University Press (OUP)",
+"doi": "10.1093/comjnl/bxaf060"
+},
+"classification": {
+"title": "Journal of Classification",
+"issn": [
+"0176-4268",
+"1432-1343"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00357-024-09481-3"
+},
+"cleiej": {
+"title": "CLEI Electronic Journal",
+"issn": [
+"0717-5000"
+],
+"publisher": "Centro Latino Americano de Estudios en Informatica",
+"doi": "10.19153/cleiej.28.4.5"
+},
+"clsr": {
+"title": "Computer Law &amp; Security Review",
+"issn": [
+"2212-473X"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.clsr.2025.106111"
+},
+"cluster": {
+"title": "Cluster Computing",
+"issn": [
+"1386-7857",
+"1573-7543"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10586-025-05255-7"
+},
+"cm": {
+"title": "IEEE Communications Magazine",
+"issn": [
+"0163-6804",
+"1558-1896"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MCOM.001.2400760"
+},
+"cma": {
+"title": "Computers &amp; Mathematics with Applications",
+"issn": [
+"0898-1221"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.camwa.2025.02.019"
+},
+"cmam": {
+"title": "Computational Methods in Applied Mathematics",
+"issn": [
+"1609-4840",
+"1609-9389"
+],
+"publisher": "Walter de Gruyter GmbH",
+"doi": "10.1515/cmam-2024-0131"
+},
+"cmbbeiv": {
+"title": "Computer Methods in Biomechanics and Biomedical Engineering: Imaging &amp; Visualization",
+"issn": [
+"2168-1163",
+"2168-1171"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/21681163.2025.2556687"
+},
+"cmc": {
+"title": "Computers, Materials &amp; Continua",
+"issn": [
+"1546-2226"
+],
+"publisher": "Tech Science Press",
+"doi": "10.32604/cmc.2025.066306"
+},
+"cmig": {
+"title": "Computerized Medical Imaging and Graphics",
+"issn": [
+"0895-6111"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.compmedimag.2025.102660"
+},
+"cmm": {
+"title": "Computational and Mathematical Methods",
+"issn": [
+"2577-7408"
+],
+"publisher": "Wiley",
+"doi": "10.1155/cmm4/6402353"
+},
+"cmpb": {
+"title": "Computer Methods and Programs in Biomedicine",
+"issn": [
+"0169-2607"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.cmpb.2025.108605"
+},
+"cms": {
+"title": "Computational Management Science",
+"issn": [
+"1619-697X",
+"1619-6988"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10287-024-00527-w"
+},
+"cn": {
+"title": "Computer Networks",
+"issn": [
+"1389-1286"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.comnet.2025.111159"
+},
+"cnsns": {
+"title": "Communications in Nonlinear Science and Numerical Simulation",
+"issn": [
+"1007-5704"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.cnsns.2025.108750"
+},
+"coap": {
+"title": "Computational Optimization and Applications",
+"issn": [
+"0926-6003",
+"1573-2894"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10589-025-00709-5"
+},
+"cogcom": {
+"title": "Cognitive Computation",
+"issn": [
+"1866-9956",
+"1866-9964"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s12559-024-10384-z"
+},
+"cogsci": {
+"title": "Cognitive Science",
+"issn": [
+"0364-0213",
+"1551-6709"
+],
+"publisher": "Wiley",
+"doi": "10.1111/cogs.70051"
+},
+"cogsr": {
+"title": "Cognitive Systems Research",
+"issn": [
+"1389-0417"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.cogsys.2025.101411"
+},
+"coling": {
+"title": "Computational Linguistics",
+"issn": [
+"0891-2017",
+"1530-9312"
+],
+"publisher": "MIT Press",
+"doi": "10.1162/coli_a_00542"
+},
+"combinatorica": {
+"title": "Combinatorica",
+"issn": [
+"0209-9683",
+"1439-6912"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00493-025-00187-7"
+},
+"combinatorics": {
+"title": "The Electronic Journal of Combinatorics",
+"issn": [
+"1077-8926"
+],
+"publisher": "The Electronic Journal of Combinatorics",
+"doi": "10.37236/13181"
+},
+"combtheory": {
+"title": "Combinatorial Theory",
+"issn": [
+"2766-1334"
+],
+"publisher": "California Digital Library (CDL)",
+"doi": "10.5070/c65365555"
+},
+"comcom": {
+"title": "Computer Communications",
+"issn": [
+"0140-3664"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.comcom.2024.107989"
+},
+"comgeo": {
+"title": "Computational Geometry",
+"issn": [
+"0925-7721"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.comgeo.2024.102159"
+},
+"cominfsys": {
+"title": "Communications in Information and Systems",
+"issn": [
+"1526-7555",
+"2163-4548"
+],
+"publisher": "International Press of Boston",
+"doi": "10.4310/cis.250822222725"
+},
+"comintsys": {
+"title": "Complex &amp; Intelligent Systems",
+"issn": [
+"2198-6053",
+"2199-4536"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s40747-025-01971-0"
+},
+"complexity": {
+"title": "Complexity",
+"issn": [
+"1076-2787",
+"1099-0526"
+],
+"publisher": "Wiley",
+"doi": "10.1155/cplx/3086287"
+},
+"compnet": {
+"title": "Journal of Complex Networks",
+"issn": [
+"2051-1329"
+],
+"publisher": "Oxford University Press (OUP)",
+"doi": "10.1093/comnet/cnaf003"
+},
+"compsec": {
+"title": "Computers &amp; Security",
+"issn": [
+"0167-4048"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.cose.2025.104547"
+},
+"compsys": {
+"title": "Complex Systems",
+"issn": [
+"0891-2513"
+],
+"publisher": "Wolfram Research, Inc.",
+"doi": "10.25088/complexsystems.34.2.203"
+},
+"computability": {
+"title": "Computability",
+"issn": [
+"2211-3568",
+"2211-3576"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/22113568251335491"
+},
+"computation": {
+"title": "Computation",
+"issn": [
+"2079-3197"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/computation13020035"
+},
+"computer": {
+"title": "Computer",
+"issn": [
+"0018-9162",
+"1558-0814"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MC.2025.3540533"
+},
+"computers": {
+"title": "Computers",
+"issn": [
+"2073-431X"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/computers14110485"
+},
+"computing": {
+"title": "Computing",
+"issn": [
+"0010-485X",
+"1436-5057"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00607-025-01531-x"
+},
+"comsis": {
+"title": "Computer Science and Information Systems",
+"issn": [
+"1820-0214",
+"2406-1018"
+],
+"publisher": "National Library of Serbia",
+"doi": "10.2298/csis241201033l"
+},
+"comsur": {
+"title": "IEEE Communications Surveys &amp; Tutorials",
+"issn": [
+"1553-877X",
+"2373-745X"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/COMST.2024.3427324"
+},
+"concurrency": {
+"title": "Concurrency and Computation: Practice and Experience",
+"issn": [
+"1532-0626",
+"1532-0634"
+],
+"publisher": "Wiley",
+"doi": "10.1002/cpe.70073"
+},
+"connection": {
+"title": "Connection Science",
+"issn": [
+"0954-0091",
+"1360-0494"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/09540091.2024.2447373"
+},
+"cor": {
+"title": "Computers &amp; Operations Research",
+"issn": [
+"0305-0548"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.cor.2024.106954"
+},
+"cp": {
+"title": "Cognitive Processing",
+"issn": [
+"1612-4782",
+"1612-4790"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10339-025-01259-8"
+},
+"cpc": {
+"title": "Combinatorics, Probability and Computing",
+"issn": [
+"0963-5483",
+"1469-2163"
+],
+"publisher": "Cambridge University Press (CUP)",
+"doi": "10.1017/s0963548324000427"
+},
+"cphysics": {
+"title": "Computer Physics Communications",
+"issn": [
+"0010-4655"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.cpc.2025.109773"
+},
+"cr": {
+"title": "Computer und Recht",
+"issn": [
+"2194-4172"
+],
+"publisher": "Verlag Dr. Otto Schmidt",
+"doi": "10.9785/cr-2025-toc4104"
+},
+"crl": {
+"title": "College &amp; Research Libraries",
+"issn": [
+"2150-6701"
+],
+"publisher": "American Library Association",
+"doi": "10.5860/crl.86.2.255"
+},
+"crossroads": {
+"title": "XRDS: Crossroads, The ACM Magazine for Students",
+"issn": [
+"1528-4972",
+"1528-4980"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3778047"
+},
+"cryptography": {
+"title": "Cryptography",
+"issn": [
+"2410-387X"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/cryptography9010012"
+},
+"csbs": {
+"title": "Computing and Software for Big Science",
+"issn": [
+"2510-2036",
+"2510-2044"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s41781-025-00139-2"
+},
+"csda": {
+"title": "Computational Statistics &amp; Data Analysis",
+"issn": [
+"0167-9473"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.csda.2024.108054"
+},
+"cse": {
+"title": "Computing in Science &amp; Engineering",
+"issn": [
+"1521-9615",
+"1558-366X"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MCSE.2025.3534718"
+},
+"csi": {
+"title": "Computer Standards &amp; Interfaces",
+"issn": [
+"0920-5489"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.csi.2024.103898"
+},
+"csl": {
+"title": "Computer Speech &amp; Language",
+"issn": [
+"0885-2308"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.csl.2024.101706"
+},
+"csm": {
+"title": "IEEE Communications Standards Magazine",
+"issn": [
+"2471-2825",
+"2471-2833"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MCOMSTD.0001.2300054"
+},
+"csms": {
+"title": "Complex System Modeling and Simulation",
+"issn": [
+"2096-9929",
+"2097-3705"
+],
+"publisher": "Tsinghua University Press",
+"doi": "10.23919/csms.2024.0026"
+},
+"csr": {
+"title": "Computer Science Review",
+"issn": [
+"1574-0137"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.cosrev.2025.100748"
+},
+"cssc": {
+"title": "Communications in Statistics - Simulation and Computation",
+"issn": [
+"0361-0918",
+"1532-4141"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/03610918.2023.2251727"
+},
+"csse": {
+"title": "Computer Systems Science and Engineering",
+"issn": [
+"0267-6192"
+],
+"publisher": "Tech Science Press",
+"doi": "10.32604/csse.2024.058741"
+},
+"cssp": {
+"title": "Circuits, Systems, and Signal Processing",
+"issn": [
+"0278-081X",
+"1531-5878"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00034-025-03073-1"
+},
+"cstat": {
+"title": "Computational Statistics",
+"issn": [
+"0943-4062",
+"1613-9658"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00180-024-01513-1"
+},
+"csur": {
+"title": "ACM Computing Surveys",
+"issn": [
+"0360-0300",
+"1557-7341"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3721478"
+},
+"csysl": {
+"title": "IEEE Control Systems Letters",
+"issn": [
+"2475-1456"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/LCSYS.2025.3578934"
+},
+"ctw": {
+"title": "Cognition, Technology &amp; Work",
+"issn": [
+"1435-5558",
+"1435-5566"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10111-024-00771-9"
+},
+"cviu": {
+"title": "Computer Vision and Image Understanding",
+"issn": [
+"1077-3142"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.cviu.2025.104297"
+},
+"cvm": {
+"title": "Computational Visual Media",
+"issn": [
+"2096-0433",
+"2096-0662"
+],
+"publisher": "Tsinghua University Press",
+"doi": "10.26599/cvm.2025.9450490"
+},
+"cybersec": {
+"title": "Cybersecurity",
+"issn": [
+"2523-3246"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1186/s42400-025-00371-8"
+},
+"cybersecurity": {
+"title": "Journal of Cybersecurity",
+"issn": [
+"2057-2085",
+"2057-2093"
+],
+"publisher": "Oxford University Press (OUP)",
+"doi": "10.1093/cybsec/tyaf019"
+},
+"cys": {
+"title": "Computación y Sistemas",
+"issn": [
+"1405-5546",
+"2007-9737"
+],
+"publisher": "Instituto Politecnico Nacional/Centro de Investigacion en Computacion",
+"doi": "10.13053/cys-26-1-4167"
+},
+"daach": {
+"title": "Digital Applications in Archaeology and Cultural Heritage",
+"issn": [
+"2212-0548"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.daach.2025.e00412"
+},
+"dai": {
+"title": "Discover Artificial Intelligence",
+"issn": [
+"2731-0809"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s44163-025-00269-x"
+},
+"dam": {
+"title": "Discrete Applied Mathematics",
+"issn": [
+"0166-218X"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.dam.2025.03.019"
+},
+"dase": {
+"title": "Data Science and Engineering",
+"issn": [
+"2364-1185",
+"2364-1541"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s41019-025-00291-0"
+},
+"data": {
+"title": "Data",
+"issn": [
+"2306-5729"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/data10110173"
+},
+"datamine": {
+"title": "Data Mining and Knowledge Discovery",
+"issn": [
+"1384-5810",
+"1573-756X"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10618-025-01149-9"
+},
+"datascience": {
+"title": "Data Science Journal",
+"issn": [
+"1683-1470"
+],
+"publisher": "Ubiquity Press, Ltd.",
+"doi": "10.5334/dsj-2025-018"
+},
+"dbsk": {
+"title": "Datenbank-Spektrum",
+"issn": [
+"1610-1995",
+"1618-2162"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s13222-025-00508-6"
+},
+"dcan": {
+"title": "Digital Communications and Networks",
+"issn": [
+"2352-8648"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.dcan.2025.06.004"
+},
+"dcc": {
+"title": "Designs, Codes and Cryptography",
+"issn": [
+"0925-1022",
+"1573-7586"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10623-025-01612-0"
+},
+"dcg": {
+"title": "Discrete &amp; Computational Geometry",
+"issn": [
+"0179-5376",
+"1432-0444"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00454-024-00675-5"
+},
+"dga": {
+"title": "Dynamic Games and Applications",
+"issn": [
+"2153-0785",
+"2153-0793"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s13235-024-00603-5"
+},
+"dgov": {
+"title": "Digital Government: Research and Practice",
+"issn": [
+"2639-0175",
+"2691-199X"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3696009"
+},
+"di": {
+"title": "Forensic Science International: Digital Investigation",
+"issn": [
+"2666-2817"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.fsidi.2025.302005"
+},
+"digearth": {
+"title": "International Journal of Digital Earth",
+"issn": [
+"1753-8947",
+"1753-8955"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/17538947.2025.2554326"
+},
+"digital": {
+"title": "Digital",
+"issn": [
+"2673-6470"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/digital5030032"
+},
+"digitalsociety": {
+"title": "Digital Society",
+"issn": [
+"2731-4650",
+"2731-4669"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s44206-025-00232-4"
+},
+"dim": {
+"title": "Data and Information Management",
+"issn": [
+"2543-9251"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.dim.2024.100075"
+},
+"dint": {
+"title": "Data Intelligence",
+"issn": [
+"2096-7004"
+],
+"publisher": "China Science Publishing & Media Ltd.",
+"doi": "10.3724/2096-7004.di.2025.0084"
+},
+"diot": {
+"title": "Discover Internet of Things",
+"issn": [
+"2730-7239"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s43926-025-00100-0"
+},
+"displays": {
+"title": "Displays",
+"issn": [
+"0141-9382"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.displa.2025.102975"
+},
+"distribledger": {
+"title": "Distributed Ledger Technologies: Research and Practice",
+"issn": [
+"2769-6480"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3688812"
+},
+"dke": {
+"title": "Data &amp; Knowledge Engineering",
+"issn": [
+"0169-023X"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.datak.2025.102467"
+},
+"dm": {
+"title": "Discrete Mathematics",
+"issn": [
+"0012-365X"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.disc.2025.114438"
+},
+"dmaa": {
+"title": "Discrete Mathematics, Algorithms and Applications",
+"issn": [
+"1793-8309",
+"1793-8317"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/S1793830925500053"
+},
+"dmgt": {
+"title": "Discussiones Mathematicae Graph Theory",
+"issn": [
+"1234-3099",
+"2083-5892"
+],
+"publisher": "University of Zielona Góra, Poland",
+"doi": "10.7151/dmgt.2556"
+},
+"dmtcs": {
+"title": "Discrete Mathematics &amp; Theoretical Computer Science",
+"issn": [
+"1365-8050"
+],
+"publisher": "Centre pour la Communication Scientifique Directe (CCSD)",
+"doi": "10.46298/dmtcs.14658"
+},
+"dsj": {
+"title": "Decision Sciences",
+"issn": [
+"0011-7315",
+"1540-5915"
+],
+"publisher": "Wiley",
+"doi": "10.1111/deci.12620"
+},
+"dsp": {
+"title": "Digital Signal Processing",
+"issn": [
+"1051-2004"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.dsp.2025.105161"
+},
+"dss": {
+"title": "Decision Support Systems",
+"issn": [
+"0167-9236"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.dss.2025.114497"
+},
+"dt": {
+"title": "IEEE Design &amp; Test",
+"issn": [
+"2168-2356",
+"2168-2364"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MDAT.2025.3543461"
+},
+"dtrap": {
+"title": "Digital Threats: Research and Practice",
+"issn": [
+"2576-5337",
+"2692-1626"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3754456"
+},
+"dud": {
+"title": "Datenschutz und Datensicherheit - DuD",
+"issn": [
+"1614-0702",
+"1862-2607"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11623-025-2153-9"
+},
+"eaai": {
+"title": "Engineering Applications of Artificial Intelligence",
+"issn": [
+"0952-1976"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.engappai.2025.110598"
+},
+"eait": {
+"title": "Education and Information Technologies",
+"issn": [
+"1360-2357",
+"1573-7608"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10639-025-13577-7"
+},
+"ecoi": {
+"title": "Ecological Informatics",
+"issn": [
+"1574-9541"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.ecoinf.2025.103176"
+},
+"ecr": {
+"title": "Electronic Commerce Research",
+"issn": [
+"1389-5753",
+"1572-9362"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10660-023-09689-2"
+},
+"ecra": {
+"title": "Electronic Commerce Research and Applications",
+"issn": [
+"1567-4223"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.elerap.2025.101478"
+},
+"eecs": {
+"title": "Periodica Polytechnica Electrical Engineering and Computer Science",
+"issn": [
+"2064-5260",
+"2064-5279"
+],
+"publisher": "Periodica Polytechnica Budapest University of Technology and Economics",
+"doi": "10.3311/ppee.37384"
+},
+"efi": {
+"title": "Education for Information",
+"issn": [
+"0167-8329",
+"1875-8649"
+],
+"publisher": "SAGE Publications",
+"doi": "10.3233/efi-240090"
+},
+"eg": {
+"title": "Electronic Government, an International Journal",
+"issn": [
+"1740-7494",
+"1740-7508"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/EG.2025.144733"
+},
+"ei": {
+"title": "e+i Elektrotechnik und Informationstechnik",
+"issn": [
+"0932-383X",
+"1613-7620"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00502-025-01319-z"
+},
+"eis": {
+"title": "Enterprise Information Systems",
+"issn": [
+"1751-7575",
+"1751-7583"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/17517575.2024.2421396"
+},
+"ejasmp": {
+"title": "EURASIP Journal on Audio, Speech, and Music Processing",
+"issn": [
+"1687-4722"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1186/s13636-025-00414-5"
+},
+"ejasp": {
+"title": "EURASIP Journal on Advances in Signal Processing",
+"issn": [
+"1687-6180"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1186/s13634-025-01210-1"
+},
+"ejc": {
+"title": "European Journal of Combinatorics",
+"issn": [
+"0195-6698"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.ejc.2025.104133"
+},
+"ejco": {
+"title": "EURO Journal on Computational Optimization",
+"issn": [
+"2192-4406"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.ejco.2025.100109"
+},
+"ejcon": {
+"title": "European Journal of Control",
+"issn": [
+"0947-3580"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.ejcon.2024.101149"
+},
+"ejgta": {
+"title": "Electronic Journal of Graph Theory and Applications",
+"issn": [
+"2338-2287"
+],
+"publisher": "The Institute for Research and Community Services (LPPM) ITB",
+"doi": "10.5614/ejgta.2025.13.1.9"
+},
+"ejis": {
+"title": "European Journal of Information Systems",
+"issn": [
+"0960-085X",
+"1476-9344"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/0960085x.2024.2351442"
+},
+"ejisdc": {
+"title": "THE ELECTRONIC JOURNAL OF INFORMATION SYSTEMS IN DEVELOPING COUNTRIES",
+"issn": [
+"1681-4835"
+],
+"publisher": "Wiley",
+"doi": "10.1002/isd2.70021"
+},
+"ejisec": {
+"title": "EURASIP Journal on Information Security",
+"issn": [
+"2510-523X"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1186/s13635-025-00214-6"
+},
+"ejivp": {
+"title": "EURASIP Journal on Image and Video Processing",
+"issn": [
+"1687-5281"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1186/s13640-025-00683-2"
+},
+"ejtl": {
+"title": "EURO Journal on Transportation and Logistics",
+"issn": [
+"2192-4376"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.ejtl.2025.100153"
+},
+"ejwcn": {
+"title": "EURASIP Journal on Wireless Communications and Networking",
+"issn": [
+"1687-1499"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1186/s13638-025-02522-4"
+},
+"el": {
+"title": "The Electronic Library",
+"issn": [
+"0264-0473",
+"1758-616X"
+],
+"publisher": "Emerald",
+"doi": "10.1108/EL-01-2024-0002"
+},
+"electronicmarkets": {
+"title": "Electronic Markets",
+"issn": [
+"1019-6781",
+"1422-8890"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s12525-025-00804-9"
+},
+"elektrik": {
+"title": "Turkish Journal of Electrical Engineering and Computer Sciences",
+"issn": [
+"1300-0632"
+],
+"publisher": "The Scientific and Technological Research Council of Turkey (TUBITAK-ULAKBIM) - DIGITAL COMMONS JOURNALS",
+"doi": "10.55730/1300-0632.4148"
+},
+"em": {
+"title": "Experimental Mathematics",
+"issn": [
+"1058-6458",
+"1944-950X"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/10586458.2024.2379793"
+},
+"eninf": {
+"title": "Energy Informatics",
+"issn": [
+"2520-8942"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1186/s42162-025-00584-8"
+},
+"entcom": {
+"title": "Entertainment Computing",
+"issn": [
+"1875-9521"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.entcom.2024.100806"
+},
+"entropy": {
+"title": "Entropy",
+"issn": [
+"1099-4300"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/e27040399"
+},
+"envsoft": {
+"title": "Environmental Modelling &amp; Software",
+"issn": [
+"1364-8152"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.envsoft.2025.106533"
+},
+"eor": {
+"title": "European Journal of Operational Research",
+"issn": [
+"0377-2217"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.ejor.2024.07.027"
+},
+"ep": {
+"title": "The Journal of Electronic Publishing",
+"issn": [
+"1080-2711"
+],
+"publisher": "University of Michigan Library",
+"doi": "10.3998/jep.5942"
+},
+"epjds": {
+"title": "EPJ Data Science",
+"issn": [
+"2193-1127"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1140/epjds/s13688-025-00575-5"
+},
+"es": {
+"title": "Expert Systems",
+"issn": [
+"0266-4720",
+"1468-0394"
+],
+"publisher": "Wiley",
+"doi": "10.1111/exsy.13572"
+},
+"ese": {
+"title": "Empirical Software Engineering",
+"issn": [
+"1382-3256",
+"1573-7616"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10664-025-10708-z"
+},
+"esi": {
+"title": "Earth Science Informatics",
+"issn": [
+"1865-0473",
+"1865-0481"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s12145-025-01999-3"
+},
+"esl": {
+"title": "IEEE Embedded Systems Letters",
+"issn": [
+"1943-0663",
+"1943-0671"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/LES.2025.3538552"
+},
+"esticas": {
+"title": "IEEE Journal on Emerging and Selected Topics in Circuits and Systems",
+"issn": [
+"2156-3357",
+"2156-3365"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/JETCAS.2025.3590744"
+},
+"eswa": {
+"title": "Expert Systems with Applications",
+"issn": [
+"0957-4174"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.eswa.2025.128565"
+},
+"et": {
+"title": "Journal of Electronic Testing",
+"issn": [
+"0923-8174",
+"1573-0727"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10836-025-06170-w"
+},
+"ethicsit": {
+"title": "Ethics and Information Technology",
+"issn": [
+"1388-1957",
+"1572-8439"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10676-025-09868-9"
+},
+"ett": {
+"title": "Transactions on Emerging Telecommunications Technologies",
+"issn": [
+"2161-3915"
+],
+"publisher": "Wiley",
+"doi": "10.1002/ett.70146"
+},
+"evi": {
+"title": "Evolutionary Intelligence",
+"issn": [
+"1864-5909",
+"1864-5917"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s12065-025-01016-y"
+},
+"evs": {
+"title": "Evolving Systems",
+"issn": [
+"1868-6478",
+"1868-6486"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s12530-025-09675-z"
+},
+"ew": {
+"title": "EAI Endorsed Transactions on Energy Web",
+"issn": [
+"2032-944X"
+],
+"publisher": "European Alliance for Innovation n.o.",
+"doi": "10.4108/ew.3669"
+},
+"ewc": {
+"title": "Engineering with Computers",
+"issn": [
+"0177-0667",
+"1435-5663"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00366-025-02158-4"
+},
+"expert": {
+"title": "IEEE Intelligent Systems",
+"issn": [
+"1541-1672",
+"1941-1294"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MIS.2025.3561475"
+},
+"fams": {
+"title": "Frontiers in Applied Mathematics and Statistics",
+"issn": [
+"2297-4687"
+],
+"publisher": "Frontiers Media SA",
+"doi": "10.3389/fams.2025.1632271"
+},
+"fbinf": {
+"title": "Frontiers in Bioinformatics",
+"issn": [
+"2673-7647"
+],
+"publisher": "Frontiers Media SA",
+"doi": "10.3389/fbinf.2025.1513790"
+},
+"fbloc": {
+"title": "Frontiers in Blockchain",
+"issn": [
+"2624-7852"
+],
+"publisher": "Frontiers Media SA",
+"doi": "10.3389/fbloc.2025.1518577"
+},
+"fcomp": {
+"title": "Frontiers in Computer Science",
+"issn": [
+"2624-9898"
+],
+"publisher": "Frontiers Media SA",
+"doi": "10.3389/fcomp.2025.1652537"
+},
+"fcsc": {
+"title": "Frontiers of Computer Science",
+"issn": [
+"2095-2228",
+"2095-2236"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11704-024-40449-z"
+},
+"fdata": {
+"title": "Frontiers in Big Data",
+"issn": [
+"2624-909X"
+],
+"publisher": "Frontiers Media SA",
+"doi": "10.3389/fdata.2025.1604887"
+},
+"fdgth": {
+"title": "Frontiers in Digital Health",
+"issn": [
+"2673-253X"
+],
+"publisher": "Frontiers Media SA",
+"doi": "10.3389/fdgth.2025.1655446"
+},
+"ffa": {
+"title": "Finite Fields and Their Applications",
+"issn": [
+"1071-5797"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.ffa.2025.102661"
+},
+"fgcs": {
+"title": "Future Generation Computer Systems",
+"issn": [
+"0167-739X"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.future.2024.07.046"
+},
+"fi": {
+"title": "Future Internet",
+"issn": [
+"1999-5903"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/fi17100447"
+},
+"ficn": {
+"title": "Frontiers in Computational Neuroscience",
+"issn": [
+"1662-5188"
+],
+"publisher": "Frontiers Media SA",
+"doi": "10.3389/fncom.2025.1725924"
+},
+"fini": {
+"title": "Frontiers in Neuroinformatics",
+"issn": [
+"1662-5196"
+],
+"publisher": "Frontiers Media SA",
+"doi": "10.3389/fninf.2025.1661617"
+},
+"finr": {
+"title": "Frontiers in Neurorobotics",
+"issn": [
+"1662-5218"
+],
+"publisher": "Frontiers Media SA",
+"doi": "10.3389/fnbot.2025.1527908"
+},
+"firai": {
+"title": "Frontiers in Robotics and AI",
+"issn": [
+"2296-9144"
+],
+"publisher": "Frontiers Media SA",
+"doi": "10.3389/frobt.2025.1545733"
+},
+"firstmonday": {
+"title": "First Monday",
+"issn": [
+"1396-0466"
+],
+"publisher": "University of Illinois Libraries",
+"doi": "10.5210/fm.v30i2.13729"
+},
+"focm": {
+"title": "Foundations of Computational Mathematics",
+"issn": [
+"1615-3375",
+"1615-3383"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10208-024-09650-1"
+},
+"frai": {
+"title": "Frontiers in Artificial Intelligence",
+"issn": [
+"2624-8212"
+],
+"publisher": "Frontiers Media SA",
+"doi": "10.3389/frai.2025.1474017"
+},
+"frcmn": {
+"title": "Frontiers in Communications and Networks",
+"issn": [
+"2673-530X"
+],
+"publisher": "Frontiers Media SA",
+"doi": "10.3389/frcmn.2025.1416845"
+},
+"frma": {
+"title": "Frontiers in Research Metrics and Analytics",
+"issn": [
+"2504-0537"
+],
+"publisher": "Frontiers Media SA",
+"doi": "10.3389/frma.2025.1415831"
+},
+"frvir": {
+"title": "Frontiers in Virtual Reality",
+"issn": [
+"2673-4192"
+],
+"publisher": "Frontiers Media SA",
+"doi": "10.3389/frvir.2025.1526567"
+},
+"fss": {
+"title": "Fuzzy Sets and Systems",
+"issn": [
+"0165-0114"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.fss.2025.109526"
+},
+"fuin": {
+"title": "Fundamenta Informaticae",
+"issn": [
+"1875-8681"
+],
+"publisher": "Centre pour la Communication Scientifique Directe (CCSD)",
+"doi": "10.46298/fi.12374"
+},
+"gac": {
+"title": "Games and Culture",
+"issn": [
+"1555-4120",
+"1555-4139"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/15554120231202707"
+},
+"games": {
+"title": "Games",
+"issn": [
+"2073-4336"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/g16050052"
+},
+"gamesrp": {
+"title": "Games: Research and Practice",
+"issn": [
+"2832-5516"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3723350"
+},
+"gandc": {
+"title": "Computers &amp; Geosciences",
+"issn": [
+"0098-3004"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.cageo.2025.106025"
+},
+"gc": {
+"title": "Graphs and Combinatorics",
+"issn": [
+"0911-0119",
+"1435-5914"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00373-025-02960-3"
+},
+"geb": {
+"title": "Games and Economic Behavior",
+"issn": [
+"0899-8256"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.geb.2025.08.012"
+},
+"geoinformatica": {
+"title": "GeoInformatica",
+"issn": [
+"1384-6175",
+"1573-7624"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10707-025-00556-w"
+},
+"giq": {
+"title": "Government Information Quarterly",
+"issn": [
+"0740-624X"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.giq.2025.102054"
+},
+"gis": {
+"title": "International Journal of Geographical Information Science",
+"issn": [
+"1362-3087",
+"1365-8816"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/13658816.2025.2456556"
+},
+"gpb": {
+"title": "Genomics, Proteomics &amp; Bioinformatics",
+"issn": [
+"1672-0229",
+"2210-3244"
+],
+"publisher": "Oxford University Press (OUP)",
+"doi": "10.1093/gpbjnl/qzae029"
+},
+"grid": {
+"title": "Journal of Grid Computing",
+"issn": [
+"1570-7873",
+"1572-9184"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10723-025-09805-6"
+},
+"gsis": {
+"title": "Geo-spatial Information Science",
+"issn": [
+"1009-5020",
+"1993-5153"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/10095020.2025.2451204"
+},
+"gsta": {
+"title": "Grey Systems: Theory and Application",
+"issn": [
+"2043-9377"
+],
+"publisher": "Emerald",
+"doi": "10.1108/GS-03-2024-0028"
+},
+"hcc": {
+"title": "High-Confidence Computing",
+"issn": [
+"2667-2952"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.hcc.2025.100314"
+},
+"hcisys": {
+"title": "Human-Centric Intelligent Systems",
+"issn": [
+"2667-1336"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s44230-025-00115-4"
+},
+"health": {
+"title": "ACM Transactions on Computing for Healthcare",
+"issn": [
+"2637-8051"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3712710"
+},
+"hf": {
+"title": "Human Factors: The Journal of the Human Factors and Ergonomics Society",
+"issn": [
+"0018-7208",
+"1547-8181"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/00187208241306966"
+},
+"hij": {
+"title": "Health Informatics Journal",
+"issn": [
+"1460-4582",
+"1741-2811"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/14604582251316774"
+},
+"hisas": {
+"title": "Health Information Science and Systems",
+"issn": [
+"2047-2501"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s13755-024-00331-5"
+},
+"hmd": {
+"title": "HMD Praxis der Wirtschaftsinformatik",
+"issn": [
+"1436-3011",
+"2198-2775"
+],
+"publisher": "Springer Fachmedien Wiesbaden GmbH",
+"doi": "10.1365/s40702-025-01191-7"
+},
+"i-jep": {
+"title": "International Journal of Engineering Pedagogy (iJEP)",
+"issn": [
+"2192-4880"
+],
+"publisher": "International Association of Online Engineering (IAOE)",
+"doi": "10.3991/ijep.v15i1.48543"
+},
+"iahe": {
+"title": "The Internet and Higher Education",
+"issn": [
+"1096-7516"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.iheduc.2024.100974"
+},
+"iajit": {
+"title": "The International Arab Journal of Information Technology",
+"issn": [
+"1683-3198",
+"2309-4524"
+],
+"publisher": "Zarqa University",
+"doi": "10.34028/iajit/22/5/8"
+},
+"iam": {
+"title": "Information &amp; Management",
+"issn": [
+"0378-7206"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.im.2025.104131"
+},
+"iandc": {
+"title": "Information and Computation",
+"issn": [
+"0890-5401"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.ic.2024.105258"
+},
+"iasc": {
+"title": "Intelligent Automation &amp; Soft Computing",
+"issn": [
+"2326-005X"
+],
+"publisher": "Tech Science Press",
+"doi": "10.32604/iasc.2025.062707"
+},
+"icae": {
+"title": "Integrated Computer-Aided Engineering",
+"issn": [
+"1069-2509",
+"1875-8835"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/10692509241301240"
+},
+"icga": {
+"title": "ICGA Journal: The Journal of the Computer Games Community",
+"issn": [
+"1389-6911",
+"2468-2438"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/13896911251350090"
+},
+"icl": {
+"title": "IEEE Communications Letters",
+"issn": [
+"1089-7798",
+"1558-2558",
+"2373-7891"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/LCOMM.2025.3596161"
+},
+"icn": {
+"title": "Intelligent and Converged Networks",
+"issn": [
+"2708-6240"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.23919/icn.2025.0022"
+},
+"icomputing": {
+"title": "Intelligent Computing",
+"issn": [
+"2771-5892"
+],
+"publisher": "American Association for the Advancement of Science (AAAS)",
+"doi": "10.34133/icomputing.0169"
+},
+"ict-express": {
+"title": "ICT Express",
+"issn": [
+"2405-9595"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.icte.2025.02.011"
+},
+"ida": {
+"title": "Intelligent Data Analysis: An International Journal",
+"issn": [
+"1088-467X",
+"1571-4128"
+],
+"publisher": "SAGE Publications",
+"doi": "10.3233/ida-230480"
+},
+"idt": {
+"title": "Intelligent Decision Technologies",
+"issn": [
+"1872-4981",
+"1875-8843"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/18724981241305875"
+},
+"ieee-rita": {
+"title": "IEEE Revista Iberoamericana de Tecnologias del Aprendizaje",
+"issn": [
+"1932-8540",
+"2374-0132"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/RITA.2025.3599155"
+},
+"ieeejas": {
+"title": "IEEE/CAA Journal of Automatica Sinica",
+"issn": [
+"2329-9266",
+"2329-9274"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/JAS.2025.125351"
+},
+"ieeemm": {
+"title": "IEEE MultiMedia",
+"issn": [
+"1070-986X",
+"1941-0166"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MMUL.2025.3581588"
+},
+"ieeenl": {
+"title": "IEEE Networking Letters",
+"issn": [
+"2576-3156"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/LNET.2024.3482295"
+},
+"ieeesp": {
+"title": "IEEE Security &amp; Privacy",
+"issn": [
+"1540-7993",
+"1558-4046"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MSEC.2025.3563092"
+},
+"ieiceee": {
+"title": "IEICE Electronics Express",
+"issn": [
+"1349-2543"
+],
+"publisher": "Institute of Electronics, Information and Communications Engineers (IEICE)",
+"doi": "10.1587/elex.22.20250544"
+},
+"ieiceta": {
+"title": "IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences",
+"issn": [
+"0916-8508",
+"1745-1337"
+],
+"publisher": "Institute of Electronics, Information and Communications Engineers (IEICE)",
+"doi": "10.1587/transfun.2024eal2061"
+},
+"ieicetb": {
+"title": "IEICE Transactions on Communications",
+"issn": [
+"0916-8516",
+"1745-1345"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.23919/transcom.2024ebt0008"
+},
+"ieicetc": {
+"title": "IEICE Transactions on Electronics",
+"issn": [
+"0916-8524",
+"1745-1353"
+],
+"publisher": "Institute of Electronics, Information and Communications Engineers (IEICE)",
+"doi": "10.1587/transele.2024cdf0001"
+},
+"ieicetd": {
+"title": "IEICE Transactions on Information and Systems",
+"issn": [
+"0916-8532",
+"1745-1361"
+],
+"publisher": "Institute of Electronics, Information and Communications Engineers (IEICE)",
+"doi": "10.1587/transinf.2024ofl0001"
+},
+"iet-blc": {
+"title": "IET Blockchain",
+"issn": [
+"2634-1573"
+],
+"publisher": "Institution of Engineering and Technology (IET)",
+"doi": "10.1049/blc2.70026"
+},
+"iet-bmt": {
+"title": "IET Biometrics",
+"issn": [
+"2047-4938",
+"2047-4946"
+],
+"publisher": "Institution of Engineering and Technology (IET)",
+"doi": "10.1049/bme2/2217175"
+},
+"iet-cds": {
+"title": "IET Circuits, Devices &amp; Systems",
+"issn": [
+"1751-858X",
+"1751-8598"
+],
+"publisher": "Institution of Engineering and Technology (IET)",
+"doi": "10.1049/cds2/8337521"
+},
+"iet-com": {
+"title": "IET Communications",
+"issn": [
+"1751-8628",
+"1751-8636"
+],
+"publisher": "Institution of Engineering and Technology (IET)",
+"doi": "10.1049/cmu2.70018"
+},
+"iet-cps": {
+"title": "IET Cyber-Physical Systems: Theory &amp; Applications",
+"issn": [
+"2398-3396"
+],
+"publisher": "Institution of Engineering and Technology (IET)",
+"doi": "10.1049/cps2.70014"
+},
+"iet-cvi": {
+"title": "IET Computer Vision",
+"issn": [
+"1751-9632",
+"1751-9640"
+],
+"publisher": "Institution of Engineering and Technology (IET)",
+"doi": "10.1049/cvi2.12312"
+},
+"iet-ifs": {
+"title": "IET Information Security",
+"issn": [
+"1751-8709",
+"1751-8717"
+],
+"publisher": "Institution of Engineering and Technology (IET)",
+"doi": "10.1049/ise2/7358963"
+},
+"iet-ipr": {
+"title": "IET Image Processing",
+"issn": [
+"1751-9659",
+"1751-9667"
+],
+"publisher": "Institution of Engineering and Technology (IET)",
+"doi": "10.1049/ipr2.13288"
+},
+"iet-net": {
+"title": "IET Networks",
+"issn": [
+"2047-4954",
+"2047-4962"
+],
+"publisher": "Institution of Engineering and Technology (IET)",
+"doi": "10.1049/ntw2.12111"
+},
+"iet-qtc": {
+"title": "IET Quantum Communication",
+"issn": [
+"2632-8925"
+],
+"publisher": "Institution of Engineering and Technology (IET)",
+"doi": "10.1049/qtc2.70025"
+},
+"iet-sen": {
+"title": "IET Software",
+"issn": [
+"1751-8806",
+"1751-8814"
+],
+"publisher": "Institution of Engineering and Technology (IET)",
+"doi": "10.1049/sfw2/4518420"
+},
+"iet-spr": {
+"title": "IET Signal Processing",
+"issn": [
+"1751-9675",
+"1751-9683"
+],
+"publisher": "Institution of Engineering and Technology (IET)",
+"doi": "10.1049/sil2/4762771"
+},
+"iet-wss": {
+"title": "IET Wireless Sensor Systems",
+"issn": [
+"2043-6386",
+"2043-6394"
+],
+"publisher": "Institution of Engineering and Technology (IET)",
+"doi": "10.1049/wss2.70001"
+},
+"ifacjsc": {
+"title": "IFAC Journal of Systems and Control",
+"issn": [
+"2468-6018"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.ifacsc.2025.100314"
+},
+"igpl": {
+"title": "Logic Journal of the IGPL",
+"issn": [
+"1367-0751",
+"1368-9894"
+],
+"publisher": "Oxford University Press (OUP)",
+"doi": "10.1093/jigpal/jzad022"
+},
+"iiset": {
+"title": "IISE Transactions",
+"issn": [
+"2472-5854",
+"2472-5862"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/24725854.2021.1937755"
+},
+"ijaac": {
+"title": "International Journal of Automation and Control",
+"issn": [
+"1740-7516",
+"1740-7524"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJAAC.2025.148280"
+},
+"ijaacs": {
+"title": "International Journal of Autonomous and Adaptive Communications Systems",
+"issn": [
+"1754-8632",
+"1754-8640"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJAACS.2025.145978"
+},
+"ijabim": {
+"title": "International Journal of Asian Business and Information Management",
+"issn": [
+"1947-9638",
+"1947-9646"
+],
+"publisher": "IGI Global Scientific Publishing",
+"doi": "10.4018/ijabim.376012"
+},
+"ijac": {
+"title": "International Journal of Algebra and Computation",
+"issn": [
+"0218-1967",
+"1793-6500"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/S0218196724500528"
+},
+"ijads": {
+"title": "International Journal of Applied Decision Sciences",
+"issn": [
+"1755-8077",
+"1755-8085"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJADS.2025.148261"
+},
+"ijahuc": {
+"title": "International Journal of Ad Hoc and Ubiquitous Computing",
+"issn": [
+"1743-8225",
+"1743-8233"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJAHUC.2025.146436"
+},
+"ijaip": {
+"title": "International Journal of Advanced Intelligence Paradigms",
+"issn": [
+"1755-0386",
+"1755-0394"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJAIP.2025.147660"
+},
+"ijais": {
+"title": "International Journal of Accounting Information Systems",
+"issn": [
+"1467-0895"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.accinf.2025.100744"
+},
+"ijait": {
+"title": "International Journal on Artificial Intelligence Tools",
+"issn": [
+"0218-2130",
+"1793-6349"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/S0218213025500058"
+},
+"ijar": {
+"title": "International Journal of Approximate Reasoning",
+"issn": [
+"0888-613X"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.ijar.2025.109404"
+},
+"ijautcomp": {
+"title": "Machine Intelligence Research",
+"issn": [
+"2731-538X",
+"2731-5398"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11633-024-1490-8"
+},
+"ijbc": {
+"title": "International Journal of Bifurcation and Chaos",
+"issn": [
+"0218-1274",
+"1793-6551"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/S0218127425501081"
+},
+"ijbic": {
+"title": "International Journal of Bio-Inspired Computation",
+"issn": [
+"1758-0366",
+"1758-0374"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJBIC.2025.150628"
+},
+"ijbidm": {
+"title": "International Journal of Business Intelligence and Data Mining",
+"issn": [
+"1743-8187",
+"1743-8195"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJBIDM.2025.145355"
+},
+"ijbis": {
+"title": "International Journal of Business Information Systems",
+"issn": [
+"1746-0972",
+"1746-0980"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJBIS.2025.144382"
+},
+"ijbm": {
+"title": "International Journal of Biometrics",
+"issn": [
+"1755-8301",
+"1755-831X"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJBM.2025.148276"
+},
+"ijbra": {
+"title": "International Journal of Bioinformatics Research and Applications",
+"issn": [
+"1744-5485",
+"1744-5493"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJBRA.2025.146350"
+},
+"ijcaet": {
+"title": "International Journal of Computer Aided Engineering and Technology",
+"issn": [
+"1757-2657",
+"1757-2665"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJCAET.2023.10052475"
+},
+"ijcat": {
+"title": "International Journal of Computer Applications in Technology",
+"issn": [
+"0952-8091",
+"1741-5047"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJCAT.2025.149357"
+},
+"ijcc": {
+"title": "International Journal of Cloud Computing",
+"issn": [
+"2043-9989",
+"2043-9997"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJCC.2025.145664"
+},
+"ijccc": {
+"title": "INTERNATIONAL JOURNAL OF COMPUTERS  COMMUNICATIONS &amp; CONTROL",
+"issn": [
+"1841-9836",
+"1841-9844"
+],
+"publisher": "Agora University of Oradea",
+"doi": "10.15837/ijccc.2025.5.7018"
+},
+"ijcci": {
+"title": "International Journal of Child-Computer Interaction",
+"issn": [
+"2212-8689"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.ijcci.2024.100702"
+},
+"ijcia": {
+"title": "International Journal of Computational Intelligence and Applications",
+"issn": [
+"1469-0268",
+"1757-5885"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/S1469026824420021"
+},
+"ijcim": {
+"title": "International Journal of Computer Integrated Manufacturing",
+"issn": [
+"0951-192X",
+"1362-3052"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/0951192x.2024.2421320"
+},
+"ijcini": {
+"title": "International Journal of Cognitive Informatics and Natural Intelligence",
+"issn": [
+"1557-3958",
+"1557-3966"
+],
+"publisher": "IGI Global Scientific Publishing",
+"doi": "10.4018/ijcini.386767"
+},
+"ijcip": {
+"title": "International Journal of Critical Infrastructure Protection",
+"issn": [
+"1874-5482"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.ijcip.2025.100742"
+},
+"ijcistudies": {
+"title": "International Journal of Computational Intelligence Studies",
+"issn": [
+"1755-4977",
+"1755-4985"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJCISTUDIES.2024.144046"
+},
+"ijcisys": {
+"title": "International Journal of Computational Intelligence Systems",
+"issn": [
+"1875-6883"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s44196-025-00943-z"
+},
+"ijcm": {
+"title": "International Journal of Computer Mathematics",
+"issn": [
+"0020-7160",
+"1029-0265"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/00207160.2025.2469246"
+},
+"ijcmcst": {
+"title": "International Journal of Computer Mathematics: Computer Systems Theory",
+"issn": [
+"2379-9927",
+"2379-9935"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/23799927.2025.2454546"
+},
+"ijcnds": {
+"title": "International Journal of Communication Networks and Distributed Systems",
+"issn": [
+"1754-3916",
+"1754-3924"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJCNDS.2025.144707"
+},
+"ijcnis": {
+"title": "International Journal of Communication Networks and Information Security (IJCNIS)",
+"issn": [
+"2073-607X",
+"2076-0930"
+],
+"publisher": "Auricle Technologies, Pvt., Ltd.",
+"doi": "10.17762/ijcnis.v16i1.6471"
+},
+"ijcomputing": {
+"title": "International Journal of Computing",
+"issn": [
+"1727-6209",
+"2312-5381"
+],
+"publisher": "Research Institute for Intelligent Computer Systems",
+"doi": "10.47839/ijc.23.2.3535"
+},
+"ijcomsys": {
+"title": "International Journal of Communication Systems",
+"issn": [
+"1074-5351",
+"1099-1131"
+],
+"publisher": "Wiley",
+"doi": "10.1002/dac.5545"
+},
+"ijcon": {
+"title": "International Journal of Control",
+"issn": [
+"0020-7179",
+"1366-5820"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/00207179.2024.2380030"
+},
+"ijcopi": {
+"title": "International Journal of Combinatorial Optimization Problems and Informatics",
+"issn": [
+"2007-1558"
+],
+"publisher": "Editorial Académica Dragón Azteca",
+"doi": "10.61467/2007.1558.2025.v16i1.549"
+},
+"ijcritis": {
+"title": "International Journal of Critical Infrastructures",
+"issn": [
+"1475-3219",
+"1741-8038"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/ijcis.2025.10064830"
+},
+"ijcrowdsci": {
+"title": "International Journal of Crowd Science",
+"issn": [
+"2398-7294"
+],
+"publisher": "Tsinghua University Press",
+"doi": "10.26599/ijcs.2024.9100007"
+},
+"ijcse": {
+"title": "International Journal of Computational Science and Engineering",
+"issn": [
+"1742-7185",
+"1742-7193"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJCSE.2025.147612"
+},
+"ijcsm": {
+"title": "International Journal of Computing Science and Mathematics",
+"issn": [
+"1752-5055",
+"1752-5063"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJCSM.2025.151192"
+},
+"ijcta": {
+"title": "International Journal of Circuit Theory and Applications",
+"issn": [
+"0098-9886",
+"1097-007X"
+],
+"publisher": "Wiley",
+"doi": "10.1002/cta.4360"
+},
+"ijcv": {
+"title": "International Journal of Computer Vision",
+"issn": [
+"0920-5691",
+"1573-1405"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11263-025-02510-7"
+},
+"ijcvr": {
+"title": "International Journal of Computational Vision and Robotics",
+"issn": [
+"1752-9131",
+"1752-914X"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJCVR.2025.148211"
+},
+"ijdar": {
+"title": "International Journal on Document Analysis and Recognition (IJDAR)",
+"issn": [
+"1433-2825",
+"1433-2833"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10032-025-00517-x"
+},
+"ijdats": {
+"title": "International Journal of Data Analysis Techniques and Strategies",
+"issn": [
+"1755-8050",
+"1755-8069"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/ijdats.2025.10065866"
+},
+"ijdsa": {
+"title": "International Journal of Data Science and Analytics",
+"issn": [
+"2364-415X",
+"2364-4168"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s41060-024-00647-1"
+},
+"ijdsn": {
+"title": "International Journal of Distributed Sensor Networks",
+"issn": [
+"1550-1329",
+"1550-1477"
+],
+"publisher": "Wiley",
+"doi": "10.1155/dsn/8479411"
+},
+"ijdsst": {
+"title": "International Journal of Decision Support System Technology",
+"issn": [
+"1941-6296",
+"1941-630X"
+],
+"publisher": "IGI Global Scientific Publishing",
+"doi": "10.4018/ijdsst.378563"
+},
+"ijdst": {
+"title": "International Journal of Distributed Systems and Technologies",
+"issn": [
+"1947-3532",
+"1947-3540"
+],
+"publisher": "IGI Global Scientific Publishing",
+"doi": "10.4018/ijdst.375389"
+},
+"ijec": {
+"title": "International Journal of e-Collaboration",
+"issn": [
+"1548-3673",
+"1548-3681"
+],
+"publisher": "IGI Global Scientific Publishing",
+"doi": "10.4018/ijec.372205"
+},
+"ijecommerce": {
+"title": "International Journal of Electronic Commerce",
+"issn": [
+"1086-4415",
+"1557-9301"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/10864415.2025.2471674"
+},
+"ijes": {
+"title": "International Journal of Embedded Systems",
+"issn": [
+"1741-1068",
+"1741-1076"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJES.2025.149250"
+},
+"ijesdf": {
+"title": "International Journal of Electronic Security and Digital Forensics",
+"issn": [
+"1751-911X",
+"1751-9128"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJESDF.2025.143469"
+},
+"ijet": {
+"title": "International Journal of Emerging Technologies in Learning (iJET)",
+"issn": [
+"1863-0383"
+],
+"publisher": "International Association of Online Engineering (IAOE)",
+"doi": "10.3991/ijet.v20i02.54951"
+},
+"ijfcs": {
+"title": "International Journal of Foundations of Computer Science",
+"issn": [
+"0129-0541",
+"1793-6373"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/S0129054123450065"
+},
+"ijflis": {
+"title": "INTERNATIONAL JOURNAL of FUZZY LOGIC and INTELLIGENT SYSTEMS",
+"issn": [
+"1598-2645",
+"2093-744X"
+],
+"publisher": "Korean Institute of Intelligent Systems",
+"doi": "10.5391/ijfis.2024.25.3.326"
+},
+"ijfs": {
+"title": "International Journal of Fuzzy Systems",
+"issn": [
+"1562-2479",
+"2199-3211"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s40815-024-01829-6"
+},
+"ijfsa": {
+"title": "International Journal of Fuzzy System Applications",
+"issn": [
+"2156-1761",
+"2156-177X"
+],
+"publisher": "IGI Global Scientific Publishing",
+"doi": "10.4018/ijfsa.366804"
+},
+"ijgi": {
+"title": "ISPRS International Journal of Geo-Information",
+"issn": [
+"2220-9964"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/ijgi15010029"
+},
+"ijgs": {
+"title": "International Journal of General Systems",
+"issn": [
+"0308-1079",
+"1563-5104"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/03081079.2024.2427246"
+},
+"ijgt": {
+"title": "International Journal of Game Theory",
+"issn": [
+"0020-7276",
+"1432-1270"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00182-025-00963-1"
+},
+"ijguc": {
+"title": "International Journal of Grid and Utility Computing",
+"issn": [
+"1741-847X",
+"1741-8488"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJGUC.2025.148545"
+},
+"ijhac": {
+"title": "International Journal of Humanities and Arts Computing",
+"issn": [
+"1753-8548",
+"1755-1706"
+],
+"publisher": "Edinburgh University Press",
+"doi": "10.3366/ijhac.2025.0353"
+},
+"ijhci": {
+"title": "International Journal of Human–Computer Interaction",
+"issn": [
+"1044-7318",
+"1532-7590"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/10447318.2024.2440633"
+},
+"ijhpca": {
+"title": "The International Journal of High Performance Computing Applications",
+"issn": [
+"1094-3420",
+"1741-2846"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/10943420241303145"
+},
+"ijicc": {
+"title": "International Journal of Intelligent Computing and Cybernetics",
+"issn": [
+"1756-378X",
+"1756-3798"
+],
+"publisher": "Emerald",
+"doi": "10.1108/ijicc-07-2025-0425"
+},
+"ijics": {
+"title": "International Journal of Information and Computer Security",
+"issn": [
+"1744-1765",
+"1744-1773"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJICS.2025.146886"
+},
+"ijict": {
+"title": "International Journal of Information and Communication Technology",
+"issn": [
+"1466-6642",
+"1741-8070"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJICT.2025.146167"
+},
+"ijicte": {
+"title": "International Journal of Information and Communication Technology Education",
+"issn": [
+"1550-1337",
+"1550-1876"
+],
+"publisher": "IGI Global Scientific Publishing",
+"doi": "10.4018/ijicte.385130"
+},
+"ijiei": {
+"title": "International Journal of Intelligent Engineering Informatics",
+"issn": [
+"1758-8715",
+"1758-8723"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJIEI.2025.150104"
+},
+"ijig": {
+"title": "International Journal of Image and Graphics",
+"issn": [
+"0219-4678",
+"1793-6756"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/s0219467825500421"
+},
+"ijim": {
+"title": "International Journal of Interactive Mobile Technologies (iJIM)",
+"issn": [
+"1865-7923"
+],
+"publisher": "International Association of Online Engineering (IAOE)",
+"doi": "10.3991/ijim.v19i03.52091"
+},
+"ijimai": {
+"title": "International Journal of Interactive Multimedia and Artificial Intelligence",
+"issn": [
+"1989-1660"
+],
+"publisher": "Universidad Internacional de La Rioja",
+"doi": "10.9781/ijimai.2023.08.002"
+},
+"ijin": {
+"title": "International Journal of Intelligent Networks",
+"issn": [
+"2666-6030"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.ijin.2025.11.010"
+},
+"ijinfoman": {
+"title": "International Journal of Information Management",
+"issn": [
+"0268-4012"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.ijinfomgt.2025.102931"
+},
+"ijinfomandi": {
+"title": "International Journal of Information Management Data Insights",
+"issn": [
+"2667-0968"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.jjimei.2025.100377"
+},
+"ijipt": {
+"title": "International Journal of Internet Protocol Technology",
+"issn": [
+"1743-8209",
+"1743-8217"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJIPT.2025.148569"
+},
+"ijira": {
+"title": "International Journal of Intelligent Robotics and Applications",
+"issn": [
+"2366-5971",
+"2366-598X"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s41315-024-00393-4"
+},
+"ijis": {
+"title": "International Journal of Intelligent Systems",
+"issn": [
+"0884-8173",
+"1098-111X"
+],
+"publisher": "Wiley",
+"doi": "10.1155/int/4115924"
+},
+"ijisec": {
+"title": "International Journal of Information Security",
+"issn": [
+"1615-5262",
+"1615-5270"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10207-025-01057-5"
+},
+"ijisp": {
+"title": "International Journal of Information Security and Privacy",
+"issn": [
+"1930-1650",
+"1930-1669"
+],
+"publisher": "IGI Global Scientific Publishing",
+"doi": "10.4018/ijisp.386964"
+},
+"ijitdm": {
+"title": "International Journal of Information Technology &amp; Decision Making",
+"issn": [
+"0219-6220",
+"1793-6845"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/s0219622025500270"
+},
+"ijitsa": {
+"title": "International Journal of Information Technologies and Systems Approach",
+"issn": [
+"1935-570X",
+"1935-5718"
+],
+"publisher": "IGI Global Scientific Publishing",
+"doi": "10.4018/ijitsa.387417"
+},
+"ijkl": {
+"title": "International Journal of Knowledge and Learning",
+"issn": [
+"1741-1009",
+"1741-1017"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJKL.2025.145085"
+},
+"ijlit": {
+"title": "International Journal of Law and Information Technology",
+"issn": [
+"0967-0769",
+"1464-3693"
+],
+"publisher": "Oxford University Press (OUP)",
+"doi": "10.1093/ijlit/eaaf006"
+},
+"ijmc": {
+"title": "International Journal of Mobile Communications",
+"issn": [
+"1470-949X",
+"1741-5217"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJMC.2025.147602"
+},
+"ijmei": {
+"title": "International Journal of Medical Engineering and Informatics",
+"issn": [
+"1755-0653",
+"1755-0661"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJMEI.2025.143279"
+},
+"ijmi": {
+"title": "International Journal of Medical Informatics",
+"issn": [
+"1386-5056"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.ijmedinf.2025.105795"
+},
+"ijmic": {
+"title": "International Journal of Modelling, Identification and Control",
+"issn": [
+"1746-6172",
+"1746-6180"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJMIC.2025.150852"
+},
+"ijmir": {
+"title": "International Journal of Multimedia Information Retrieval",
+"issn": [
+"2192-6611",
+"2192-662X"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s13735-025-00366-8"
+},
+"ijmlo": {
+"title": "International Journal of Mobile Learning and Organisation",
+"issn": [
+"1746-725X",
+"1746-7268"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJMLO.2025.143022"
+},
+"ijmms": {
+"title": "International Journal of Human-Computer Studies",
+"issn": [
+"1071-5819"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.ijhcs.2024.103412"
+},
+"ijmmsc": {
+"title": "International Journal of Mathematics and Mathematical Sciences",
+"issn": [
+"0161-1712",
+"1687-0425"
+],
+"publisher": "Wiley",
+"doi": "10.1155/ijmm/9959220"
+},
+"ijmor": {
+"title": "International Journal of Mathematics in Operational Research",
+"issn": [
+"1757-5850",
+"1757-5869"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJMOR.2025.145757"
+},
+"ijmssc": {
+"title": "International Journal of Modeling, Simulation, and Scientific Computing",
+"issn": [
+"1793-9615",
+"1793-9623"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/S1793962325500631"
+},
+"ijmtm": {
+"title": "International Journal of Manufacturing Technology and Management",
+"issn": [
+"1368-2148",
+"1741-5195"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJMTM.2025.144120"
+},
+"ijnm": {
+"title": "International Journal of Network Management",
+"issn": [
+"1055-7148",
+"1099-1190"
+],
+"publisher": "Wiley",
+"doi": "10.1002/nem.2315"
+},
+"ijns": {
+"title": "International Journal of Neural Systems",
+"issn": [
+"0129-0657",
+"1793-6462"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/S0129065725500388"
+},
+"ijnvo": {
+"title": "International Journal of Networking and Virtual Organisations",
+"issn": [
+"1470-9503",
+"1741-5225"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJNVO.2025.145396"
+},
+"ijoe": {
+"title": "International Journal of Online and Biomedical Engineering (iJOE)",
+"issn": [
+"2626-8493"
+],
+"publisher": "International Association of Online Engineering (IAOE)",
+"doi": "10.3991/ijoe.v21i01.53203"
+},
+"ijon": {
+"title": "Neurocomputing",
+"issn": [
+"0925-2312"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.neucom.2025.130488"
+},
+"ijpcc": {
+"title": "International Journal of Pervasive Computing and Communications",
+"issn": [
+"1742-7371",
+"1742-738X"
+],
+"publisher": "Emerald",
+"doi": "10.1108/IJPCC-09-2021-0234"
+},
+"ijpe": {
+"title": "International Journal of Performability Engineering",
+"issn": [
+"0973-1318"
+],
+"publisher": "Totem Publisher, Inc.",
+"doi": "10.23940/ijpe.25.10.p3.559571"
+},
+"ijpr": {
+"title": "International Journal of Production Research",
+"issn": [
+"0020-7543",
+"1366-588X"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/00207543.2024.2439372"
+},
+"ijprai": {
+"title": "International Journal of Pattern Recognition and Artificial Intelligence",
+"issn": [
+"0218-0014",
+"1793-6381"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/S0218001425540035"
+},
+"ijra": {
+"title": "International Journal of Robotics and Automation",
+"issn": [
+"1925-7090"
+],
+"publisher": "ACTA Press",
+"doi": "10.2316/J.2025.206-1120"
+},
+"ijris": {
+"title": "International Journal of Reasoning-based Intelligent Systems",
+"issn": [
+"1755-0556",
+"1755-0564"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/ijris.2025.146670"
+},
+"ijrr": {
+"title": "The International Journal of Robotics Research",
+"issn": [
+"0278-3649",
+"1741-3176"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/02783649241274794"
+},
+"ijsc": {
+"title": "International Journal of Semantic Computing",
+"issn": [
+"1793-351X",
+"1793-7108"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/S1793351X25420061"
+},
+"ijseke": {
+"title": "International Journal of Software Engineering and Knowledge Engineering",
+"issn": [
+"0218-1940",
+"1793-6403"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/S0218194025300027"
+},
+"ijsg": {
+"title": "International Journal of Serious Games",
+"issn": [
+"2384-8766"
+],
+"publisher": "Serious Games Society",
+"doi": "10.17083/dnza4k90"
+},
+"ijsi": {
+"title": "International Journal of Software and Informatics",
+"issn": [
+"1673-7288"
+],
+"publisher": "International Journal of Software and Informatics (IJSI)",
+"doi": "10.21655/ijsi.1673-7288.00366"
+},
+"ijsinnov": {
+"title": "International Journal of Software Innovation",
+"issn": [
+"2166-7160",
+"2166-7179"
+],
+"publisher": "IGI Global Scientific Publishing",
+"doi": "10.4018/ijsi.362623"
+},
+"ijsir": {
+"title": "International Journal of Swarm Intelligence Research",
+"issn": [
+"1947-9263",
+"1947-9271"
+],
+"publisher": "IGI Global Scientific Publishing",
+"doi": "10.4018/ijsir.392504"
+},
+"ijsnet": {
+"title": "International Journal of Sensor Networks",
+"issn": [
+"1748-1279",
+"1748-1287"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJSNET.2025.146143"
+},
+"ijsose": {
+"title": "International Journal of System of Systems Engineering",
+"issn": [
+"1748-0671",
+"1748-068X"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/ijsse.2025.10059053"
+},
+"ijspm": {
+"title": "International Journal of Simulation and Process Modelling",
+"issn": [
+"1740-2123",
+"1740-2131"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJSPM.2025.148302"
+},
+"ijsr": {
+"title": "International Journal of Social Robotics",
+"issn": [
+"1875-4791",
+"1875-4805"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s12369-025-01316-4"
+},
+"ijst": {
+"title": "International Journal of Speech Technology",
+"issn": [
+"1381-2416",
+"1572-8110"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10772-025-10214-z"
+},
+"ijswis": {
+"title": "International Journal on Semantic Web and Information Systems",
+"issn": [
+"1552-6283",
+"1552-6291"
+],
+"publisher": "IGI Global Scientific Publishing",
+"doi": "10.4018/ijswis.336480"
+},
+"ijsysc": {
+"title": "International Journal of Systems Science",
+"issn": [
+"0020-7721",
+"1464-5319"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/00207721.2025.2455997"
+},
+"ijtm": {
+"title": "International Journal of Technology Management",
+"issn": [
+"0267-5730",
+"1741-5276"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJTM.2025.143595"
+},
+"ijufks": {
+"title": "International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems",
+"issn": [
+"0218-4885",
+"1793-6411"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/S0218488525500163"
+},
+"ijwis": {
+"title": "International Journal on Semantic Web and Information Systems",
+"issn": [
+"1552-6283",
+"1552-6291"
+],
+"publisher": "IGI Global Scientific Publishing",
+"doi": "10.4018/ijswis.383062"
+},
+"ijwltt": {
+"title": "International Journal of Web-Based Learning and Teaching Technologies",
+"issn": [
+"1548-1093",
+"1548-1107"
+],
+"publisher": "IGI Global Scientific Publishing",
+"doi": "10.4018/ijwltt.373316"
+},
+"ijwmc": {
+"title": "International Journal of Wireless and Mobile Computing",
+"issn": [
+"1741-1084",
+"1741-1092"
+],
+"publisher": "Inderscience Publishers",
+"doi": "10.1504/IJWMC.2025.146632"
+},
+"ijwmip": {
+"title": "International Journal of Wavelets, Multiresolution and Information Processing",
+"issn": [
+"0219-6913",
+"1793-690X"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/S0219691324500656"
+},
+"ile": {
+"title": "Interactive Learning Environments",
+"issn": [
+"1049-4820",
+"1744-5191"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/10494820.2025.2457351"
+},
+"imamci": {
+"title": "IMA Journal of Mathematical Control and Information",
+"issn": [
+"0265-0754",
+"1471-6887"
+],
+"publisher": "Oxford University Press (OUP)",
+"doi": "10.1093/imamci/dnaf039"
+},
+"imds": {
+"title": "Industrial Management &amp; Data Systems",
+"issn": [
+"0263-5577",
+"1758-5783"
+],
+"publisher": "Emerald",
+"doi": "10.1108/IMDS-03-2024-0190"
+},
+"imm": {
+"title": "IEEE Instrumentation &amp; Measurement Magazine",
+"issn": [
+"1094-6969",
+"1941-0123"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MIM.2025.10946256"
+},
+"imst": {
+"title": "International Journal of Imaging Systems and Technology",
+"issn": [
+"0899-9457",
+"1098-1098"
+],
+"publisher": "Wiley",
+"doi": "10.1002/ima.70054"
+},
+"imwut": {
+"title": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
+"issn": [
+"2474-9567"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3749538"
+},
+"inffus": {
+"title": "Information Fusion",
+"issn": [
+"1566-2535"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.inffus.2024.102615"
+},
+"informaticaLT": {
+"title": "Informatica",
+"issn": [
+"0868-4952",
+"1822-8844"
+],
+"publisher": "Vilnius University Press",
+"doi": "10.15388/25-infor587"
+},
+"informaticaSI": {
+"title": "Informatica",
+"issn": [
+"0350-5596",
+"1854-3871"
+],
+"publisher": "Slovenian Association Informatika",
+"doi": "10.31449/inf.v49i14.7349"
+},
+"informatics": {
+"title": "Informatics",
+"issn": [
+"2227-9709"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/informatics12030089"
+},
+"information": {
+"title": "Information",
+"issn": [
+"2078-2489"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/info16121069"
+},
+"informs": {
+"title": "INFORMS Journal on Computing",
+"issn": [
+"1091-9856",
+"1526-5528"
+],
+"publisher": "Institute for Operations Research and the Management Sciences (INFORMS)",
+"doi": "10.1287/ijoc.2023.0366"
+},
+"infsof": {
+"title": "Information and Software Technology",
+"issn": [
+"0950-5849"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.infsof.2025.107874"
+},
+"inis": {
+"title": "EAI Endorsed Transactions on Industrial Networks and Intelligent Systems",
+"issn": [
+"2410-0218"
+],
+"publisher": "European Alliance for Innovation n.o.",
+"doi": "10.4108/eetinis.v12i3.8604"
+},
+"inroads": {
+"title": "ACM Inroads",
+"issn": [
+"2153-2184",
+"2153-2192"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3747853"
+},
+"insk": {
+"title": "Informatik Spektrum",
+"issn": [
+"0170-6012",
+"1432-122X"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00287-023-01551-x"
+},
+"integration": {
+"title": "Integration",
+"issn": [
+"0167-9260"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.vlsi.2025.102478"
+},
+"interactions": {
+"title": "Interactions",
+"issn": [
+"1072-5520",
+"1558-3449"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3708356"
+},
+"internet": {
+"title": "IEEE Internet Computing",
+"issn": [
+"1089-7801",
+"1941-0131"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MIC.2025.3619462"
+},
+"intpolrev": {
+"title": "Internet Policy Review",
+"issn": [
+"2197-6775"
+],
+"publisher": "Internet Policy Review, Alexander von Humboldt Institute for Internet and Society",
+"doi": "10.14763/2025.3.2029"
+},
+"intr": {
+"title": "Internet Research",
+"issn": [
+"1066-2243"
+],
+"publisher": "Emerald",
+"doi": "10.1108/INTR-03-2023-0202"
+},
+"ior": {
+"title": "Operations Research",
+"issn": [
+"0030-364X",
+"1526-5463"
+],
+"publisher": "Institute for Operations Research and the Management Sciences (INFORMS)",
+"doi": "10.1287/opre.2022.0463"
+},
+"iot": {
+"title": "Internet of Things",
+"issn": [
+"2542-6605"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.iot.2025.101585"
+},
+"iotcps": {
+"title": "Internet of Things and Cyber-Physical Systems",
+"issn": [
+"2667-3452"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.iotcps.2026.03.004"
+},
+"iotj": {
+"title": "IEEE Internet of Things Journal",
+"issn": [
+"2327-4662",
+"2372-2541"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/JIOT.2025.3563858"
+},
+"iotm": {
+"title": "IEEE Internet of Things Magazine",
+"issn": [
+"2576-3180",
+"2576-3199"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MIOT.2025.3575931"
+},
+"ipl": {
+"title": "Information Processing Letters",
+"issn": [
+"0020-0190"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.ipl.2024.106530"
+},
+"ipm": {
+"title": "Information Processing &amp; Management",
+"issn": [
+"0306-4573"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.ipm.2024.103916"
+},
+"ir": {
+"title": "Discover Computing",
+"issn": [
+"2948-2992"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10791-025-09662-7"
+},
+"irjocs": {
+"title": "Iran Journal of Computer Science",
+"issn": [
+"2520-8438",
+"2520-8446"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s42044-025-00310-3"
+},
+"irob": {
+"title": "Industrial Robot: the international journal of robotics research and application",
+"issn": [
+"0143-991X",
+"1758-5791"
+],
+"publisher": "Emerald",
+"doi": "10.1108/ir-07-2024-0343"
+},
+"is": {
+"title": "Information Systems",
+"issn": [
+"0306-4379"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.is.2024.102504"
+},
+"isci": {
+"title": "Information Sciences",
+"issn": [
+"0020-0255"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.ins.2025.122376"
+},
+"isem": {
+"title": "Information Systems and e-Business Management",
+"issn": [
+"1617-9846",
+"1617-9854"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10257-023-00653-z"
+},
+"isf": {
+"title": "Information Systems Frontiers",
+"issn": [
+"1387-3326",
+"1572-9419"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10796-023-10436-z"
+},
+"isj": {
+"title": "Information Systems Journal",
+"issn": [
+"1350-1917",
+"1365-2575"
+],
+"publisher": "Wiley",
+"doi": "10.1111/isj.12580"
+},
+"isr": {
+"title": "Information Systems Research",
+"issn": [
+"1047-7047",
+"1526-5536"
+],
+"publisher": "Institute for Operations Research and the Management Sciences (INFORMS)",
+"doi": "10.1287/isre.2022.0441"
+},
+"isrob": {
+"title": "Intelligent Service Robotics",
+"issn": [
+"1861-2776",
+"1861-2784"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11370-024-00571-0"
+},
+"isse": {
+"title": "Innovations in Systems and Software Engineering",
+"issn": [
+"1614-5046",
+"1614-5054"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11334-022-00496-w"
+},
+"istr": {
+"title": "Journal of Information Security and Applications",
+"issn": [
+"2214-2126"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.jisa.2025.104139"
+},
+"isu": {
+"title": "Information Services and Use",
+"issn": [
+"0167-5265",
+"1875-8789"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/18758789251336085"
+},
+"iswa": {
+"title": "Intelligent Systems with Applications",
+"issn": [
+"2667-3053"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.iswa.2025.200538"
+},
+"itc": {
+"title": "Information Technology and Control",
+"issn": [
+"1392-124X",
+"2335-884X"
+],
+"publisher": "Kaunas University of Technology (KTU)",
+"doi": "10.5755/j01.itc.54.1.38802"
+},
+"itd": {
+"title": "Information Technology for Development",
+"issn": [
+"0268-1102",
+"1554-0170"
+],
+"publisher": "Association for Information Systems",
+"doi": "10.1080/02681102.2024.2414402"
+},
+"itiis": {
+"title": "KSII Transactions on Internet and Information Systems",
+"issn": [
+"1976-7277"
+],
+"publisher": "Korean Society for Internet Information (KSII)",
+"doi": "10.3837/tiis.2025.11.002"
+},
+"itl": {
+"title": "Internet Technology Letters",
+"issn": [
+"2476-1508"
+],
+"publisher": "Wiley",
+"doi": "10.1002/itl2.70043"
+},
+"itor": {
+"title": "International Transactions in Operational Research",
+"issn": [
+"0969-6016",
+"1475-3995"
+],
+"publisher": "Wiley",
+"doi": "10.1111/itor.13505"
+},
+"itp": {
+"title": "Information Technology &amp; People",
+"issn": [
+"0959-3845"
+],
+"publisher": "Emerald",
+"doi": "10.1108/ITP-07-2022-0533"
+},
+"itpro": {
+"title": "IT Professional",
+"issn": [
+"1520-9202",
+"1941-045X"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MITP.2024.3519632"
+},
+"itse": {
+"title": "Interactive Technology and Smart Education",
+"issn": [
+"1741-5659",
+"1758-8510"
+],
+"publisher": "Emerald",
+"doi": "10.1108/itse-12-2024-0325"
+},
+"itsm": {
+"title": "IEEE Intelligent Transportation Systems Magazine",
+"issn": [
+"1939-1390",
+"1941-1197"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MITS.2025.3548869"
+},
+"itsr": {
+"title": "International Journal of Intelligent Transportation Systems Research",
+"issn": [
+"1348-8503",
+"1868-8659"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s13177-025-00556-y"
+},
+"ivc": {
+"title": "Image and Vision Computing",
+"issn": [
+"0262-8856"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.imavis.2024.105368"
+},
+"iwc": {
+"title": "Interacting with Computers",
+"issn": [
+"0953-5438",
+"1873-7951"
+],
+"publisher": "Oxford University Press (OUP)",
+"doi": "10.1093/iwc/iwaf017"
+},
+"jacic": {
+"title": "Journal of Aerospace Information Systems",
+"issn": [
+"1940-3151",
+"2327-3097"
+],
+"publisher": "American Institute of Aeronautics and Astronautics (AIAA)",
+"doi": "10.2514/1.i011498"
+},
+"jaciii": {
+"title": "Journal of Advanced Computational Intelligence and Intelligent Informatics",
+"issn": [
+"1343-0130",
+"1883-8014"
+],
+"publisher": "Fuji Technology Press Ltd.",
+"doi": "10.20965/jaciii.2025.p1145"
+},
+"jact": {
+"title": "Journal of Applied and Computational Topology",
+"issn": [
+"2367-1726",
+"2367-1734"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s41468-025-00206-y"
+},
+"jaec": {
+"title": "Journal of Advanced Engineering and Computation",
+"issn": [
+"2588-123X"
+],
+"publisher": "Ton Duc Thang University",
+"doi": "10.55579/jaec.202593.469"
+},
+"jaic": {
+"title": "Journal of Artificial Intelligence and Consciousness",
+"issn": [
+"2705-0785",
+"2705-0793"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/s2705078524500085"
+},
+"jaihc": {
+"title": "Journal of Ambient Intelligence and Humanized Computing",
+"issn": [
+"1868-5137",
+"1868-5145"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s12652-024-04859-y"
+},
+"jair": {
+"title": "Journal of Artificial Intelligence Research",
+"issn": [
+"1076-9757"
+],
+"publisher": "AI Access Foundation",
+"doi": "10.1613/jair.1.17292"
+},
+"jais": {
+"title": "Journal of the Association for Information Systems",
+"issn": [
+"1536-9323"
+],
+"publisher": "Association for Information Systems",
+"doi": "10.17705/1jais.00653"
+},
+"jaise": {
+"title": "Journal of Ambient Intelligence and Smart Environments",
+"issn": [
+"1876-1364",
+"1876-1372"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/18761364241297221"
+},
+"jam": {
+"title": "Journal of Applied Mathematics",
+"issn": [
+"1110-757X",
+"1687-0042"
+],
+"publisher": "Wiley",
+"doi": "10.1155/jama/7790305"
+},
+"jamc": {
+"title": "Journal of Applied Mathematics and Computing",
+"issn": [
+"1598-5865",
+"1865-2085"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s12190-025-02539-4"
+},
+"jamia": {
+"title": "Journal of the American Medical Informatics Association",
+"issn": [
+"1067-5027",
+"1527-974X"
+],
+"publisher": "Oxford University Press (OUP)",
+"doi": "10.1093/jamia/ocaf022"
+},
+"jap": {
+"title": "Journal of Applied Probability",
+"issn": [
+"0021-9002",
+"1475-6072"
+],
+"publisher": "Cambridge University Press (CUP)",
+"doi": "10.1017/jpr.2025.14"
+},
+"jasis": {
+"title": "Journal of the Association for Information Science and Technology",
+"issn": [
+"2330-1635",
+"2330-1643"
+],
+"publisher": "Wiley",
+"doi": "10.1002/asi.24961"
+},
+"jat": {
+"title": "Journal of Approximation Theory",
+"issn": [
+"0021-9045"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.jat.2025.106146"
+},
+"jbcs": {
+"title": "Journal of the Brazilian Computer Society",
+"issn": [
+"1678-4804"
+],
+"publisher": "Sociedade Brasileira de Computacao - SB",
+"doi": "10.5753/jbcs.2025.5799"
+},
+"jbd": {
+"title": "Journal of Big Data",
+"issn": [
+"2196-1115"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1186/s40537-025-01139-0"
+},
+"jbi": {
+"title": "Journal of Biomedical Informatics",
+"issn": [
+"1532-0464"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.jbi.2025.104929"
+},
+"jc": {
+"title": "Journal of Complexity",
+"issn": [
+"0885-064X"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.jco.2024.101906"
+},
+"jcal": {
+"title": "Journal of Computer Assisted Learning",
+"issn": [
+"0266-4909",
+"1365-2729"
+],
+"publisher": "Wiley",
+"doi": "10.1111/jcal.70067"
+},
+"jcam": {
+"title": "Journal of Computational and Applied Mathematics",
+"issn": [
+"0377-0427"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.cam.2025.116517"
+},
+"jcamd": {
+"title": "Journal of Computer-Aided Molecular Design",
+"issn": [
+"0920-654X",
+"1573-4951"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10822-025-00629-w"
+},
+"jcb": {
+"title": "Journal of Computational Biology",
+"issn": [
+"1557-8666"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1089/cmb.2024.0807"
+},
+"jcc": {
+"title": "Journal of Computational Chemistry",
+"issn": [
+"0192-8651",
+"1096-987X"
+],
+"publisher": "Wiley",
+"doi": "10.1002/jcc.70118"
+},
+"jccee": {
+"title": "Journal of Computing in Civil Engineering",
+"issn": [
+"0887-3801",
+"1943-5487"
+],
+"publisher": "American Society of Civil Engineers (ASCE)",
+"doi": "10.1061/jccee5.cpeng-5948"
+},
+"jcde": {
+"title": "Journal of Computational Design and Engineering",
+"issn": [
+"2288-5048"
+],
+"publisher": "Oxford University Press (OUP)",
+"doi": "10.1093/jcde/qwaf056"
+},
+"jce": {
+"title": "Journal of Cryptographic Engineering",
+"issn": [
+"2190-8508",
+"2190-8516"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s13389-025-00368-6"
+},
+"jcgs": {
+"title": "Journal of Computational and Graphical Statistics",
+"issn": [
+"1061-8600",
+"1537-2715"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/10618600.2024.2374962"
+},
+"jche": {
+"title": "Journal of Computing in Higher Education",
+"issn": [
+"1042-1726",
+"1867-1233"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s12528-024-09403-7"
+},
+"jcheminf": {
+"title": "Journal of Cheminformatics",
+"issn": [
+"1758-2946"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1186/s13321-025-00961-1"
+},
+"jcin": {
+"title": "Journal of Communications and Information Networks",
+"issn": [
+"2096-1081",
+"2509-3312"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.23919/JCIN.2025.11357503"
+},
+"jcis": {
+"title": "Journal of Computer Information Systems",
+"issn": [
+"0887-4417",
+"2380-2057"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/08874417.2024.2302001"
+},
+"jcisd": {
+"title": "Journal of Chemical Information and Modeling",
+"issn": [
+"1549-9596",
+"1549-960X"
+],
+"publisher": "American Chemical Society (ACS)",
+"doi": "10.1021/acs.jcim.4c01790"
+},
+"jcise": {
+"title": "Journal of Computing and Information Science in Engineering",
+"issn": [
+"1530-9827",
+"1944-7078"
+],
+"publisher": "Wiley",
+"doi": "10.1115/1.4069117"
+},
+"jclc": {
+"title": "International Journal of Asian Language Processing",
+"issn": [
+"2424-791X",
+"2717-5545"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/S2717554525500043"
+},
+"jcloudc": {
+"title": "Journal of Cloud Computing",
+"issn": [
+"2192-113X"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1186/s13677-025-00754-9"
+},
+"jcm": {
+"title": "Journal of Communications",
+"issn": [
+"1796-2021"
+],
+"publisher": "Engineering and Technology Publishing",
+"doi": "10.12720/jcm.20.2.221-228"
+},
+"jcmse": {
+"title": "Journal of Computational Methods in Sciences and Engineering",
+"issn": [
+"1472-7978",
+"1875-8983"
+],
+"publisher": "European Society of Computational Methods in Sciences and Engineering",
+"doi": "10.1177/14727978251374330"
+},
+"jcn": {
+"title": "Journal of Communications and Networks",
+"issn": [
+"1229-2370",
+"1976-5541"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.23919/jcn.2025.000060"
+},
+"jco": {
+"title": "Journal of Combinatorial Optimization",
+"issn": [
+"1382-6905",
+"1573-2886"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10878-024-01232-9"
+},
+"jcondec": {
+"title": "Journal of Control and Decision",
+"issn": [
+"2330-7706",
+"2330-7714"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/23307706.2023.2270481"
+},
+"jcphy": {
+"title": "Journal of Computational Physics",
+"issn": [
+"0021-9991"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.jcp.2025.114164"
+},
+"jcsc": {
+"title": "Journal of Circuits, Systems and Computers",
+"issn": [
+"0218-1266",
+"1793-6454"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/S021812662550077X"
+},
+"jcsm": {
+"title": "Journal of Cyber Security and Mobility",
+"issn": [
+"2245-1439",
+"2245-4578"
+],
+"publisher": "River Publishers",
+"doi": "10.13052/jcsm2245-1439.1428"
+},
+"jcss": {
+"title": "Journal of Computer and System Sciences",
+"issn": [
+"0022-0000"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.jcss.2024.103588"
+},
+"jcst": {
+"title": "Journal of Computer Science and Technology",
+"issn": [
+"1000-9000",
+"1860-4749"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11390-025-4802-8"
+},
+"jcta": {
+"title": "Journal of Combinatorial Theory, Series A",
+"issn": [
+"0097-3165"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.jcta.2025.106075"
+},
+"jctb": {
+"title": "Journal of Combinatorial Theory, Series B",
+"issn": [
+"0095-8956"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.jctb.2025.07.001"
+},
+"jcybsec": {
+"title": "Journal of Cyber Security",
+"issn": [
+"2579-0064"
+],
+"publisher": "Tech Science Press",
+"doi": "10.32604/jcs.2025.063711"
+},
+"jd": {
+"title": "Journal of Documentation",
+"issn": [
+"0022-0418",
+"1758-7379"
+],
+"publisher": "Emerald",
+"doi": "10.1108/jd-04-2025-0085"
+},
+"jdi": {
+"title": "Journal of Imaging Informatics in Medicine",
+"issn": [
+"2948-2933"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10278-025-01546-y"
+},
+"jdiq": {
+"title": "Journal of Data and Information Quality",
+"issn": [
+"1936-1955",
+"1936-1963"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3712066"
+},
+"jdis": {
+"title": "Journal of Data and Information Science",
+"issn": [
+"2543-683X"
+],
+"publisher": "Walter de Gruyter GmbH",
+"doi": "10.2478/jdis-2025-0040"
+},
+"jece": {
+"title": "Journal of Electrical and Computer Engineering",
+"issn": [
+"2090-0147",
+"2090-0155"
+],
+"publisher": "Wiley",
+"doi": "10.1155/jece/8108611"
+},
+"jei": {
+"title": "Journal of Electronic Imaging",
+"issn": [
+"1017-9909",
+"1560-229X"
+],
+"publisher": "SPIE-Intl Soc Optical Eng",
+"doi": "10.1117/1.jei.34.4.043048"
+},
+"jeim": {
+"title": "Journal of Enterprise Information Management",
+"issn": [
+"1741-0398",
+"1758-7409"
+],
+"publisher": "Emerald",
+"doi": "10.1108/jeim-01-2025-0015"
+},
+"jet": {
+"title": "Journal of Economic Theory",
+"issn": [
+"0022-0531"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.jet.2025.106098"
+},
+"jetai": {
+"title": "Journal of Experimental &amp; Theoretical Artificial Intelligence",
+"issn": [
+"0952-813X",
+"1362-3079"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/0952813x.2023.2222720"
+},
+"jetc": {
+"title": "ACM Journal on Emerging Technologies in Computing Systems",
+"issn": [
+"1550-4832",
+"1550-4840"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3748652"
+},
+"jfi": {
+"title": "Journal of the Franklin Institute",
+"issn": [
+"0016-0032"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.jfranklin.2025.108104"
+},
+"jfr": {
+"title": "Journal of Field Robotics",
+"issn": [
+"1556-4959",
+"1556-4967"
+],
+"publisher": "Wiley",
+"doi": "10.1002/rob.22584"
+},
+"jgim": {
+"title": "Journal of Global Information Management",
+"issn": [
+"1062-7375",
+"1533-7995"
+],
+"publisher": "IGI Global Scientific Publishing",
+"doi": "10.4018/jgim.347514"
+},
+"jgo": {
+"title": "Journal of Global Optimization",
+"issn": [
+"0925-5001",
+"1573-2916"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10898-024-01442-9"
+},
+"jgs": {
+"title": "Journal of Geographical Systems",
+"issn": [
+"1435-5930",
+"1435-5949"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10109-024-00447-y"
+},
+"jgt": {
+"title": "Journal of Graph Theory",
+"issn": [
+"0364-9024",
+"1097-0118"
+],
+"publisher": "Wiley",
+"doi": "10.1002/jgt.23271"
+},
+"jhir": {
+"title": "Journal of Healthcare Informatics Research",
+"issn": [
+"2509-4971",
+"2509-498X"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s41666-025-00191-y"
+},
+"jhsn": {
+"title": "Journal of High Speed Networks",
+"issn": [
+"0926-6801",
+"1875-8940"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/09266801251331816"
+},
+"jiat": {
+"title": "Journal of Information and Telecommunication",
+"issn": [
+"2475-1839",
+"2475-1847"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/24751839.2025.2458889"
+},
+"jices": {
+"title": "Journal of Information, Communication and Ethics in Society",
+"issn": [
+"1477-996X",
+"1758-8871"
+],
+"publisher": "Emerald",
+"doi": "10.1108/JICES-11-2023-0143"
+},
+"jicts": {
+"title": "Journal of ICT Standardization",
+"issn": [
+"2245-800X",
+"2246-0853"
+],
+"publisher": "River Publishers",
+"doi": "10.13052/jicts2245-800X.1311"
+},
+"jid": {
+"title": "Journal of Integrated Design and Process Science: Transactions of the SDPS, Official Journal of the Society for Design and Process Science",
+"issn": [
+"1092-0617",
+"1875-8959"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/10920617241300224"
+},
+"jifs": {
+"title": "Journal of Intelligent &amp; Fuzzy Systems: Applications in Engineering and Technology",
+"issn": [
+"1064-1246",
+"1875-8967"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/18758967251345258"
+},
+"jiii": {
+"title": "Journal of Industrial Information Integration",
+"issn": [
+"2452-414X"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.jii.2025.100781"
+},
+"jiis": {
+"title": "Journal of Intelligent Information Systems",
+"issn": [
+"0925-9902",
+"1573-7675"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10844-025-00927-7"
+},
+"jikm": {
+"title": "Journal of Information &amp; Knowledge Management",
+"issn": [
+"0219-6492",
+"1793-6926"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/S0219649224500977"
+},
+"jim": {
+"title": "Journal of Intelligent Manufacturing",
+"issn": [
+"0956-5515",
+"1572-8145"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10845-024-02529-6"
+},
+"jimaging": {
+"title": "Journal of Imaging",
+"issn": [
+"2313-433X"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/jimaging11090303"
+},
+"jip": {
+"title": "Journal of Information Processing",
+"issn": [
+"1882-6652"
+],
+"publisher": "Information Processing Society of Japan",
+"doi": "10.2197/ipsjjip.33.41"
+},
+"jirs": {
+"title": "Journal of Intelligent &amp; Robotic Systems",
+"issn": [
+"1573-0409"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10846-025-02328-y"
+},
+"jis": {
+"title": "Journal of Information Science",
+"issn": [
+"0165-5515",
+"1741-6485"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/01655515221133531"
+},
+"jisa": {
+"title": "Journal of Internet Services and Applications",
+"issn": [
+"1869-0238"
+],
+"publisher": "Sociedade Brasileira de Computacao - SB",
+"doi": "10.5753/jisa.2025.5252"
+},
+"jisis": {
+"title": "Journal of Internet Services and Information Security",
+"issn": [
+"2182-2069",
+"2182-2077"
+],
+"publisher": "SASA Publications",
+"doi": "10.58346/jisis.2025.i3.016"
+},
+"jisys": {
+"title": "Journal of Information Systems",
+"issn": [
+"0888-7985",
+"1558-7959"
+],
+"publisher": "American Accounting Association",
+"doi": "10.2308/isys-2022-028"
+},
+"jite": {
+"title": "Journal of Information Technology Education: Research",
+"issn": [
+"1539-3585",
+"1547-9714"
+],
+"publisher": "Informing Science Institute",
+"doi": "10.28945/5501"
+},
+"jits": {
+"title": "Journal of Intelligent Transportation Systems",
+"issn": [
+"1547-2442",
+"1547-2450"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/15472450.2022.2141118"
+},
+"jitt": {
+"title": "Information Technology &amp; Tourism",
+"issn": [
+"1098-3058",
+"1943-4294"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s40558-025-00337-z"
+},
+"jkm": {
+"title": "Journal of Knowledge Management",
+"issn": [
+"1367-3270",
+"1758-7484"
+],
+"publisher": "Emerald",
+"doi": "10.1108/jkm-12-2024-1547"
+},
+"jksucis": {
+"title": "Journal of King Saud University Computer and Information Sciences",
+"issn": [
+"1319-1578",
+"2213-1248"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s44443-025-00299-6"
+},
+"jlap": {
+"title": "Journal of Logical and Algebraic Methods in Programming",
+"issn": [
+"2352-2208"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.jlamp.2025.101071"
+},
+"jmemcom": {
+"title": "Journal of Membrane Computing",
+"issn": [
+"2523-8906",
+"2523-8914"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s41965-025-00195-y"
+},
+"jmihi": {
+"title": "Journal of Medical Imaging and Health Informatics",
+"issn": [
+"2156-7018"
+],
+"publisher": "American Scientific Publishers",
+"doi": "10.1166/jmihi.2022.3924"
+},
+"jmiv": {
+"title": "Journal of Mathematical Imaging and Vision",
+"issn": [
+"0924-9907",
+"1573-7683"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10851-025-01251-z"
+},
+"jml": {
+"title": "Journal of Mathematical Logic",
+"issn": [
+"0219-0613",
+"1793-6691"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/S0219061324500120"
+},
+"jmm": {
+"title": "Journal of Mobile Multimedia",
+"issn": [
+"1550-4646",
+"1550-4654"
+],
+"publisher": "River Publishers",
+"doi": "10.13052/jmm1550-4646.2111"
+},
+"jmmis": {
+"title": "Journal of Multimedia Information System",
+"issn": [
+"2383-7632"
+],
+"publisher": "Korea Multimedia Society - English Version Journal",
+"doi": "10.33851/jmis.2025.12.4.141"
+},
+"jms": {
+"title": "Journal of Medical Systems",
+"issn": [
+"1573-689X"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10916-025-02163-6"
+},
+"jmui": {
+"title": "Journal on Multimodal User Interfaces",
+"issn": [
+"1783-7677",
+"1783-8738"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s12193-025-00468-x"
+},
+"jnca": {
+"title": "Journal of Network and Computer Applications",
+"issn": [
+"1084-8045"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.jnca.2024.104094"
+},
+"jnlp": {
+"title": "Journal of Natural Language Processing",
+"issn": [
+"1340-7619",
+"2185-8314"
+],
+"publisher": "Association for Natural Language Processing",
+"doi": "10.5715/jnlp.32.800"
+},
+"jns": {
+"title": "Journal of Nonlinear Science",
+"issn": [
+"0938-8974",
+"1432-1467"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00332-024-10118-3"
+},
+"jnsm": {
+"title": "Journal of Network and Systems Management",
+"issn": [
+"1064-7570",
+"1573-7705"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10922-025-09898-0"
+},
+"joc": {
+"title": "Journal of Cryptology",
+"issn": [
+"0933-2790",
+"1432-1378"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00145-024-09535-0"
+},
+"jocch": {
+"title": "Journal on Computing and Cultural Heritage",
+"issn": [
+"1556-4673",
+"1556-4711"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3744346"
+},
+"jocn": {
+"title": "Journal of Cognitive Neuroscience",
+"issn": [
+"0898-929X",
+"1530-8898"
+],
+"publisher": "MIT Press",
+"doi": "10.1162/jocn_a_02293"
+},
+"jocnet": {
+"title": "Journal of Optical Communications and Networking",
+"issn": [
+"1943-0620",
+"1943-0639"
+],
+"publisher": "Optica Publishing Group",
+"doi": "10.1364/jocn.552061"
+},
+"jocs": {
+"title": "Journal of Computational Science",
+"issn": [
+"1877-7503"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.jocs.2025.102733"
+},
+"jocsap": {
+"title": "Journal of Cybersecurity and Privacy",
+"issn": [
+"2624-800X"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/jcp5040106"
+},
+"jocss": {
+"title": "Journal of Computational Social Science",
+"issn": [
+"2432-2717",
+"2432-2725"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s42001-025-00415-6"
+},
+"jodl": {
+"title": "International Journal on Digital Libraries",
+"issn": [
+"1432-1300",
+"1432-5012"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00799-025-00411-1"
+},
+"joeuc": {
+"title": "Journal of Organizational and End User Computing",
+"issn": [
+"1546-2234",
+"1546-5012"
+],
+"publisher": "IGI Global Scientific Publishing",
+"doi": "10.4018/joeuc.369156"
+},
+"joi": {
+"title": "Journal of Informetrics",
+"issn": [
+"1751-1577"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.joi.2024.101602"
+},
+"join": {
+"title": "Journal of Interconnection Networks",
+"issn": [
+"0219-2659",
+"1793-6713"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/S0219265924500014"
+},
+"jois": {
+"title": "Journal of Intelligent Systems",
+"issn": [
+"2191-026X"
+],
+"publisher": "Walter de Gruyter GmbH",
+"doi": "10.1515/jisys-2024-0122"
+},
+"jolis": {
+"title": "Journal of Librarianship and Information Science",
+"issn": [
+"0961-0006",
+"1741-6477"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/09610006241269139"
+},
+"jors": {
+"title": "Journal of the Operational Research Society",
+"issn": [
+"0160-5682",
+"1476-9360"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/01605682.2024.2418882"
+},
+"jos": {
+"title": "Journal of Simulation",
+"issn": [
+"1747-7778",
+"1747-7786"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/17477778.2024.2407369"
+},
+"joscas": {
+"title": "Journal of Smart Cities and Society",
+"issn": [
+"2772-3577",
+"2772-3585"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/27723577251388360"
+},
+"jossac": {
+"title": "Journal of Systems Science and Complexity",
+"issn": [
+"1009-6124",
+"1559-7067"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11424-025-4590-9"
+},
+"jossw": {
+"title": "Journal of Open Source Software",
+"issn": [
+"2475-9066"
+],
+"publisher": "The Open Journal",
+"doi": "10.21105/joss.09174"
+},
+"jota": {
+"title": "Journal of Optimization Theory and Applications",
+"issn": [
+"0022-3239",
+"1573-2878"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10957-025-02757-7"
+},
+"jowua": {
+"title": "Journal of Wireless Mobile Networks, Ubiquitous Computing, and Dependable Applications",
+"issn": [
+"2093-5374",
+"2093-5382"
+],
+"publisher": "SASA Publications",
+"doi": "10.58346/jowua.2025.i2.034"
+},
+"jpdc": {
+"title": "Journal of Parallel and Distributed Computing",
+"issn": [
+"0743-7315"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.jpdc.2024.104998"
+},
+"jphil": {
+"title": "Journal of Philosophical Logic",
+"issn": [
+"0022-3611",
+"1573-0433"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10992-024-09782-3"
+},
+"jphonetics": {
+"title": "Journal of Phonetics",
+"issn": [
+"0095-4470"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.wocn.2025.101431"
+},
+"jr": {
+"title": "Journal of Robotics",
+"issn": [
+"1687-9600",
+"1687-9619"
+],
+"publisher": "Wiley",
+"doi": "10.1155/joro/8471068"
+},
+"jrie": {
+"title": "Journal of Reliable Intelligent Environments",
+"issn": [
+"2199-4668",
+"2199-4676"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s40860-025-00256-0"
+},
+"jrm": {
+"title": "Journal of Robotics and Mechatronics",
+"issn": [
+"0915-3942",
+"1883-8049"
+],
+"publisher": "Fuji Technology Press Ltd.",
+"doi": "10.20965/jrm.2025.p1400"
+},
+"jrtip": {
+"title": "Journal of Real-Time Image Processing",
+"issn": [
+"1861-8200",
+"1861-8219"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11554-025-01733-8"
+},
+"jrtpm": {
+"title": "Journal of Rail Transport Planning &amp; Management",
+"issn": [
+"2210-9706"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.jrtpm.2025.100549"
+},
+"js": {
+"title": "Journal of Sensors",
+"issn": [
+"1687-725X",
+"1687-7268"
+],
+"publisher": "Wiley",
+"doi": "10.1155/2022/7481064"
+},
+"jsa": {
+"title": "Journal of Systems Architecture",
+"issn": [
+"1383-7621"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.sysarc.2025.103419"
+},
+"jsac": {
+"title": "IEEE Journal on Selected Areas in Communications",
+"issn": [
+"0733-8716",
+"1558-0008"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/JSAC.2024.3460063"
+},
+"jsait": {
+"title": "IEEE Journal on Selected Areas in Information Theory",
+"issn": [
+"2641-8770"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/JSAIT.2025.3567480"
+},
+"jsan": {
+"title": "Journal of Sensor and Actuator Networks",
+"issn": [
+"2224-2708"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/jsan14040083"
+},
+"jsc": {
+"title": "Journal of Symbolic Computation",
+"issn": [
+"0747-7171"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.jsc.2025.102451"
+},
+"jsce": {
+"title": "Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering",
+"issn": [
+"0959-6518",
+"2041-3041"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/09596518241262503"
+},
+"jscic": {
+"title": "Journal of Scientific Computing",
+"issn": [
+"0885-7474",
+"1573-7691"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10915-025-02994-y"
+},
+"jsemantics": {
+"title": "Journal of Semantics",
+"issn": [
+"0167-5133",
+"1477-4593"
+],
+"publisher": "Oxford University Press (OUP)",
+"doi": "10.1093/jos/ffaf003"
+},
+"jss": {
+"title": "Journal of Systems and Software",
+"issn": [
+"0164-1212"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.jss.2025.112337"
+},
+"jssc": {
+"title": "IEEE Journal of Solid-State Circuits",
+"issn": [
+"0018-9200",
+"1558-173X"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/JSSC.2024.3516040"
+},
+"jstatsoft": {
+"title": "Journal of Statistical Software",
+"issn": [
+"1548-7660"
+],
+"publisher": "Foundation for Open Access Statistic",
+"doi": "10.18637/jss.v115.i01"
+},
+"jstsp": {
+"title": "IEEE Journal of Selected Topics in Signal Processing",
+"issn": [
+"1932-4553",
+"1941-0484"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/JSTSP.2025.3617859"
+},
+"jsyml": {
+"title": "The Journal of Symbolic Logic",
+"issn": [
+"0022-4812",
+"1943-5886"
+],
+"publisher": "Cambridge University Press (CUP)",
+"doi": "10.1017/jsl.2023.45"
+},
+"jtaer": {
+"title": "Journal of Theoretical and Applied Electronic Commerce Research",
+"issn": [
+"0718-1876"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/jtaer20040327"
+},
+"jucs": {
+"title": "JUCS - Journal of Universal Computer Science",
+"issn": [
+"0948-695X",
+"0948-6968"
+],
+"publisher": "Pensoft Publishers",
+"doi": "10.3897/jucs.137699"
+},
+"juq": {
+"title": "SIAM/ASA Journal on Uncertainty Quantification",
+"issn": [
+"2166-2525"
+],
+"publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+"doi": "10.1137/24m1676491"
+},
+"jus": {
+"title": "Journal of Uncertain Systems",
+"issn": [
+"1752-8909",
+"1752-8917"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/S1752890925500072"
+},
+"jvca": {
+"title": "Computer Animation and Virtual Worlds",
+"issn": [
+"1546-4261",
+"1546-427X"
+],
+"publisher": "Wiley",
+"doi": "10.1002/cav.70073"
+},
+"jvcir": {
+"title": "Journal of Visual Communication and Image Representation",
+"issn": [
+"1047-3203"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.jvcir.2025.104474"
+},
+"jvis": {
+"title": "Journal of Visualization",
+"issn": [
+"1343-8875",
+"1875-8975"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s12650-025-01057-6"
+},
+"jwe": {
+"title": "Journal of Web Engineering",
+"issn": [
+"1540-9589",
+"1544-5976"
+],
+"publisher": "River Publishers",
+"doi": "10.13052/jwe1540-9589.2453"
+},
+"jzusc": {
+"title": "Frontiers of Information Technology &amp; Electronic Engineering",
+"issn": [
+"2095-9184",
+"2095-9230"
+],
+"publisher": "Zhejiang University Press",
+"doi": "10.1631/FITEE.2400612"
+},
+"kais": {
+"title": "Knowledge and Information Systems",
+"issn": [
+"0219-1377",
+"0219-3116"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10115-025-02442-1"
+},
+"kbs": {
+"title": "Knowledge-Based Systems",
+"issn": [
+"0950-7051"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.knosys.2025.114943"
+},
+"kes": {
+"title": "International Journal of Knowledge-Based and Intelligent Engineering Systems",
+"issn": [
+"1327-2314",
+"1875-8827"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/13272314241295966"
+},
+"ki": {
+"title": "KI - Künstliche Intelligenz",
+"issn": [
+"0933-1875",
+"1610-1987"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s13218-025-00891-y"
+},
+"kybernetes": {
+"title": "Kybernetes",
+"issn": [
+"0368-492X",
+"1758-7883"
+],
+"publisher": "Emerald",
+"doi": "10.1108/k-11-2023-2421"
+},
+"kybernetika": {
+"title": "Kybernetika",
+"issn": [
+"0023-5954",
+"1805-949X"
+],
+"publisher": "Institute of Information Theory and Automation of the CAS",
+"doi": "10.14736/kyb-2025-1-0109"
+},
+"lalc": {
+"title": "Digital Scholarship in the Humanities",
+"issn": [
+"2055-7671",
+"2055-768X"
+],
+"publisher": "Oxford University Press (OUP)",
+"doi": "10.1093/llc/fqaf014"
+},
+"lgrs": {
+"title": "IEEE Geoscience and Remote Sensing Letters",
+"issn": [
+"1545-598X",
+"1558-0571"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/LGRS.2024.3515136"
+},
+"lht": {
+"title": "Library Hi Tech",
+"issn": [
+"0737-8831",
+"2054-166X"
+],
+"publisher": "Emerald",
+"doi": "10.1108/LHT-09-2023-0437"
+},
+"libt": {
+"title": "Library Trends",
+"issn": [
+"1559-0682"
+],
+"publisher": "Project MUSE",
+"doi": "10.1353/lib.2025.a970677"
+},
+"lmcs": {
+"title": "Logical Methods in Computer Science",
+"issn": [
+"1860-5974"
+],
+"publisher": "Centre pour la Communication Scientifique Directe (CCSD)",
+"doi": "10.46298/lmcs-21(4:26)2025"
+},
+"logcom": {
+"title": "Journal of Logic and Computation",
+"issn": [
+"0955-792X",
+"1465-363X"
+],
+"publisher": "Oxford University Press (OUP)",
+"doi": "10.1093/logcom/exae032"
+},
+"lp": {
+"title": "Learned Publishing",
+"issn": [
+"0953-1513",
+"1741-4857"
+],
+"publisher": "Wiley",
+"doi": "10.1002/leap.1656"
+},
+"lre": {
+"title": "Language Resources and Evaluation",
+"issn": [
+"1574-020X",
+"1574-0218"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10579-025-09840-5"
+},
+"lssc": {
+"title": "IEEE Solid-State Circuits Letters",
+"issn": [
+"2573-9603"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/LSSC.2025.3566726"
+},
+"lu": {
+"title": "Logica Universalis",
+"issn": [
+"1661-8297",
+"1661-8300"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11787-025-00396-0"
+},
+"ma": {
+"title": "Journal of Multivariate Analysis",
+"issn": [
+"0047-259X"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.jmva.2024.105395"
+},
+"make": {
+"title": "Machine Learning and Knowledge Extraction",
+"issn": [
+"2504-4990"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/make7030070"
+},
+"mam": {
+"title": "Microprocessors and Microsystems",
+"issn": [
+"0141-9331"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.micpro.2025.105141"
+},
+"mansci": {
+"title": "Management Science",
+"issn": [
+"0025-1909",
+"1526-5501"
+],
+"publisher": "Institute for Operations Research and the Management Sciences (INFORMS)",
+"doi": "10.1287/mnsc.2023.03632"
+},
+"maple": {
+"title": "Maple Transactions",
+"issn": [
+"2564-3029"
+],
+"publisher": "University of Western Ontario, Western Libraries",
+"doi": "10.5206/mt.v5i1.21229"
+},
+"mbec": {
+"title": "Medical &amp; Biological Engineering &amp; Computing",
+"issn": [
+"0140-0118",
+"1741-0444"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11517-025-03299-w"
+},
+"mcs": {
+"title": "Mathematics and Computers in Simulation",
+"issn": [
+"0378-4754"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.matcom.2024.10.007"
+},
+"mdpinetwork": {
+"title": "Network",
+"issn": [
+"2673-8732"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/network5010003"
+},
+"mdpisoftware": {
+"title": "Software",
+"issn": [
+"2674-113X"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/software4040028"
+},
+"memetic": {
+"title": "Memetic Computing",
+"issn": [
+"1865-9284",
+"1865-9292"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s12293-025-00465-3"
+},
+"mfc": {
+"title": "Mathematical Foundations of Computing",
+"issn": [
+"2577-8838"
+],
+"publisher": "American Institute of Mathematical Sciences (AIMS)",
+"doi": "10.3934/mfc.2024011"
+},
+"mia": {
+"title": "Medical Image Analysis",
+"issn": [
+"1361-8415"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.media.2024.103390"
+},
+"micro": {
+"title": "IEEE Micro",
+"issn": [
+"0272-1732",
+"1937-4143"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MM.2025.3557487"
+},
+"mics": {
+"title": "Mathematics in Computer Science",
+"issn": [
+"1661-8270",
+"1661-8289"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11786-025-00606-4"
+},
+"midm": {
+"title": "BMC Medical Informatics and Decision Making",
+"issn": [
+"1472-6947"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1186/s12911-025-02912-0"
+},
+"mis": {
+"title": "Mobile Information Systems",
+"issn": [
+"1574-017X",
+"1875-905X"
+],
+"publisher": "Wiley",
+"doi": "10.1155/2022/6257885"
+},
+"misq": {
+"title": "MIS Quarterly",
+"issn": [
+"0276-7783",
+"2162-9730"
+],
+"publisher": "MIS Quarterly",
+"doi": "10.25300/misq/2025/17948"
+},
+"mj": {
+"title": "Microelectronics Journal",
+"issn": [
+"1879-2391"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.mejo.2024.106502"
+},
+"mktsci": {
+"title": "Marketing Science",
+"issn": [
+"0732-2399",
+"1526-548X"
+],
+"publisher": "Institute for Operations Research and the Management Sciences (INFORMS)",
+"doi": "10.1287/mksc.2022.0380"
+},
+"ml": {
+"title": "Machine Learning",
+"issn": [
+"0885-6125",
+"1573-0565"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10994-025-06745-w"
+},
+"mlc": {
+"title": "International Journal of Machine Learning and Cybernetics",
+"issn": [
+"1868-8071",
+"1868-808X"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s13042-024-02417-8"
+},
+"mlst": {
+"title": "Machine Learning: Science and Technology",
+"issn": [
+"2632-2153"
+],
+"publisher": "IOP Publishing",
+"doi": "10.1088/2632-2153/ae1563"
+},
+"mma": {
+"title": "Mathematical Modelling and Analysis",
+"issn": [
+"1392-6292",
+"1648-3510"
+],
+"publisher": "Vilnius Gediminas Technical University",
+"doi": "10.3846/mma.2025.22650"
+},
+"mmas": {
+"title": "Multiscale Modeling &amp; Simulation",
+"issn": [
+"1540-3459",
+"1540-3467"
+],
+"publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+"doi": "10.1137/23m1610720"
+},
+"mms": {
+"title": "Multimedia Systems",
+"issn": [
+"0942-4962",
+"1432-1882"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00530-025-01907-1"
+},
+"moc": {
+"title": "Mathematics of Computation",
+"issn": [
+"0025-5718",
+"1088-6842"
+],
+"publisher": "American Mathematical Society (AMS)",
+"doi": "10.1090/mcom/4064"
+},
+"monet": {
+"title": "Mobile Networks and Applications",
+"issn": [
+"1383-469X",
+"1572-8153"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11036-025-02453-w"
+},
+"mor": {
+"title": "Mathematics of Operations Research",
+"issn": [
+"0364-765X",
+"1526-5471"
+],
+"publisher": "Institute for Operations Research and the Management Sciences (INFORMS)",
+"doi": "10.1287/moor.2022.0284"
+},
+"mp": {
+"title": "Mathematical Programming",
+"issn": [
+"0025-5610",
+"1436-4646"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10107-024-02165-1"
+},
+"mpc": {
+"title": "Mathematical Programming Computation",
+"issn": [
+"1867-2949",
+"1867-2957"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s12532-024-00271-x"
+},
+"mscs": {
+"title": "Mathematical Structures in Computer Science",
+"issn": [
+"0960-1295",
+"1469-8072"
+],
+"publisher": "Cambridge University Press (CUP)",
+"doi": "10.1017/s0960129525100327"
+},
+"msom": {
+"title": "Manufacturing &amp; Service Operations Management",
+"issn": [
+"1523-4614",
+"1526-5498"
+],
+"publisher": "Institute for Operations Research and the Management Sciences (INFORMS)",
+"doi": "10.1287/msom.2022.0453"
+},
+"mss": {
+"title": "Mathematical Social Sciences",
+"issn": [
+"0165-4896"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.mathsocsci.2025.102414"
+},
+"mssp": {
+"title": "Multidimensional Systems and Signal Processing",
+"issn": [
+"0923-6082",
+"1573-0824"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11045-025-00899-5"
+},
+"mta": {
+"title": "Multimedia Tools and Applications",
+"issn": [
+"1573-7721"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11042-025-20848-5"
+},
+"mti": {
+"title": "Multimodal Technologies and Interaction",
+"issn": [
+"2414-4088"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/mti9080083"
+},
+"mva": {
+"title": "Machine Vision and Applications",
+"issn": [
+"0932-8092",
+"1432-1769"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00138-024-01643-y"
+},
+"na": {
+"title": "Numerical Algorithms",
+"issn": [
+"1017-1398",
+"1572-9265"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11075-024-01855-3"
+},
+"nar": {
+"title": "Nucleic Acids Research",
+"issn": [
+"0305-1048",
+"1362-4962"
+],
+"publisher": "Oxford University Press (OUP)",
+"doi": "10.1093/nar/gkac951"
+},
+"natmi": {
+"title": "Nature Machine Intelligence",
+"issn": [
+"2522-5839"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1038/s42256-024-00978-5"
+},
+"nc": {
+"title": "Natural Computing",
+"issn": [
+"1567-7818",
+"1572-9796"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11047-024-10003-8"
+},
+"nca": {
+"title": "Neural Computing and Applications",
+"issn": [
+"0941-0643",
+"1433-3058"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00521-025-11454-5"
+},
+"ncs": {
+"title": "Nature Computational Science",
+"issn": [
+"2662-8457"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1038/s43588-025-00855-0"
+},
+"neco": {
+"title": "Neural Computation",
+"issn": [
+"0899-7667",
+"1530-888X"
+],
+"publisher": "MIT Press",
+"doi": "10.1162/neco_a_01743"
+},
+"netmahib": {
+"title": "Network Modeling Analysis in Health Informatics and Bioinformatics",
+"issn": [
+"2192-6670"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s13721-025-00546-w"
+},
+"netsci": {
+"title": "Network Science",
+"issn": [
+"2050-1242",
+"2050-1250"
+],
+"publisher": "Cambridge University Press (CUP)",
+"doi": "10.1017/nws.2025.10018"
+},
+"network": {
+"title": "IEEE Network",
+"issn": [
+"0890-8044",
+"1558-156X"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MNET.2024.3514083"
+},
+"networks": {
+"title": "Networks",
+"issn": [
+"0028-3045",
+"1097-0037"
+],
+"publisher": "Wiley",
+"doi": "10.1002/net.22273"
+},
+"neuroimage": {
+"title": "NeuroImage",
+"issn": [
+"1053-8119"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.neuroimage.2025.121330"
+},
+"neuromorphic": {
+"title": "Neuromorphic Computing and Engineering",
+"issn": [
+"2634-4386"
+],
+"publisher": "IOP Publishing",
+"doi": "10.1088/2634-4386/ae006c"
+},
+"nfd": {
+"title": "Information – Wissenschaft &amp; Praxis",
+"issn": [
+"1434-4653",
+"1619-4292"
+],
+"publisher": "Walter de Gruyter GmbH",
+"doi": "10.1515/iwp-2025-2003"
+},
+"ngc": {
+"title": "New Generation Computing",
+"issn": [
+"0288-3635",
+"1882-7055"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00354-025-00291-8"
+},
+"nhm": {
+"title": "Networks and Heterogeneous Media",
+"issn": [
+"1556-1801"
+],
+"publisher": "American Institute of Mathematical Sciences (AIMS)",
+"doi": "10.3934/nhm.2025060"
+},
+"ni": {
+"title": "Neuroinformatics",
+"issn": [
+"1559-0089"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s12021-025-09715-8"
+},
+"nla": {
+"title": "Numerical Linear Algebra with Applications",
+"issn": [
+"1070-5325",
+"1099-1506"
+],
+"publisher": "Wiley",
+"doi": "10.1002/nla.2582"
+},
+"nle": {
+"title": "Natural Language Engineering",
+"issn": [
+"1351-3249",
+"1469-8110"
+],
+"publisher": "Cambridge University Press (CUP)",
+"doi": "10.1017/s135132492300058x"
+},
+"nlpj": {
+"title": "Natural Language Processing Journal",
+"issn": [
+"2949-7191"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.nlp.2025.100175"
+},
+"nm": {
+"title": "Numerische Mathematik",
+"issn": [
+"0029-599X",
+"0945-3245"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00211-025-01505-3"
+},
+"nmnc": {
+"title": "New Mathematics and Natural Computation",
+"issn": [
+"1793-0057",
+"1793-7027"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/S1793005725500103"
+},
+"nms": {
+"title": "New Media &amp; Society",
+"issn": [
+"1461-4448",
+"1461-7315"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/14614448241270434"
+},
+"nn": {
+"title": "Neural Networks",
+"issn": [
+"0893-6080"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.neunet.2025.107455"
+},
+"npjdm": {
+"title": "npj Digital Medicine",
+"issn": [
+"2398-6352"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1038/s41746-025-01892-9"
+},
+"npl": {
+"title": "Neural Processing Letters",
+"issn": [
+"1573-773X"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11063-025-11755-9"
+},
+"ns": {
+"title": "Network Security",
+"issn": [
+"1353-4858",
+"1872-9371"
+],
+"publisher": "Breda Publishing Press",
+"doi": "10.70985/5a8a5j69"
+},
+"oclc": {
+"title": "Digital Library Perspectives",
+"issn": [
+"2059-5816",
+"2059-5824"
+],
+"publisher": "Emerald",
+"doi": "10.1108/DLP-02-2025-154"
+},
+"oir": {
+"title": "Online Information Review",
+"issn": [
+"1468-4527"
+],
+"publisher": "Emerald",
+"doi": "10.1108/OIR-04-2023-0171"
+},
+"ojcands": {
+"title": "IEEE Open Journal of Circuits and Systems",
+"issn": [
+"2644-1225"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/OJCAS.2025.3559774"
+},
+"ojcomps": {
+"title": "IEEE Open Journal of the Computer Society",
+"issn": [
+"2644-1268"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/OJCS.2024.3523699"
+},
+"ojcs": {
+"title": "IEEE Open Journal of the Communications Society",
+"issn": [
+"2644-125X"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/OJCOMS.2025.3561002"
+},
+"ol": {
+"title": "Optimization Letters",
+"issn": [
+"1862-4472",
+"1862-4480"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11590-025-02200-w"
+},
+"oms": {
+"title": "Optimization Methods and Software",
+"issn": [
+"1029-4937",
+"1055-6788"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/10556788.2024.2436179"
+},
+"or": {
+"title": "Operational Research",
+"issn": [
+"1109-2858",
+"1866-1505"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s12351-025-00908-2"
+},
+"ord": {
+"title": "Operations Research and Decisions",
+"issn": [
+"2081-8858",
+"2391-6060"
+],
+"publisher": "Politechnika Wroclawska Oficyna Wydawnicza",
+"doi": "10.37190/ord250105"
+},
+"order": {
+"title": "Order",
+"issn": [
+"0167-8094",
+"1572-9273"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11083-024-09683-9"
+},
+"orf": {
+"title": "Operations Research Forum",
+"issn": [
+"2662-2556"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s43069-025-00527-9"
+},
+"orl": {
+"title": "Operations Research Letters",
+"issn": [
+"0167-6377"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.orl.2025.107240"
+},
+"ors": {
+"title": "OR Spectrum",
+"issn": [
+"0171-6468",
+"1436-6304"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00291-024-00775-x"
+},
+"osnm": {
+"title": "Online Social Networks and Media",
+"issn": [
+"2468-6964"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.osnem.2025.100334"
+},
+"paa": {
+"title": "Pattern Analysis and Applications",
+"issn": [
+"1433-7541",
+"1433-755X"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10044-024-01387-5"
+},
+"pacmcgit": {
+"title": "Proceedings of the ACM on Computer Graphics and Interactive Techniques",
+"issn": [
+"2577-6193"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3747858"
+},
+"pacmhci": {
+"title": "Proceedings of the ACM on Human-Computer Interaction",
+"issn": [
+"2573-0142"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3711078"
+},
+"pacmmod": {
+"title": "Proceedings of the ACM on Management of Data",
+"issn": [
+"2836-6573"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3725332"
+},
+"pacmnet": {
+"title": "Proceedings of the ACM on Networking",
+"issn": [
+"2834-5509"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3749215"
+},
+"pacmpl": {
+"title": "Proceedings of the ACM on Programming Languages",
+"issn": [
+"2475-1421"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3704875"
+},
+"pacmse": {
+"title": "Proceedings of the ACM on Software Engineering",
+"issn": [
+"2994-970X"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3715726"
+},
+"pai": {
+"title": "Progress in Artificial Intelligence",
+"issn": [
+"2192-6352",
+"2192-6360"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s13748-024-00352-x"
+},
+"pami": {
+"title": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+"issn": [
+"0162-8828",
+"1939-3539",
+"2160-9292"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TPAMI.2025.3562999"
+},
+"patterns": {
+"title": "Patterns",
+"issn": [
+"2666-3899"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.patter.2025.101176"
+},
+"pcs": {
+"title": "Programming and Computer Software",
+"issn": [
+"0361-7688",
+"1608-3261"
+],
+"publisher": "Pleiades Publishing Ltd",
+"doi": "10.1134/S0361768825700161"
+},
+"pe": {
+"title": "Performance Evaluation",
+"issn": [
+"0166-5316"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.peva.2025.102517"
+},
+"peerj-cs": {
+"title": "PeerJ Computer Science",
+"issn": [
+"2376-5992"
+],
+"publisher": "PeerJ",
+"doi": "10.7717/peerj-cs.3292"
+},
+"percom": {
+"title": "Pervasive and Mobile Computing",
+"issn": [
+"1574-1192"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.pmcj.2025.102067"
+},
+"phat": {
+"title": "EAI Endorsed Transactions on Pervasive Health and Technology",
+"issn": [
+"2411-7145"
+],
+"publisher": "European Alliance for Innovation n.o.",
+"doi": "10.4108/eetpht.10.5699"
+},
+"phycomm": {
+"title": "Physical Communication",
+"issn": [
+"1874-4907"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.phycom.2025.102820"
+},
+"pieee": {
+"title": "Proceedings of the IEEE",
+"issn": [
+"0018-9219",
+"1558-2256"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/JPROC.2025.3557698"
+},
+"ploscb": {
+"title": "PLOS Computational Biology",
+"issn": [
+"1553-7358"
+],
+"publisher": "Public Library of Science (PLoS)",
+"doi": "10.1371/journal.pcbi.1012790"
+},
+"pmh": {
+"title": "Periodica Mathematica Hungarica",
+"issn": [
+"0031-5303",
+"1588-2829"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10998-025-00666-w"
+},
+"polity": {
+"title": "Information Polity",
+"issn": [
+"1570-1255",
+"1875-8754"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/15701255251356399"
+},
+"pomacs": {
+"title": "Proceedings of the ACM on Measurement and Analysis of Computing Systems",
+"issn": [
+"2476-1249"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3711698"
+},
+"popets": {
+"title": "Proceedings on Privacy Enhancing Technologies",
+"issn": [
+"2299-0984"
+],
+"publisher": "Privacy Enhancing Technologies Symposium Advisory Board",
+"doi": "10.56553/popets-2025-0037"
+},
+"ppna": {
+"title": "Peer-to-Peer Networking and Applications",
+"issn": [
+"1936-6442",
+"1936-6450"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s12083-024-01820-w"
+},
+"pr": {
+"title": "Pattern Recognition",
+"issn": [
+"0031-3203"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.patcog.2025.111591"
+},
+"prl": {
+"title": "Pattern Recognition Letters",
+"issn": [
+"0167-8655"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.patrec.2025.03.023"
+},
+"programming": {
+"title": "The Art, Science, and Engineering of Programming",
+"issn": [
+"2473-7321"
+],
+"publisher": "Aspect-Oriented Software Association (AOSA)",
+"doi": "10.22152/programming-journal.org/2025/10/20"
+},
+"publications": {
+"title": "Publications",
+"issn": [
+"2304-6775"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/publications13040052"
+},
+"pubtrans": {
+"title": "Public Transport",
+"issn": [
+"1613-7159",
+"1866-749X"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s12469-024-00382-7"
+},
+"puc": {
+"title": "Personal and Ubiquitous Computing",
+"issn": [
+"1617-4909",
+"1617-4917"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00779-025-01848-6"
+},
+"pvldb": {
+"title": "Proceedings of the VLDB Endowment",
+"issn": [
+"2150-8097"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.14778/3746405.3746419"
+},
+"qip": {
+"title": "Quantum Information Processing",
+"issn": [
+"1573-1332"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11128-025-04679-9"
+},
+"qmi": {
+"title": "Quantum Machine Intelligence",
+"issn": [
+"2524-4906",
+"2524-4914"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s42484-025-00247-7"
+},
+"qre": {
+"title": "Quality and Reliability Engineering International",
+"issn": [
+"0748-8017",
+"1099-1638"
+],
+"publisher": "Wiley",
+"doi": "10.1002/qre.3664"
+},
+"qss": {
+"title": "Quantitative Science Studies",
+"issn": [
+"2641-3337"
+],
+"publisher": "MIT Press",
+"doi": "10.1162/qss_a_00350"
+},
+"quanbio": {
+"title": "Quantitative Biology",
+"issn": [
+"2095-4689",
+"2095-4697"
+],
+"publisher": "Wiley",
+"doi": "10.1002/qub2.70000"
+},
+"quantum": {
+"title": "Quantum",
+"issn": [
+"2521-327X"
+],
+"publisher": "Verein zur Forderung des Open Access Publizierens in den Quantenwissenschaften",
+"doi": "10.22331/q-2025-12-11-1936"
+},
+"questa": {
+"title": "Queueing Systems",
+"issn": [
+"0257-0130",
+"1572-9443"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11134-025-09957-y"
+},
+"queue": {
+"title": "Queue",
+"issn": [
+"1542-7730",
+"1542-7749"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3723000"
+},
+"rairo": {
+"title": "RAIRO - Operations Research",
+"issn": [
+"0399-0559",
+"2804-7303"
+],
+"publisher": "EDP Sciences",
+"doi": "10.1051/ro/2024222"
+},
+"ral": {
+"title": "IEEE Robotics and Automation Letters",
+"issn": [
+"2377-3766",
+"2377-3774"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/LRA.2025.3554104"
+},
+"ram": {
+"title": "IEEE Robotics &amp; Automation Magazine",
+"issn": [
+"1070-9932",
+"1558-223X"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MRA.2025.3527820"
+},
+"ras": {
+"title": "Robotics and Autonomous Systems",
+"issn": [
+"0921-8890"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.robot.2024.104897"
+},
+"rbie": {
+"title": "Revista Brasileira de Informática na Educação",
+"issn": [
+"1414-5685",
+"2317-6121"
+],
+"publisher": "Sociedade Brasileira de Computacao - SB",
+"doi": "10.5753/rbie.2025.4610"
+},
+"rcim": {
+"title": "Robotics and Computer-Integrated Manufacturing",
+"issn": [
+"0736-5845"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.rcim.2024.102896"
+},
+"remotesensing": {
+"title": "Remote Sensing",
+"issn": [
+"2072-4292"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/rs16183512"
+},
+"ress": {
+"title": "Reliability Engineering &amp; System Safety",
+"issn": [
+"0951-8320"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.ress.2024.110556"
+},
+"rita": {
+"title": "Revista de Informática Teórica e Aplicada",
+"issn": [
+"0103-4308",
+"2175-2745"
+],
+"publisher": "Universidade Federal do Rio Grande do Sul",
+"doi": "10.22456/2175-2745.143357"
+},
+"rjour": {
+"title": "The R Journal",
+"issn": [
+"2073-4859"
+],
+"publisher": "The R Foundation",
+"doi": "10.32614/rj-2024-042"
+},
+"robotica": {
+"title": "Robotica",
+"issn": [
+"0263-5747",
+"1469-8668"
+],
+"publisher": "Cambridge University Press (CUP)",
+"doi": "10.1017/s0263574724001930"
+},
+"robotics": {
+"title": "Robotics",
+"issn": [
+"2218-6581"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/robotics14110150"
+},
+"roia": {
+"title": "Revue Ouverte d'Intelligence Artificielle",
+"issn": [
+"2967-9672"
+],
+"publisher": "MathDoc/Centre Mersenne",
+"doi": "10.5802/roia.90fr"
+},
+"rptel": {
+"title": "Research and Practice in Technology Enhanced Learning",
+"issn": [
+"1793-7078"
+],
+"publisher": "Asia-Pacific Society for Computers in Education",
+"doi": "10.58459/rptel.2026.21008"
+},
+"rsa": {
+"title": "Random Structures &amp; Algorithms",
+"issn": [
+"1042-9832",
+"1098-2418"
+],
+"publisher": "Wiley",
+"doi": "10.1002/rsa.70016"
+},
+"rsl": {
+"title": "The Review of Symbolic Logic",
+"issn": [
+"1755-0203",
+"1755-0211"
+],
+"publisher": "Cambridge University Press (CUP)",
+"doi": "10.1017/s1755020325100981"
+},
+"rss": {
+"title": "The Review of Socionetwork Strategies",
+"issn": [
+"1867-3236",
+"2523-3173"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s12626-025-00188-4"
+},
+"sac": {
+"title": "Statistics and Computing",
+"issn": [
+"0960-3174",
+"1573-1375"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11222-025-10666-y"
+},
+"sadm": {
+"title": "Statistical Analysis and Data Mining: An ASA Data Science Journal",
+"issn": [
+"1932-1864",
+"1932-1872"
+],
+"publisher": "Wiley",
+"doi": "10.1002/sam.70047"
+},
+"saem": {
+"title": "International Journal of System Assurance Engineering and Management",
+"issn": [
+"0975-6809",
+"0976-4348"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s13198-025-02773-w"
+},
+"sands": {
+"title": "Security and Safety",
+"issn": [
+"2826-1275"
+],
+"publisher": "EDP Sciences",
+"doi": "10.1051/sands/2024019"
+},
+"sap": {
+"title": "SECURITY AND PRIVACY",
+"issn": [
+"2475-6725"
+],
+"publisher": "Wiley",
+"doi": "10.1002/spy2.70001"
+},
+"sbcjis": {
+"title": "Journal on Interactive Systems",
+"issn": [
+"2763-7719"
+],
+"publisher": "Sociedade Brasileira de Computacao - SB",
+"doi": "10.5753/jis.2025.5552"
+},
+"scheduling": {
+"title": "Journal of Scheduling",
+"issn": [
+"1094-6136",
+"1099-1425"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10951-025-00849-w"
+},
+"scientometrics": {
+"title": "Scientometrics",
+"issn": [
+"0138-9130",
+"1588-2861"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11192-025-05498-6"
+},
+"scirobotics": {
+"title": "Science Robotics",
+"issn": [
+"2470-9476"
+],
+"publisher": "American Association for the Advancement of Science (AAAS)",
+"doi": "10.1126/scirobotics.ado6251"
+},
+"scl": {
+"title": "Systems &amp; Control Letters",
+"issn": [
+"0167-6911"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.sysconle.2025.106229"
+},
+"scn": {
+"title": "Security and Communication Networks",
+"issn": [
+"1939-0114",
+"1939-0122"
+],
+"publisher": "Wiley",
+"doi": "10.1155/2022/7275433"
+},
+"scp": {
+"title": "Science of Computer Programming",
+"issn": [
+"0167-6423"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.scico.2025.103298"
+},
+"scpe": {
+"title": "Scalable Computing: Practice and Experience",
+"issn": [
+"1895-1767"
+],
+"publisher": "Scalable Computing: Practice and Experience",
+"doi": "10.12694/scpe.v26i2.4020"
+},
+"scw": {
+"title": "Social Choice and Welfare",
+"issn": [
+"0176-1714",
+"1432-217X"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00355-024-01578-3"
+},
+"se": {
+"title": "Systems Engineering",
+"issn": [
+"1098-1241",
+"1520-6858"
+],
+"publisher": "Wiley",
+"doi": "10.1002/sys.21774"
+},
+"see": {
+"title": "Science and Engineering Ethics",
+"issn": [
+"1471-5546"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11948-025-00566-9"
+},
+"semweb": {
+"title": "Semantic Web: – Interoperability, Usability, Applicability",
+"issn": [
+"1570-0844",
+"2210-4968"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/22104968251361286"
+},
+"sensors": {
+"title": "Sensors",
+"issn": [
+"1424-8220"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/s24123725"
+},
+"siaga": {
+"title": "SIAM Journal on Applied Algebra and Geometry",
+"issn": [
+"2470-6566"
+],
+"publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+"doi": "10.1137/24m1713910"
+},
+"siamads": {
+"title": "SIAM Journal on Applied Dynamical Systems",
+"issn": [
+"1536-0040"
+],
+"publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+"doi": "10.1137/24m1706955"
+},
+"siamam": {
+"title": "SIAM Journal on Applied Mathematics",
+"issn": [
+"0036-1399",
+"1095-712X"
+],
+"publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+"doi": "10.1137/24m1714290"
+},
+"siamco": {
+"title": "SIAM Journal on Control and Optimization",
+"issn": [
+"0363-0129",
+"1095-7138"
+],
+"publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+"doi": "10.1137/23m1588172"
+},
+"siamdm": {
+"title": "SIAM Journal on Discrete Mathematics",
+"issn": [
+"0895-4801",
+"1095-7146"
+],
+"publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+"doi": "10.1137/23m157082x"
+},
+"siamfm": {
+"title": "SIAM Journal on Financial Mathematics",
+"issn": [
+"1945-497X"
+],
+"publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+"doi": "10.1137/24m1653021"
+},
+"siamis": {
+"title": "SIAM Journal on Imaging Sciences",
+"issn": [
+"1936-4954"
+],
+"publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+"doi": "10.1137/24m170658x"
+},
+"siamjo": {
+"title": "SIAM Journal on Optimization",
+"issn": [
+"1052-6234",
+"1095-7189"
+],
+"publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+"doi": "10.1137/24m1629237"
+},
+"siamma": {
+"title": "SIAM Journal on Mathematical Analysis",
+"issn": [
+"0036-1410",
+"1095-7154"
+],
+"publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+"doi": "10.1137/23m1590159"
+},
+"siammax": {
+"title": "SIAM Journal on Matrix Analysis and Applications",
+"issn": [
+"0895-4798",
+"1095-7162"
+],
+"publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+"doi": "10.1137/25m1737651"
+},
+"siamnum": {
+"title": "SIAM Journal on Numerical Analysis",
+"issn": [
+"0036-1429",
+"1095-7170"
+],
+"publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+"doi": "10.1137/23m159946x"
+},
+"siamrev": {
+"title": "SIAM Review",
+"issn": [
+"0036-1445",
+"1095-7200"
+],
+"publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+"doi": "10.1137/22m1541721"
+},
+"siamsc": {
+"title": "SIAM Journal on Scientific Computing",
+"issn": [
+"1064-8275",
+"1095-7197"
+],
+"publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+"doi": "10.1137/24m1661777"
+},
+"sigact": {
+"title": "ACM SIGACT News",
+"issn": [
+"0163-5700"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3767145.3767151"
+},
+"sigcse": {
+"title": "ACM SIGCSE Bulletin",
+"issn": [
+"0097-8418"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3756898.3756903"
+},
+"sigir": {
+"title": "ACM SIGIR Forum",
+"issn": [
+"0163-5840"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3769733.3769742"
+},
+"siglog": {
+"title": "ACM SIGLOG News",
+"issn": [
+"2372-3491"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3723141.3723148"
+},
+"sigmetrics": {
+"title": "ACM SIGMETRICS Performance Evaluation Review",
+"issn": [
+"0163-5999"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3712170.3712177"
+},
+"sigmod": {
+"title": "ACM SIGMOD Record",
+"issn": [
+"0163-5808"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3749116.3749135"
+},
+"sigpro": {
+"title": "Signal Processing",
+"issn": [
+"0165-1684"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.sigpro.2024.109724"
+},
+"sigsoft": {
+"title": "ACM SIGSOFT Software Engineering Notes",
+"issn": [
+"0163-5948"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3709616.3709621"
+},
+"simods": {
+"title": "SIAM Journal on Mathematics of Data Science",
+"issn": [
+"2577-0187"
+],
+"publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+"doi": "10.1137/23m1620478"
+},
+"simpa": {
+"title": "Software Impacts",
+"issn": [
+"2665-9638"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.simpa.2025.100771"
+},
+"simpra": {
+"title": "Simulation Modelling Practice and Theory",
+"issn": [
+"1569-190X"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.simpat.2025.103126"
+},
+"simulation": {
+"title": "SIMULATION",
+"issn": [
+"0037-5497",
+"1741-3133"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/00375497231159944"
+},
+"sis": {
+"title": "ICST Transactions on Scalable Information Systems",
+"issn": [
+"2032-9407"
+],
+"publisher": "European Alliance for Innovation n.o.",
+"doi": "10.4108/eetsis.7029"
+},
+"sivp": {
+"title": "Signal, Image and Video Processing",
+"issn": [
+"1863-1703",
+"1863-1711"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11760-025-04242-0"
+},
+"sj": {
+"title": "IEEE Systems Journal",
+"issn": [
+"1932-8184",
+"1937-9234",
+"2373-7816"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/JSYST.2025.3608826"
+},
+"sjis": {
+"title": "Scandinavian Journal of Information Systems",
+"issn": [
+"1901-0990"
+],
+"publisher": "Association for Information Systems",
+"doi": "10.17705/3sjis/037.08"
+},
+"sle": {
+"title": "Smart Learning Environments",
+"issn": [
+"2196-7091"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1186/s40561-025-00410-4"
+},
+"smr": {
+"title": "Journal of Software: Evolution and Process",
+"issn": [
+"2047-7473",
+"2047-7481"
+],
+"publisher": "Wiley",
+"doi": "10.1002/smr.2757"
+},
+"snam": {
+"title": "Social Network Analysis and Mining",
+"issn": [
+"1869-5469"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s13278-025-01532-w"
+},
+"sncs": {
+"title": "SN Computer Science",
+"issn": [
+"2661-8907"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s42979-025-04247-z"
+},
+"socnet": {
+"title": "Social Networks",
+"issn": [
+"0378-8733"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.socnet.2025.03.005"
+},
+"soco": {
+"title": "Soft Computing",
+"issn": [
+"1432-7643",
+"1433-7479"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00500-025-10557-4"
+},
+"socomp": {
+"title": "Journal of Social Computing",
+"issn": [
+"2688-5255"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.23919/jsc.2025.0001"
+},
+"software": {
+"title": "IEEE Software",
+"issn": [
+"0740-7459",
+"1937-4194"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MS.2025.3540536"
+},
+"softx": {
+"title": "SoftwareX",
+"issn": [
+"2352-7110"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.softx.2025.102214"
+},
+"solarjla": {
+"title": "Journal of Learning Analytics",
+"issn": [
+"1929-7750"
+],
+"publisher": "Society for Learning Analytics Research",
+"doi": "10.18608/jla.2025.8735"
+},
+"sosym": {
+"title": "Software and Systems Modeling",
+"issn": [
+"1619-1366",
+"1619-1374"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10270-024-01180-2"
+},
+"sp": {
+"title": "Scientific Programming",
+"issn": [
+"1058-9244",
+"1875-919X"
+],
+"publisher": "Wiley",
+"doi": "10.1155/2022/4037625"
+},
+"spe": {
+"title": "Software: Practice and Experience",
+"issn": [
+"0038-0644",
+"1097-024X"
+],
+"publisher": "Wiley",
+"doi": "10.1002/spe.3379"
+},
+"speech": {
+"title": "Speech Communication",
+"issn": [
+"0167-6393"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.specom.2025.103243"
+},
+"spic": {
+"title": "Signal Processing: Image Communication",
+"issn": [
+"0923-5965"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.image.2025.117356"
+},
+"spl": {
+"title": "IEEE Signal Processing Letters",
+"issn": [
+"1070-9908",
+"1558-2361"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/LSP.2025.3585822"
+},
+"spm": {
+"title": "IEEE Signal Processing Magazine",
+"issn": [
+"1053-5888",
+"1558-0792"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MSP.2025.3543669"
+},
+"sqj": {
+"title": "Software Quality Journal",
+"issn": [
+"0963-9314",
+"1573-1367"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11219-025-09723-6"
+},
+"staeors": {
+"title": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+"issn": [
+"1939-1404",
+"2151-1535"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/JSTARS.2025.3610145"
+},
+"sttt": {
+"title": "International Journal on Software Tools for Technology Transfer",
+"issn": [
+"1433-2779",
+"1433-2787"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10009-025-00799-w"
+},
+"suscom": {
+"title": "Sustainable Computing: Informatics and Systems",
+"issn": [
+"2210-5379"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.suscom.2025.101218"
+},
+"swevo": {
+"title": "Swarm and Evolutionary Computation",
+"issn": [
+"2210-6502"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.swevo.2025.102143"
+},
+"symmetry": {
+"title": "Symmetry",
+"issn": [
+"2073-8994"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/sym17060803"
+},
+"synthese": {
+"title": "Synthese",
+"issn": [
+"0039-7857",
+"1573-0964"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11229-019-02140-w"
+},
+"systems": {
+"title": "Systems",
+"issn": [
+"2079-8954"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/systems13090790"
+},
+"taasm": {
+"title": "Technology Analysis &amp; Strategic Management",
+"issn": [
+"0953-7325",
+"1465-3990"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/09537325.2024.2361430"
+},
+"tac": {
+"title": "IEEE Transactions on Automatic Control",
+"issn": [
+"0018-9286",
+"1558-2523",
+"2334-3303"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TAC.2024.3470848"
+},
+"taccess": {
+"title": "ACM Transactions on Accessible Computing",
+"issn": [
+"1936-7228",
+"1936-7236"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3733606"
+},
+"tacl": {
+"title": "Transactions of the Association for Computational Linguistics",
+"issn": [
+"2307-387X"
+],
+"publisher": "MIT Press",
+"doi": "10.1162/tacl.a.49"
+},
+"taco": {
+"title": "ACM Transactions on Architecture and Code Optimization",
+"issn": [
+"1544-3566",
+"1544-3973"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3743137"
+},
+"taes": {
+"title": "IEEE Transactions on Aerospace and Electronic Systems",
+"issn": [
+"0018-9251",
+"1557-9603",
+"2371-9877"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TAES.2025.3531843"
+},
+"taffco": {
+"title": "IEEE Transactions on Affective Computing",
+"issn": [
+"1949-3045",
+"2371-9850"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TAFFC.2024.3455371"
+},
+"tai": {
+"title": "IEEE Transactions on Artificial Intelligence",
+"issn": [
+"2691-4581"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TAI.2025.3552686"
+},
+"talg": {
+"title": "ACM Transactions on Algorithms",
+"issn": [
+"1549-6325",
+"1549-6333"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3681790"
+},
+"talip": {
+"title": "ACM Transactions on Asian and Low-Resource Language Information Processing",
+"issn": [
+"2375-4699",
+"2375-4702"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3708886"
+},
+"tamd": {
+"title": "IEEE Transactions on Cognitive and Developmental Systems",
+"issn": [
+"2379-8920",
+"2379-8939"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TCDS.2025.3561422"
+},
+"tamm": {
+"title": "The American Mathematical Monthly",
+"issn": [
+"0002-9890",
+"1930-0972"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/00029890.2025.2558484"
+},
+"tase": {
+"title": "IEEE Transactions on Automation Science and Engineering",
+"issn": [
+"1545-5955",
+"1558-3783"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TASE.2024.3468459"
+},
+"taslp": {
+"title": "IEEE/ACM Transactions on Audio, Speech, and Language Processing",
+"issn": [
+"2329-9290",
+"2329-9304"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TASLP.2023.3329374"
+},
+"tasm": {
+"title": "IEEE Technology and Society Magazine",
+"issn": [
+"0278-0097",
+"1937-416X"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MTS.2025.3537170"
+},
+"tbbis": {
+"title": "IEEE Transactions on Biometrics, Behavior, and Identity Science",
+"issn": [
+"2637-6407"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TBIOM.2025.3560692"
+},
+"tbc": {
+"title": "IEEE Transactions on Broadcasting",
+"issn": [
+"0018-9316",
+"1557-9611"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TBC.2025.3549995"
+},
+"tbcas": {
+"title": "IEEE Transactions on Biomedical Circuits and Systems",
+"issn": [
+"1932-4545",
+"1940-9990"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TBCAS.2024.3439619"
+},
+"tbd": {
+"title": "IEEE Transactions on Big Data",
+"issn": [
+"2332-7790",
+"2372-2096"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TBDATA.2024.3403380"
+},
+"tbe": {
+"title": "IEEE Transactions on Biomedical Engineering",
+"issn": [
+"0018-9294",
+"1558-2531"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TBME.2024.3488014"
+},
+"tc": {
+"title": "IEEE Transactions on Computers",
+"issn": [
+"0018-9340",
+"1557-9956",
+"2326-3814"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TC.2025.3566901"
+},
+"tcad": {
+"title": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+"issn": [
+"0278-0070",
+"1937-4151"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TCAD.2025.3567550"
+},
+"tcasI": {
+"title": "IEEE Transactions on Circuits and Systems I: Regular Papers",
+"issn": [
+"1549-8328",
+"1558-0806"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TCSI.2024.3485192"
+},
+"tcasII": {
+"title": "IEEE Transactions on Circuits and Systems II: Express Briefs",
+"issn": [
+"1549-7747",
+"1558-3791"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TCSII.2025.3582752"
+},
+"tcbb": {
+"title": "IEEE Transactions on Computational Biology and Bioinformatics",
+"issn": [
+"2998-4165"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/tcbbio.2025.3539326"
+},
+"tcc": {
+"title": "IEEE Transactions on Cloud Computing",
+"issn": [
+"2168-7161",
+"2372-0018"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TCC.2025.3583414"
+},
+"tccn": {
+"title": "IEEE Transactions on Cognitive Communications and Networking",
+"issn": [
+"2332-7731",
+"2372-2045"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TCCN.2025.3588724"
+},
+"tce": {
+"title": "IEEE Transactions on Consumer Electronics",
+"issn": [
+"0098-3063",
+"1558-4127"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TCE.2025.3552780"
+},
+"tches": {
+"title": "IACR Transactions on Cryptographic Hardware and Embedded Systems",
+"issn": [
+"2569-2925"
+],
+"publisher": "Universitatsbibliothek der Ruhr-Universitat Bochum",
+"doi": "10.46586/tches.v2025.i4.254-289"
+},
+"tci": {
+"title": "IEEE Transactions on Computational Imaging",
+"issn": [
+"2333-9403",
+"2334-0118",
+"2573-0436"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TCI.2025.3614497"
+},
+"tciaig": {
+"title": "IEEE Transactions on Games",
+"issn": [
+"2475-1502",
+"2475-1510"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TG.2024.3498325"
+},
+"tcns": {
+"title": "IEEE Transactions on Control of Network Systems",
+"issn": [
+"2325-5870",
+"2372-2533"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TCNS.2025.3526713"
+},
+"tcom": {
+"title": "IEEE Transactions on Communications",
+"issn": [
+"0090-6778",
+"1558-0857"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TCOMM.2024.3524020"
+},
+"tcps": {
+"title": "ACM Transactions on Cyber-Physical Systems",
+"issn": [
+"2378-962X",
+"2378-9638"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3765620"
+},
+"tcs": {
+"title": "Theoretical Computer Science",
+"issn": [
+"0304-3975"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.tcs.2025.115427"
+},
+"tcss": {
+"title": "IEEE Transactions on Computational Social Systems",
+"issn": [
+"2329-924X",
+"2373-7476"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TCSS.2024.3517164"
+},
+"tcst": {
+"title": "IEEE Transactions on Control Systems Technology",
+"issn": [
+"1063-6536",
+"1558-0865",
+"2374-0159"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TCST.2025.3547260"
+},
+"tcsv": {
+"title": "IEEE Transactions on Circuits and Systems for Video Technology",
+"issn": [
+"1051-8215",
+"1558-2205"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TCSVT.2025.3550900"
+},
+"tcyb": {
+"title": "IEEE Transactions on Cybernetics",
+"issn": [
+"2168-2267",
+"2168-2275"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TCYB.2025.3562263"
+},
+"tds": {
+"title": "Traitement du Signal",
+"issn": [
+"0765-0019",
+"1958-5608"
+],
+"publisher": "International Information and Engineering Technology Association",
+"doi": "10.18280/ts.380622"
+},
+"tdsc": {
+"title": "IEEE Transactions on Dependable and Secure Computing",
+"issn": [
+"1545-5971",
+"1941-0018",
+"2160-9209"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TDSC.2024.3521942"
+},
+"te": {
+"title": "IEEE Transactions on Education",
+"issn": [
+"0018-9359",
+"1557-9638"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TE.2025.3602399"
+},
+"tec": {
+"title": "IEEE Transactions on Evolutionary Computation",
+"issn": [
+"1089-778X",
+"1941-0026"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TEVC.2024.3390719"
+},
+"technometrics": {
+"title": "Technometrics",
+"issn": [
+"0040-1706",
+"1537-2723"
+],
+"publisher": "Informa UK Limited",
+"doi": "10.1080/00401706.2025.2565972"
+},
+"tecs": {
+"title": "ACM Transactions on Embedded Computing Systems",
+"issn": [
+"1539-9087",
+"1558-3465"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3760385"
+},
+"tele": {
+"title": "Telematics and Informatics",
+"issn": [
+"0736-5853"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.tele.2024.102227"
+},
+"telo": {
+"title": "ACM Transactions on Evolutionary Learning and Optimization",
+"issn": [
+"2688-3007"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3665336"
+},
+"telsys": {
+"title": "Telecommunication Systems",
+"issn": [
+"1018-4864",
+"1572-9451"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11235-025-01323-w"
+},
+"tem": {
+"title": "IEEE Transactions on Engineering Management",
+"issn": [
+"0018-9391",
+"1558-0040"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TEM.2024.3478054"
+},
+"tetc": {
+"title": "IEEE Transactions on Emerging Topics in Computing",
+"issn": [
+"2168-6750",
+"2376-4562"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TETC.2024.3472649"
+},
+"tetci": {
+"title": "IEEE Transactions on Emerging Topics in Computational Intelligence",
+"issn": [
+"2471-285X"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TETCI.2025.3542127"
+},
+"tfs": {
+"title": "IEEE Transactions on Fuzzy Systems",
+"issn": [
+"1063-6706",
+"1941-0034"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TFUZZ.2024.3519724"
+},
+"tgcn": {
+"title": "IEEE Transactions on Green Communications and Networking",
+"issn": [
+"2473-2400"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TGCN.2024.3506752"
+},
+"tgis": {
+"title": "Transactions in GIS",
+"issn": [
+"1361-1682",
+"1467-9671"
+],
+"publisher": "Wiley",
+"doi": "10.1111/tgis.70061"
+},
+"tgrs": {
+"title": "IEEE Transactions on Geoscience and Remote Sensing",
+"issn": [
+"0196-2892",
+"1558-0644"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TGRS.2025.3590496"
+},
+"thms": {
+"title": "IEEE Transactions on Human-Machine Systems",
+"issn": [
+"2168-2291",
+"2168-2305"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/THMS.2025.3603434"
+},
+"thri": {
+"title": "ACM Transactions on Human-Robot Interaction",
+"issn": [
+"2573-9522"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3711936"
+},
+"tie": {
+"title": "IEEE Transactions on Industrial Electronics",
+"issn": [
+"0278-0046",
+"1557-9948"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TIE.2025.3559961"
+},
+"tifs": {
+"title": "IEEE Transactions on Information Forensics and Security",
+"issn": [
+"1556-6013",
+"1556-6021"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TIFS.2025.3635058"
+},
+"tii": {
+"title": "IEEE Transactions on Industrial Informatics",
+"issn": [
+"1551-3203",
+"1941-0050"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TII.2024.3452755"
+},
+"tiis": {
+"title": "ACM Transactions on Interactive Intelligent Systems",
+"issn": [
+"2160-6455",
+"2160-6463"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3690829"
+},
+"tim": {
+"title": "IEEE Transactions on Instrumentation and Measurement",
+"issn": [
+"0018-9456",
+"1557-9662"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TIM.2025.3573001"
+},
+"tinstmc": {
+"title": "Transactions of the Institute of Measurement and Control",
+"issn": [
+"0142-3312",
+"1477-0369"
+],
+"publisher": "SAGE Publications",
+"doi": "10.1177/01423312241257298"
+},
+"tiot": {
+"title": "ACM Transactions on Internet of Things",
+"issn": [
+"2577-6207",
+"2691-1914"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3722232"
+},
+"tip": {
+"title": "IEEE Transactions on Image Processing",
+"issn": [
+"1057-7149",
+"1941-0042"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TIP.2025.3640001"
+},
+"tismir": {
+"title": "Transactions of the International Society for Music Information Retrieval",
+"issn": [
+"2514-3298"
+],
+"publisher": "Ubiquity Press, Ltd.",
+"doi": "10.5334/tismir.203"
+},
+"tissec": {
+"title": "ACM Transactions on Privacy and Security",
+"issn": [
+"2471-2566",
+"2471-2574"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3703350"
+},
+"tist": {
+"title": "ACM Transactions on Intelligent Systems and Technology",
+"issn": [
+"2157-6904",
+"2157-6912"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3696461"
+},
+"tit": {
+"title": "IEEE Transactions on Information Theory",
+"issn": [
+"0018-9448",
+"1557-9654"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TIT.2025.3613748"
+},
+"titb": {
+"title": "IEEE Journal of Biomedical and Health Informatics",
+"issn": [
+"2168-2194",
+"2168-2208"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/JBHI.2025.3538040"
+},
+"tits": {
+"title": "IEEE Transactions on Intelligent Transportation Systems",
+"issn": [
+"1524-9050",
+"1558-0016"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TITS.2025.3563961"
+},
+"tiv": {
+"title": "IEEE Transactions on Intelligent Vehicles",
+"issn": [
+"2379-8858",
+"2379-8904"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TIV.2024.3476934"
+},
+"tjs": {
+"title": "The Journal of Supercomputing",
+"issn": [
+"1573-0484"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11227-025-07811-9"
+},
+"tkdd": {
+"title": "ACM Transactions on Knowledge Discovery from Data",
+"issn": [
+"1556-4681",
+"1556-472X"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3769293"
+},
+"tkde": {
+"title": "IEEE Transactions on Knowledge and Data Engineering",
+"issn": [
+"1041-4347",
+"1558-2191",
+"2326-3865"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TKDE.2025.3593123"
+},
+"tkl": {
+"title": "Technology, Knowledge and Learning",
+"issn": [
+"2211-1662",
+"2211-1670"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10758-025-09830-0"
+},
+"tlt": {
+"title": "IEEE Transactions on Learning Technologies",
+"issn": [
+"1939-1382",
+"2372-0050"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TLT.2025.3570979"
+},
+"tmbmc": {
+"title": "IEEE Transactions on Molecular, Biological, and Multi-Scale Communications",
+"issn": [
+"2332-7804",
+"2372-2061"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/tmbmc.2024.3473694"
+},
+"tmc": {
+"title": "IEEE Transactions on Mobile Computing",
+"issn": [
+"1536-1233",
+"1558-0660",
+"2161-9875"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TMC.2025.3558815"
+},
+"tmi": {
+"title": "IEEE Transactions on Medical Imaging",
+"issn": [
+"0278-0062",
+"1558-254X"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TMI.2024.3493170"
+},
+"tmis": {
+"title": "ACM Transactions on Management Information Systems",
+"issn": [
+"2158-656X",
+"2158-6578"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3727624"
+},
+"tmm": {
+"title": "IEEE Transactions on Multimedia",
+"issn": [
+"1520-9210",
+"1941-0077"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TMM.2025.3543107"
+},
+"tnn": {
+"title": "IEEE Transactions on Neural Networks and Learning Systems",
+"issn": [
+"2162-237X",
+"2162-2388"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TNNLS.2024.3456593"
+},
+"tnse": {
+"title": "IEEE Transactions on Network Science and Engineering",
+"issn": [
+"2327-4697",
+"2334-329X"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TNSE.2025.3540982"
+},
+"tnsm": {
+"title": "IEEE Transactions on Network and Service Management",
+"issn": [
+"1932-4537",
+"2373-7379"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TNSM.2025.3532343"
+},
+"toce": {
+"title": "ACM Transactions on Computing Education",
+"issn": [
+"1946-6226"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3748665"
+},
+"tochi": {
+"title": "ACM Transactions on Computer-Human Interaction",
+"issn": [
+"1073-0516",
+"1557-7325"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3715117"
+},
+"tocl": {
+"title": "ACM Transactions on Computational Logic",
+"issn": [
+"1529-3785",
+"1557-945X"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3750046"
+},
+"toct": {
+"title": "ACM Transactions on Computation Theory",
+"issn": [
+"1942-3454",
+"1942-3462"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3744252"
+},
+"todaes": {
+"title": "ACM Transactions on Design Automation of Electronic Systems",
+"issn": [
+"1084-4309",
+"1557-7309"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3760778"
+},
+"tog": {
+"title": "ACM Transactions on Graphics",
+"issn": [
+"0730-0301",
+"1557-7368"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3763346"
+},
+"toh": {
+"title": "IEEE Transactions on Haptics",
+"issn": [
+"1939-1412",
+"2329-4051",
+"2334-0134"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TOH.2025.3549677"
+},
+"tois": {
+"title": "ACM Transactions on Information Systems",
+"issn": [
+"1046-8188",
+"1558-2868"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3742424"
+},
+"toit": {
+"title": "ACM Transactions on Internet Technology",
+"issn": [
+"1533-5399",
+"1557-6051"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3737699"
+},
+"tomccap": {
+"title": "ACM Transactions on Multimedia Computing, Communications, and Applications",
+"issn": [
+"1551-6857",
+"1551-6865"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3715698"
+},
+"ton": {
+"title": "IEEE Transactions on Networking",
+"issn": [
+"2998-4157"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TON.2024.3520210"
+},
+"topics": {
+"title": "Topics in Cognitive Science",
+"issn": [
+"1756-8757",
+"1756-8765"
+],
+"publisher": "Wiley",
+"doi": "10.1111/tops.12784"
+},
+"tors": {
+"title": "ACM Transactions on Recommender Systems",
+"issn": [
+"2770-6699"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3701762"
+},
+"tos": {
+"title": "ACM Transactions on Storage",
+"issn": [
+"1553-3077",
+"1553-3093"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3769109"
+},
+"tosc": {
+"title": "IACR Transactions on Symmetric Cryptology",
+"issn": [
+"2519-173X"
+],
+"publisher": "Universitatsbibliothek der Ruhr-Universitat Bochum",
+"doi": "10.46586/tosc.v2025.i1.44-69"
+},
+"tosem": {
+"title": "ACM Transactions on Software Engineering and Methodology",
+"issn": [
+"1049-331X",
+"1557-7392"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3712186"
+},
+"tosn": {
+"title": "ACM Transactions on Sensor Networks",
+"issn": [
+"1550-4859",
+"1550-4867"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3717065"
+},
+"tpc": {
+"title": "IEEE Transactions on Professional Communication",
+"issn": [
+"0361-1434",
+"1558-1500"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TPC.2025.3528716"
+},
+"tpds": {
+"title": "IEEE Transactions on Parallel and Distributed Systems",
+"issn": [
+"1045-9219",
+"1558-2183",
+"2161-9883"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TPDS.2024.3522016"
+},
+"tplp": {
+"title": "Theory and Practice of Logic Programming",
+"issn": [
+"1471-0684",
+"1475-3081"
+],
+"publisher": "Cambridge University Press (CUP)",
+"doi": "10.1017/s1471068425100264"
+},
+"tqc": {
+"title": "ACM Transactions on Quantum Computing",
+"issn": [
+"2643-6809",
+"2643-6817"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3722119"
+},
+"tr": {
+"title": "IEEE Transactions on Reliability",
+"issn": [
+"0018-9529",
+"1558-1721"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TR.2024.3504400"
+},
+"transci": {
+"title": "Transportation Science",
+"issn": [
+"0041-1655",
+"1526-5447"
+],
+"publisher": "Institute for Operations Research and the Management Sciences (INFORMS)",
+"doi": "10.1287/trsc.2024.0725"
+},
+"trets": {
+"title": "ACM Transactions on Reconfigurable Technology and Systems",
+"issn": [
+"1936-7406",
+"1936-7414"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3705324"
+},
+"trob": {
+"title": "IEEE Transactions on Robotics",
+"issn": [
+"1552-3098",
+"1941-0468"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TRO.2024.3502192"
+},
+"tsas": {
+"title": "ACM Transactions on Spatial Algorithms and Systems",
+"issn": [
+"2374-0353",
+"2374-0361"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3707459"
+},
+"tsc": {
+"title": "IEEE Transactions on Services Computing",
+"issn": [
+"1939-1374",
+"2372-0204"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TSC.2025.3601051"
+},
+"tse": {
+"title": "IEEE Transactions on Software Engineering",
+"issn": [
+"0098-5589",
+"1939-3520",
+"2326-3881"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TSE.2025.3639694"
+},
+"tsg": {
+"title": "IEEE Transactions on Smart Grid",
+"issn": [
+"1949-3053",
+"1949-3061"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TSG.2024.3492391"
+},
+"tsipn": {
+"title": "IEEE Transactions on Signal and Information Processing over Networks",
+"issn": [
+"2373-776X",
+"2373-7778"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TSIPN.2025.3603740"
+},
+"tsmc": {
+"title": "IEEE Transactions on Systems, Man, and Cybernetics: Systems",
+"issn": [
+"2168-2216",
+"2168-2232"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TSMC.2024.3508573"
+},
+"tsp": {
+"title": "IEEE Transactions on Signal Processing",
+"issn": [
+"1053-587X",
+"1941-0476"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TSP.2025.3564303"
+},
+"tsusc": {
+"title": "IEEE Transactions on Sustainable Computing",
+"issn": [
+"2377-3782",
+"2377-3790"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TSUSC.2024.3409712"
+},
+"tvcg": {
+"title": "IEEE Transactions on Visualization and Computer Graphics",
+"issn": [
+"1077-2626",
+"1941-0506",
+"2160-9306"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TVCG.2025.3602405"
+},
+"tvlsi": {
+"title": "IEEE Transactions on Very Large Scale Integration (VLSI) Systems",
+"issn": [
+"1063-8210",
+"1557-9999"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TVLSI.2025.3572140"
+},
+"tvt": {
+"title": "IEEE Transactions on Vehicular Technology",
+"issn": [
+"0018-9545",
+"1939-9359"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TVT.2025.3588199"
+},
+"twc": {
+"title": "IEEE Transactions on Wireless Communications",
+"issn": [
+"1536-1276",
+"1558-2248"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/TWC.2025.3540871"
+},
+"tweb": {
+"title": "ACM Transactions on the Web",
+"issn": [
+"1559-1131",
+"1559-114X"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3689431"
+},
+"uais": {
+"title": "Universal Access in the Information Society",
+"issn": [
+"1615-5289",
+"1615-5297"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10209-024-01136-9"
+},
+"ubiquity": {
+"title": "Ubiquity",
+"issn": [
+"1530-2180"
+],
+"publisher": "Association for Computing Machinery (ACM)",
+"doi": "10.1145/3772190"
+},
+"urban": {
+"title": "Computers, Environment and Urban Systems",
+"issn": [
+"0198-9715"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.compenvurbsys.2025.102286"
+},
+"urbaninformatics": {
+"title": "Urban Informatics",
+"issn": [
+"2731-6963"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s44212-025-00072-0"
+},
+"us": {
+"title": "Unmanned Systems",
+"issn": [
+"2301-3850",
+"2301-3869"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/S2301385025500104"
+},
+"vc": {
+"title": "The Visual Computer",
+"issn": [
+"0178-2789",
+"1432-2315"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00371-024-03362-x"
+},
+"vciba": {
+"title": "Visual Computing for Industry, Biomedicine, and Art",
+"issn": [
+"2524-4442"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1186/s42492-025-00192-z"
+},
+"vcomm": {
+"title": "Vehicular Communications",
+"issn": [
+"2214-2096"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.vehcom.2025.100930"
+},
+"vi": {
+"title": "Visual Informatics",
+"issn": [
+"2468-502X"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.visinf.2025.100271"
+},
+"virology": {
+"title": "Journal of Computer Virology and Hacking Techniques",
+"issn": [
+"2263-8733"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11416-025-00549-1"
+},
+"virtualworlds": {
+"title": "Virtual Worlds",
+"issn": [
+"2813-2084"
+],
+"publisher": "MDPI AG",
+"doi": "10.3390/virtualworlds4030037"
+},
+"visintelligence": {
+"title": "Visual Intelligence",
+"issn": [
+"2097-3330",
+"2731-9008"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s44267-025-00083-0"
+},
+"vjcs": {
+"title": "Vietnam Journal of Computer Science",
+"issn": [
+"2196-8888",
+"2196-8896"
+],
+"publisher": "World Scientific Pub Co Pte Ltd",
+"doi": "10.1142/s2196888824500192"
+},
+"vldb": {
+"title": "The VLDB Journal",
+"issn": [
+"0949-877X",
+"1066-8888"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s00778-024-00897-2"
+},
+"vlsisp": {
+"title": "Journal of Signal Processing Systems",
+"issn": [
+"1939-8018",
+"1939-8115"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11265-025-01957-8"
+},
+"vr": {
+"title": "Virtual Reality",
+"issn": [
+"1434-9957"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s10055-025-01203-3"
+},
+"vrih": {
+"title": "Virtual Reality &amp; Intelligent Hardware",
+"issn": [
+"2096-5796"
+],
+"publisher": "Elsevier BV",
+"doi": "10.1016/j.vrih.2024.07.003"
+},
+"vtm": {
+"title": "IEEE Vehicular Technology Magazine",
+"issn": [
+"1556-6072",
+"1556-6080"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MVT.2024.3516233"
+},
+"wc": {
+"title": "IEEE Wireless Communications",
+"issn": [
+"1536-1284",
+"1558-0687"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/MWC.2025.3599658"
+},
+"wcl": {
+"title": "IEEE Wireless Communications Letters",
+"issn": [
+"2162-2337",
+"2162-2345"
+],
+"publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+"doi": "10.1109/LWC.2025.3614748"
+},
+"wias": {
+"title": "Web Intelligence",
+"issn": [
+"2405-6456",
+"2405-6464"
+],
+"publisher": "SAGE Publications",
+"doi": "10.3233/web-230248"
+},
+"wicomm": {
+"title": "Wireless Communications and Mobile Computing",
+"issn": [
+"1530-8669",
+"1530-8677"
+],
+"publisher": "Wiley",
+"doi": "10.1155/2022/7409171"
+},
+"widm": {
+"title": "WIREs Data Mining and Knowledge Discovery",
+"issn": [
+"1942-4787",
+"1942-4795"
+],
+"publisher": "Wiley",
+"doi": "10.1002/widm.70009"
+},
+"winet": {
+"title": "Wireless Networks",
+"issn": [
+"1022-0038",
+"1572-8196"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11276-024-03833-y"
+},
+"wm": {
+"title": "Wirtschaftsinformatik &amp; Management",
+"issn": [
+"1867-5905",
+"1867-5913"
+],
+"publisher": "Springer Fachmedien Wiesbaden GmbH",
+"doi": "10.1365/s35764-025-00555-4"
+},
+"wpc": {
+"title": "Wireless Personal Communications",
+"issn": [
+"0929-6212",
+"1572-834X"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11277-025-11802-7"
+},
+"www": {
+"title": "World Wide Web",
+"issn": [
+"1386-145X",
+"1573-1413"
+],
+"publisher": "Springer Science and Business Media LLC",
+"doi": "10.1007/s11280-025-01336-0"
+},
+"zfbb": {
+"title": "Zeitschrift für Bibliothekswesen und Bibliographie",
+"issn": [
+"1864-2950"
+],
+"publisher": "Vittorio Klostermann GMBH",
+"doi": "10.3196/1864295025726107"
+}
+}

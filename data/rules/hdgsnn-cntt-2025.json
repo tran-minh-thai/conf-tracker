@@ -1,0 +1,776 @@
+{
+ "schema_version": 1,
+ "id": "hdgsnn-cntt-2025",
+ "kind": "points",
+ "unit": "points",
+ "unit_label": "điểm (tối đa)",
+ "title": "Điểm công trình HĐGSNN ngành Công nghệ thông tin 2025",
+ "source": {
+  "document": "Quyết định số 26/QĐ-HĐGSNN ngày 11/7/2025 của Hội đồng Giáo sư Nhà nước",
+  "transcribed_from": "https://vojs.vn/bai-viet/co-so-du-lieu-trich-dan-khoa-hoc/danh-muc-tap-chi-khoa-hoc-duoc-tinh-diem-hdgsnn-nganh-cong-nghe-thong-tin-nam-2025",
+  "checked": "2026-11-22",
+  "warning": "Chép từ bản tổng hợp của VOJS, không phải bản quyết định gốc. Hãy đối chiếu với quyết định gốc trước khi dùng cho hồ sơ."
+ },
+ "policy": "max",
+ "value_note": "Văn bản ghi khoảng 0 – tối đa; hội đồng ngành quyết định điểm cụ thể. Ứng dụng hiện mức tối đa.",
+ "ambiguities": [
+  "“SCI, SCIE và Scopus Qx”: gói này đọc theo nghĩa đen là cần CẢ thuộc SCI/SCIE VÀ thuộc Scopus hạng Qx. Nếu hội đồng hiểu là một trong các điều kiện, hãy sửa các quy tắc intl-*.",
+  "Hạng hội nghị A*/A: văn bản không nêu hệ thống xếp hạng; trang nguồn cho biết thường tra theo CORE, nên gói này dùng hạng CORE."
+ ],
+ "rules": [
+  {
+   "id": "intl-q1-if5",
+   "label": "SCI, SCIE và Scopus Q1, có IF ≥ 5",
+   "value": 3.0,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "journal"
+     },
+     {
+      "fact": "international_journal",
+      "eq": true
+     },
+     {
+      "fact": "wos_index",
+      "in": [
+       "SCI",
+       "SCIE"
+      ]
+     },
+     {
+      "fact": "scopus_quartile",
+      "eq": "Q1"
+     },
+     {
+      "fact": "impact_factor",
+      "gte": 5
+     }
+    ]
+   }
+  },
+  {
+   "id": "intl-q1-if3",
+   "label": "SCI, SCIE và Scopus Q1, có IF ≥ 3",
+   "value": 2.5,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "journal"
+     },
+     {
+      "fact": "international_journal",
+      "eq": true
+     },
+     {
+      "fact": "wos_index",
+      "in": [
+       "SCI",
+       "SCIE"
+      ]
+     },
+     {
+      "fact": "scopus_quartile",
+      "eq": "Q1"
+     },
+     {
+      "fact": "impact_factor",
+      "gte": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": "intl-q1",
+   "label": "SCI, SCIE và Scopus Q1",
+   "value": 2.0,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "journal"
+     },
+     {
+      "fact": "international_journal",
+      "eq": true
+     },
+     {
+      "fact": "wos_index",
+      "in": [
+       "SCI",
+       "SCIE"
+      ]
+     },
+     {
+      "fact": "scopus_quartile",
+      "eq": "Q1"
+     }
+    ]
+   }
+  },
+  {
+   "id": "intl-q2",
+   "label": "SCI, SCIE và Scopus Q2",
+   "value": 1.75,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "journal"
+     },
+     {
+      "fact": "international_journal",
+      "eq": true
+     },
+     {
+      "fact": "wos_index",
+      "in": [
+       "SCI",
+       "SCIE"
+      ]
+     },
+     {
+      "fact": "scopus_quartile",
+      "eq": "Q2"
+     }
+    ]
+   }
+  },
+  {
+   "id": "intl-q3",
+   "label": "SCI, SCIE và Scopus Q3",
+   "value": 1.5,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "journal"
+     },
+     {
+      "fact": "international_journal",
+      "eq": true
+     },
+     {
+      "fact": "wos_index",
+      "in": [
+       "SCI",
+       "SCIE"
+      ]
+     },
+     {
+      "fact": "scopus_quartile",
+      "eq": "Q3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "intl-q4",
+   "label": "Scopus Q4",
+   "value": 1.0,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "journal"
+     },
+     {
+      "fact": "international_journal",
+      "eq": true
+     },
+     {
+      "fact": "scopus_quartile",
+      "eq": "Q4"
+     }
+    ]
+   }
+  },
+  {
+   "id": "intl-other-online",
+   "label": "Tạp chí quốc tế khác có ISSN (online)",
+   "value": 1.0,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "journal"
+     },
+     {
+      "fact": "international_journal",
+      "eq": true
+     },
+     {
+      "fact": "issn_online",
+      "eq": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "intl-other-print",
+   "label": "Tạp chí quốc tế khác có ISSN (không online)",
+   "value": 0.75,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "journal"
+     },
+     {
+      "fact": "international_journal",
+      "eq": true
+     },
+     {
+      "fact": "issn_online",
+      "eq": false
+     }
+    ]
+   }
+  },
+  {
+   "id": "conf-astar",
+   "label": "Hội nghị quốc tế xếp hạng A*",
+   "value": 1.5,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "conference"
+     },
+     {
+      "fact": "full_paper",
+      "eq": true
+     },
+     {
+      "fact": "peer_reviewed",
+      "eq": true
+     },
+     {
+      "fact": "has_isbn",
+      "eq": true
+     },
+     {
+      "fact": "conference_scope",
+      "eq": "international"
+     },
+     {
+      "fact": "core_rank",
+      "eq": "A*"
+     }
+    ]
+   }
+  },
+  {
+   "id": "conf-a",
+   "label": "Hội nghị quốc tế xếp hạng A",
+   "value": 1.25,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "conference"
+     },
+     {
+      "fact": "full_paper",
+      "eq": true
+     },
+     {
+      "fact": "peer_reviewed",
+      "eq": true
+     },
+     {
+      "fact": "has_isbn",
+      "eq": true
+     },
+     {
+      "fact": "conference_scope",
+      "eq": "international"
+     },
+     {
+      "fact": "core_rank",
+      "eq": "A"
+     }
+    ]
+   }
+  },
+  {
+   "id": "conf-other",
+   "label": "Hội nghị quốc tế còn lại",
+   "value": 1.0,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "conference"
+     },
+     {
+      "fact": "full_paper",
+      "eq": true
+     },
+     {
+      "fact": "peer_reviewed",
+      "eq": true
+     },
+     {
+      "fact": "has_isbn",
+      "eq": true
+     },
+     {
+      "fact": "conference_scope",
+      "eq": "international"
+     }
+    ]
+   }
+  },
+  {
+   "id": "national-conf",
+   "label": "Báo cáo tại hội nghị quốc gia (có ISBN từ 2017)",
+   "value": 0.5,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "conference"
+     },
+     {
+      "fact": "full_paper",
+      "eq": true
+     },
+     {
+      "fact": "peer_reviewed",
+      "eq": true
+     },
+     {
+      "fact": "has_isbn",
+      "eq": true
+     },
+     {
+      "fact": "conference_scope",
+      "eq": "national"
+     },
+     {
+      "fact": "year",
+      "gte": 2017
+     }
+    ]
+   }
+  },
+  {
+   "id": "fair-2019",
+   "label": "Báo cáo FAIR tại hội nghị quốc gia (có ISBN), từ 2019",
+   "value": 0.75,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "conference"
+     },
+     {
+      "fact": "full_paper",
+      "eq": true
+     },
+     {
+      "fact": "peer_reviewed",
+      "eq": true
+     },
+     {
+      "fact": "has_isbn",
+      "eq": true
+     },
+     {
+      "fact": "conference_scope",
+      "eq": "national"
+     },
+     {
+      "fact": "year",
+      "gte": 2017
+     },
+     {
+      "fact": "series",
+      "eq": "FAIR"
+     },
+     {
+      "fact": "year",
+      "gte": 2019
+     }
+    ]
+   }
+  }
+ ],
+ "list_label": "Tạp chí trong nước được tính điểm",
+ "list": [
+  {
+   "id": "item-5",
+   "name": "Acta Mathematica Vietnamica",
+   "issn": [
+    "0251-4184"
+   ],
+   "publisher": "Viện Hàn lâm KH&CN VN",
+   "raw": "0–1,0 (0–1,25 từ 2020)",
+   "history": [
+    {
+     "from": null,
+     "max": 1.0
+    },
+    {
+     "from": 2020,
+     "max": 1.25
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "item-6",
+   "name": "An toàn thông tin",
+   "issn": [
+    "2615-9570"
+   ],
+   "publisher": "Ban Cơ yếu Chính phủ",
+   "raw": "0–0,5 từ 2020; 0–0,75 từ 2024",
+   "history": [
+    {
+     "from": 2020,
+     "max": 0.5
+    },
+    {
+     "from": 2024,
+     "max": 0.75
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "item-7",
+   "name": "Công nghệ TT & Truyền thông",
+   "issn": [
+    "1859-3526"
+   ],
+   "publisher": "Bộ KH&CN",
+   "raw": "0–1,0; 0–0,5 từ 2020; 0–0,75 từ 2024",
+   "history": [
+    {
+     "from": null,
+     "max": 1.0
+    },
+    {
+     "from": 2020,
+     "max": 0.5
+    },
+    {
+     "from": 2024,
+     "max": 0.75
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "item-8",
+   "name": "VNU Journal of Science: CS & Comm. Eng.",
+   "issn": [
+    "2615-9260",
+    "2588-1086"
+   ],
+   "publisher": "ĐHQG Hà Nội",
+   "raw": "0–0,5; 0–0,75 từ 2019; 0–1,0 từ 2024",
+   "history": [
+    {
+     "from": null,
+     "max": 0.5
+    },
+    {
+     "from": 2019,
+     "max": 0.75
+    },
+    {
+     "from": 2024,
+     "max": 1.0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "item-9",
+   "name": "Journal on Electronics and Communications",
+   "issn": [
+    "1859-378X"
+   ],
+   "publisher": "Hội Vô tuyến-Điện tử VN",
+   "raw": "0–1,0; 0–0,75 từ 2019",
+   "history": [
+    {
+     "from": null,
+     "max": 1.0
+    },
+    {
+     "from": 2019,
+     "max": 0.75
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "item-10",
+   "name": "Journal on Information Technologies & Communications",
+   "issn": [
+    "1859-3534"
+   ],
+   "publisher": "Bộ KH&CN",
+   "raw": "0–1,0; 0–0,75 từ 2020; 0–1,0 từ 2024",
+   "history": [
+    {
+     "from": null,
+     "max": 1.0
+    },
+    {
+     "from": 2020,
+     "max": 0.75
+    },
+    {
+     "from": 2024,
+     "max": 1.0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "item-11",
+   "name": "Khoa học CN TT và Truyền thông",
+   "issn": [
+    "2525-2224"
+   ],
+   "publisher": "HV CN Bưu chính Viễn thông",
+   "raw": "0–0,5 từ 2020; 0–0,75 từ 2024",
+   "history": [
+    {
+     "from": 2020,
+     "max": 0.5
+    },
+    {
+     "from": 2024,
+     "max": 0.75
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "item-12",
+   "name": "Vietnam Journal of Science and Technology",
+   "issn": [
+    "2525-2518",
+    "2815-5874"
+   ],
+   "publisher": "Viện Hàn lâm KH&CN VN",
+   "raw": "0–0,5; 0–0,75 từ 2020; 0–1,0 từ 2024 (Scopus từ 2022)",
+   "history": [
+    {
+     "from": null,
+     "max": 0.5
+    },
+    {
+     "from": 2020,
+     "max": 0.75
+    },
+    {
+     "from": 2024,
+     "max": 1.0
+    }
+   ],
+   "notes": [
+    "Scopus từ 2022"
+   ]
+  },
+  {
+   "id": "item-13",
+   "name": "Khoa học và Kỹ thuật (Chuyên san CNTT-TT)",
+   "issn": [
+    "1859-0209"
+   ],
+   "publisher": "HV Kỹ thuật Quân sự",
+   "raw": "0–0,5; 0–0,75 từ 2021; 0–1,0 từ 2024",
+   "history": [
+    {
+     "from": null,
+     "max": 0.5
+    },
+    {
+     "from": 2021,
+     "max": 0.75
+    },
+    {
+     "from": 2024,
+     "max": 1.0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "item-14",
+   "name": "Phát triển Khoa học và Công nghệ",
+   "issn": [
+    "1859-0128"
+   ],
+   "publisher": "ĐHQG TP.HCM",
+   "raw": "0–0,5",
+   "history": [
+    {
+     "from": null,
+     "max": 0.5
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "item-15",
+   "name": "Tin học và Điều khiển học (J. of Comp. Sci. and Cybernetics)",
+   "issn": [
+    "1813-9663"
+   ],
+   "publisher": "Viện Hàn lâm KH&CN VN",
+   "raw": "0–1,0; 0–1,25 từ 2020; 0–1,0 từ 2025 (ACI)",
+   "history": [
+    {
+     "from": null,
+     "max": 1.0
+    },
+    {
+     "from": 2020,
+     "max": 1.25
+    },
+    {
+     "from": 2025,
+     "max": 1.0
+    }
+   ],
+   "notes": [
+    "ACI"
+   ]
+  },
+  {
+   "id": "item-16",
+   "name": "Khoa học và Công nghệ các trường ĐH kỹ thuật",
+   "issn": [],
+   "publisher": "ĐHBK HN, BK HCM, ĐH Đà Nẵng và các trường ĐH kỹ thuật",
+   "raw": "0–0,5",
+   "history": [
+    {
+     "from": null,
+     "max": 0.5
+    }
+   ],
+   "notes": [
+    "Nhiều ISSN: chọn mục này bằng tay"
+   ]
+  },
+  {
+   "id": "item-17",
+   "name": "Tạp chí Khoa học của các cơ sở GDĐH",
+   "issn": [],
+   "publisher": "ĐH Thái Nguyên, ĐH Huế, ĐH Đà Nẵng, ĐH Cần Thơ, ĐHSP Hà Nội, ĐHSP TP.HCM, ĐH Vinh, ĐH Đà Lạt",
+   "raw": "0–0,5",
+   "history": [
+    {
+     "from": null,
+     "max": 0.5
+    }
+   ],
+   "notes": [
+    "Nhóm tạp chí: chọn mục này bằng tay"
+   ]
+  },
+  {
+   "id": "item-18",
+   "name": "Nghiên cứu KH&CN Quân sự (CN TT và Điều khiển)",
+   "issn": [
+    "1859-1043"
+   ],
+   "publisher": "Viện KH&CN Quân sự",
+   "raw": "0–0,5; 0–0,75 từ 2024",
+   "history": [
+    {
+     "from": null,
+     "max": 0.5
+    },
+    {
+     "from": 2024,
+     "max": 0.75
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "item-19",
+   "name": "Ứng dụng Toán học",
+   "issn": [
+    "1859-4492"
+   ],
+   "publisher": "Hội Toán học VN",
+   "raw": "0–0,50 (0 điểm từ 2025)",
+   "history": [
+    {
+     "from": null,
+     "max": 0.5
+    },
+    {
+     "from": 2025,
+     "max": 0.0
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "item-20",
+   "name": "Vietnam Journal of Mathematics",
+   "issn": [
+    "0866-7179"
+   ],
+   "publisher": "Hội Toán học VN",
+   "raw": "0–1,0; 0–1,25 từ 2020",
+   "history": [
+    {
+     "from": null,
+     "max": 1.0
+    },
+    {
+     "from": 2020,
+     "max": 1.25
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "item-21",
+   "name": "Khoa học và Công nghệ VN bản B",
+   "issn": [
+    "1859-4794",
+    "2615-9929"
+   ],
+   "publisher": "Bộ KH&CN",
+   "raw": "0–0,5 từ 2025",
+   "history": [
+    {
+     "from": 2025,
+     "max": 0.5
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "item-22",
+   "name": "Tạp chí KH của các cơ sở GDĐH (xét năm 2025)",
+   "issn": [],
+   "publisher": "ĐH Quy Nhơn, ĐH Trà Vinh, ĐH Nam Cần Thơ, ĐH Ngoại ngữ-Tin học, ĐH Công nghệ GTVT, ĐH Mở TPHCM, ĐH Khoa học ĐH Huế",
+   "raw": "0–0,25 từ 2025",
+   "history": [
+    {
+     "from": 2025,
+     "max": 0.25
+    }
+   ],
+   "notes": [
+    "Nhóm tạp chí: chọn mục này bằng tay"
+   ]
+  }
+ ]
+}
