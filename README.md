@@ -84,6 +84,16 @@ Each profile build also runs a held-out evaluation: profiles from the five years
 before the latest year, queried with that latest year's titles. Results, with the
 command and file hashes that produced them, are written to `evaluation/`.
 
+"Find venues for a paper" joins the abstract and main contributions into one text
+and weights each term by how few venue profiles hold it (`paperVector` in
+`assets/match.js`). `scripts/evaluate_paper_matching.py` measures it on held-out
+2025 abstracts (4,806 queries over 197 venues, abstracts from Semantic Scholar and
+Crossref, cached outside the repository): MRR 0.289 to 0.302 with a short second
+field, 0.285 to 0.291 on abstracts alone, and 0.230 to 0.235 on titles
+(`evaluation/paper-matching-*.json`). The gain is small: title profiles cannot hold
+a topic that appears in a fraction of a percent of a venue's titles, so a very
+specific paper can still rank a venue first on a generic shared phrase.
+
 ## Rule files
 
 A rule file is JSON that transcribes one official document. Conditions are data

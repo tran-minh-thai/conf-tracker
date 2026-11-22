@@ -202,6 +202,27 @@ def query_vector(text: str, idf: dict) -> dict:
     return {t: w / norm for t, w in vec.items()}
 
 
+SPECIFICITY_EXPONENT = 0.5  # chosen on held-out abstracts; mirrored in assets/match.js
+
+
+def term_specificity(term_maps) -> dict:
+    """(ln((N + 1) / (n + 1)) + 1) / (ln(N + 1) + 1), n = number of venue vectors holding the term."""
+    n, total = Counter(), 0
+    for terms in term_maps:
+        total += 1
+        n.update(terms.keys())
+    top = math.log(total + 1) + 1
+    return {t: (math.log((total + 1) / (k + 1)) + 1) / top for t, k in n.items()}
+
+
+def paper_vector(fields, idf: dict, specificity: dict) -> dict:
+    """A paper's fields (abstract, contributions) joined as one text, weighted by term specificity."""
+    q = query_vector("\n".join(f for f in fields if f and f.strip()), idf)
+    vec = {t: w * specificity.get(t, 1.0) ** SPECIFICITY_EXPONENT for t, w in q.items()}
+    norm = math.sqrt(sum(w * w for w in vec.values())) or 1.0
+    return {t: w / norm for t, w in vec.items()}
+
+
 def score(qvec: dict, profile_terms: dict) -> float:
     return sum(w * profile_terms.get(t, 0.0) for t, w in qvec.items())
 

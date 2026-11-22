@@ -45,6 +45,38 @@ export function textVector(text, idf) {
   return normalize(vec);
 }
 
+/**
+ * Specificity of each term over a set of venue vectors (Maps):
+ * (ln((N + 1) / (n + 1)) + 1) / (ln(N + 1) + 1), where n is the number of vectors holding the term.
+ * A term held by one venue gets about 0.9, one held by every venue about 0.15.
+ */
+export function termSpecificity(vectors) {
+  const n = new Map();
+  let total = 0;
+  for (const vec of vectors) {
+    total++;
+    for (const t of vec.keys()) n.set(t, (n.get(t) || 0) + 1);
+  }
+  const top = Math.log(total + 1) + 1;
+  const out = new Map();
+  for (const [t, k] of n) out.set(t, (Math.log((total + 1) / (k + 1)) + 1) / top);
+  return out;
+}
+
+/** Exponent on termSpecificity in paperVector, chosen on held-out abstracts (evaluation/paper-matching-*.json). */
+export const SPECIFICITY_EXPONENT = 0.5;
+
+/**
+ * Query for a paper: its fields (abstract, main contributions) joined as one text, so a short
+ * field adds its terms to the counts instead of carrying as much weight as the whole abstract;
+ * each term is then weighted by its specificity across venues and the vector renormalised.
+ */
+export function paperVector(fields, idf, specificity) {
+  const vec = textVector(fields.filter((f) => f && f.trim()).join("\n"), idf);
+  for (const [t, w] of vec) vec.set(t, w * Math.pow(specificity.get(t) ?? 1, SPECIFICITY_EXPONENT));
+  return normalize(vec);
+}
+
 /** Weighted sum of vectors, renormalised. parts: [{vec: Map, weight}] */
 export function combine(parts) {
   const out = new Map();

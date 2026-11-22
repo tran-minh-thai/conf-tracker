@@ -170,6 +170,37 @@ export const tests = {
     ok(Math.abs(norm - 1) < 1e-9, "query vector not normalised");
     eq(match.textVector("", idf).size, 0);
   },
+  "term specificity follows the shared formula"() {
+    const u = fixtures.paper.specificity_unit;
+    const got = match.termSpecificity(u.vectors.map((v) => new Map(v.map((t) => [t, 1]))));
+    eq([...got.keys()].sort(), Object.keys(u.expected).sort());
+    for (const [t, w] of Object.entries(u.expected)) ok(Math.abs(got.get(t) - w) < 1e-12, `specificity of ${t}`);
+  },
+  "paper query and ranking agree with the Python fixture"() {
+    const f = fixtures.paper;
+    match.setStopwords(f.stopwords);
+    const spec = new Map(Object.entries(f.specificity));
+    const vecs = Object.entries(f.profiles).map(([k, p]) => [k, new Map(Object.entries(p.terms))]);
+    for (const c of f.cases) {
+      const q = match.paperVector(c.fields, f.idf, spec);
+      eq([...q.keys()].sort(), Object.keys(c.query).sort());
+      for (const [t, w] of Object.entries(c.query)) ok(Math.abs(q.get(t) - w) < 1e-12, `${c.name}: weight of ${t}`);
+      const ranked = vecs.map(([k, v]) => [k, match.dot(q, v)]).filter(([, s]) => s > 0)
+        .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1));
+      eq(ranked.map(([k]) => k), c.ranking.map(([k]) => k));
+      ranked.forEach(([, s], i) => ok(Math.abs(s - c.ranking[i][1]) < 1e-12, `${c.name}: score ${i}`));
+    }
+    match.setStopwords(fixtures.stopwords);
+  },
+  "high-utility abstract ranks database venues above theory venues"() {
+    const f = fixtures.paper, c = f.cases.find((x) => x.name.startsWith("high-utility"));
+    match.setStopwords(f.stopwords);
+    const q = match.paperVector(c.fields, f.idf, new Map(Object.entries(f.specificity)));
+    const order = Object.entries(f.profiles).map(([k, p]) => [k, match.dot(q, new Map(Object.entries(p.terms)))])
+      .sort((a, b) => b[1] - a[1]).map(([k]) => k);
+    for (const db of ["edbt", "dexa"]) for (const th of ["soda", "coco", "stoc"]) ok(order.indexOf(db) < order.indexOf(th), `${db} above ${th}`);
+    match.setStopwords(fixtures.stopwords);
+  },
   "plan import validates entries"() {
     const good = { plan: { a: { status: "submitted", title: "T", snapshot: { acronym: "A" } }, b: { status: "weird", snapshot: { acronym: "B" } }, c: {} } };
     const r = core.parsePlanImport(JSON.stringify(good));

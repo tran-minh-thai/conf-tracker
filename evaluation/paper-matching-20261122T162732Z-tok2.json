@@ -1,0 +1,269 @@
+{
+ "kind": "data property: paper-to-venue matching accuracy on held-out abstracts (machine independent)",
+ "command": "python evaluate_paper_matching.py --dump dblp.xml.gz --ccfddl-zip ccf.zip --cache-dir conf-tracker-eval --no-fetch",
+ "started": "2026-11-22T16:27:32+00:00",
+ "python": "3.14.6",
+ "dump_sha256": "f511276a7c78ecade7eae4004f1fd5088b946fe3bebdf9e19e669e647043bb6b",
+ "ccfddl_zip_sha256": "19b8c65cf24b735cd66126cca5366acc25d2efdeb4e839028625321773dda98c",
+ "tool_sha256": {
+  "scripts/build_journal_profiles.py": "12444267cd768e847796560bf74ee707307ab60d18a0584767edeade8ff28663",
+  "scripts/build_profiles.py": "40c93f3af40dcd504b11e1a9da73bf78e815e328f3b871c01453cc22616327c8",
+  "scripts/conftracker/__init__.py": "79825b33a58bb61f326f23082d9a6e058f471df66005edde6363f9b2fc38f093",
+  "scripts/conftracker/build.py": "608f5796a7bfc0b7d61a09dd9a6170540b828200e04b4ccc31545b6efe61055b",
+  "scripts/conftracker/ccfddl.py": "133b212b04f10344d8fb07c986010249aae43d36601603cf2082790e5bd9d6f4",
+  "scripts/conftracker/crossref_meta.py": "7c197752d680e2c5dbbedd6741bc42bccf3a509dec4eda9e3e03fbe856bf7eee",
+  "scripts/conftracker/curated.py": "df3250f551a1fc2e1b0ff5223e865a1721ef353d5860fc6a6bc8f790f1dacdc9",
+  "scripts/conftracker/ics.py": "55f3dbf7882039ae779db7a510314812e4c430226b92cd9301def0c7de45f8d6",
+  "scripts/conftracker/parsing.py": "d930aaeab2718b3faad93faec498ae474ab06573732de4124542da8a08aacd81",
+  "scripts/conftracker/profiles.py": "5f1951a4c7793c4d617d705f25b6618c1cd48b3f92b12a6a118560847f14b0fd",
+  "scripts/conftracker/topics.py": "181136cd63cce4980e6df0dab833bcf90ad829e987a712f6379513f227983b0e",
+  "scripts/conftracker/watch.py": "35d074e9cc05a3a6b9070fe951ad77a16b3660f83e13498b86adb471edfbd416",
+  "scripts/conftracker/wikicfp.py": "c528709864b5c8877c497008062071c9be43f6c6acc69f81dd78d368d51b6354",
+  "scripts/evaluate_paper_matching.py": "e7275f5ad627376cfee97e04b50b2615b79abbbae13f4a8c2c227cef9f1cceaf",
+  "scripts/fetch_conferences.py": "99cbdda6d5569799540d4330fdd991b5589c7343f98b65e11ac68c182efffa46",
+  "scripts/watch_series.py": "0ab9c2bac20a1f7a2e68355abec7615f628d46851ebd264f5967244f9bfa527e"
+ },
+ "tokenizer_version": 2,
+ "specificity_exponent": 0.5,
+ "train_years": [
+  2020,
+  2024
+ ],
+ "test_year": 2025,
+ "doi_sample": {
+  "count": 13042,
+  "sha256": "fc451c9d9644b6057f0096b068d84d104f933301b23a4a14312d00f7f97d9b73",
+  "per_venue": 80
+ },
+ "abstract_sources": {
+  "semantic_scholar": 9097,
+  "crossref": 234
+ },
+ "result": {
+  "abstract_only_odd_half": {
+   "queries": 2403,
+   "venues": 197,
+   "before": {
+    "mrr": 0.2852,
+    "hit@1": 0.1669,
+    "hit@5": 0.4012,
+    "hit@10": 0.5223
+   },
+   "after": {
+    "mrr": 0.2913,
+    "hit@1": 0.1744,
+    "hit@5": 0.4082,
+    "hit@10": 0.5389
+   },
+   "mrr_delta": 0.0062,
+   "mrr_delta_95ci_paired_bootstrap": [
+    0.0023,
+    0.0097
+   ],
+   "queries_better": 685,
+   "queries_worse": 740,
+   "per_area_queries_mrr_before_after": {
+    "AI": [
+     306,
+     0.3011,
+     0.2996
+    ],
+    "CG": [
+     228,
+     0.3743,
+     0.3956
+    ],
+    "CT": [
+     73,
+     0.3835,
+     0.4089
+    ],
+    "DB": [
+     183,
+     0.2829,
+     0.2893
+    ],
+    "DS": [
+     500,
+     0.2284,
+     0.2313
+    ],
+    "HI": [
+     213,
+     0.4243,
+     0.4398
+    ],
+    "MX": [
+     115,
+     0.3931,
+     0.398
+    ],
+    "NW": [
+     272,
+     0.1937,
+     0.2013
+    ],
+    "SC": [
+     203,
+     0.2099,
+     0.1979
+    ],
+    "SE": [
+     310,
+     0.2673,
+     0.2754
+    ]
+   }
+  },
+  "abstract_plus_title_as_second_field": {
+   "queries": 4806,
+   "venues": 197,
+   "before": {
+    "mrr": 0.2888,
+    "hit@1": 0.1715,
+    "hit@5": 0.4066,
+    "hit@10": 0.5312
+   },
+   "after": {
+    "mrr": 0.3024,
+    "hit@1": 0.1825,
+    "hit@5": 0.4255,
+    "hit@10": 0.5564
+   },
+   "mrr_delta": 0.0135,
+   "mrr_delta_95ci_paired_bootstrap": [
+    0.0081,
+    0.0184
+   ],
+   "queries_better": 1867,
+   "queries_worse": 1628,
+   "per_area_queries_mrr_before_after": {
+    "AI": [
+     615,
+     0.2931,
+     0.3005
+    ],
+    "CG": [
+     455,
+     0.3934,
+     0.41
+    ],
+    "CT": [
+     145,
+     0.4056,
+     0.4676
+    ],
+    "DB": [
+     366,
+     0.2986,
+     0.2918
+    ],
+    "DS": [
+     1004,
+     0.2394,
+     0.2521
+    ],
+    "HI": [
+     423,
+     0.393,
+     0.4241
+    ],
+    "MX": [
+     230,
+     0.3735,
+     0.3897
+    ],
+    "NW": [
+     546,
+     0.1996,
+     0.2148
+    ],
+    "SC": [
+     402,
+     0.2187,
+     0.2192
+    ],
+    "SE": [
+     620,
+     0.2765,
+     0.2899
+    ]
+   }
+  },
+  "title_only_guard": {
+   "queries": 7116,
+   "venues": 265,
+   "before": {
+    "mrr": 0.2299,
+    "hit@1": 0.1322,
+    "hit@5": 0.3201,
+    "hit@10": 0.4285
+   },
+   "after": {
+    "mrr": 0.2352,
+    "hit@1": 0.1365,
+    "hit@5": 0.3253,
+    "hit@10": 0.4345
+   },
+   "mrr_delta": 0.0053,
+   "mrr_delta_95ci_paired_bootstrap": [
+    0.0033,
+    0.0073
+   ],
+   "queries_better": 1772,
+   "queries_worse": 1971,
+   "per_area_queries_mrr_before_after": {
+    "AI": [
+     1118,
+     0.2179,
+     0.2225
+    ],
+    "CG": [
+     613,
+     0.3116,
+     0.3102
+    ],
+    "CT": [
+     279,
+     0.2914,
+     0.2993
+    ],
+    "DB": [
+     744,
+     0.2316,
+     0.2404
+    ],
+    "DS": [
+     1200,
+     0.2008,
+     0.2037
+    ],
+    "HI": [
+     494,
+     0.319,
+     0.3287
+    ],
+    "MX": [
+     404,
+     0.3068,
+     0.3217
+    ],
+    "NW": [
+     678,
+     0.1642,
+     0.1706
+    ],
+    "SC": [
+     821,
+     0.1668,
+     0.1686
+    ],
+    "SE": [
+     765,
+     0.2312,
+     0.2374
+    ]
+   }
+  }
+ }
+}

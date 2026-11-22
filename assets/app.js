@@ -7,7 +7,7 @@ import {
 } from "./core.js";
 import { AREA_NAMES, makeT } from "./i18n.js";
 import { CITIES, browserTimeZone, citiesOf, countryFromTimeZone, nearestCity } from "./geo.js";
-import { combine, dot, setStopwords, textVector, topShared, venueVector } from "./match.js";
+import { combine, dot, paperVector as paperQuery, setStopwords, termSpecificity, textVector, topShared, venueVector } from "./match.js";
 import { createPubs } from "./pubs.js";
 import { scoreWithPacks } from "./rules.js";
 
@@ -169,6 +169,7 @@ async function ensureProfiles() {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     app.profiles = await res.json();
     setStopwords(app.profiles.stopwords);
+    app.profiles.specificity = termSpecificity(Object.values(app.profiles.profiles).map((p) => new Map(Object.entries(p.terms))));
     app.profilesState = "ready";
   } catch (err) {
     console.error(err);
@@ -185,6 +186,7 @@ async function ensureJournals() {
     app.journals = await res.json();
     setStopwords(app.journals.stopwords);
     app.journals.vecs = Object.fromEntries(Object.entries(app.journals.profiles).map(([k, p]) => [k, new Map(Object.entries(p.terms))]));
+    app.journals.specificity = termSpecificity(Object.values(app.journals.vecs));
     app.journalsState = "ready";
   } catch (err) {
     console.error(err);
@@ -204,12 +206,9 @@ function sjrByTitle() {
   sjrByTitle.cache = { src: sjr, map };
   return map;
 }
-/** Abstract plus main contributions as one query over the given vocabulary. */
-function paperVector(idf) {
-  const parts = [];
-  if (app.profile.abstract.trim()) parts.push({ vec: textVector(app.profile.abstract, idf), weight: 1 });
-  if (app.profile.contrib.trim()) parts.push({ vec: textVector(app.profile.contrib, idf), weight: 1 });
-  const v = combine(parts);
+/** Abstract plus main contributions as one query over the given profile set (venues or journals). */
+function paperVector(set) {
+  const v = paperQuery([app.profile.abstract, app.profile.contrib], set.idf, set.specificity);
   return v.size ? v : null;
 }
 
@@ -218,7 +217,7 @@ function journalResults(t) {
     if (app.journalsState === "idle") ensureJournals();
     return `<p class="empty">${h(t(app.journalsState === "error" ? "journalsError" : "journalsLoading"))}</p>`;
   }
-  const q = paperVector(app.journals.idf);
+  const q = paperVector(app.journals);
   if (!q) return `<p class="empty">${h(t("matchNone"))}</p>`;
   const ranked = Object.entries(app.journals.vecs).map(([k, v]) => [k, dot(q, v)]).filter(([, s]) => s > 0)
     .sort((a, b) => b[1] - a[1]).slice(0, 25);
@@ -663,7 +662,7 @@ function renderForYou() {
   else if (app.profilesState === "error") body = `<p class="empty">${h(t("profilesError"))}</p>`;
   else {
     const useAbstract = app.matchMode === "abstract" && (app.profile.abstract.trim() || app.profile.contrib.trim());
-    const qvec = useAbstract ? paperVector(app.profiles.idf) : userVector();
+    const qvec = useAbstract ? paperVector(app.profiles) : userVector();
     if (useAbstract && app.profile.target === "journals") {
       body = journalResults(t);
     } else if (!qvec || !qvec.size) {
