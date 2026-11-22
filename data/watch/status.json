@@ -1,0 +1,242 @@
+{
+ "atc": {
+  "acronym": "ATC",
+  "pages": {
+   "https://atc-conf.org/": {
+    "last_changed": "2026-11-22T14:20:31+00:00",
+    "last_checked": "2026-11-22T14:20:31+00:00",
+    "signature": [
+     200,
+     "https://atc-conf.org/",
+     "5b5696cfc38448c135b48792e21e37b1c904e9c89a6ca934f1357de9e89fc541",
+     false
+    ],
+    "status": 200,
+    "title": "ATC 2026 - International Conference on Advanced Technologies for Communications"
+   }
+  }
+ },
+ "fair": {
+  "acronym": "FAIR",
+  "pages": {
+   "https://fair.conf.vn/": {
+    "last_changed": "2026-11-22T14:20:31+00:00",
+    "last_checked": "2026-11-22T14:20:31+00:00",
+    "signature": [
+     200,
+     "https://fair.conf.vn/",
+     "a56b05ce725fc398d8419fd496e1690e4d6f4cd238783465ae58c304b95fbafe",
+     false
+    ],
+    "status": 200,
+    "title": "Home | FAIR - Fundamental And Applied IT Research"
+   }
+  }
+ },
+ "fjcai": {
+  "acronym": "FJCAI",
+  "pages": {
+   "https://fjcai.vn/": {
+    "last_changed": "2026-11-22T14:20:31+00:00",
+    "last_checked": "2026-11-22T14:20:31+00:00",
+    "signature": [
+     200,
+     "https://fjcai.vn/",
+     "11bb1230c486741dcbbc4f47666b986b0441d252e2fe9a5366259da4e2ccf53c",
+     false
+    ],
+    "status": 200,
+    "title": "Trang chủ - FJCAI 2027"
+   }
+  }
+ },
+ "icetai": {
+  "acronym": "ICETAI",
+  "pages": {
+   "https://icetai.neu.edu.vn/2026/important-dates": {
+    "last_changed": "2026-11-22T14:20:31+00:00",
+    "last_checked": "2026-11-22T14:20:31+00:00",
+    "signature": [
+     404,
+     "https://icetai.neu.edu.vn/2026/important-dates",
+     null,
+     false
+    ],
+    "status": 404,
+    "title": ""
+   },
+   "https://icetai.neu.edu.vn/2027/important-dates": {
+    "last_changed": "2026-11-22T14:20:31+00:00",
+    "last_checked": "2026-11-22T14:20:31+00:00",
+    "signature": [
+     200,
+     "https://icetai.neu.edu.vn/2027/important-dates",
+     "4af683922d94500fbdaa70e9f30267eb770b2b8c27adfd81aedd343fbb03c4a3",
+     false
+    ],
+    "status": 200,
+    "title": "Important Dates — ICETAI 2027"
+   }
+  }
+ },
+ "iciit": {
+  "acronym": "ICIIT",
+  "pages": {
+   "https://www.iciit.org/": {
+    "last_changed": "2026-11-22T14:20:31+00:00",
+    "last_checked": "2026-11-22T14:20:31+00:00",
+    "signature": [
+     200,
+     "https://www.iciit.org/",
+     "0f4cdf03b2f126009c7401e13cc7f6fc0873bd2f1f614264701754eebed35d43",
+     false
+    ],
+    "status": 200,
+    "title": "ICIIT2027丨Intelligent Information Technology"
+   }
+  }
+ },
+ "ismsi": {
+  "acronym": "ISMSI",
+  "pages": {
+   "https://ismsi.org/": {
+    "last_changed": "2026-11-22T14:20:31+00:00",
+    "last_checked": "2026-11-22T14:20:31+00:00",
+    "signature": [
+     200,
+     "https://ismsi.org/",
+     "9c44e9001a8b716975ad6181d7b2785471916e3710de9b9901a9a98d3109d6d9",
+     false
+    ],
+    "status": 200,
+    "title": "ISMSI 2027"
+   }
+  }
+ },
+ "mapr": {
+  "acronym": "MAPR",
+  "pages": {
+   "https://mapr.uit.edu.vn/": {
+    "last_changed": "2026-11-22T14:20:31+00:00",
+    "last_checked": "2026-11-22T14:20:31+00:00",
+    "signature": [
+     200,
+     "https://mapr.uit.edu.vn/",
+     "6200e23452be7305bbbf2a5a191a0d8264190129c62f9429be9ab665ef3c56a8",
+     false
+    ],
+    "status": 200,
+    "title": "2026 International Conference on Multimedia Analysis and Pattern Recognition (MAPR) | The University of Information Technology"
+   }
+  }
+ },
+ "raids": {
+  "acronym": "RAIDS",
+  "pages": {
+   "https://raids.eai-conferences.org/2026/": {
+    "last_changed": "2026-11-22T14:20:31+00:00",
+    "last_checked": "2026-11-22T14:20:31+00:00",
+    "signature": [
+     200,
+     "https://raids.eai-conferences.org/2026/",
+     "8a2ed97d21f315295f1e8da9c248f3d94dcc27535bca30808fff176f4a226302",
+     false
+    ],
+    "status": 200,
+    "title": "Raids 2026 – Second Raids 2026"
+   },
+   "https://raids.eai-conferences.org/2027/": {
+    "last_changed": "2026-11-22T14:20:31+00:00",
+    "last_checked": "2026-11-22T14:20:31+00:00",
+    "signature": [
+     200,
+     "https://raids.eai-conferences.org/2027/",
+     "00abbc86606a29773b0c902c15b1f3dffe3d4b63847376e460d5c7498dc89f2f",
+     false
+    ],
+    "status": 200,
+    "title": "RAIDS 2027 – 3rd EAI International Conference on Responsible Artificial Intelligence and Data Science"
+   }
+  }
+ },
+ "rev-ecit": {
+  "acronym": "REV-ECIT",
+  "pages": {
+   "https://rev-ecit.vn/": {
+    "last_changed": "2026-11-22T14:20:31+00:00",
+    "last_checked": "2026-11-22T14:20:31+00:00",
+    "signature": [
+     200,
+     "https://rev-ecit.vn/",
+     "3dbe3022ba3de48207c100843011b9a4ebe4cfb5a774f7db7ec2db2e47645a0b",
+     false
+    ],
+    "status": 200,
+    "title": "Trang chủ | Hội nghị Quốc gia lần thứ 29 về Điện tử, Truyền thông và Công nghệ Thông tin"
+   }
+  }
+ },
+ "rivf": {
+  "acronym": "RIVF",
+  "pages": {
+   "https://rivf2026.org/": {
+    "last_changed": "2026-11-22T14:20:31+00:00",
+    "last_checked": "2026-11-22T14:20:31+00:00",
+    "signature": [
+     200,
+     "https://rivf2026.org/",
+     "09e69a71bd5bfb4e1c45850c95c22399bf35edee45c590a54ac918ed95e989c0",
+     false
+    ],
+    "status": 200,
+    "title": "RIVF 2026"
+   },
+   "https://rivf2027.org/": {
+    "last_changed": "2026-11-22T14:20:31+00:00",
+    "last_checked": "2026-11-22T14:20:31+00:00",
+    "signature": [
+     null,
+     null,
+     null,
+     true
+    ],
+    "status": null,
+    "title": ""
+   }
+  }
+ },
+ "soict": {
+  "acronym": "SoICT",
+  "pages": {
+   "https://soict.org/": {
+    "last_changed": "2026-11-22T14:20:31+00:00",
+    "last_checked": "2026-11-22T14:20:31+00:00",
+    "signature": [
+     200,
+     "https://soict.org/",
+     "b532fed9d96a0cb9174250290dded31d2efe2dbe2e2a292ea16ced8613fc614b",
+     false
+    ],
+    "status": 200,
+    "title": "SOICT 2026"
+   }
+  }
+ },
+ "vnict": {
+  "acronym": "VNICT",
+  "pages": {
+   "https://vnict.vn/": {
+    "last_changed": "2026-11-22T14:20:31+00:00",
+    "last_checked": "2026-11-22T14:20:31+00:00",
+    "signature": [
+     200,
+     "https://vnict.vn/",
+     "3716231876c6413817803e92951e83929a1d7da9a02b134a41ee43ff2f4b8b21",
+     false
+    ],
+    "status": 200,
+    "title": "Hội thảo Quốc gia lần thứ XXIX - VNICT 2026: Một số vấn đề chọn lọc của Công nghệ thông tin và truyền thông, Hà Nội, 2026"
+   }
+  }
+ }
+}

@@ -1,0 +1,473 @@
+{
+ "checked_at": "2026-11-22T14:20:31+00:00",
+ "pages": 15,
+ "changed": [
+  {
+   "series": "soict",
+   "acronym": "SoICT",
+   "url": "https://soict.org/",
+   "title": "SOICT 2026",
+   "first_seen": true,
+   "dates": [
+    {
+     "date": "2026-09-09",
+     "label": "abstract",
+     "evidence": "s and Applications (Q1 Journal). Important Dates Abstract Submission: 09 September 2026 20 September 2026 Full Paper"
+    },
+    {
+     "date": "2026-09-20",
+     "label": "abstract",
+     "evidence": "(Q1 Journal). Important Dates Abstract Submission: 09 September 2026 20 September 2026 Full Paper Submission: 16 Sep"
+    },
+    {
+     "date": "2026-09-16",
+     "label": "paper",
+     "evidence": "ubmission: 09 September 2026 20 September 2026 Full Paper Submission: 16 September 2026 20 September 2026 Author Noti"
+    },
+    {
+     "date": "2026-09-20",
+     "label": "paper",
+     "evidence": "ember 2026 20 September 2026 Full Paper Submission: 16 September 2026 20 September 2026 Author Notification: 18 Octob"
+    },
+    {
+     "date": "2026-10-18",
+     "label": "notification",
+     "evidence": "Submission: 16 September 2026 20 September 2026 Author Notification: 18 October 2026 Camera-Ready Submission: 30 O"
+    },
+    {
+     "date": "2026-10-30",
+     "label": "paper",
+     "evidence": "er 2026 Author Notification: 18 October 2026 Camera-Ready Submission: 30 October 2026 Conference Dates: 4-5 Decembe"
+    },
+    {
+     "date": "2026-12-05",
+     "label": "event",
+     "evidence": "ber 2026 Camera-Ready Submission: 30 October 2026 Conference Dates: 4-5 December 2026 FOLLOW US Tweets by SOICTConf"
+    }
+   ]
+  },
+  {
+   "series": "rivf",
+   "acronym": "RIVF",
+   "url": "https://rivf2026.org/",
+   "title": "RIVF 2026",
+   "first_seen": true,
+   "dates": [
+    {
+     "date": "2026-11-25",
+     "label": "paper",
+     "evidence": "ady instructions for accepted papers are online: final papers are due November 25, 2026 — see Camera-Ready Submission"
+    },
+    {
+     "date": "2026-09-15",
+     "label": "paper",
+     "evidence": "— see Keynote Speakers . The paper submission deadline is extended to September 15, 2026 . This is a hard deadline — s"
+    },
+    {
+     "date": "2026-08-31",
+     "label": "paper",
+     "evidence": "026. Important Dates (Tentative) Paper Submission Deadline (Extended) August 31, 2026 September 15, 2026 Acceptance"
+    }
+   ]
+  },
+  {
+   "series": "atc",
+   "acronym": "ATC",
+   "url": "https://atc-conf.org/",
+   "title": "ATC 2026 - International Conference on Advanced Technologies for Communications",
+   "first_seen": true,
+   "dates": []
+  },
+  {
+   "series": "mapr",
+   "acronym": "MAPR",
+   "url": "https://mapr.uit.edu.vn/",
+   "title": "2026 International Conference on Multimedia Analysis and Pattern Recognition (MAPR) | The University of Information Technology",
+   "first_seen": true,
+   "dates": [
+    {
+     "date": "2026-07-30",
+     "label": "proceedings",
+     "evidence": "yet. News Aug 12, 2026 : The MAPR 2026 Proceedings are now available Jul 30, 2026 - MAPR 2026 Participant List"
+    },
+    {
+     "date": "2026-07-22",
+     "label": "paper",
+     "evidence": "h line in each session indicates the presentation order and Paper ID. Jul 22, 2026 - Paper Presentation Informat"
+    },
+    {
+     "date": "2026-07-12",
+     "label": "registration",
+     "evidence": "r must have at least one Regular registration completed no later than July 12, 2026 . This is required for the pa"
+    },
+    {
+     "date": "2026-07-07",
+     "label": "paper",
+     "evidence": "apr.uit.edu.vn/list-accepted-papers . Congratulations to all authors! Jul 07, 2026 - Camera-Ready Submission Ins"
+    },
+    {
+     "date": "2026-07-12",
+     "label": "paper",
+     "evidence": "camera-ready-submission-instructions . The deadline for submission is July 12, 2026 . KEYNOTE SPEAKER: Prof. NGO"
+    },
+    {
+     "date": "2026-05-10",
+     "label": "paper",
+     "evidence": "Innovative Applications IMPORTANT DATES Abstract Submission Deadline: May 10, 2026 Full Paper Submission Deadlin"
+    },
+    {
+     "date": "2026-05-15",
+     "label": "paper",
+     "evidence": "act Submission Deadline: May 10, 2026 Full Paper Submission Deadline: May 15, 2026 Paper Acceptance Notification"
+    },
+    {
+     "date": "2026-07-06",
+     "label": "notification",
+     "evidence": "Deadline: May 15, 2026 Paper Acceptance Notification: J une 30, 2026 July 6, 2026 Camera Ready : July 6, 2026 ."
+    },
+    {
+     "date": "2026-07-06",
+     "label": "camera_ready",
+     "evidence": "r Acceptance Notification: J une 30, 2026 July 6, 2026 Camera Ready : July 6, 2026 . July 12, 2026 Author regist"
+    },
+    {
+     "date": "2026-07-12",
+     "label": "camera_ready",
+     "evidence": "tification: J une 30, 2026 July 6, 2026 Camera Ready : July 6, 2026 . July 12, 2026 Author registration : July 6,"
+    },
+    {
+     "date": "2026-07-06",
+     "label": "registration",
+     "evidence": "026 Camera Ready : July 6, 2026 . July 12, 2026 Author registration : July 6, 2026 July 12, 2026 Conference Date"
+    }
+   ]
+  },
+  {
+   "series": "fair",
+   "acronym": "FAIR",
+   "url": "https://fair.conf.vn/",
+   "title": "Home | FAIR - Fundamental And Applied IT Research",
+   "first_seen": true,
+   "dates": [
+    {
+     "date": "2026-08-31",
+     "label": "paper",
+     "evidence": "e for venue location: IMPORTANT DATES Full paper submission deadline: August 31, 2026 Notification of acceptance: S"
+    },
+    {
+     "date": "2026-09-21",
+     "label": "notification",
+     "evidence": "aper submission deadline: August 31, 2026 Notification of acceptance: September 21, 2026 CONFERENCE PROGRAM CO-ORGANIZ"
+    }
+   ]
+  },
+  {
+   "series": "rev-ecit",
+   "acronym": "REV-ECIT",
+   "url": "https://rev-ecit.vn/",
+   "title": "Trang chủ | Hội nghị Quốc gia lần thứ 29 về Điện tử, Truyền thông và Công nghệ Thông tin",
+   "first_seen": true,
+   "dates": [
+    {
+     "date": "2026-10-15",
+     "label": "paper",
+     "evidence": "chiến lược-Kiến tạo tương lai số Việt Nam CÁC MỐC THỜI GIAN: Hạn nộp: 15/10/2026 - Hạn thông báo kết quả: 20/1"
+    },
+    {
+     "date": "2026-11-20",
+     "label": "notification",
+     "evidence": "t Nam CÁC MỐC THỜI GIAN: Hạn nộp: 15/10/2026 - Hạn thông báo kết quả: 20/11/2026 - Hạn nộp bản in: 26/11/2026"
+    },
+    {
+     "date": "2026-11-26",
+     "label": "paper",
+     "evidence": "nộp: 15/10/2026 - Hạn thông báo kết quả: 20/11/2026 - Hạn nộp bản in: 26/11/2026 - Ngày diễn ra Hội nghị: 19/1"
+    },
+    {
+     "date": "2026-12-19",
+     "label": "event",
+     "evidence": "quả: 20/11/2026 - Hạn nộp bản in: 26/11/2026 - Ngày diễn ra Hội nghị: 19/12/2026 - Nộp bài TẠI ĐÂY! LÀM CHỦ CÔ"
+    }
+   ]
+  },
+  {
+   "series": "vnict",
+   "acronym": "VNICT",
+   "url": "https://vnict.vn/",
+   "title": "Hội thảo Quốc gia lần thứ XXIX - VNICT 2026: Một số vấn đề chọn lọc của Công nghệ thông tin và truyền thông, Hà Nội, 2026",
+   "first_seen": true,
+   "dates": [
+    {
+     "date": "2026-08-15",
+     "label": "paper",
+     "evidence": "xa hoi mot so moc thoi gian quan trong cua hoi thao toan van bao cao: 15/8/2026 (da gia han) chap nhan dang k"
+    },
+    {
+     "date": "2026-09-15",
+     "label": "proceedings",
+     "evidence": "thao toan van bao cao: 15/8/2026 (da gia han) chap nhan dang ky yeu: 15/9/2026 xuat ban ky yeu hoi thao: 31/"
+    },
+    {
+     "date": "2026-10-31",
+     "label": "event",
+     "evidence": "a gia han) chap nhan dang ky yeu: 15/9/2026 xuat ban ky yeu hoi thao: 31/10/2026 dang ky tham du: tu 30/9 - 10"
+    },
+    {
+     "date": "2026-10-10",
+     "label": "registration",
+     "evidence": "/2026 xuat ban ky yeu hoi thao: 31/10/2026 dang ky tham du: tu 30/9 - 10/10/2026 cac bai nop truoc han 30/6 tr"
+    }
+   ]
+  },
+  {
+   "series": "fjcai",
+   "acronym": "FJCAI",
+   "url": "https://fjcai.vn/",
+   "title": "Trang chủ - FJCAI 2027",
+   "first_seen": true,
+   "dates": [
+    {
+     "date": "2026-12-15",
+     "label": "paper",
+     "evidence": "Trang chủ - FJCAI 2027 Bỏ qua điều hướng Mới Hạn nộp bài gia hạn đến 15/12/2026; thông báo kết quả phản biện"
+    },
+    {
+     "date": "2027-01-15",
+     "label": "notification",
+     "evidence": "Hạn nộp bài gia hạn đến 15/12/2026; thông báo kết quả phản biện ngày 15/01/2027. Xem thông báo Call for Paper"
+    },
+    {
+     "date": "2027-04-09",
+     "label": "event",
+     "evidence": "i nộp bài tham dự FJCAI 2027 Hạn nộp bài: 15/12/2026 · Hội thảo: 8 và 9/04/2027 tại Đà Nẵng (VKU). Nộp bài qu"
+    },
+    {
+     "date": "2026-11-15",
+     "label": "paper",
+     "evidence": "Lịch trình Mốc thời gian quan trọng Hạn nộp bài Full paper submission 15/11/2026 15/12/2026 Mới Thông báo chấp"
+    },
+    {
+     "date": "2027-01-10",
+     "label": "notification",
+     "evidence": "submission 15/11/2026 15/12/2026 Mới Thông báo chấp nhận Notification 10/01/2027 15/01/2027 Mới Camera-ready B"
+    },
+    {
+     "date": "2027-02-01",
+     "label": "camera_ready",
+     "evidence": "ận Notification 10/01/2027 15/01/2027 Mới Camera-ready Bản hoàn chỉnh 01/02/2027 Hội thảo Đà Nẵng · VKU 8 và 9"
+    }
+   ]
+  },
+  {
+   "series": "iciit",
+   "acronym": "ICIIT",
+   "url": "https://www.iciit.org/",
+   "title": "ICIIT2027丨Intelligent Information Technology",
+   "first_seen": true,
+   "dates": [
+    {
+     "date": "2026-11-30",
+     "label": "paper",
+     "evidence": "March 04-07, 2027 Venue Ho Chi Minh City, Vietnam Submission Deadline Nov. 30, 2026 (Full Paper) With our great p"
+    },
+    {
+     "date": "2024-05-15",
+     "label": "paper",
+     "evidence": "2024 papers have been indexed by Ei Compendex and Scopus . ( Click ) 15/05/2024 news! Official website of ICI"
+    },
+    {
+     "date": "2024-03-01",
+     "label": "paper",
+     "evidence": "te of ICIIT 2025 is onlined and paper submission is opened. ( Click ) 01/03/2024 news! ICIIT 2024 has been hel"
+    },
+    {
+     "date": "2023-08-31",
+     "label": "proceedings",
+     "evidence": "n the ACM Conference Proceedings (ISBN: 979-8-4007-1671-3). ( Click ) 31/08/2023 news! ICIIT 2023 papers have"
+    },
+    {
+     "date": "2023-07-13",
+     "label": "paper",
+     "evidence": "ews! ICIIT 2023 papers have been indexed by Ei Compendex and Scopus . 13/07/2023 news! ICIIT 2023 papers have"
+    }
+   ]
+  },
+  {
+   "series": "ismsi",
+   "acronym": "ISMSI",
+   "url": "https://ismsi.org/",
+   "title": "ISMSI 2027",
+   "first_seen": true,
+   "dates": [
+    {
+     "date": "2026-11-25",
+     "label": "paper",
+     "evidence": "copus) Q1 CiteScore Best Quartile Important Dates Submission Deadline November 25, 2026 Acceptance Notification Decem"
+    },
+    {
+     "date": "2026-12-25",
+     "label": "notification",
+     "evidence": "t Dates Submission Deadline November 25, 2026 Acceptance Notification December 25, 2026 Registration Deadline January"
+    },
+    {
+     "date": "2027-01-10",
+     "label": "paper",
+     "evidence": "2026 Acceptance Notification December 25, 2026 Registration Deadline January 10, 2027 Conference Dates April 23-25,"
+    }
+   ]
+  },
+  {
+   "series": "raids",
+   "acronym": "RAIDS",
+   "url": "https://raids.eai-conferences.org/2026/",
+   "title": "Raids 2026 – Second Raids 2026",
+   "first_seen": true,
+   "dates": [
+    {
+     "date": "2026-03-12",
+     "label": "paper",
+     "evidence": "htful Posters Session About Proceedings Deadlines EAI RAIDS 2026 10 – 12 March 2026 Danang city, Vietnam We are c"
+    },
+    {
+     "date": "2026-02-10",
+     "label": "paper",
+     "evidence": "I RAIDS 2026 Deadlines Important dates Full Paper Submission deadline 10 February 2026 Submission open Notification"
+    },
+    {
+     "date": "2026-02-16",
+     "label": "paper",
+     "evidence": "ssion deadline 10 February 2026 Submission open Notification deadline 16 February 2026 Camera-ready deadline 21 Febr"
+    },
+    {
+     "date": "2026-02-21",
+     "label": "paper",
+     "evidence": "ion open Notification deadline 16 February 2026 Camera-ready deadline 21 February 2026 Poster Track Full Paper Submi"
+    },
+    {
+     "date": "2024-07-10",
+     "label": "paper",
+     "evidence": "deadline 21 February 2026 Poster Track Full Paper Submission deadline 10th July 2024 Submission closed Notificatio"
+    },
+    {
+     "date": "2024-08-01",
+     "label": "paper",
+     "evidence": "ssion deadline 10th July 2024 Submission closed Notification deadline 1st August 2024 Camera-ready deadline 20th Au"
+    },
+    {
+     "date": "2024-08-20",
+     "label": "paper",
+     "evidence": "on closed Notification deadline 1st August 2024 Camera-ready deadline 20th August 2024 Late Track Full Paper Submiss"
+    },
+    {
+     "date": "2026-02-14",
+     "label": "paper",
+     "evidence": "4 Important dates Main Track – Round 2 Full Paper Submission deadline 14 February 2026 Submission open Notification"
+    },
+    {
+     "date": "2026-02-20",
+     "label": "paper",
+     "evidence": "ssion deadline 14 February 2026 Submission open Notification deadline 20 February 2026 Camera-ready deadline 7 March"
+    },
+    {
+     "date": "2026-03-07",
+     "label": "paper",
+     "evidence": "ion open Notification deadline 20 February 2026 Camera-ready deadline 7 March 2026 Conference dates 10 – 12 Marc"
+    },
+    {
+     "date": "2026-03-12",
+     "label": "event",
+     "evidence": "ebruary 2026 Camera-ready deadline 7 March 2026 Conference dates 10 – 12 March 2026 Dong A University, Danang, Vi"
+    },
+    {
+     "date": "2026-01-30",
+     "label": "paper",
+     "evidence": "University, Danang, Vietnam Main Track Full Paper Submission deadline 30 January 2026 Submission closed Notificatio"
+    }
+   ]
+  },
+  {
+   "series": "raids",
+   "acronym": "RAIDS",
+   "url": "https://raids.eai-conferences.org/2027/",
+   "title": "RAIDS 2027 – 3rd EAI International Conference on Responsible Artificial Intelligence and Data Science",
+   "first_seen": true,
+   "dates": [
+    {
+     "date": "2026-12-11",
+     "label": "paper",
+     "evidence": "lendar Submit Now Add to Calendar Important Dates Submission deadline 11 December 2026 Notification deadline 11 Janu"
+    },
+    {
+     "date": "2027-01-11",
+     "label": "paper",
+     "evidence": "tant Dates Submission deadline 11 December 2026 Notification deadline 11 January 2027 Camera-ready deadline 10 Febr"
+    },
+    {
+     "date": "2027-02-10",
+     "label": "paper",
+     "evidence": "mber 2026 Notification deadline 11 January 2027 Camera-ready deadline 10 February 2027 Indexed in Hear from the part"
+    },
+    {
+     "date": "2027-03-12",
+     "label": "paper",
+     "evidence": "posters session About Proceedings Deadlines Venue EAI RAIDS 2027 10 – 12 March 2027 Danang city, Vietnam We are c"
+    },
+    {
+     "date": "2024-07-10",
+     "label": "paper",
+     "evidence": "deadline 10 February 2027 Poster Track Full Paper Submission deadline 10th July 2024 Submission closed Notificatio"
+    },
+    {
+     "date": "2024-08-01",
+     "label": "paper",
+     "evidence": "ssion deadline 10th July 2024 Submission closed Notification deadline 1st August 2024 Camera-ready deadline 20th Au"
+    },
+    {
+     "date": "2024-08-20",
+     "label": "paper",
+     "evidence": "on closed Notification deadline 1st August 2024 Camera-ready deadline 20th August 2024 Late Track Full Paper Submiss"
+    }
+   ]
+  },
+  {
+   "series": "icetai",
+   "acronym": "ICETAI",
+   "url": "https://icetai.neu.edu.vn/2027/important-dates",
+   "title": "Important Dates — ICETAI 2027",
+   "first_seen": true,
+   "dates": [
+    {
+     "date": "2027-08-27",
+     "label": "registration",
+     "evidence": "Information Registration ICETAI 2026 → Important Dates ICETAI 2027 — 27 August 2027, Da Nang, Vietnam Timeline 1"
+    },
+    {
+     "date": "2027-04-30",
+     "label": "paper",
+     "evidence": "27 August 2027, Da Nang, Vietnam Timeline 1 Paper Submission Deadline 30 April 2027 2 Notification of Acceptance"
+    },
+    {
+     "date": "2027-06-30",
+     "label": "notification",
+     "evidence": "Paper Submission Deadline 30 April 2027 2 Notification of Acceptance 30 June 2027 3 Early Registration Deadline"
+    },
+    {
+     "date": "2027-07-30",
+     "label": "paper",
+     "evidence": "Notification of Acceptance 30 June 2027 3 Early Registration Deadline 30 July 2027 4 Registration Deadline 15 Au"
+    },
+    {
+     "date": "2027-08-15",
+     "label": "paper",
+     "evidence": "27 3 Early Registration Deadline 30 July 2027 4 Registration Deadline 15 August 2027 5 Conference Date 27 August 2"
+    },
+    {
+     "date": "2027-08-27",
+     "label": "event",
+     "evidence": "30 July 2027 4 Registration Deadline 15 August 2027 5 Conference Date 27 August 2027 Da Nang, Vietnam ICETAI 2027"
+    }
+   ]
+  }
+ ],
+ "errors": 2
+}
