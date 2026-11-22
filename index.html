@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CS Conference Deadlines</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-10">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+      <div>
+        <h1 class="text-2xl font-bold text-slate-900">Hội nghị Khoa học Quốc tế CNTT &amp; CS</h1>
+        <p id="meta-info" class="text-sm text-slate-500">Đang tải dữ liệu...</p>
+      </div>
+      <button id="btn-bookmarks" class="px-3 py-1.5 text-sm font-medium rounded-lg border border-slate-300 hover:bg-slate-100 self-start sm:self-auto">
+        ★ Đang theo dõi (<span id="bm-count">0</span>)
+      </button>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-6">
+    <!-- Bộ lọc -->
+    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 mb-6 grid grid-cols-1 md:grid-cols-4 gap-3">
+      <input id="search" type="text" placeholder="Tìm tên hội nghị (VD: KDD, NeurIPS, IEEE)..."
+        class="md:col-span-2 px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      <select id="filter-sub" class="px-3 py-2 border border-slate-300 rounded-lg text-sm bg-white">
+        <option value="">Tất cả lĩnh vực</option>
+      </select>
+      <select id="filter-rank" class="px-3 py-2 border border-slate-300 rounded-lg text-sm bg-white">
+        <option value="">Tất cả hạng CCF</option>
+        <option value="A">CCF A</option>
+        <option value="B">CCF B</option>
+        <option value="C">CCF C</option>
+      </select>
+    </div>
+
+    <!-- Danh sách hội nghị -->
+    <div id="conf-list" class="space-y-3"></div>
+  </main>
+
+  <script>
+    let allConfs = [];
+    let showBookmarksOnly = false;
+    let bookmarks = new Set(JSON.parse(localStorage.getItem("cs_conf_bookmarks") || "[]"));
+
+    function saveBookmarks() {
+      localStorage.setItem("cs_conf_bookmarks", JSON.stringify([...bookmarks]));
+      document.getElementById("bm-count").textContent = bookmarks.size;
+    }
+
+    function formatCountdown(isoStr) {
+      const diff = new Date(isoStr) - new Date();
+      if (diff <= 0) return "Đã hết hạn";
+      const days = Math.floor(diff / 86400000);
+      const hours = Math.floor((diff % 86400000) / 3600000);
+      const mins = Math.floor((diff % 3600000) / 60000);
+      return `${days} ngày ${hours} giờ ${mins} phút`;
+    }
+
+    function downloadICS(conf) {
+      const dt = new Date(conf.deadline_iso).toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
+      const ics = [
+        "BEGIN:VCALENDAR", "VERSION:2.0", "BEGIN:VEVENT",
+        `SUMMARY:[Deadline] ${conf.acronym} ${conf.year}`,
+        `DTSTART:${dt}`, `DTEND:${dt}`,
+        `DESCRIPTION:${conf.full_name}\\nLink: ${conf.url}`,
+        `LOCATION:${conf.place}`,
+        "END:VEVENT", "END:VCALENDAR"
+      ].join("\r\n");
+      const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = `${conf.acronym}_${conf.year}_deadline.ics`;
+      a.click();
+    }
+
+    function render() {
+      const q = document.getElementById("search").value.toLowerCase().trim();
+      const sub = document.getElementById("filter-sub").value;
+      const rank = document.getElementById("filter-rank").value;
+
+      const filtered = allConfs.filter(c => {
+        if (showBookmarksOnly && !bookmarks.has(c.id)) return false;
+        if (sub && c.sub !== sub) return false;
+        if (rank && c.rank_ccf !== rank) return false;
+        if (q && !(`${c.acronym} ${c.full_name} ${c.place}`).toLowerCase().includes(q)) return false;
+        return true;
+      });
+
+      const container = document.getElementById("conf-list");
+      if (!filtered.length) {
+        container.innerHTML = `<div class="text-center py-12 text-slate-500 bg-white rounded-xl border border-slate-200">Không tìm thấy hội nghị phù hợp.</div>`;
+        return;
+      }
+
+      container.innerHTML = filtered.map(c => {
+        const isBm = bookmarks.has(c.id);
+        const localDeadline = new Date(c.deadline_iso).toLocaleString("vi-VN", {
+          dateStyle: "medium", timeStyle: "short"
+        });
+        const badgeColor = c.rank_ccf === "A" ? "bg-rose-100 text-rose-700"
+                         : c.rank_ccf === "B" ? "bg-amber-100 text-amber-700"
+                         : "bg-slate-100 text-slate-700";
+
+        return `
+          <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:border-blue-300 transition flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="space-y-1">
+              <div class="flex flex-wrap items-center gap-2">
+                <a href="${c.url}" target="_blank" rel="noopener" class="text-lg font-bold text-blue-700 hover:underline">
+                  ${c.acronym} ${c.year}
+                </a>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded ${badgeColor}">CCF ${c.rank_ccf}</span>
+                ${c.rank_core && c.rank_core !== "N/A" ? `<span class="px-2 py-0.5 text-xs font-semibold rounded bg-indigo-100 text-indigo-700">CORE ${c.rank_core}</span>` : ""}
+                <span class="px-2 py-0.5 text-xs rounded bg-slate-100 text-slate-600">${c.topic}</span>
+              </div>
+              <p class="text-sm text-slate-700">${c.full_name}</p>
+              <p class="text-xs text-slate-500">📅 ${c.date} &nbsp;|&nbsp; 📍 ${c.place} ${c.comment ? `&nbsp;|&nbsp; ℹ️ ${c.comment}` : ""}</p>
+            </div>
+            <div class="md:text-right shrink-0 flex flex-col md:items-end gap-1.5">
+              <div class="text-sm font-bold text-emerald-700 countdown" data-iso="${c.deadline_iso}">
+                ⏳ ${formatCountdown(c.deadline_iso)}
+              </div>
+              <div class="text-xs text-slate-500">Hạn nộp (giờ máy bạn): ${localDeadline}</div>
+              <div class="flex items-center gap-2 mt-1">
+                <button onclick="toggleBm('${c.id}')" class="px-2.5 py-1 text-xs rounded border ${isBm ? 'bg-amber-50 border-amber-400 text-amber-700 font-semibold' : 'border-slate-300 text-slate-600 hover:bg-slate-50'}">
+                  ${isBm ? "★ Đã lưu" : "☆ Theo dõi"}
+                </button>
+                <button onclick='downloadICS(${JSON.stringify(c).replace(/'/g, "&#39;")})' class="px-2.5 py-1 text-xs rounded border border-slate-300 text-slate-600 hover:bg-slate-50">
+                  + Lịch (.ics)
+                </button>
+              </div>
+            </div>
+          </div>`;
+      }).join("");
+    }
+
+    window.toggleBm = (id) => {
+      bookmarks.has(id) ? bookmarks.delete(id) : bookmarks.add(id);
+      saveBookmarks();
+      render();
+    };
+
+    async function init() {
+      saveBookmarks();
+      try {
+        const res = await fetch("./data/conferences.json");
+        const data = await res.json();
+        allConfs = data.conferences || [];
+        const updated = new Date(data.last_updated).toLocaleString("vi-VN");
+        document.getElementById("meta-info").textContent =
+          `Hiển thị ${allConfs.length} hội nghị sắp hết hạn • Cập nhật lần cuối: ${updated}`;
+
+        const subSelect = document.getElementById("filter-sub");
+        const topics = [...new Map(allConfs.map(c => [c.sub, c.topic])).entries()];
+        topics.sort((a, b) => a[1].localeCompare(b[1])).forEach(([code, name]) => {
+          const opt = document.createElement("option");
+          opt.value = code;
+          opt.textContent = name;
+          subSelect.appendChild(opt);
+        });
+
+        render();
+        setInterval(() => {
+          document.querySelectorAll(".countdown").forEach(el => {
+            el.textContent = "⏳ " + formatCountdown(el.dataset.iso);
+          });
+        }, 60000);
+      } catch (err) {
+        document.getElementById("meta-info").textContent = "Chưa có file data/conferences.json. Hãy chạy GitHub Actions trước.";
+      }
+    }
+
+    ["search", "filter-sub", "filter-rank"].forEach(id =>
+      document.getElementById(id).addEventListener("input", render)
+    );
+    document.getElementById("btn-bookmarks").addEventListener("click", (e) => {
+      showBookmarksOnly = !showBookmarksOnly;
+      e.currentTarget.classList.toggle("bg-amber-50", showBookmarksOnly);
+      e.currentTarget.classList.toggle("border-amber-400", showBookmarksOnly);
+      render();
+    });
+
+    init();
+  </script>
+</body>
+</html>
