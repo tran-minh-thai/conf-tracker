@@ -28,7 +28,6 @@ SUB_MAP = {
     "MX": "Interdisciplinary / Emerging",
 }
 
-# Các chuyên mục cần lấy trên WikiCFP -> ánh xạ về mã nhóm (sub)
 WIKICFP_CATEGORIES = [
     ("data mining", "DB"),
     ("artificial intelligence", "AI"),
@@ -39,11 +38,168 @@ WIKICFP_CATEGORIES = [
     ("computer science", "MX"),
 ]
 
+COUNTRY_ALIASES = {
+    "usa": "USA",
+    "u.s.a.": "USA",
+    "u.s.": "USA",
+    "us": "USA",
+    "united states": "USA",
+    "united states of america": "USA",
+    "uk": "UK",
+    "u.k.": "UK",
+    "united kingdom": "UK",
+    "england": "UK",
+    "scotland": "UK",
+    "wales": "UK",
+    "prc": "China",
+    "p.r. china": "China",
+    "p.r.china": "China",
+    "china": "China",
+    "korea": "South Korea",
+    "south korea": "South Korea",
+    "republic of korea": "South Korea",
+    "viet nam": "Vietnam",
+    "vietnam": "Vietnam",
+    "uae": "UAE",
+    "united arab emirates": "UAE",
+    "the netherlands": "Netherlands",
+    "netherlands": "Netherlands",
+}
+
+US_STATES = {
+    "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID",
+    "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS",
+    "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK",
+    "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV",
+    "WI", "WY", "DC",
+}
+
+CITY_STATES = {"singapore", "hong kong", "macau", "macao"}
+
+MONTH_MAP = {
+    "jan": 1, "january": 1, "feb": 2, "february": 2, "mar": 3, "march": 3,
+    "apr": 4, "april": 4, "may": 5, "jun": 6, "june": 6, "jul": 7, "july": 7,
+    "aug": 8, "august": 8, "sep": 9, "sept": 9, "september": 9,
+    "oct": 10, "october": 10, "nov": 11, "november": 11, "dec": 12, "december": 12,
+}
+
 
 def make_dedup_key(acronym: str, year) -> str:
-    """Tạo khóa chuẩn hóa để khử trùng lặp giữa các nguồn."""
     raw = f"{acronym}{year}".lower()
     return re.sub(r"[^a-z0-9]", "", raw)
+
+
+def normalize_country(raw: str) -> str:
+    c = raw.strip().strip(".")
+    if not c:
+        return "TBD"
+    if c.upper() in US_STATES:
+        return "USA"
+    return COUNTRY_ALIASES.get(c.lower(), c)
+
+
+def parse_place(place_str: str):
+    """Tách chuỗi địa điểm thành (city, country) đã chuẩn hóa."""
+    if not place_str or place_str.strip().lower() in ("tbd", "n/a", "tba", ""):
+        return "", "TBD"
+
+    clean = re.sub(r"\s+", " ", place_str).strip()
+    if any(k in clean.lower() for k in ("online", "virtual")):
+        return "Online", "Online"
+
+    parts = [p.strip() for p in clean.split(",") if p.strip()]
+    if len(parts) == 1:
+        p0 = parts[0]
+        if p0.lower() in CITY_STATES:
+            return p0, p0
+        return "", normalize_country(p0)
+
+    if len(parts) == 2:
+        city, second = parts[0], parts[1]
+        return city, normalize_country(second)
+
+    # 3 phần trở lên, ví dụ: "San Diego, CA, USA" hoặc "Vancouver, BC, Canada"
+    return parts[0], normalize_country(parts[-1])
+
+
+def safe_iso_date(y: int, m: int, d: int):
+    try:
+        return datetime(y, m, d).strftime("%Y-%m-%d")
+    except ValueError:
+        return None
+
+
+def parse_event_dates(date_str: str, fallback_year=None):
+    """Phân tích chuỗi ngày tổ chức thành (event_start, event_end) dạng YYYY-MM-DD."""
+    if not date_str or str(date_str).strip().lower() in ("tbd", "n/a", "tba", ""):
+        return None, None
+
+    s = str(date_str).replace("–", "-").replace("—", "-").strip()
+    s = re.sub(r"\s+", " ", s)
+
+    # Dạng 1: "Oct 12, 2026 - Oct 15, 2026" (phổ biến trên WikiCFP)
+    m = re.search(
+        r"([A-Za-z]+)\s+(\d{1,2}),?\s*(\d{4})\s*-\s*([A-Za-z]+)\s+(\d{1,2}),?\s*(\d{4})",
+        s,
+    )
+    if m:
+        m1, d1, y1, m2, d2, y2 = m.groups()
+        mo1, mo2 = MONTH_MAP.get(m1.lower()), MONTH_MAP.get(m2.lower())
+        if mo1 and mo2:
+            return safe_iso_date(int(y1), mo1, int(d1)), safe_iso_date(int(y2), mo2, int(d2))
+
+    # Dạng 2: "May 29 - June 2, 2027"
+    m = re.search(
+        r"([A-Za-z]+)\s+(\d{1,2})\s*-\s*([A-Za-z]+)\s+(\d{1,2}),?\s*(\d{4})",
+        s,
+    )
+    if m:
+        m1, d1, m2, d2, y = m.groups()
+        mo1, mo2 = MONTH_MAP.get(m1.lower()), MONTH_MAP.get(m2.lower())
+        if mo1 and mo2:
+            y1 = int(y) - 1 if mo1 > mo2 else int(y)
+            return safe_iso_date(y1, mo1, int(d1)), safe_iso_date(int(y), mo2, int(d2))
+
+    # Dạng 3: "August 14-18, 2027" hoặc "Aug 14 - 18, 2027"
+    m = re.search(r"([A-Za-z]+)\s+(\d{1,2})\s*-\s*(\d{1,2}),?\s*(\d{4})", s)
+    if m:
+        mon, d1, d2, y = m.groups()
+        mo = MONTH_MAP.get(mon.lower())
+        if mo:
+            return safe_iso_date(int(y), mo, int(d1)), safe_iso_date(int(y), mo, int(d2))
+
+    # Dạng 4: "14-18 August 2027"
+    m = re.search(r"(\d{1,2})\s*-\s*(\d{1,2})\s+([A-Za-z]+),?\s*(\d{4})", s)
+    if m:
+        d1, d2, mon, y = m.groups()
+        mo = MONTH_MAP.get(mon.lower())
+        if mo:
+            return safe_iso_date(int(y), mo, int(d1)), safe_iso_date(int(y), mo, int(d2))
+
+    # Dạng 5: "2027-08-14 - 2027-08-18" hoặc "2027-08-14 to 2027-08-18"
+    m = re.search(r"(\d{4}-\d{2}-\d{2})\s*(?:-|to)\s*(\d{4}-\d{2}-\d{2})", s)
+    if m:
+        return m.group(1), m.group(2)
+
+    # Dạng 6: Ngày đơn "August 14, 2027"
+    m = re.search(r"([A-Za-z]+)\s+(\d{1,2}),?\s*(\d{4})", s)
+    if m:
+        mon, d1, y = m.groups()
+        mo = MONTH_MAP.get(mon.lower())
+        if mo:
+            dt = safe_iso_date(int(y), mo, int(d1))
+            return dt, dt
+
+    # Dạng 7: Chỉ có tháng và năm "August 2027"
+    m = re.search(r"([A-Za-z]+),?\s*(\d{4})", s)
+    if m:
+        mon, y = m.groups()
+        mo = MONTH_MAP.get(mon.lower())
+        if mo:
+            dt = safe_iso_date(int(y), mo, 1)
+            return dt, dt
+
+    return None, None
 
 
 def parse_tz(tz_str: str) -> timezone:
@@ -62,18 +218,9 @@ def parse_deadline(dl_str: str, tz_str: str = "AoE"):
     if not dl_str or str(dl_str).strip().upper() in ("TBD", "N/A", ""):
         return None
     tz = parse_tz(tz_str)
-    clean_str = str(dl_str).strip()
-    # Loại bỏ phần ngày cũ trong ngoặc đơn nếu WikiCFP ghi kiểu: "Dec 15, 2026 (Dec 01, 2026)"
-    clean_str = re.sub(r"\(.*?\)", "", clean_str).strip()
+    clean_str = re.sub(r"\(.*?\)", "", str(dl_str).strip()).strip()
 
-    formats = (
-        "%Y-%m-%d %H:%M:%S",
-        "%Y-%m-%d %H:%M",
-        "%Y-%m-%d",
-        "%b %d, %Y",
-        "%B %d, %Y",
-    )
-    for fmt in formats:
+    for fmt in ("%Y-%m-%d %H:%M:%S", "%Y-%m-%d %H:%M", "%Y-%m-%d", "%b %d, %Y", "%B %d, %Y"):
         try:
             dt = datetime.strptime(clean_str, fmt)
             if fmt in ("%Y-%m-%d", "%b %d, %Y", "%B %d, %Y"):
@@ -94,10 +241,7 @@ def fetch_ccfddl():
     seen_keys = set()
 
     with zipfile.ZipFile(io.BytesIO(resp.content)) as zf:
-        yml_files = [
-            f for f in zf.namelist()
-            if "/conference/" in f and f.endswith(".yml")
-        ]
+        yml_files = [f for f in zf.namelist() if "/conference/" in f and f.endswith(".yml")]
 
         for filepath in yml_files:
             with zf.open(filepath) as f:
@@ -135,11 +279,16 @@ def fetch_ccfddl():
                         if upcoming_dl:
                             key = make_dedup_key(title, year)
                             seen_keys.add(key)
+                            place_raw = conf.get("place", "TBD")
+                            date_raw = conf.get("date", "TBD")
+                            city, country = parse_place(place_raw)
+                            ev_start, ev_end = parse_event_dates(date_raw, year)
+
                             results.append({
                                 "id": conf.get("id", f"{title.lower()}_{year}"),
                                 "acronym": title,
                                 "full_name": desc,
-                                "year": year,
+                                "year": int(year) if year else upcoming_dl.year,
                                 "sub": sub,
                                 "topic": SUB_MAP.get(sub, sub),
                                 "rank_ccf": rank.get("ccf", "N/A"),
@@ -148,8 +297,12 @@ def fetch_ccfddl():
                                 "abstract_iso": abstract_dl,
                                 "timezone": tz_str,
                                 "comment": comment,
-                                "date": conf.get("date", "TBD"),
-                                "place": conf.get("place", "TBD"),
+                                "date": date_raw,
+                                "event_start": ev_start,
+                                "event_end": ev_end,
+                                "place": place_raw,
+                                "city": city,
+                                "country": country,
                                 "url": conf.get("link", ""),
                                 "source": "ccfddl",
                             })
@@ -161,9 +314,7 @@ def fetch_ccfddl():
 def fetch_wikicfp(seen_keys: set, max_pages: int = 2):
     print("2. Đang bổ sung dữ liệu từ WikiCFP...")
     now_utc = datetime.now(timezone.utc)
-    headers = {
-        "User-Agent": "Mozilla/5.0 (compatible; CSConfTracker/1.0; +https://github.com)"
-    }
+    headers = {"User-Agent": "Mozilla/5.0 (compatible; CSConfTracker/1.0; +https://github.com)"}
     added = []
 
     for cat_name, sub_code in WIKICFP_CATEGORIES:
@@ -181,10 +332,8 @@ def fetch_wikicfp(seen_keys: set, max_pages: int = 2):
             if not contsec:
                 break
 
-            # Bảng danh sách hội nghị của WikiCFP có cặp 2 thẻ <tr> cho mỗi hội nghị
-            tables = contsec.find_all("table")
             conf_table = None
-            for tb in tables:
+            for tb in contsec.find_all("table"):
                 if tb.find("td", string=re.compile(r"Event", re.I)):
                     conf_table = tb
                     break
@@ -192,7 +341,6 @@ def fetch_wikicfp(seen_keys: set, max_pages: int = 2):
                 break
 
             rows = conf_table.find_all("tr")
-            # Bỏ qua hàng tiêu đề đầu tiên, duyệt từng cặp 2 hàng
             i = 1
             while i + 1 < len(rows):
                 r1_tds = rows[i].find_all("td")
@@ -219,20 +367,20 @@ def fetch_wikicfp(seen_keys: set, max_pages: int = 2):
                 if not dl_dt or dl_dt <= now_utc:
                     continue
 
-                # Tách tên viết tắt và năm từ chuỗi kiểu "ICDM 2026"
                 m = re.match(r"^(.*?)\s*(\d{4})$", raw_event)
                 if m:
-                    acronym = m.group(1).strip()
-                    year = int(m.group(2))
+                    acronym, year = m.group(1).strip(), int(m.group(2))
                 else:
-                    acronym = raw_event
-                    year = dl_dt.year
+                    acronym, year = raw_event, dl_dt.year
 
                 key = make_dedup_key(acronym, year)
                 if key in seen_keys:
                     continue
 
                 seen_keys.add(key)
+                city, country = parse_place(place_str)
+                ev_start, ev_end = parse_event_dates(date_str, year)
+
                 added.append({
                     "id": f"wikicfp_{key}",
                     "acronym": acronym,
@@ -247,12 +395,15 @@ def fetch_wikicfp(seen_keys: set, max_pages: int = 2):
                     "timezone": "AoE",
                     "comment": "Nguồn: WikiCFP",
                     "date": date_str or "TBD",
+                    "event_start": ev_start,
+                    "event_end": ev_end,
                     "place": place_str or "TBD",
+                    "city": city,
+                    "country": country,
                     "url": conf_url,
                     "source": "wikicfp",
                 })
 
-            # Nghỉ 1 giây giữa các trang để tôn trọng máy chủ WikiCFP
             time.sleep(1)
 
     print(f"   -> Bổ sung thêm {len(added)} hội nghị mới từ WikiCFP.")
