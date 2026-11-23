@@ -8,6 +8,7 @@ import {
 import { AREA_NAMES, makeT } from "./i18n.js";
 import { CITIES, browserTimeZone, citiesOf, countryFromTimeZone, nearestCity } from "./geo.js";
 import { combine, dot, paperVector as paperQuery, setStopwords, termSpecificity, textVector, topShared, venueVector } from "./match.js";
+import { icon } from "./icons.js";
 import { createPubs } from "./pubs.js";
 import { scoreWithPacks } from "./rules.js";
 
@@ -126,8 +127,8 @@ function saveLocation(loc) {
 }
 function renderLocation() {
   const t = app.t, l = app.loc;
-  const label = l.country ? `📍 ${[l.city, countryName(l.country)].filter(Boolean).join(", ")}` : `📍 ${t("locUnknown")}`;
-  $("#btn-loc").textContent = label;
+  const label = l.country ? [l.city, countryName(l.country)].filter(Boolean).join(", ") : t("locUnknown");
+  $("#btn-loc").innerHTML = `${icon("pin")}<span>${h(label)}</span>`;
   $("#btn-loc").title = l.source ? `${t("locTitle")}: ${t({ timezone: "locDetected", precise: "locPrecise", manual: "locManual" }[l.source])}` : t("locTitle");
 }
 function openLocationDialog() {
@@ -136,7 +137,7 @@ function openLocationDialog() {
     .filter((c) => c && c !== "TBD" && c !== "Online").sort(byCountryName);
   $("#loc-title").textContent = t("locTitle");
   $("#loc-note").textContent = t("locPreciseNote");
-  $("#loc-precise").textContent = `🎯 ${t("locUsePrecise")}`;
+  $("#loc-precise").textContent = `${t("locUsePrecise")}`;
   $("#loc-save").textContent = t("locSave");
   $("#loc-close").textContent = t("close");
   $("#loc-country-label").textContent = t("country");
@@ -457,7 +458,7 @@ function applyTexts() {
   $("#app-name").textContent = t("appName");
   $("#lang").value = app.lang;
   $("#tagline").textContent = t("tagline");
-  $("#btn-subscribe").textContent = `📅 ${t("subscribe")}`;
+  $("#btn-subscribe").innerHTML = `${icon("bell")}<span>${h(t("subscribe"))}</span>`;
   $("#btn-theme").title = t("theme");
   $("#footer").textContent = `${t("footer")} ${t("privacyNote")}`;
   $("#sub-title").textContent = t("subscribeTitle");
@@ -471,11 +472,11 @@ function applyTexts() {
 }
 function updateTabCounts() {
   const n = Object.keys(app.plan).length;
-  $("#tab-list").textContent = app.t("tabList");
-  $("#tab-foryou").textContent = `✨ ${app.t("tabForYou")}`;
-  $("#tab-calendar").textContent = app.t("tabCalendar");
-  $("#tab-plan").innerHTML = `${h(app.t("tabPlan"))}<span class="count">${n}</span>`;
-  $("#tab-pubs").textContent = `🎓 ${app.t("tabPubs")}`;
+  $("#tab-list").innerHTML = `${icon("list")}<span>${h(app.t("tabList"))}</span>`;
+  $("#tab-foryou").innerHTML = `${icon("spark")}<span>${h(app.t("tabForYou"))}</span>`;
+  $("#tab-calendar").innerHTML = `${icon("calendar")}<span>${h(app.t("tabCalendar"))}</span>`;
+  $("#tab-plan").innerHTML = `${icon("star")}<span>${h(app.t("tabPlan"))}</span><span class="count">${n}</span>`;
+  $("#tab-pubs").innerHTML = `${icon("cap")}<span>${h(app.t("tabPubs"))}</span>`;
   for (const b of document.querySelectorAll(".tab")) b.setAttribute("aria-selected", String(b.dataset.view === app.view));
 }
 function renderFresh() {
@@ -610,9 +611,9 @@ function summaryRow(c) {
     ? `${h(t("feesFrom", { amount: fee }))} <a href="${h(feeUrl)}" target="_blank" rel="noopener" title="${h(t("feesChecked", { date: c.fees.checked }))}">↗</a>`
     : `<span class="muted">${h(t("feesUnknown"))}</span>${feeUrl ? ` <a href="${h(feeUrl)}" target="_blank" rel="noopener">↗</a>` : ""}`;
   return `<dl class="summary-row">
-    <div><dt>${h(t("summaryTime"))}</dt><dd>${h(when)}</dd></div>
-    <div><dt>${h(t("summaryPlace"))}</dt><dd>${home ? "📍 " : ""}${h(placeText)}</dd></div>
-    <div><dt>${h(t("summaryFees"))}</dt><dd>${feeHtml}</dd></div>
+    <div class="fact"><dt>${icon("calendar")}${h(t("summaryTime"))}</dt><dd>${h(when)}</dd></div>
+    <div class="fact${home ? " home" : ""}"><dt>${icon("pin")}${h(t("summaryPlace"))}</dt><dd>${h(placeText)}</dd></div>
+    <div class="fact"><dt>${icon("card")}${h(t("summaryFees"))}</dt><dd>${feeHtml}</dd></div>
   </dl>`;
 }
 
@@ -648,19 +649,21 @@ function cardHtml(c, now, match = null) {
         <strong>${h(t("matchScore", { pct: match.pct }))}</strong>
         ${match.terms.length ? `<span>${h(t("matchWhy", { terms: match.terms.join(", ") }))}</span>` : ""}
         ${match.basis === "name" ? `<span class="badge warn">${h(t("matchBasisName"))}</span>` : ""}</div>` : ""}
-      ${summaryRow(c)}
-      ${ar ? `<div class="meta"><span title="${h(t("acceptanceHistory"))}">📊 ${h(t("acceptance"))} ${(ar.rate * 100).toFixed(1)}% (${h(ar.year)})</span></div>` : ""}
-      <ul class="deadlines">${deadlineRows(shown, now)}</ul>
     </div>
     <div class="side">
-      ${key ? `<div class="countdown u-${u}" data-deadline="${h(key.iso)}">${h(countdownText(key.iso, now))}</div>
-      <div class="countdown-label">${h(t(key.type))} · ${h(t("venueTime"))}: ${h(c.timezone || "AoE")}</div>` : ""}
+      ${key ? `<div class="countdown-box u-${u}"><div class="countdown u-${u}" data-deadline="${h(key.iso)}">${icon("clock")}<span>${h(countdownText(key.iso, now))}</span></div>
+      <div class="countdown-label">${h(t(key.type))} · ${h(t("venueTime"))}: ${h(c.timezone || "AoE")}</div></div>` : ""}
       <div class="actions">
-        <button type="button" class="btn small ${tracked ? "on" : ""}" data-action="track" data-id="${h(c.id)}" aria-pressed="${tracked}">${tracked ? "★ " + h(t("tracked")) : "☆ " + h(t("track"))}</button>
+        <button type="button" class="btn small ${tracked ? "on" : ""}" data-action="track" data-id="${h(c.id)}" aria-pressed="${tracked}">${tracked ? icon("starFill") + h(t("tracked")) : icon("star") + h(t("track"))}</button>
         <button type="button" class="btn small" data-action="ics" data-id="${h(c.id)}">＋ ${h(t("addCalendar"))}</button>
         ${c.dblp ? `<a class="btn small" href="https://dblp.org/db/conf/${encodeURIComponent(c.dblp)}/" target="_blank" rel="noopener">${h(t("dblp"))}</a>` : ""}
         <button type="button" class="btn small ghost" data-action="details" data-id="${h(c.id)}" aria-expanded="${isOpen}">${h(isOpen ? t("hideDetails") : t("details"))}</button>
       </div>
+    </div>
+    <div class="card-body">
+      ${summaryRow(c)}
+      ${ar ? `<div class="meta"><span title="${h(t("acceptanceHistory"))}">${icon("chart")}${h(t("acceptance"))} ${(ar.rate * 100).toFixed(1)}% (${h(ar.year)})</span></div>` : ""}
+      <ul class="deadlines">${deadlineRows(shown, now)}</ul>
     </div>
     ${isOpen ? detailsHtml(c) : ""}
   </article>`;
@@ -672,7 +675,7 @@ function detailsHtml(c) {
   const max = Math.max(0.01, ...rates.map((r) => r.rate));
   const fees = c.fees?.items || [];
   return `<div class="details">
-    ${c.status === "estimated" ? `<div>⚠️ ${h(t("estimatedNote"))}</div>` : ""}
+    ${c.status === "estimated" ? `<div class="note-warn">${icon("warn")}${h(t("estimatedNote"))}</div>` : ""}
     ${fees.length ? `<div><strong>${h(t("summaryFees"))}</strong> (${h(t("feesChecked", { date: c.fees.checked }))},
       <a href="${h(safeUrl(c.fees.url))}" target="_blank" rel="noopener">${h(t("feesSource"))}</a>)
       <ul class="fees">${fees.map((f) => `<li>${feeLabel(f)}: ${h(new Intl.NumberFormat(locale()).format(f.amount))} ${h(f.currency)}</li>`).join("")}</ul></div>` : ""}
@@ -692,7 +695,7 @@ function watchLine(c) {
   if (!pages.length) return "";
   const latest = (k) => pages.map(([, p]) => p[k]).sort().slice(-1)[0];
   const day = (iso) => new Intl.DateTimeFormat(locale(), { dateStyle: "medium" }).format(new Date(iso));
-  return `<div>🔁 ${h(app.t("watchStatus", { checked: day(latest("last_checked")), changed: day(latest("last_changed")) }))}
+  return `<div class="note">${icon("refresh")}${h(app.t("watchStatus", { checked: day(latest("last_checked")), changed: day(latest("last_changed")) }))}
     ${pages.map(([url]) => `<a href="${h(safeUrl(url))}" target="_blank" rel="noopener">${h(new URL(url).host)}</a>`).join(" · ")}</div>`;
 }
 
@@ -702,7 +705,7 @@ function toolbar(items, extraButtons = "") {
   const sorts = [["deadline", "sortDeadline"], ["event", "sortEvent"], ["rank", "sortRank"], ["acceptance", "sortAcceptance"]];
   if (hasPersonalSignal()) sorts.push(["match", "sortMatch"]);
   return `<div class="toolbar">
-      <button type="button" class="btn filter-toggle" data-action="toggle-filters">⚙ ${h(t("showFilters"))}</button>
+      <button type="button" class="btn filter-toggle" data-action="toggle-filters">${icon("filter")}${h(t("showFilters"))}</button>
       <div class="summary">${h(t("summary", { shown: items.length }))}${soon ? `<small>${h(t("summarySoon", { n: soon }))}</small>` : ""}</div>
       <label class="sr-only" for="f-sort">${h(t("sortBy"))}</label>
       <select id="f-sort" class="btn" data-field="sort" aria-label="${h(t("sortBy"))}">
@@ -729,8 +732,8 @@ function renderList() {
   const { items, hidden } = filterConfs(app.confs, app.state, now, ctx({ scores }));
   const top = scores ? Math.max(1e-9, ...items.map((c) => scores.get(c.id) || 0)) : 0;
   $("#view").innerHTML = `
-    ${toolbar(items, `<button type="button" class="btn" data-action="export-ics">📅 ${h(t("exportIcs"))}</button>
-      <button type="button" class="btn" data-action="export-csv">⬇ ${h(t("exportCsv"))}</button>`)}
+    ${toolbar(items, `<button type="button" class="btn" data-action="export-ics">${icon("calendar")}${h(t("exportIcs"))}</button>
+      <button type="button" class="btn" data-action="export-csv">${icon("download")}${h(t("exportCsv"))}</button>`)}
     ${hiddenNote(hidden)}
     ${app.state.sort === "match" && app.profilesState === "loading" ? `<p class="hint">${h(t("profilesLoading"))}</p>` : ""}
     <div class="list">
@@ -772,7 +775,7 @@ function renderForYou() {
     }
   }
   $("#view").innerHTML = `
-    <div class="toolbar"><button type="button" class="btn filter-toggle" data-action="toggle-filters">⚙ ${h(t("showFilters"))}</button></div>
+    <div class="toolbar"><button type="button" class="btn filter-toggle" data-action="toggle-filters">${icon("filter")}${h(t("showFilters"))}</button></div>
     <div class="foryou">
       <section class="panel pad">
         <h3>${h(t("profileTitle"))}</h3>
@@ -780,7 +783,7 @@ function renderForYou() {
         <textarea id="p-interests" rows="3" placeholder="${h(t("profilePlaceholder"))}">${h(app.profile.interests)}</textarea>
         <label class="check"><input type="checkbox" id="p-learn" ${app.profile.learn ? "checked" : ""}/> <span>${h(t("learnActivity"))}</span></label>
         <p class="hint">${h(t("activityCount", { n: nSignals }))} <button type="button" class="btn small" data-action="clear-activity" ${nSignals ? "" : "disabled"}>${h(t("clearActivity"))}</button></p>
-        <button type="button" class="btn primary" data-action="match-profile">✨ ${h(t("sortMatch"))}</button>
+        <button type="button" class="btn primary" data-action="match-profile">${icon("spark")}${h(t("sortMatch"))}</button>
       </section>
       <section class="panel pad">
         <h3>${h(t("abstractTitle"))}</h3>
@@ -792,7 +795,7 @@ function renderForYou() {
           <button type="button" class="chip" data-action="target" data-value="journals" aria-pressed="${app.profile.target === "journals"}">${h(t("targetJournals"))}</button>
         </div>
         <p></p>
-        <button type="button" class="btn primary" data-action="match-abstract">🔎 ${h(t("findVenues"))}</button>
+        <button type="button" class="btn primary" data-action="match-abstract">${icon("search")}${h(t("findVenues"))}</button>
       </section>
     </div>
     <p class="hint">${h(t("privacyNote"))}</p>
@@ -833,7 +836,7 @@ function renderCalendar() {
   const title = new Intl.DateTimeFormat(locale(), { month: "long", year: "numeric" }).format(first);
   $("#view").innerHTML = `
     <div class="cal-head">
-      <button type="button" class="btn filter-toggle" data-action="toggle-filters">⚙ ${h(t("showFilters"))}</button>
+      <button type="button" class="btn filter-toggle" data-action="toggle-filters">${icon("filter")}${h(t("showFilters"))}</button>
       <h2>${h(title)}</h2>
       <button type="button" class="btn" data-action="cal-prev" aria-label="${h(t("calPrev"))}">‹</button>
       <button type="button" class="btn" data-action="cal-today">${h(t("calToday"))}</button>
@@ -864,9 +867,9 @@ function renderPlan() {
   $("#view").innerHTML = `
     <div class="toolbar">
       <div class="summary">${h(t("tabPlan"))} · ${entries.length}</div>
-      <button type="button" class="btn" data-action="plan-ics" ${entries.length ? "" : "disabled"}>📅 ${h(t("planExportIcs"))}</button>
-      <button type="button" class="btn" data-action="plan-export" ${entries.length ? "" : "disabled"}>⬇ ${h(t("planExport"))}</button>
-      <button type="button" class="btn" data-action="plan-import">⬆ ${h(t("planImport"))}</button>
+      <button type="button" class="btn" data-action="plan-ics" ${entries.length ? "" : "disabled"}>${icon("calendar")}${h(t("planExportIcs"))}</button>
+      <button type="button" class="btn" data-action="plan-export" ${entries.length ? "" : "disabled"}>${icon("download")}${h(t("planExport"))}</button>
+      <button type="button" class="btn" data-action="plan-import">${icon("upload")}${h(t("planImport"))}</button>
     </div>
     <p class="plan-note">${h(t("planLocal"))}</p>
     <div class="plan">
@@ -898,7 +901,7 @@ function planItemHtml(id, e, c, now) {
         <select data-plan="status">${PLAN_STATUSES.map((s) => `<option value="${s}" ${e.status === s ? "selected" : ""}>${h(t(`st_${s}`))}</option>`).join("")}</select>
       </label>
       <button type="button" class="btn small" data-action="ics" data-id="${h(id)}">＋ ${h(t("addCalendar"))}</button>
-      <button type="button" class="btn small" data-action="untrack" data-id="${h(id)}">✕ ${h(t("planRemove"))}</button>
+      <button type="button" class="btn small" data-action="untrack" data-id="${h(id)}">${icon("x")}${h(t("planRemove"))}</button>
     </div>
   </div>`;
 }
@@ -1165,7 +1168,7 @@ function tick() {
   for (const el of document.querySelectorAll("[data-deadline]")) {
     const diff = Date.parse(el.dataset.deadline) - now;
     if (diff <= 0) expired = true;
-    el.textContent = countdownText(el.dataset.deadline, now);
+    (el.querySelector("span") || el).textContent = countdownText(el.dataset.deadline, now);
     el.className = el.className.replace(/u-\w+/, `u-${urgency(diff)}`);
   }
   // Re-render only when nothing is being typed, so no input loses focus.

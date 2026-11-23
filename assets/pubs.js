@@ -5,6 +5,7 @@
 import { checkPack, findInList, localizePack, manualRules, parseListTable, scoreWithPacks, valueForYear } from "./rules.js";
 import { crossrefSearchUrl, crossrefUrl, fromCrossref, guessSeries, parseDoi, parseSjrCsv, periodOf, sjrFacts } from "./scholar.js";
 import { csvCell, escapeHtml as h, safeUrl } from "./core.js";
+import { icon } from "./icons.js";
 
 const KEYS = { pubs: "conf_tracker_pubs_v1", packs: "conf_tracker_packs_v1", sjr: "conf_tracker_sjr_v1", period: "conf_tracker_period_start" };
 const SAMPLES = { points: "data/rules/hdgsnn-cntt-2025.json", bonus: "data/rules/sample-university-bonus.json" };
@@ -129,7 +130,7 @@ export function createPubs(ctx) {
         <h3>${h(label)}</h3>
         <p class="hint">${h(t(role === "points" ? "packPointsHint" : "packBonusHint"))}</p>
         <div class="actions left">
-          <button type="button" class="btn primary" data-pact="import" data-role="${role}">⬆ ${h(t("packImport"))}</button>
+          <button type="button" class="btn primary" data-pact="import" data-role="${role}">${icon("upload")}${h(t("packImport"))}</button>
           <button type="button" class="btn" data-pact="sample" data-role="${role}">${h(t("packUseSample"))}</button>
         </div>
       </section>`;
@@ -142,7 +143,7 @@ export function createPubs(ctx) {
       ${otherLang ? `<p class="hint">${h(t("packOtherLang", { lang: t(`lang_${pack.language}`, {}, pack.language) }))}</p>` : ""}
       ${!st.packs[role].translations && SAMPLES[role].endsWith(`/${st.packs[role].id}.json`) ? `<p class="hint">${h(t("packOldSample"))} <button type="button" class="btn small" data-pact="sample" data-role="${role}">${h(t("packReloadSample"))}</button></p>` : ""}
       <p class="hint">${h(t("packSource"))}: ${h(pack.source?.document || "")}${pack.source?.checked ? ` · ${h(t("feesChecked", { date: pack.source.checked }))}` : ""}</p>
-      ${pack.source?.warning ? `<p class="warnbox">⚠️ ${h(pack.source.warning)}</p>` : ""}
+      ${pack.source?.warning ? `<p class="warnbox">${icon("warn")}${h(pack.source.warning)}</p>` : ""}
       ${problems.length ? `<p class="warnbox">${h(t("packInvalid", { n: problems.length }))}: ${h(problems.slice(0, 3).join("; "))}</p>` : ""}
       ${(pack.ambiguities || []).length ? `<details><summary>${h(t("packAmbiguities", { n: pack.ambiguities.length }))}</summary><ul>${pack.ambiguities.map((a) => `<li>${h(a)}</li>`).join("")}</ul></details>` : ""}
       <details><summary>${h(t("packRules", { n: (pack.rules || []).length }))}</summary>
@@ -157,15 +158,15 @@ export function createPubs(ctx) {
         <table class="rules"><thead><tr><th>${h(t("listName"))}</th><th>ISSN</th><th>${h(t("listPoints"))}</th></tr></thead><tbody>
         ${(pack.list || []).map((e) => `<tr><td>${h(e.name)}${(e.notes || []).length ? `<br><small class="muted">${h(e.notes.join("; "))}</small>` : ""}</td><td>${h((e.issn || []).join(", ") || "—")}</td><td>${h(e.raw || e.history.map((s) => `${s.max}${s.from ? ` (${s.from}+)` : ""}`).join("; "))}</td></tr>`).join("")}
         </tbody></table>
-        <button type="button" class="btn small" data-pact="paste" data-role="${role}">📋 ${h(t("listPaste"))}</button>
+        <button type="button" class="btn small" data-pact="paste" data-role="${role}">${icon("clipboard")}${h(t("listPaste"))}</button>
         ${st.pasteFor === role ? `<div class="paste"><p class="hint">${h(t("listPasteHint"))}</p>
           <textarea id="list-paste" rows="6" placeholder="TT\t...\tISSN\t...\t..."></textarea>
           <button type="button" class="btn primary small" data-pact="paste-apply" data-role="${role}">${h(t("listPasteApply"))}</button></div>` : ""}
       </details>` : ""}
       <div class="actions left">
-        <button type="button" class="btn small" data-pact="export" data-role="${role}">⬇ ${h(t("packExport"))}</button>
-        <button type="button" class="btn small" data-pact="import" data-role="${role}">⬆ ${h(t("packReplace"))}</button>
-        <button type="button" class="btn small" data-pact="remove" data-role="${role}">✕ ${h(t("packRemove"))}</button>
+        <button type="button" class="btn small" data-pact="export" data-role="${role}">${icon("download")}${h(t("packExport"))}</button>
+        <button type="button" class="btn small" data-pact="import" data-role="${role}">${icon("upload")}${h(t("packReplace"))}</button>
+        <button type="button" class="btn small" data-pact="remove" data-role="${role}">${icon("x")}${h(t("packRemove"))}</button>
       </div>
     </section>`;
   }
@@ -176,8 +177,8 @@ export function createPubs(ctx) {
       <p class="hint">${h(t("sjrHint"))} <a href="https://www.scimagojr.com/journalrank.php" target="_blank" rel="noopener">scimagojr.com</a></p>
       ${st.sjr ? `<p>${h(t("sjrLoaded", { n: new Intl.NumberFormat(ctx.locale()).format(st.sjr.rows), year: st.sjr.year || "?" }))}</p>` : ""}
       <div class="actions left">
-        <button type="button" class="btn" data-pact="sjr-import">⬆ ${h(t("sjrImport"))}</button>
-        ${st.sjr ? `<button type="button" class="btn small" data-pact="sjr-remove">✕ ${h(t("packRemove"))}</button>` : ""}
+        <button type="button" class="btn" data-pact="sjr-import">${icon("upload")}${h(t("sjrImport"))}</button>
+        ${st.sjr ? `<button type="button" class="btn small" data-pact="sjr-remove">${icon("x")}${h(t("packRemove"))}</button>` : ""}
       </div>
     </section>`;
   }
@@ -243,7 +244,7 @@ export function createPubs(ctx) {
       </div>
       <div class="actions left">
         <button type="button" class="btn small" data-pact="facts" data-pub="${h(p.id)}">${h(open ? t("hideFacts") : t("editFacts"))}</button>
-        <button type="button" class="btn small" data-pact="delete" data-pub="${h(p.id)}">✕ ${h(t("planRemove"))}</button>
+        <button type="button" class="btn small" data-pact="delete" data-pub="${h(p.id)}">${icon("x")}${h(t("planRemove"))}</button>
       </div>
       ${open ? `<div class="facts">
         ${relevantFacts(p).map((k) => factField(p, k)).join("")}
@@ -273,9 +274,9 @@ export function createPubs(ctx) {
       <div class="toolbar"><h3 class="grow">${h(t("summaryTitle"))}</h3>
         <label class="field inline">${h(t("periodStart"))}
           <select data-pact="period">${[1, 7, 8, 9, 10].map((m) => `<option value="${m}" ${st.periodStart === m ? "selected" : ""}>${h(m === 1 ? t("periodCalendar") : t("periodFrom", { m }))}</option>`).join("")}</select></label>
-        <button type="button" class="btn small" data-pact="export-csv" ${st.pubs.length ? "" : "disabled"}>⬇ CSV</button>
-        <button type="button" class="btn small" data-pact="backup">⬇ ${h(t("backup"))}</button>
-        <button type="button" class="btn small" data-pact="restore">⬆ ${h(t("restore"))}</button>
+        <button type="button" class="btn small" data-pact="export-csv" ${st.pubs.length ? "" : "disabled"}>${icon("download")}CSV</button>
+        <button type="button" class="btn small" data-pact="backup">${icon("download")}${h(t("backup"))}</button>
+        <button type="button" class="btn small" data-pact="restore">${icon("upload")}${h(t("restore"))}</button>
       </div>
       ${sorted.length ? `<table class="rules"><thead><tr><th>${h(t("period"))}</th><th>${h(t("pubCount"))}</th>
         ${st.packs.points ? `<th>${h(t("packPoints"))}</th>` : ""}${st.packs.bonus ? `<th>${h(t("packBonus"))}</th>` : ""}<th>${h(t("incomplete"))}</th></tr></thead><tbody>
