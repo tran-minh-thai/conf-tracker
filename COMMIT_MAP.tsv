@@ -1,0 +1,14 @@
+# Commit ids before and after the 2026-11-23 history rewrite (illustrative bonus figures).
+# Files that cite an old id (evaluation logs) refer to the commit on the right.
+old	new
+50d9e5c	150f562
+4f6d186	d26c8b9
+4c6f06d	41f301c
+1749a9a	ff6e049
+97b6ff7	48b1f7f
+d13378d	570402f
+6099405	1c6bd94
+9693a30	9ff79d0
+4ef7217	c5578d7
+aae35b2	4012470
+f5a4a25	e86cac4
