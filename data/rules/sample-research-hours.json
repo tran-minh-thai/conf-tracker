@@ -1,0 +1,389 @@
+{
+ "schema_version": 1,
+ "language": "vi",
+ "id": "sample-research-hours",
+ "kind": "hours",
+ "unit": "hours",
+ "unit_label": "giờ",
+ "title": "Bảng quy đổi giờ nghiên cứu minh hoạ (số liệu giả định)",
+ "source": {
+  "document": "Bảng giả định 12 mục để minh hoạ cách quy đổi giờ nghiên cứu; không phải văn bản của trường nào (tạo ngày 2026-11-23)",
+  "checked": "2026-11-23",
+  "warning": "Số liệu giả định, chỉ để thử ứng dụng. Hãy sửa theo quy định hiện hành của trường bạn."
+ },
+ "policy": "max",
+ "value_note": "Mỗi bài nhận mức cao nhất mà nó đạt, rồi chia cho các tác giả: bài có từ 2 tác giả thì tác giả chính nhận trước 40%, phần còn lại chia đều cho mọi tác giả (kể cả tác giả chính).",
+ "depends_on": [
+  "points"
+ ],
+ "period_start_month": 9,
+ "share": {
+  "scheme": "main_plus_equal",
+  "main": 0.4
+ },
+ "quota": [
+  {
+   "from": "2024-09-01",
+   "hours": 160
+  },
+  {
+   "from": "2026-09-01",
+   "hours": 210
+  }
+ ],
+ "ambiguities": [
+  "“Tác giả chính” trong bảng này là người bạn tự khai (tác giả đầu hoặc tác giả liên hệ, tuỳ trường quy định).",
+  "Hạng Q lấy theo Scimago; nếu trường dùng hạng theo WoS, hãy nhập hạng đó.",
+  "Giờ vượt định mức không chuyển sang năm sau."
+ ],
+ "rules": [
+  {
+   "id": "1",
+   "label": "Tạp chí thuộc WoS (SCI, SCIE, SSCI, AHCI), hạng Q1",
+   "value": 450,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "journal"
+     },
+     {
+      "fact": "wos_index",
+      "in": [
+       "SCI",
+       "SCIE",
+       "SSCI",
+       "AHCI"
+      ]
+     },
+     {
+      "fact": "scopus_quartile",
+      "eq": "Q1"
+     }
+    ]
+   }
+  },
+  {
+   "id": "2",
+   "label": "Tạp chí thuộc WoS, hạng Q2",
+   "value": 340,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "journal"
+     },
+     {
+      "fact": "wos_index",
+      "in": [
+       "SCI",
+       "SCIE",
+       "SSCI",
+       "AHCI"
+      ]
+     },
+     {
+      "fact": "scopus_quartile",
+      "eq": "Q2"
+     }
+    ]
+   }
+  },
+  {
+   "id": "3",
+   "label": "Tạp chí thuộc WoS, hạng Q3 hoặc Q4",
+   "value": 260,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "journal"
+     },
+     {
+      "fact": "wos_index",
+      "in": [
+       "SCI",
+       "SCIE",
+       "SSCI",
+       "AHCI"
+      ]
+     },
+     {
+      "fact": "scopus_quartile",
+      "in": [
+       "Q3",
+       "Q4"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "4",
+   "label": "Tạp chí thuộc ESCI hoặc Scopus",
+   "value": 200,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "journal"
+     },
+     {
+      "any": [
+       {
+        "fact": "wos_index",
+        "eq": "ESCI"
+       },
+       {
+        "fact": "scopus_indexed",
+        "eq": true
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "5",
+   "label": "Chương sách thuộc WoS, Scopus hoặc nhà xuất bản uy tín",
+   "value": 240,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "book_chapter"
+     },
+     {
+      "any": [
+       {
+        "fact": "wos_index",
+        "in": [
+         "SCI",
+         "SCIE",
+         "SSCI",
+         "AHCI",
+         "ESCI"
+        ]
+       },
+       {
+        "fact": "scopus_indexed",
+        "eq": true
+       },
+       {
+        "fact": "reputable_publisher",
+        "eq": true
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "6",
+   "label": "Tạp chí được HĐGSNN tính tối đa từ 0,75 điểm",
+   "value": 170,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "journal"
+     },
+     {
+      "fact": "hdgsnn_max",
+      "gte": 0.75
+     }
+    ]
+   }
+  },
+  {
+   "id": "7",
+   "label": "Tạp chí được HĐGSNN tính dưới 0,75 điểm",
+   "value": 130,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "journal"
+     },
+     {
+      "fact": "hdgsnn_max",
+      "gt": 0
+     },
+     {
+      "fact": "hdgsnn_max",
+      "lt": 0.75
+     }
+    ]
+   }
+  },
+  {
+   "id": "8",
+   "label": "Tạp chí khoa học của trường",
+   "value": 110,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "journal"
+     },
+     {
+      "fact": "institution_journal",
+      "eq": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "9",
+   "label": "Hội nghị quốc tế tổ chức ở nước ngoài, kỷ yếu có ISBN",
+   "value": 180,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "conference"
+     },
+     {
+      "fact": "conference_scope",
+      "eq": "international"
+     },
+     {
+      "fact": "held_abroad",
+      "eq": true
+     },
+     {
+      "fact": "has_isbn",
+      "eq": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "10",
+   "label": "Hội nghị quốc tế tổ chức trong nước, kỷ yếu có ISBN",
+   "value": 150,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "conference"
+     },
+     {
+      "fact": "conference_scope",
+      "eq": "international"
+     },
+     {
+      "fact": "held_abroad",
+      "eq": false
+     },
+     {
+      "fact": "has_isbn",
+      "eq": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "11",
+   "label": "Hội nghị toàn quốc, kỷ yếu có ISBN (đến hết năm học 2025-2026)",
+   "value": 90,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "conference"
+     },
+     {
+      "fact": "conference_scope",
+      "eq": "national"
+     },
+     {
+      "fact": "has_isbn",
+      "eq": true
+     }
+    ]
+   },
+   "valid": {
+    "until": "2026-09-01"
+   }
+  },
+  {
+   "id": "12",
+   "label": "Hội nghị toàn quốc, kỷ yếu có ISBN (từ năm học 2026-2027)",
+   "value": 60,
+   "when": {
+    "all": [
+     {
+      "fact": "kind",
+      "eq": "conference"
+     },
+     {
+      "fact": "conference_scope",
+      "eq": "national"
+     },
+     {
+      "fact": "has_isbn",
+      "eq": true
+     }
+    ]
+   },
+   "valid": {
+    "from": "2026-09-01"
+   }
+  }
+ ],
+ "translations": {
+  "en": {
+   "title": "Illustrative research-hour table (made-up figures)",
+   "unit_label": "hours",
+   "value_note": "Each paper gets the highest value it qualifies for, then it is shared among the authors: with 2 or more authors the main author first takes 40%, and the rest is split equally among all authors (the main author included).",
+   "source": {
+    "document": "Illustrative table with 12 items showing how research hours are computed; not any university's document (made on 2026-11-23)",
+    "warning": "Made-up figures for trying the app. Edit them to match your university's current regulation."
+   },
+   "ambiguities": [
+    "The “main author” in this table is whoever you declare (first or corresponding author, as your university decides).",
+    "Quartiles are read from Scimago; if your university uses WoS quartiles, enter those.",
+    "Hours above the quota do not carry over to the next year."
+   ],
+   "rules": {
+    "1": {
+     "label": "Journal in WoS (SCI, SCIE, SSCI, AHCI), quartile Q1"
+    },
+    "2": {
+     "label": "Journal in WoS, quartile Q2"
+    },
+    "3": {
+     "label": "Journal in WoS, quartile Q3 or Q4"
+    },
+    "4": {
+     "label": "Journal in ESCI or Scopus"
+    },
+    "5": {
+     "label": "Book chapter in WoS, Scopus or with a reputable publisher"
+    },
+    "6": {
+     "label": "Journal with a state council maximum of 0.75 points or more"
+    },
+    "7": {
+     "label": "Journal with a state council maximum below 0.75 points"
+    },
+    "8": {
+     "label": "The university's own journal"
+    },
+    "9": {
+     "label": "International conference held abroad, proceedings with an ISBN"
+    },
+    "10": {
+     "label": "International conference held in the country, proceedings with an ISBN"
+    },
+    "11": {
+     "label": "National conference, proceedings with an ISBN (until the end of school year 2025-2026)"
+    },
+    "12": {
+     "label": "National conference, proceedings with an ISBN (from school year 2026-2027)"
+    }
+   }
+  }
+ }
+}

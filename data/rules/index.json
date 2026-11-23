@@ -7,6 +7,10 @@
   {
    "file": "sample-university-bonus.json",
    "role": "bonus"
+  },
+  {
+   "file": "sample-research-hours.json",
+   "role": "hours"
   }
  ]
 }

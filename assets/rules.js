@@ -25,7 +25,12 @@ export const FACTS = {
   institution_journal: { type: "bool" },
   series: { type: "string" },
   hdgsnn_max: { type: "number" },
+  month: { type: "number" },
+  held_abroad: { type: "bool" },
 };
+
+/** Facts the table editor offers, with their kind: what the editor's value input looks like. */
+export const OPS_FOR = { enum: ["eq", "ne", "in"], number: ["gte", "gt", "lte", "lt", "eq"], bool: ["eq"], string: ["eq", "ne"] };
 
 const OPS = ["eq", "ne", "in", "gte", "gt", "lte", "lt", "known"];
 
@@ -86,6 +91,27 @@ export function evaluate(cond, facts, missing = new Set()) {
   return false;
 }
 
+const ISO_DAY = /^\d{4}-\d{2}-\d{2}$/;
+
+/**
+ * Is a rule in effect for a publication of this year/month? A rule may carry
+ * "valid": {"from": "YYYY-MM-01", "until": "YYYY-MM-01"} (from inclusive, until exclusive) when a
+ * document changes its table on a date. Dates are first days of a month: the app knows the month a
+ * paper came out, not the day. Returns true, false, or null when the month is needed to tell (the
+ * change falls inside the publication year and the month is unknown).
+ */
+export function inEffect(valid, year, month) {
+  if (!valid || (!valid.from && !valid.until)) return true;
+  if (!year) return null;
+  const test = (m) => {
+    const d = `${year}-${String(m).padStart(2, "0")}-01`;
+    return (!valid.from || d >= valid.from) && (!valid.until || d < valid.until);
+  };
+  if (month) return test(month);
+  const answers = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(test));
+  return answers.size === 1 ? [...answers][0] : null;
+}
+
 /** Value of a list entry for a publication year: the last step that has started. */
 export function valueForYear(history, year) {
   let value = null;
@@ -136,7 +162,10 @@ export function scorePublication(pack, facts) {
   for (const rule of pack.rules || []) {
     if (rule.manual) continue;
     const m = new Set();
-    const r = evaluate(rule.when, facts, m);
+    const eff = inEffect(rule.valid, facts.year, facts.month);
+    if (eff === false) continue;
+    let r = evaluate(rule.when, facts, m);
+    if (eff === null && r !== false) { r = null; m.add(facts.year ? "month" : "year"); }
     if (r === true) matched.push({ id: rule.id, label: rule.label, value: rule.value, note: rule.note });
     else if (r === null) { unknown.push({ id: rule.id, label: rule.label, value: rule.value, needs: [...m] }); m.forEach((f) => missing.add(f)); }
   }
@@ -171,9 +200,16 @@ export function checkPack(pack) {
       if (!r.range || !(r.range.min <= r.range.max)) p.push(`${w}: manual rule needs range {min, max}`);
       return;
     }
-    if (typeof r.value !== "number" || r.value < 0) p.push(`${w}: value must be a non-negative number`);
+    if (typeof r.value !== "number" || !Number.isFinite(r.value) || r.value < 0) p.push(`${w}: value must be a non-negative number`);
     p.push(...checkCondition(r.when, `${w}.when`));
+    if (r.valid != null) {
+      const { from, until } = r.valid;
+      if ([from, until].some((d) => d != null && !/^\d{4}-(0[1-9]|1[0-2])-01$/.test(d))) p.push(`${w}.valid: dates must be the first day of a month, YYYY-MM-01`);
+      else if (!from && !until) p.push(`${w}.valid: needs from or until`);
+      else if (from && until && from >= until) p.push(`${w}.valid: from must be before until`);
+    }
   });
+  if (pack.kind === "hours") p.push(...checkHours(pack));
   (pack.list || []).forEach((e, i) => {
     const w = `list[${i}] (${e.name || "?"})`;
     if (!e.id || !e.name) p.push(`${w}: needs id and name`);
@@ -187,6 +223,77 @@ export function checkPack(pack) {
   if (!(pack.rules || []).length && !(pack.list || []).length) p.push("pack has neither rules nor list");
   p.push(...checkTranslations(pack));
   return p;
+}
+
+// ---- Research-hour packs ------------------------------------------------------------
+
+export const SHARE_SCHEMES = ["full", "equal", "main_plus_equal"];
+
+/**
+ * A pack of kind "hours" converts publications into research hours of one lecturer:
+ *   rules         hours for the whole publication (the best rule it meets, like the other packs);
+ *   share         {scheme: "full"}: every author counts the whole value;
+ *                 {scheme: "equal"}: value / number of authors;
+ *                 {scheme: "main_plus_equal", main: 0.3}: with two or more authors the main author
+ *                 first takes main x value, then the rest is split equally among all authors
+ *                 (the main author included); a single author takes the whole value;
+ *   quota         [{from: "YYYY-MM-DD", hours}]: the yearly quota, the last step started by the
+ *                 first day of the academic year;
+ *   period_start_month  month the academic year starts (1 = calendar year).
+ */
+export function checkHours(pack) {
+  const p = [];
+  const sh = pack.share;
+  if (sh != null) {
+    if (!SHARE_SCHEMES.includes(sh.scheme)) p.push(`share.scheme must be one of ${SHARE_SCHEMES.join(", ")}`);
+    if (sh.scheme === "main_plus_equal" && !(typeof sh.main === "number" && sh.main > 0 && sh.main < 1)) p.push("share.main must be a fraction between 0 and 1");
+  }
+  const m = pack.period_start_month;
+  if (m != null && !(Number.isInteger(m) && m >= 1 && m <= 12)) p.push("period_start_month must be a month number 1-12");
+  const q = pack.quota || [];
+  if (!Array.isArray(q)) p.push("quota must be a list");
+  else {
+    q.forEach((s, i) => {
+      if (s.from != null && !ISO_DAY.test(s.from)) p.push(`quota[${i}].from must be YYYY-MM-DD`);
+      if (typeof s.hours !== "number" || !Number.isFinite(s.hours) || s.hours < 0) p.push(`quota[${i}].hours must be a non-negative number`);
+    });
+    const days = q.map((s) => s.from || "");
+    if (days.some((d, i) => i && d <= days[i - 1])) p.push("quota steps must be in increasing date order");
+  }
+  return p;
+}
+
+/**
+ * Fraction of a publication's hours that belongs to this lecturer.
+ * authors: number of authors; role: "main" | "co" | undefined.
+ * Returns {share, missing}: share null when a needed answer is missing ("authors" or "role").
+ */
+export function authorShare(pack, authors, role) {
+  const sh = pack?.share || { scheme: "full" };
+  if (sh.scheme === "full") return { share: 1, missing: null };
+  const n = Number(authors);
+  if (!Number.isInteger(n) || n < 1) return { share: null, missing: "authors" };
+  if (n === 1) return { share: 1, missing: null };
+  if (sh.scheme === "equal") return { share: 1 / n, missing: null };
+  if (role !== "main" && role !== "co") return { share: null, missing: "role" };
+  const rest = (1 - sh.main) / n;
+  return { share: role === "main" ? sh.main + rest : rest, missing: null };
+}
+
+/** First year of the academic period a publication falls in, or null when the month is needed. */
+export function periodYear(year, month, startMonth = 1) {
+  if (!year) return null;
+  if (startMonth <= 1) return year;
+  if (!month) return null;
+  return month >= startMonth ? year : year - 1;
+}
+
+/** Yearly quota for the academic year starting in `startYear` (null when the pack has none). */
+export function quotaFor(pack, startYear) {
+  const start = `${startYear}-${String(pack.period_start_month || 1).padStart(2, "0")}-01`;
+  let hours = null;
+  for (const s of pack.quota || []) if (!s.from || s.from <= start) hours = s.hours;
+  return hours;
 }
 
 // ---- Translations of a pack's text ------------------------------------------------
@@ -343,17 +450,18 @@ export function parseListTable(text) {
 }
 
 /**
- * Score a publication with a points pack and a bonus pack. The points result feeds
- * the bonus pack as the fact hdgsnn_max: its value when a rule or list entry matched,
+ * Score a publication with a points pack, a bonus pack and an hours pack. The points result feeds
+ * the bonus and hours packs as the fact hdgsnn_max: its value when a rule or list entry matched,
  * 0 when nothing could match, and unknown (null) when missing facts might change it.
  */
-export function scoreWithPacks({ points, bonus }, facts) {
-  const out = { points: null, bonus: null, facts: { ...facts } };
+export function scoreWithPacks({ points, bonus, hours }, facts) {
+  const out = { points: null, bonus: null, hours: null, facts: { ...facts } };
   if (points) {
     out.points = scorePublication(points, facts);
     const p = out.points;
     out.facts.hdgsnn_max = p.value > 0 ? p.value : (p.unknown.length ? null : 0);
   }
   if (bonus) out.bonus = scorePublication(bonus, out.facts);
+  if (hours) out.hours = scorePublication(hours, out.facts);
   return out;
 }
