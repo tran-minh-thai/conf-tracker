@@ -1,4 +1,4 @@
-# conf-tMtTracker
+# PaperClock (formerly conf-tMtTracker)
 
 Calls for papers in computer science, built for researchers deciding where to
 submit: deadlines in the venue's own time zone and yours, CCF and CORE ranks,

@@ -3,7 +3,7 @@
 
 export const STRINGS = {
   en: {
-    appName: "conf-tMtTracker",
+    appName: "PaperClock",
     tagline: "Calls for papers in computer science, with ranks, acceptance rates and your submission plan",
     loading: "Loading data…",
     loadError: "Could not load data/conferences.json. Run the update workflow first.",
@@ -232,7 +232,7 @@ export const STRINGS = {
     journalEstimate: "Estimate with your rule files, Web of Science and IF unknown: {parts}",
   },
   vi: {
-    appName: "conf-tMtTracker",
+    appName: "PaperClock",
     tagline: "Lời mời nộp bài hội nghị khoa học máy tính, kèm xếp hạng, tỉ lệ chấp nhận và kế hoạch nộp bài của bạn",
     loading: "Đang tải dữ liệu…",
     loadError: "Không tải được data/conferences.json. Hãy chạy quy trình cập nhật trước.",

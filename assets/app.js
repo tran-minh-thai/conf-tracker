@@ -1027,7 +1027,7 @@ function bindEvents() {
       }
       case "export-ics": {
         const { items } = filterConfs(app.confs, app.state, now, ctx());
-        download("conference_deadlines.ics", buildIcs(items, now, "conf-tMtTracker: conference deadlines").text, "text/calendar;charset=utf-8");
+        download("conference_deadlines.ics", buildIcs(items, now, "PaperClock: conference deadlines").text, "text/calendar;charset=utf-8");
         break;
       }
       case "export-csv": {
@@ -1037,7 +1037,7 @@ function bindEvents() {
       }
       case "plan-ics": {
         const list = Object.entries(app.plan).map(([pid, e]) => app.byId.get(pid) || e.snapshot);
-        download("my_submission_plan.ics", buildIcs(list, now, "conf-tMtTracker: my submission plan").text, "text/calendar;charset=utf-8");
+        download("my_submission_plan.ics", buildIcs(list, now, "PaperClock: my submission plan").text, "text/calendar;charset=utf-8");
         break;
       }
       case "plan-export":

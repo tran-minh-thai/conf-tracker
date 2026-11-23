@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>conf-tMtTracker</title>
+  <title>PaperClock</title>
   <meta name="description" content="Computer science calls for papers with CCF and CORE ranks, acceptance rates, calendar export and a personal submission plan." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%233650d0'/%3E%3Cpath d='M9 8h14v3H9zM9 14h14v3H9zM9 20h9v3H9z' fill='white'/%3E%3C/svg%3E" />
-  <link rel="stylesheet" href="assets/styles.css?v=12" />
-  <link rel="alternate" type="text/calendar" title="conf-tMtTracker: ranked conference deadlines" href="data/deadlines.ics" />
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg?v=13" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=13" />
+  <link rel="stylesheet" href="assets/styles.css?v=13" />
+  <link rel="alternate" type="text/calendar" title="PaperClock: ranked conference deadlines" href="data/deadlines.ics" />
   <script>
     // Apply the saved theme before first paint to avoid a flash.
     try { const t = localStorage.getItem("conf_tracker_theme"); if (t) document.documentElement.dataset.theme = t; } catch {}
@@ -17,9 +18,9 @@
   <header class="topbar">
     <div class="topbar-inner">
       <div class="brand">
-        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="url(#bg)"/><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4f6bed"/><stop offset="1" stop-color="#2a3fb0"/></linearGradient></defs><rect x="8" y="9.5" width="16" height="14" rx="2.5" fill="none" stroke="#fff" stroke-width="2"/><path d="M8 14h16M12.5 7.5v4M19.5 7.5v4" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="18.8" r="1.8" fill="#ffd166"/></svg></span>
+        <span class="brand-mark" aria-hidden="true"><img src="assets/icon.svg?v=13" alt="" width="38" height="38" /></span>
         <div class="brand-text">
-          <h1 id="app-name">conf-tMtTracker</h1>
+          <h1 id="app-name">PaperClock</h1>
           <p id="tagline"></p>
         </div>
       </div>
@@ -80,6 +81,6 @@
   <input type="file" id="plan-file" accept="application/json,.json" hidden />
   <div id="toast" class="toast" role="status"></div>
 
-  <script type="module" src="assets/app.js?v=12"></script>
+  <script type="module" src="assets/app.js?v=13"></script>
 </body>
 </html>

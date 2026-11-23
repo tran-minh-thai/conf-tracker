@@ -253,5 +253,5 @@ def write_outputs(payload: dict, out_dir: Path, now: datetime) -> dict:
     events = sorted(feed_events(payload["conferences"], now), key=lambda e: e["when"])
     ics_path = out_dir / "deadlines.ics"
     with open(ics_path, "w", encoding="utf-8", newline="") as fh:
-        fh.write(ics.calendar(events, "conf-tMtTracker: ranked conference deadlines", now))
+        fh.write(ics.calendar(events, "PaperClock: ranked conference deadlines", now))
     return {"json": json_path.as_posix(), "ics": ics_path.as_posix(), "feed_events": len(events)}
