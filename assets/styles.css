@@ -153,6 +153,25 @@ aside.panel { position: sticky; top: 76px; max-height: calc(100vh - 92px); overf
 .summary-row a { text-decoration: none; }
 .muted { color: var(--muted); }
 .fees { margin: 4px 0 0; padding-left: 18px; }
+/* Attendance mode on conference cards */
+.badge.mode-in-person { background: var(--accent-soft); color: var(--accent); }
+.badge.mode-hybrid { background: var(--est-soft); color: var(--est); }
+.badge.mode-online { background: var(--ok-soft); color: var(--ok); }
+.badge.mode-tbd { background: var(--surface-2); color: var(--muted); font-weight: 600; }
+/* Journal finder: rank, access type, figures */
+.jfilters { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 4px 0 10px; }
+.jfilters .chip-label { margin: 0 4px 0 0; }
+.rank-num { display: inline-flex; align-items: center; justify-content: center; min-width: 26px; height: 26px; padding: 0 6px; border-radius: 99px; background: var(--accent-soft); color: var(--accent); font-weight: 800; font-size: 13px; font-variant-numeric: tabular-nums; }
+.badge.access-open { background: var(--ok-soft); color: var(--ok); }
+.badge.access-hybrid { background: var(--soon-soft); color: var(--soon); }
+.badge.access-sub { background: var(--surface-2); color: var(--muted); }
+.badge.access-unknown { background: var(--surface-2); color: var(--muted); font-weight: 600; }
+.card.jcard.access-open { border-left-color: var(--ok); }
+.card.jcard.access-hybrid { border-left-color: var(--soon); }
+.card.jcard.access-sub { border-left-color: var(--muted); }
+.jstats { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.jstat { font-size: 12.5px; padding: 2px 8px; border-radius: 6px; background: var(--surface-2); color: var(--text); font-variant-numeric: tabular-nums; }
+a.jstat { color: var(--accent); text-decoration: none; }
 .match { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 13px; margin: 2px 0 6px; }
 .match-bar { width: 90px; height: 7px; border-radius: 99px; background: var(--surface-2); overflow: hidden; display: inline-block; }
 .match-bar i { display: block; height: 100%; background: var(--accent); }

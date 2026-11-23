@@ -1,0 +1,31 @@
+# Hand-checked access model for journals the automatic sources get wrong (format in README.md).
+# Only what the journal's own page states is recorded; "diamond" needs an explicit statement
+# that authors pay no fee. Checked 2026-11-23.
+
+- journal: pvldb               # key in data/journal_profiles.json
+  access: open
+  diamond: true
+  url: https://vldb.org/pvldb/general-information/open-access-statement
+  note: "Free access to all articles from publication; no fees for authors or readers; CC BY-NC-ND 4.0. OpenAlex marks its articles closed and DOAJ does not list it."
+  checked: 2026-11-23
+
+- journal: programming
+  access: open
+  diamond: true
+  url: https://programming-journal.org/
+  note: "Diamond open access, free of charge to authors (journal home page)."
+  checked: 2026-11-23
+
+- journal: jmlr
+  access: open
+  diamond: false
+  url: https://www.jmlr.org/
+  note: "All published papers freely available online. The page does not state author fees, so diamond is not claimed. JMLR has no DOIs, so no ISSN reaches OpenAlex."
+  checked: 2026-11-23
+
+- journal: tmlr
+  access: open
+  diamond: false
+  url: https://jmlr.org/tmlr/papers/
+  note: "Papers published openly on OpenReview with free PDFs. Author fees not stated on the pages read, so diamond is not claimed."
+  checked: 2026-11-23

@@ -1,0 +1,443 @@
+{
+ "kind": "data accuracy audit (machine independent)",
+ "run": "2026-11-23T02:50:16Z",
+ "seed": 1,
+ "n": 40,
+ "pool": 188,
+ "data_last_updated": "2026-11-23T02:06:37+00:00",
+ "tally": {
+  "match": 28,
+  "on_page": 2,
+  "other_date": 4,
+  "no_dates": 5,
+  "unreachable": 1
+ },
+ "rows": [
+  {
+   "id": "wikicfp_ijngn2026",
+   "source": "wikicfp",
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191992&copyownerid=46167",
+   "deadlines": [
+    "2026-11-23T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "ijcnn2027",
+   "source": "ccfddl",
+   "url": "https://ijcnn.org/2027",
+   "deadlines": [
+    "2027-02-01T11:59:59Z"
+   ],
+   "status": "on_page"
+  },
+  {
+   "id": "computing27",
+   "source": "ccfddl",
+   "url": "https://saiconference.com/Computing",
+   "deadlines": [
+    "2026-11-02T11:59:59Z",
+    "2026-12-02T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "wikicfp_iccrd2027",
+   "source": "wikicfp",
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=194958&copyownerid=13881",
+   "deadlines": [
+    "2026-12-01T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "wikicfp_ije2026",
+   "source": "wikicfp",
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=200354&copyownerid=33993",
+   "deadlines": [
+    "2026-11-23T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "nossdav27",
+   "source": "ccfddl",
+   "url": "https://nossdav.org/",
+   "deadlines": [
+    "2027-01-12T11:59:59Z"
+   ],
+   "status": "no_dates",
+   "note": "dates on the page, none labelled as submission"
+  },
+  {
+   "id": "wikicfp_lcsai2026",
+   "source": "wikicfp",
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=204090&copyownerid=200885",
+   "deadlines": [
+    "2027-01-01T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "bis2027",
+   "source": "ccfddl",
+   "url": "https://bisconf.org/2027/",
+   "deadlines": [
+    "2027-01-11T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "cec2027",
+   "source": "ccfddl",
+   "url": "https://ieeecec.org/2027",
+   "deadlines": [
+    "2027-03-01T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "eswc27",
+   "source": "ccfddl",
+   "url": "https://2027.eswc-conferences.org/",
+   "deadlines": [
+    "2026-12-11T11:59:59Z",
+    "2026-12-18T11:59:59Z"
+   ],
+   "status": "other_date",
+   "page_dates": [
+    "2026-05-13"
+   ]
+  },
+  {
+   "id": "wikicfp_ijwest2026",
+   "source": "wikicfp",
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=192578&copyownerid=33993",
+   "deadlines": [
+    "2026-11-26T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "wikicfp_avc2026",
+   "source": "wikicfp",
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191951&copyownerid=46167",
+   "deadlines": [
+    "2026-11-23T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "dis27",
+   "source": "ccfddl",
+   "url": "https://dis.acm.org/2027/",
+   "deadlines": [
+    "2027-01-12T11:59:59Z",
+    "2027-01-19T11:59:59Z"
+   ],
+   "status": "no_dates",
+   "note": "dates on the page, none labelled as submission"
+  },
+  {
+   "id": "uss27",
+   "source": "ccfddl",
+   "url": "https://www.usenix.org/conference/usenixsecurity27",
+   "deadlines": [
+    "2026-08-19T11:59:59Z",
+    "2026-08-26T11:59:59Z",
+    "2027-01-20T11:59:59Z",
+    "2027-01-27T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "wikicfp_scsnai2027",
+   "source": "wikicfp",
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=203130&copyownerid=71296",
+   "deadlines": [
+    "2026-12-11T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "sec27",
+   "source": "ccfddl",
+   "url": "https://ifipsec.org/",
+   "deadlines": [
+    "2026-12-16T11:59:59Z"
+   ],
+   "status": "no_dates",
+   "note": "dates on the page, none labelled as submission"
+  },
+  {
+   "id": "eusipco27",
+   "source": "ccfddl",
+   "url": "https://eusipco2027.de/",
+   "deadlines": [
+    "2027-02-07T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "vldb27",
+   "source": "ccfddl",
+   "url": "https://www.vldb.org/2027/",
+   "deadlines": [
+    "2026-03-26T00:00:00Z",
+    "2026-04-02T00:00:00Z",
+    "2026-04-26T00:00:00Z",
+    "2026-05-02T00:00:00Z",
+    "2026-05-26T00:00:00Z",
+    "2026-06-02T00:00:00Z",
+    "2026-06-26T00:00:00Z",
+    "2026-07-02T00:00:00Z",
+    "2026-07-26T00:00:00Z",
+    "2026-08-02T00:00:00Z",
+    "2026-08-26T00:00:00Z",
+    "2026-09-02T00:00:00Z",
+    "2026-09-26T00:00:00Z",
+    "2026-10-02T00:00:00Z",
+    "2026-10-26T00:00:00Z",
+    "2026-11-02T01:00:00Z",
+    "2026-11-26T01:00:00Z",
+    "2026-12-02T01:00:00Z",
+    "2026-12-26T01:00:00Z",
+    "2027-01-02T01:00:00Z",
+    "2027-01-26T01:00:00Z",
+    "2027-02-02T01:00:00Z",
+    "2027-02-26T01:00:00Z",
+    "2027-03-02T01:00:00Z"
+   ],
+   "status": "no_dates",
+   "note": "dates on the page, none labelled as submission"
+  },
+  {
+   "id": "wikicfp_isci2027",
+   "source": "wikicfp",
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=203895&copyownerid=13149",
+   "deadlines": [
+    "2027-01-01T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "codaspy2027",
+   "source": "ccfddl",
+   "url": "https://www.codaspy.org/2027/",
+   "deadlines": [
+    "2026-12-01T11:59:59Z",
+    "2026-12-08T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "wikicfp_cisse2026",
+   "source": "wikicfp",
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=203864&copyownerid=182680",
+   "deadlines": [
+    "2026-11-28T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "sigcomm27",
+   "source": "ccfddl",
+   "url": "https://conferences.sigcomm.org/sigcomm/2027/",
+   "deadlines": [
+    "2027-02-03T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "wikicfp_ijcis2026",
+   "source": "wikicfp",
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=200236&copyownerid=33993",
+   "deadlines": [
+    "2026-11-23T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "socg27",
+   "source": "ccfddl",
+   "url": "https://cgweek27.computational-geometry.org/",
+   "deadlines": [
+    "2026-12-03T11:59:59Z"
+   ],
+   "status": "other_date",
+   "page_dates": [
+    "2026-06-01"
+   ]
+  },
+  {
+   "id": "wikicfp_ieicescis2028",
+   "source": "wikicfp",
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=203583&copyownerid=191020",
+   "deadlines": [
+    "2027-03-16T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "ches27",
+   "source": "ccfddl",
+   "url": "https://ches.iacr.org/2027/",
+   "deadlines": [
+    "2026-07-16T11:59:59Z",
+    "2026-10-16T11:59:59Z",
+    "2027-01-16T11:59:59Z",
+    "2027-04-16T11:59:59Z"
+   ],
+   "status": "on_page"
+  },
+  {
+   "id": "csfw27",
+   "source": "ccfddl",
+   "url": "https://www.ieee-security.org/TC/CSF2027/",
+   "deadlines": [
+    "2026-08-04T11:59:59Z",
+    "2026-10-16T11:59:59Z",
+    "2027-01-29T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "siggraph27",
+   "source": "ccfddl",
+   "url": "https://s2027.siggraph.org/",
+   "deadlines": [
+    "2027-01-21T22:00:00Z",
+    "2027-01-28T22:00:00Z"
+   ],
+   "status": "other_date",
+   "page_dates": [
+    "2027-01-19",
+    "2027-02-02",
+    "2027-02-23"
+   ]
+  },
+  {
+   "id": "pods27",
+   "source": "ccfddl",
+   "url": "https://2027.sigmod.org/",
+   "deadlines": [
+    "2026-05-24T11:59:59Z",
+    "2026-05-31T11:59:59Z",
+    "2026-12-04T11:59:59Z",
+    "2026-12-11T11:59:59Z"
+   ],
+   "status": "other_date",
+   "page_dates": [
+    "2026-12-08",
+    "2026-12-20",
+    "2027-02-01"
+   ]
+  },
+  {
+   "id": "wikicfp_isssr2027",
+   "source": "wikicfp",
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=203581&copyownerid=31894",
+   "deadlines": [
+    "2027-04-02T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "wikicfp_mlhmi2027",
+   "source": "wikicfp",
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=194785&copyownerid=13881",
+   "deadlines": [
+    "2026-11-26T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "curated_fjcai2027",
+   "source": "curated",
+   "url": "https://fjcai.vn/",
+   "deadlines": [
+    "2026-12-16T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "icsme27",
+   "source": "ccfddl",
+   "url": "https://conf.researchr.org/home/icsme-2027",
+   "deadlines": [
+    "2027-02-20T11:59:59Z",
+    "2027-02-27T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "idc27",
+   "source": "ccfddl",
+   "url": "https://idc.acm.org/2027/",
+   "deadlines": [
+    "2027-01-19T11:59:59Z",
+    "2027-01-26T11:59:59Z"
+   ],
+   "status": "unreachable"
+  },
+  {
+   "id": "middleware27",
+   "source": "ccfddl",
+   "url": "https://middleware-conf.github.io/2027/",
+   "deadlines": [
+    "2026-11-27T12:00:00Z",
+    "2026-12-04T12:00:00Z",
+    "2027-05-29T11:59:59Z",
+    "2027-06-05T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "wikicfp_icons2027",
+   "source": "wikicfp",
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=204121&copyownerid=83510",
+   "deadlines": [
+    "2026-12-29T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "fscd27",
+   "source": "ccfddl",
+   "url": "https://fscd-cade.science.ru.nl/",
+   "deadlines": [
+    "2027-04-20T11:59:59Z",
+    "2027-04-27T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "colt27",
+   "source": "ccfddl",
+   "url": "https://learningtheory.org/colt2027/",
+   "deadlines": [
+    "2027-01-30T11:59:59Z"
+   ],
+   "status": "no_dates"
+  },
+  {
+   "id": "mobisys27",
+   "source": "ccfddl",
+   "url": "https://www.sigmobile.org/mobisys/2027/",
+   "deadlines": [
+    "2026-11-28T11:59:59Z",
+    "2026-12-05T11:59:59Z"
+   ],
+   "status": "match"
+  },
+  {
+   "id": "wikicfp_iccde2027",
+   "source": "wikicfp",
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=194773&copyownerid=13881",
+   "deadlines": [
+    "2026-12-06T11:59:59Z"
+   ],
+   "status": "match"
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+command: python scripts/build_journal_info.py --doaj-csv <doaj.csv sha256 753918289d22...> --year 2025
+commit: 4c6f06d (+ uncommitted journal_info.py 2a26f2e7747f, build script 4df7afd5b79f, journal_access.yml 76d13e0caa26)
+1. DOAJ: 36224 ISSNs (26041816 bytes, sha256 753918289d22)
+2. OpenAlex: 1067/1089 journals found by ISSN
+3. articles in 2025: counts for 1059 sources, hybrid articles in 710
+   hand-checked entries applied: 4
+4. wrote data/journal_info.json {'open': 271, 'hybrid': 597, 'subscription': 153, 'unknown': 68, 'hand_checked': 4, 'diamond': 47, 'total': 1089}

@@ -205,9 +205,14 @@ async function ensureJournals() {
   if (app.journalsState === "ready" || app.journalsState === "loading") return;
   app.journalsState = "loading";
   try {
-    const res = await fetch("data/journal_profiles.json", { cache: "no-cache" });
+    const [res, info] = await Promise.all([
+      fetch("data/journal_profiles.json", { cache: "no-cache" }),
+      // Access model and citation figures, rebuilt weekly; the finder works without them.
+      fetch("data/journal_info.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
+    ]);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     app.journals = await res.json();
+    app.journalInfo = info;
     setStopwords(app.journals.stopwords);
     app.journals.vecs = Object.fromEntries(Object.entries(app.journals.profiles).map(([k, p]) => [k, new Map(Object.entries(p.terms))]));
     app.journals.specificity = termSpecificity(Object.values(app.journals.vecs));
@@ -236,6 +241,32 @@ function paperVector(set) {
   return v.size ? v : null;
 }
 
+const JKEY = "conf_tracker_journal_filter_v1";
+function journalFilter() {
+  if (!app.jfilter) {
+    try { app.jfilter = JSON.parse(localStorage.getItem(JKEY)) || null; } catch { app.jfilter = null; }
+    if (!app.jfilter || !Array.isArray(app.jfilter.access)) app.jfilter = { access: [], noFee: false };
+  }
+  return app.jfilter;
+}
+function saveJournalFilter() { try { localStorage.setItem(JKEY, JSON.stringify(app.jfilter)); } catch { /* private mode */ } }
+const ACCESS_BADGE = { open: "access-open", hybrid: "access-hybrid", subscription: "access-sub", unknown: "access-unknown" };
+/** Article charge as the journal (DOAJ) or OpenAlex states it; several currencies are listed as given. */
+function apcText(t, info) {
+  if (!info) return "";
+  if (info.diamond) return t("apcNone");
+  if (!info.apc?.length) return "";
+  const fmt = (a) => `${new Intl.NumberFormat(locale()).format(a.amount)} ${a.currency}`;
+  return t(info.access === "hybrid" ? "apcHybrid" : "apcOpen", { amount: info.apc.map(fmt).join(" / ") });
+}
+function accessBadge(t, info) {
+  if (!info) return "";
+  const label = info.diamond ? t("accessDiamond") : t(`access_${info.access}`);
+  const how = info.override ? t("accessChecked", { date: info.override.checked })
+    : t("accessSource", { year: app.journalInfo.year });
+  return `<span class="badge ${ACCESS_BADGE[info.access] || ""}" title="${h(how)}">${h(label)}</span>`;
+}
+
 function journalResults(t) {
   if (app.journalsState !== "ready") {
     if (app.journalsState === "idle") ensureJournals();
@@ -243,18 +274,41 @@ function journalResults(t) {
   }
   const q = paperVector(app.journals);
   if (!q) return `<p class="empty">${h(t("matchNone"))}</p>`;
-  const ranked = Object.entries(app.journals.vecs).map(([k, v]) => [k, dot(q, v)]).filter(([, s]) => s > 0)
-    .sort((a, b) => b[1] - a[1]).slice(0, 25);
-  if (!ranked.length) return `<p class="empty">${h(t("matchNone"))}</p>`;
-  const top = ranked[0][1];
+  const all = Object.entries(app.journals.vecs).map(([k, v]) => [k, dot(q, v)]).filter(([, s]) => s > 0)
+    .sort((a, b) => b[1] - a[1]);
+  if (!all.length) return `<p class="empty">${h(t("matchNone"))}</p>`;
+  const top = all[0][1];
+  const infoOf = (k) => app.journalInfo?.journals?.[k] || null;
+  const f = journalFilter();
+  // Filters keep the relevance order; the rank number is the position among all matches.
+  const position = new Map(all.map(([k], i) => [k, i + 1]));
+  const shown = all.filter(([k]) => {
+    const i = infoOf(k);
+    if (f.access.length && !(i && f.access.includes(i.access))) return false;
+    if (f.noFee && !(i && i.diamond)) return false;
+    return true;
+  });
+  const ranked = shown.slice(0, 25);
+  const tally = { open: 0, hybrid: 0, subscription: 0 };
+  for (const [k] of all.slice(0, 200)) { const a = infoOf(k)?.access; if (a in tally) tally[a] += 1; }
+  const chip = (value, label) => `<button type="button" class="chip" data-action="jaccess" data-value="${value}" aria-pressed="${value ? f.access.includes(value) : !f.access.length}">${h(label)}</button>`;
+  const filters = app.journalInfo ? `<div class="jfilters" role="group" aria-label="${h(t("accessFilter"))}">
+      <span class="chip-label">${h(t("accessFilter"))}</span>
+      ${chip("", t("accessAll"))}${chip("open", `${t("access_open")} · ${tally.open}`)}${chip("hybrid", `${t("access_hybrid")} · ${tally.hybrid}`)}${chip("subscription", `${t("access_subscription")} · ${tally.subscription}`)}
+      <button type="button" class="chip" data-action="jnofee" aria-pressed="${f.noFee}">${h(t("accessNoFee"))}</button>
+    </div>` : "";
+  if (!ranked.length) return `<h3 class="section-title">${h(t("journalResults"))}</h3>${filters}<p class="empty">${h(t("accessNoMatch"))}</p>`;
   const sjr = sjrByTitle();
   const packs = pubs?.state.packs || {};
   const money = (v, unit) => (unit === "VND" ? `${new Intl.NumberFormat(locale()).format(v)} ${t("currencyVnd")}`
     : `${new Intl.NumberFormat(locale(), { maximumFractionDigits: 2 }).format(v)} ${t("pointsUnit")}`);
   return `<h3 class="section-title">${h(t("journalResults"))}</h3>
-    <p class="hint">${h(t("matchNote"))} ${sjr ? "" : h(t("journalNoSjr"))}</p>
+    ${filters}
+    <p class="hint">${h(t("matchNote"))} ${sjr ? "" : h(t("journalNoSjr"))}${app.journalInfo ? ` ${h(t("journalInfoNote", { year: app.journalInfo.year }))}` : ""}</p>
     <div class="list">${ranked.map(([key, s]) => {
       const p = app.journals.profiles[key];
+      const info = infoOf(key);
+      const apc = apcText(t, info);
       // ISSN join first (exact); the normalised title is only a fallback.
       const byIssn = (p.issn || []).map((i) => pubs?.state.sjr?.byIssn[i]).find(Boolean);
       const hit = byIssn || sjr?.get(normTitle(p.name));
@@ -269,8 +323,10 @@ function journalResults(t) {
         if (r.bonus) parts.push(`${t("packBonus")}: ${r.bonus.value ? money(r.bonus.value, packs.bonus.unit) : "—"}`);
         estimate = `<div class="hint">${h(t("journalEstimate", { parts: parts.join(" · ") }))}</div>`;
       }
-      return `<article class="card"><div>
-        <div class="title-row"><a class="name" href="https://dblp.org/db/journals/${encodeURIComponent(key)}/" target="_blank" rel="noopener">${h(p.name)}</a>
+      return `<article class="card jcard ${info ? ACCESS_BADGE[info.access] : ""}"><div>
+        <div class="title-row"><span class="rank-num" title="${h(t("rankTitle"))}">${position.get(key)}</span>
+          <a class="name" href="https://dblp.org/db/journals/${encodeURIComponent(key)}/" target="_blank" rel="noopener">${h(p.name)}</a>
+          ${accessBadge(t, info)}
           ${p.abbrev && p.abbrev !== p.name ? `<span class="muted">${h(p.abbrev)}</span>` : ""}
           ${hit ? `<span class="badge ${hit.q === "Q1" ? "rank-top" : hit.q === "Q2" ? "rank-mid" : "rank-low"}">${h(hit.q === "none" ? "Scopus" : `Scopus ${hit.q}`)}</span>` : ""}</div>
         <div class="match"><span class="match-bar"><i style="width:${Math.max(1, Math.round((s / top) * 100))}%"></i></span>
@@ -279,6 +335,12 @@ function journalResults(t) {
         <div class="meta"><span>${h(t("journalTitles", { n: p.n_titles, from: app.journals.years[0], to: app.journals.years[1] }))}</span>
           ${p.issn?.length ? `<span>ISSN ${h(p.issn.join(", "))}</span>` : ""}${p.publisher ? `<span>${h(p.publisher)}</span>` : ""}
           ${hit ? `<span>${h(t(joinedBy === "issn" ? "journalSjrIssn" : "journalSjrMatch", { year: pubs.state.sjr.year || "?" }))}</span>` : ""}</div>
+        ${info && (apc || info.citedness_2y != null || info.h_index != null) ? `<div class="jstats">
+          ${apc ? `<span class="jstat"><b>${h(apc)}</b></span>` : ""}
+          ${info.citedness_2y != null ? `<span class="jstat" title="${h(t("citedTitle"))}">${h(t("citedShort", { v: new Intl.NumberFormat(locale(), { maximumFractionDigits: 1 }).format(info.citedness_2y) }))}</span>` : ""}
+          ${info.h_index != null ? `<span class="jstat">h-index ${h(String(info.h_index))}</span>` : ""}
+          ${info.override ? `<a class="jstat" href="${h(safeUrl(info.override.url))}" target="_blank" rel="noopener">${h(t("accessCheckedLink"))} ↗</a>` : ""}
+        </div>` : ""}
         ${estimate}
       </div></article>`;
     }).join("")}</div>`;
@@ -380,6 +442,11 @@ function rankBadges(c) {
 }
 function modeLabel(mode) {
   return app.t({ "in-person": "modeInPerson", hybrid: "modeHybrid", online: "modeOnline", tbd: "modeTbd" }[mode] || "modeTbd");
+}
+/** Attendance mode as a coloured badge on the list card. */
+function modeBadge(c) {
+  const m = ["in-person", "hybrid", "online"].includes(c.mode) ? c.mode : "tbd";
+  return `<span class="badge mode-${m}" title="${h(app.t("mode"))}">${h(modeLabel(m))}</span>`;
 }
 const ctx = (extra = {}) => ({ home: app.loc.country, ...extra });
 
@@ -535,7 +602,7 @@ function summaryRow(c) {
   const when = formatEventRange(c, locale()) || t("modeTbd");
   const place = [c.city && c.city !== c.country ? c.city : "", c.country !== "TBD" && c.country !== "Online" ? countryName(c.country) : ""]
     .filter(Boolean).join(", ");
-  const placeText = `${place || (c.mode === "online" ? t("modeOnline") : t("modeTbd"))}${c.mode === "hybrid" ? ` · ${t("modeHybrid")}` : ""}`;
+  const placeText = place || (c.mode === "online" ? t("modeOnline") : t("modeTbd"));
   const home = app.loc.country && c.country === app.loc.country;
   const fee = feeSummary(c.fees, locale());
   const feeUrl = safeUrl(c.fees?.url) || safeUrl(c.url);
@@ -561,6 +628,7 @@ function cardHtml(c, now, match = null) {
   const shown = isOpen ? c : { ...c, deadlines: trimDeadlines(c.deadlines || [], now) };
   const badges = [
     rankBadges(c),
+    modeBadge(c),
     `<span class="badge area">${h(areaName(c.sub))}</span>`,
     c.scope === "national" ? `<span class="badge">${h(t("levelNational"))}</span>` : "",
     status === "estimated" ? `<span class="badge est">${h(t("badgeEstimated", { year: c.estimated_from }))}</span>` : "",
@@ -927,6 +995,19 @@ function bindEvents() {
         app.profile.interests = $("#p-interests").value;
         saveProfile();
         app.matchMode = "profile";
+        renderView();
+        break;
+      case "jaccess": {
+        const f = journalFilter();
+        const v = btn.dataset.value;
+        f.access = !v ? [] : f.access.includes(v) ? f.access.filter((x) => x !== v) : [...f.access, v];
+        saveJournalFilter();
+        renderView();
+        break;
+      }
+      case "jnofee":
+        journalFilter().noFee = !journalFilter().noFee;
+        saveJournalFilter();
         renderView();
         break;
       case "target":

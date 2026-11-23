@@ -54,3 +54,19 @@ Vietnamese page shows the English text marked as written on the venue page.
 ```
 
 `acronym` is matched without prefixes such as IEEE or ACM.
+
+## `journal_access.yml`: access model the automatic sources get wrong
+
+`data/journal_info.json` is rebuilt weekly from the DOAJ journal CSV and OpenAlex
+(`scripts/build_journal_info.py`; rules in `scripts/conftracker/journal_info.py`). Some
+journals are free to read on their own site but invisible to both sources (no DOAJ
+listing, no DOIs, articles marked closed). Record them here, from the journal's own page:
+
+```yaml
+- journal: pvldb              # key in data/journal_profiles.json
+  access: open                # open | hybrid | subscription
+  diamond: true               # true only if the page says authors pay no fee
+  url: https://vldb.org/pvldb/general-information/open-access-statement
+  note: "what the page states, in your own words"
+  checked: 2026-11-23
+```
