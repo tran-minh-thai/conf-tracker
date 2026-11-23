@@ -96,6 +96,11 @@ def journal_record(issns: list[str], doaj: dict, source: dict | None, works: int
         "citedness_2y": round(stats["2yr_mean_citedness"], 2) if isinstance(stats.get("2yr_mean_citedness"), (int, float)) else None,
         "h_index": stats.get("h_index"),
         "openalex": (source or {}).get("id", "").rsplit("/", 1)[-1] or None,
+        # Every ISSN known for the journal (the finder's own plus OpenAlex's), so a publication can be
+        # matched whichever ISSN Crossref gives; and the publisher's country (OpenAlex), which tells a
+        # foreign journal from a domestic one.
+        "issn": sorted({n for n in (norm_issn(i) for i in [*issns, *((source or {}).get("issn") or [])]) if n}),
+        "country": (source or {}).get("country_code") or None,
     }
     if access == "open" and rec["diamond"]:
         rec["apc"], rec["apc_source"] = [], "doaj"

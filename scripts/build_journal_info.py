@@ -83,7 +83,7 @@ def main(argv=None) -> int:
     sources = {}
     for part in chunks(all_issns, BATCH):
         d = get(session, f"{OPENALEX}/sources", {"filter": f"issn:{'|'.join(part)}", "per_page": 200,
-                                                 "select": "id,display_name,issn,is_oa,is_in_doaj,apc_usd,summary_stats,works_count,type"})
+                                                 "select": "id,display_name,issn,is_oa,is_in_doaj,apc_usd,summary_stats,works_count,type,country_code"})
         for s in d.get("results", []):
             for i in s.get("issn") or []:
                 prev = sources.get(i)

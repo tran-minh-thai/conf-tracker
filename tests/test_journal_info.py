@@ -47,6 +47,16 @@ def test_record_prefers_journal_statement_and_marks_diamond():
     assert (sub["access"], sub["apc_source"], sub["citedness_2y"]) == ("hybrid", "openalex", None)
 
 
+def test_record_lists_every_issn_and_the_country():
+    # The finder knows only the print ISSN; OpenAlex adds the online one and the publisher's country.
+    src = {"id": "S900972176", "is_oa": False, "summary_stats": {}, "issn": ["0952-1976", "1873-6769"], "country_code": "GB"}
+    r = ji.journal_record(["0952-1976"], {}, src, 3168, 336)
+    assert (r["issn"], r["country"]) == (["0952-1976", "1873-6769"], "GB")
+    # Not found in OpenAlex: the finder's own ISSNs, no country (unknown, not "domestic").
+    r = ji.journal_record(["0952-1976", "bad"], {}, None, None, None)
+    assert (r["issn"], r["country"]) == (["0952-1976"], None)
+
+
 def write_yaml(tmp_path, text):
     p = tmp_path / "journal_access.yml"
     p.write_text(text, encoding="utf-8")

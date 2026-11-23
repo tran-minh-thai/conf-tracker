@@ -31,7 +31,7 @@
       bonus: await (await fetch("../data/rules/sample-university-bonus.json", { cache: "no-cache" })).json(),
       hours: await (await fetch("../data/rules/sample-research-hours.json", { cache: "no-cache" })).json(),
     };
-    const ruleResults = runRules(await import("../assets/rules.js"), packs, await import("../assets/packcsv.js"), await import("../assets/packedit.js")).map((r) => ({ ...r, name: `rules: ${r.name}` }));
+    const ruleResults = runRules(await import("../assets/rules.js"), packs, await import("../assets/packcsv.js"), await import("../assets/packedit.js"), (await import("../assets/i18n.js")).STRINGS).map((r) => ({ ...r, name: `rules: ${r.name}` }));
     results.push(...ruleResults);
     const { run: runScholar } = await import("./scholar.test.js");
     results.push(...runScholar(await import("../assets/scholar.js")).map((r) => ({ ...r, name: `scholar: ${r.name}` })));

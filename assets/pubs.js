@@ -3,8 +3,9 @@
 // (added by DOI, link or title through Crossref), facts per publication with their
 // source, points and bonus per publication, and totals per academic period.
 import { FACTS as FACT_KEYS, authorShare, checkPack, findInList, localizePack, manualRules, parseListTable, periodYear, quotaFor, scoreWithPacks, valueForYear } from "./rules.js";
-import { crossrefSearchUrl, crossrefUrl, fromCrossref, guessSeries, parseDoi, parseSjrCsv, sjrFacts } from "./scholar.js";
-import { packFromCsv, packToCsv } from "./packcsv.js";
+import { crossrefSearchUrl, crossrefUrl, fromCrossref, guessSeries, journalFacts, journalIndex, parseDoi, parseSjrCsv, sjrFacts } from "./scholar.js";
+import { packFromCsv, packToCsv, sheetAliases, sheetVocab } from "./packcsv.js";
+import { STRINGS } from "./i18n.js";
 import { describeCondition, draftProblems, editorChange, editorClick, fromDraft, renderEditor, toDraft } from "./packedit.js";
 import { csvCell, escapeHtml as h, safeUrl } from "./core.js";
 import { icon } from "./icons.js";
@@ -38,6 +39,10 @@ export function createPubs(ctx) {
     edit: null,          // {role, draft, problems}: the table being edited
     dashYear: null,      // academic year shown in the dashboard (first calendar year)
   };
+  // Saved publications gain the facts the journal data states (only facts still unknown).
+  if (st.pubs.length && ctx.journalInfo) {
+    ctx.journalInfo().then((info) => { if (info) { st.pubs.forEach(autofill); save(); ctx.renderView(); } });
+  }
   // Crossref work types in the page language; an unlisted type is shown as Crossref names it.
   const CR_TYPES = { "journal-article": "v_kind_journal", "proceedings-article": "v_kind_conference", "book-chapter": "v_kind_book_chapter",
     "book-part": "v_kind_book_chapter", "book-section": "v_kind_book_chapter", book: "crBook", "posted-content": "crPreprint",
@@ -75,10 +80,13 @@ export function createPubs(ctx) {
   const periodLabel = (y) => (startMonth() <= 1 ? String(y) : `${y}-${y + 1}`);
 
   // ---- auto-fill -------------------------------------------------------------------
+  let jIndex = { src: null, map: null };
   function autofill(pub) {
     const sources = { ...(pub.sources || {}) };
     // Sources are stored as codes and translated when shown.
     for (const k of Object.keys(pub.facts)) sources[k] = sources[k] || "crossref";
+    // Earlier versions read a print-only Crossref ISSN as "no online ISSN"; Crossref cannot state that.
+    if (pub.facts.issn_online === false && sources.issn_online === "crossref") { delete pub.facts.issn_online; delete sources.issn_online; }
     const fromSjr = sjrFacts(st.sjr, pub.issn);
     if (fromSjr) {
       pub.facts.scopus_indexed = true;
@@ -88,6 +96,13 @@ export function createPubs(ctx) {
     if (pub.facts.kind === "journal" && st.packs.points) {
       const hit = findInList(st.packs.points, { issn: (pub.issn || []).join(" "), venue: pub.venue });
       if (hit) { pub.facts.international_journal = false; sources.international_journal = "list"; }
+    }
+    if (pub.facts.kind === "journal" && ctx.app.journalInfo) {
+      if (jIndex.src !== ctx.app.journalInfo) jIndex = { src: ctx.app.journalInfo, map: journalIndex(ctx.app.journalInfo) };
+      // Only facts no other source has stated: the domestic list and the user win.
+      for (const [k, v] of Object.entries(journalFacts(jIndex.map, pub.issn))) {
+        if (pub.facts[k] == null) { pub.facts[k] = v; sources[k] = "openalex"; }
+      }
     }
     if (pub.facts.kind === "conference") {
       const series = guessSeries(pub, ctx.app.confs);
@@ -111,7 +126,9 @@ export function createPubs(ctx) {
         const res = await fetch(crossrefUrl(doi));
         if (res.status === 404) throw new Error(t("doiNotFound", { doi }));
         if (!res.ok) throw new Error(`Crossref HTTP ${res.status}`);
-        addPub(fromCrossref((await res.json()).message));
+        const rec = fromCrossref((await res.json()).message);
+        await ctx.journalInfo?.();
+        addPub(rec);
         st.lookup = { busy: false, results: null, error: "" };
       } else if (/^https?:\/\//i.test(q)) {
         throw new Error(t("noDoiInLink"));
@@ -243,7 +260,7 @@ export function createPubs(ctx) {
   function sourceLabel(code) {
     if (!code) return "";
     if (code.startsWith("sjr:")) return `Scimago ${code.slice(4)}`.trim();
-    return { crossref: "Crossref", list: t("srcDomesticList"), core: t("srcCore"), you: t("srcYou") }[code] || code;
+    return { crossref: "Crossref", openalex: "OpenAlex", list: t("srcDomesticList"), core: t("srcCore"), you: t("srcYou") }[code] || code;
   }
 
   function factField(p, key) {
@@ -265,6 +282,18 @@ export function createPubs(ctx) {
     }
     const type = key === "impact_factor" || key === "year" ? "number" : "text";
     return `<label class="field">${label}<input type="${type}" step="any" data-fact="${key}" data-pub="${h(p.id)}" value="${h(f[key] ?? "")}" /></label>`;
+  }
+
+  /** Where the facts no open source states can be found: Scimago file, Clarivate's journal list. */
+  function journalHints(p) {
+    if (p.facts.kind !== "journal") return "";
+    const out = [];
+    if (p.facts.scopus_quartile == null && !st.sjr) out.push(`<p class="hint wide">${h(t("needSjr"))}</p>`);
+    const issn = (p.issn || [])[0];
+    if (issn && (p.facts.wos_index == null || p.facts.impact_factor == null)) {
+      out.push(`<p class="hint wide"><a href="https://mjl.clarivate.com/search-results?issn=${encodeURIComponent(issn)}" target="_blank" rel="noopener">${h(t("checkMjl"))} (${h(issn)})</a></p>`);
+    }
+    return out.join("");
   }
 
   function relevantFacts(p) {
@@ -327,6 +356,7 @@ export function createPubs(ctx) {
         <label class="field"><span>ISSN</span><input data-pubfield="issn" data-pub="${h(p.id)}" value="${h((p.issn || []).join(", "))}" /></label>
         ${listOpts.length && p.facts.kind === "journal" ? `<label class="field"><span>${h(t("listEntry"))}</span><select data-pubfield="list_entry" data-pub="${h(p.id)}">
           <option value="">${h(t("listAuto"))}</option>${listOpts.map((e) => `<option value="${h(e.id)}" ${p.list_entry === e.id ? "selected" : ""}>${h(e.name)}</option>`).join("")}</select></label>` : ""}
+        ${journalHints(p)}
         <p class="hint wide">${h(t("factsHint"))}</p>
       </div>` : ""}
     </article>`;
@@ -441,17 +471,16 @@ export function createPubs(ctx) {
       input.click();
     });
   }
-  const sheetLabels = () => Object.fromEntries([["id", t("edId")], ["label", t("ruleLabel")], ["value", t("ruleValue")], ["note", t("edNote")],
-    ["valid_from", t("edValidFrom")], ["valid_until", t("edValidUntil")], ...Object.keys(FACT_KEYS).map((k) => [k, t(`f_${k}`)])]);
   function downloadSheet(pack) {
     try {
-      download(`${pack.id || "rules"}.csv`, packToCsv(localizePack(pack, ctx.app.lang), { labels: sheetLabels(), help: t("sheetHelp").split("\n") }), "text/csv;charset=utf-8");
+      download(`${pack.id || "rules"}.csv`, packToCsv(localizePack(pack, ctx.app.lang), { ...sheetVocab(STRINGS[ctx.app.lang] || STRINGS.en), help: t("sheetHelp").split("\n") }), "text/csv;charset=utf-8");
     } catch (e) { toast(e.message); }
   }
   /** Read a picked rule file: a sheet (.csv, .txt, .tsv) or JSON. Returns a pack or null (after a toast). */
   function readPackFile(file, role) {
     if (/\.(csv|tsv|txt)$/i.test(file.name) || !file.text.trim().startsWith("{")) {
-      const { pack, errors } = packFromCsv(file.text, st.packs[role] || { kind: role === "points" ? "points" : role, unit: role === "hours" ? "hours" : role === "bonus" ? "VND" : "points" });
+      const { pack, errors } = packFromCsv(file.text, st.packs[role] || { kind: role === "points" ? "points" : role, unit: role === "hours" ? "hours" : role === "bonus" ? "VND" : "points" },
+        sheetAliases(Object.values(STRINGS).map(sheetVocab)));
       if (!pack) { toast(t("sheetErrors", { n: errors.length, first: errors.slice(0, 2).join("; ") })); return null; }
       return pack;
     }
@@ -533,7 +562,7 @@ export function createPubs(ctx) {
       case "lookup": lookup(document.getElementById("pub-input").value); return true;
       case "pick": {
         const res = await fetch(crossrefUrl(b.dataset.doi));
-        if (res.ok) addPub(fromCrossref((await res.json()).message));
+        if (res.ok) { const rec = fromCrossref((await res.json()).message); await ctx.journalInfo?.(); addPub(rec); }
         st.lookup = { busy: false, results: null, error: "" };
         break;
       }

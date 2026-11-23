@@ -6,21 +6,27 @@
 //   @title,<text>               settings rows: first cell starts with "@"
 //   @kind,points|bonus|hours    (also @unit, @unit_label, @language, @source, @warning, @value_note,
 //                               @policy, @period_start_month, @share, @share_main, @quota)
-//   id,label,value,note,valid_from,valid_until,<one column per fact>
+//   No.,Rule,Value,Type,...     header: only the columns the table uses, named in the page language
 //   # ...                       rows whose first cell starts with "#" are notes, skipped on import
-//   1,Q1 journal,450,,,,journal,...
+//   1,Q1 journal,450,Journal article,...
+// The header may name a column by its key (kind, wos_index, ...) or by its name in any language the
+// caller passes as aliases, so files written before (key header, one column per fact) still import.
 // A fact cell is a condition on that fact; empty means "any value". Cell syntax:
 //   a          equals a                     a|b|c     one of
-//   !a         differs from a               yes / no  for yes/no facts (also true/false, co/khong)
+//   !a         differs from a               yes / no  for yes/no facts (also Co/Khong, true/false)
 //   >=3  >3  <=3  <3  =3                    numbers; join several with &: >=2&<3
 //   *          is known                     !*        is not known
-// Rows sharing an id are alternatives: the rule holds when any of its rows holds.
+// Values may be written as keys (journal) or as their names in the page language (Journal article).
+// Rows sharing an id are alternatives: the rule holds when any of its rows holds; the export writes
+// "or" in the value cell of such a row so it reads as one.
 // A value written min..max makes a manual rule (a range decided case by case, never summed).
 // The domestic journal list of a points pack is not part of the sheet; it keeps its own paste box.
 import { FACTS, checkPack } from "./rules.js";
 
 // Yes/no words: English and Vietnamese ("co"/"khong", with or without accents).
 const BOOL_WORDS = { yes: true, true: true, co: true, "c\u00f3": true, no: false, false: false, khong: false, "kh\u00f4ng": false };
+// Words an alternative row may carry in its value cell (English and Vietnamese, with or without accents).
+const OR_WORDS = ["or", "ho\u1eb7c", "hoac"];
 const FIXED = ["id", "label", "value", "note", "valid_from", "valid_until"];
 const SETTINGS = ["kind", "id", "title", "language", "unit", "unit_label", "source", "warning", "checked", "value_note", "policy", "period_start_month", "share", "share_main", "quota"];
 const NUM_OPS = [[">=", "gte"], ["<=", "lte"], [">", "gt"], ["<", "lt"], ["=", "eq"]];
@@ -84,9 +90,31 @@ export function dnf(cond) {
 
 const fmtNum = (n, dec) => (dec === "," ? String(n).replace(".", ",") : String(n));
 
-function leafText(leaf, dec) {
+/** A conjunction with each fact's numeric bounds reduced to the tightest lower and upper bound. */
+function tighten(conj) {
+  const lower = {}, upper = {};
+  // A strict bound beats an inclusive one at the same number (> 2 is tighter than >= 2).
+  const stronger = (a, b, side) => b == null || (side === "lo" ? a.v > b.v : a.v < b.v) || (a.v === b.v && a.strict && !b.strict);
+  for (const l of conj) {
+    for (const [op, side, strict] of [["gte", "lo", false], ["gt", "lo", true], ["lte", "hi", false], ["lt", "hi", true]]) {
+      if (!(op in l)) continue;
+      const box = side === "lo" ? lower : upper;
+      const cand = { v: l[op], strict, leaf: l };
+      if (stronger(cand, box[l.fact], side)) box[l.fact] = cand;
+    }
+  }
+  return conj.filter((l) => {
+    const lo = ["gte", "gt"].some((o) => o in l), hi = ["lte", "lt"].some((o) => o in l);
+    if (lo) return lower[l.fact].leaf === l;
+    if (hi) return upper[l.fact].leaf === l;
+    return true;
+  });
+}
+
+function leafText(leaf, dec, words, values) {
   const type = FACTS[leaf.fact]?.type;
-  const val = (v) => (typeof v === "boolean" ? (v ? "yes" : "no") : typeof v === "number" ? fmtNum(v, dec) : String(v));
+  const val = (v) => (typeof v === "boolean" ? (v ? words.yes : words.no) : typeof v === "number" ? fmtNum(v, dec)
+    : values?.[leaf.fact]?.[v] || String(v));
   if ("known" in leaf) return leaf.known ? "*" : "!*";
   if ("in" in leaf) return leaf.in.map(val).join("|");
   if ("ne" in leaf) return `!${val(leaf.ne)}`;
@@ -96,43 +124,79 @@ function leafText(leaf, dec) {
 }
 
 /**
- * The pack as a sheet. `labels` (optional) maps column keys to names in the page language; they go in a
- * note row under the header, so the header itself stays the same in every language.
- * Throws when a condition cannot be written as rows (a "not" around a group).
+ * The pack as a sheet with only the columns the table uses (a table without rules gets every column,
+ * as a template). Optional names in the page language: `labels` for column headers (key -> name),
+ * `words` for yes / no / or, `values` for enum values ({fact: {key: name}}). Without them the sheet
+ * uses keys. Throws when a condition cannot be written as rows (a "not" around a group).
  */
-export function packToCsv(pack, { labels = null, help = null, sep = "," } = {}) {
+export function packToCsv(pack, { labels = null, words = null, values = null, help = null, sep = "," } = {}) {
   const dec = sep === "," ? "." : ",";
-  const facts = Object.keys(FACTS);
+  const w = { yes: "yes", no: "no", or: "or", ...(words || {}) };
+  const rules = pack.rules || [];
+  const rows = [];
+  for (const r of rules) {
+    if (r.manual) { rows.push({ r, conj: null, first: true }); continue; }
+    dnf(r.when).forEach((conj, k) => rows.push({ r, conj: tighten(conj), first: k === 0 }));
+  }
+  const used = new Set(rows.flatMap((x) => (x.conj || []).map((l) => l.fact)));
+  const facts = Object.keys(FACTS).filter((f) => !rules.length || used.has(f));
+  const fixed = FIXED.filter((k) => !rules.length || ["id", "label", "value"].includes(k)
+    || (k === "note" && rules.some((r) => r.note)) || (k === "valid_from" && rules.some((r) => r.valid?.from))
+    || (k === "valid_until" && rules.some((r) => r.valid?.until)));
   const out = [];
   for (const line of help || []) out.push([`# ${line}`]);
   const set = (k, v) => { if (v != null && v !== "") out.push([`@${k}`, v]); };
   set("kind", pack.kind); set("id", pack.id); set("title", pack.title); set("language", pack.language);
   set("unit", pack.unit); set("unit_label", pack.unit_label); set("source", pack.source?.document);
   set("warning", pack.source?.warning); set("checked", pack.source?.checked); set("value_note", pack.value_note);
-  set("policy", pack.policy); set("period_start_month", pack.period_start_month);
+  if (pack.policy && pack.policy !== "max") set("policy", pack.policy);   // "max" is what an absent policy means
+  set("period_start_month", pack.period_start_month);
   if (pack.share) { set("share", pack.share.scheme); if (pack.share.main != null) set("share_main", fmtNum(pack.share.main, dec)); }
   if (pack.quota?.length) set("quota", pack.quota.map((q) => `${q.from || ""}=${fmtNum(q.hours, dec)}`).join("; "));
   out.push([]);
-  out.push([...FIXED, ...facts]);
-  if (labels) out.push([`# ${labels.id || "id"}`, ...[...FIXED.slice(1), ...facts].map((k) => labels[k] || k)]);
-  // What each fact column accepts, so the sheet can be filled without this page.
-  const accepts = (k) => {
-    const f = FACTS[k];
-    return f.type === "enum" ? f.values.join("|") : f.type === "bool" ? "yes|no" : f.type === "number" ? ">= > <= < =" : "text";
-  };
-  out.push(["# ...", "", "", "", "YYYY-MM-01", "YYYY-MM-01", ...facts.map(accepts)]);
-  for (const r of pack.rules || []) {
-    const head = [r.id, r.label, r.manual ? `${fmtNum(r.range.min, dec)}..${fmtNum(r.range.max, dec)}` : fmtNum(r.value, dec),
-      r.note || "", r.valid?.from || "", r.valid?.until || ""];
-    if (r.manual) { out.push(head); continue; }
-    dnf(r.when).forEach((conj, k) => {
-      const byFact = {};
-      for (const leaf of conj) (byFact[leaf.fact] ||= []).push(leafText(leaf, dec));
-      out.push([...(k ? [r.id, "", "", "", "", ""] : head), ...facts.map((f) => (byFact[f] || []).join("&"))]);
-    });
+  out.push([...fixed, ...facts].map((k) => labels?.[k] || k));
+  for (const { r, conj, first } of rows) {
+    const cellOf = { id: r.id, label: first ? r.label : "",
+      value: !first ? w.or : r.manual ? `${fmtNum(r.range.min, dec)}..${fmtNum(r.range.max, dec)}` : fmtNum(r.value, dec),
+      note: first ? r.note || "" : "", valid_from: first ? r.valid?.from || "" : "", valid_until: first ? r.valid?.until || "" : "" };
+    const byFact = {};
+    for (const leaf of conj || []) (byFact[leaf.fact] ||= []).push(leafText(leaf, dec, w, values));
+    out.push([...fixed.map((k) => cellOf[k]), ...facts.map((f) => (byFact[f] || []).join("&"))]);
   }
   // The sep= hint is written as is: quoting it (it holds the separator) would hide it from Excel.
   return `\uFEFFsep=${sep}\r\n` + out.map((row) => row.map((c) => cellOut(c, sep)).join(sep)).join("\r\n") + "\r\n";
+}
+
+/**
+ * Column, yes/no/or and value names of the sheet in one language, from that language's string
+ * table (keys sh_*, f_<fact>, v_<fact>_<value>, tri_yes, tri_no).
+ */
+export function sheetVocab(s) {
+  const labels = { id: s.sh_id, label: s.sh_label, value: s.sh_value, note: s.sh_note, valid_from: s.sh_from, valid_until: s.sh_until };
+  for (const k of Object.keys(FACTS)) labels[k] = s[`f_${k}`];
+  const values = {};
+  for (const [f, d] of Object.entries(FACTS)) {
+    if (d.type !== "enum") continue;
+    for (const v of d.values) if (s[`v_${f}_${v}`]) (values[f] ||= {})[v] = s[`v_${f}_${v}`];
+  }
+  return { labels, values, words: { yes: s.tri_yes, no: s.tri_no, or: s.sh_or } };
+}
+
+/**
+ * Names the import accepts besides keys, from the vocabularies of every language the app speaks
+ * (each {labels, words, values} as packToCsv takes them): column name -> key, value name -> key.
+ */
+export function sheetAliases(vocabs) {
+  const norm = (s) => String(s || "").trim().toLowerCase();
+  const columns = {}, values = {}, or = [...OR_WORDS], bools = { ...BOOL_WORDS };
+  for (const v of vocabs || []) {
+    for (const [k, name] of Object.entries(v.labels || {})) if (name && !(norm(name) in columns)) columns[norm(name)] = k;
+    for (const [f, m] of Object.entries(v.values || {})) for (const [k, name] of Object.entries(m)) if (name) (values[f] ||= {})[norm(name)] = k;
+    if (v.words?.or && !or.includes(norm(v.words.or))) or.push(norm(v.words.or));
+    if (v.words?.yes) bools[norm(v.words.yes)] = true;
+    if (v.words?.no) bools[norm(v.words.no)] = false;
+  }
+  return { columns, values, or, bools };
 }
 
 // ---- import ----------------------------------------------------------------------------
@@ -144,7 +208,7 @@ function parseNumber(s, dec) {
 }
 
 /** One cell -> list of leaves, or an error text. */
-function cellLeaves(fact, raw, dec) {
+function cellLeaves(fact, raw, dec, aliases) {
   const type = FACTS[fact].type;
   const leaves = [];
   for (const partRaw of String(raw).split("&")) {
@@ -165,11 +229,11 @@ function cellLeaves(fact, raw, dec) {
     const conv = [];
     for (const v of vals) {
       if (type === "bool") {
-        const b = BOOL_WORDS[v.toLowerCase()];
+        const b = (aliases.bools || BOOL_WORDS)[v.toLowerCase()];
         if (b === undefined) return `${fact}: "${v}" should be yes or no`;
         conv.push(b);
       } else if (type === "enum") {
-        const hit = FACTS[fact].values.find((x) => x.toLowerCase() === v.toLowerCase());
+        const hit = FACTS[fact].values.find((x) => x.toLowerCase() === v.toLowerCase()) || aliases.values?.[fact]?.[v.toLowerCase()];
         if (!hit) return `${fact}: "${v}" is not one of ${FACTS[fact].values.join(", ")}`;
         conv.push(hit);
       } else conv.push(v);
@@ -183,10 +247,11 @@ function cellLeaves(fact, raw, dec) {
 
 /**
  * Read a sheet back into a pack. `base` (optional) is the pack being replaced: its domestic journal
- * list and its kind are kept when the sheet does not say otherwise. Returns {pack, errors}; the pack
- * is null when anything is wrong, and every error names its row (1-based, as Excel shows it).
+ * list and its kind are kept when the sheet does not say otherwise. `aliases` (from sheetAliases)
+ * are the column and value names accepted besides keys. Returns {pack, errors}; the pack is null when
+ * anything is wrong, and every error names its row (1-based, as Excel shows it).
  */
-export function packFromCsv(text, base = null) {
+export function packFromCsv(text, base = null, aliases = sheetAliases([])) {
   const { sep, hinted } = detectSep(text);
   const rows = parseCsv(text, sep);
   const dec = sep === "," ? "." : ",";
@@ -207,7 +272,7 @@ export function packFromCsv(text, base = null) {
       return;
     }
     if (!header) {
-      header = cells.map((c) => c.trim().toLowerCase());
+      header = cells.map((c) => { const k = c.trim().toLowerCase(); return FIXED.includes(k) || k in FACTS ? k : aliases.columns?.[k] || k; });
       const miss = ["id", "label", "value"].filter((k) => !header.includes(k));
       if (miss.length) { errors.push(`row ${line}: the header row needs the columns ${miss.join(", ")}`); header = []; }
       header.forEach((h, k) => { if (h && !FIXED.includes(h) && !(h in FACTS)) errors.push(`row ${line}: unknown column "${cells[k]}"`); });
@@ -220,11 +285,13 @@ export function packFromCsv(text, base = null) {
     const leaves = [];
     for (const [j, h] of header.entries()) {
       if (!(h in FACTS) || !(cells[j] || "").trim()) continue;
-      const got = cellLeaves(h, cells[j], dec);
+      const got = cellLeaves(h, cells[j], dec, aliases);
       if (typeof got === "string") errors.push(`row ${line}: ${got}`); else leaves.push(...got);
     }
     const g = groups.get(id) || { line, label: "", value: "", note: "", from: "", until: "", alts: [] };
-    for (const [k, v] of [["label", get("label")], ["value", get("value")], ["note", get("note")], ["from", get("valid_from")], ["until", get("valid_until")]]) {
+    // An alternative row may say "or" in its value cell instead of leaving it empty.
+    const value = groups.has(id) && (aliases.or || OR_WORDS).includes(get("value").toLowerCase()) ? "" : get("value");
+    for (const [k, v] of [["label", get("label")], ["value", value], ["note", get("note")], ["from", get("valid_from")], ["until", get("valid_until")]]) {
       if (!v) continue;
       if (g[k] && g[k] !== v) errors.push(`row ${line}: rule ${id} already has ${k === "from" || k === "until" ? `valid_${k}` : k} "${g[k]}" (row ${g.line}); repeat rows of a rule leave it empty`);
       else g[k] = v;

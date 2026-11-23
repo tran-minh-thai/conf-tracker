@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 // Browser-run tests for assets/rules.js against the sample rule packs in data/rules/.
-let R, hd, sch, hr, C, E;
+let R, hd, sch, hr, C, E, STR;
 
 const base = { kind: "journal", year: 2025, international_journal: true, issn_online: true };
 const conf = { kind: "conference", year: 2025, conference_scope: "international", full_paper: true, peer_reviewed: true, has_isbn: true };
@@ -240,10 +240,12 @@ export const tests = {
   },
   "sheet round trip: all three samples score the same on every grid case"() {
     const grid = factGrid();
+    const aliases = C.sheetAliases(Object.values(STR).map(C.sheetVocab));
     for (const pk of [hd, sch, hr]) {
-      for (const sep of [",", ";"]) {
-        const csv = C.packToCsv(pk, { sep, labels: { id: "Mã", label: "Tên mục" }, help: ["Ghi chú, có dấu phẩy; và chấm phẩy", "@ không phải cài đặt"] });
-        const { pack, errors } = C.packFromCsv(csv, pk);
+      // keys only, and names in each language (the import knows every language's names)
+      for (const [sep, vocab] of [[",", {}], [";", {}], [",", C.sheetVocab(STR.vi)], [";", C.sheetVocab(STR.en)]]) {
+        const csv = C.packToCsv(pk, { sep, ...vocab, help: ["Ghi chú, có dấu phẩy; và chấm phẩy", "@ không phải cài đặt"] });
+        const { pack, errors } = C.packFromCsv(csv, pk, aliases);
         eq(errors, []);
         eq(pack.rules.map((r) => [r.id, r.label, r.value ?? r.range]), pk.rules.map((r) => [r.id, r.label, r.value ?? r.range]));
         eq([pack.share, pack.quota, pack.period_start_month, pack.kind, pack.title], [pk.share, pk.quota, pk.period_start_month, pk.kind, pk.title]);
@@ -259,6 +261,55 @@ export const tests = {
         ok(n > 10000, `only ${n} grid cases`);
       }
     }
+  },
+  "sheet layout: only the columns a table uses, names in the page language, one way to read each row"() {
+    const vi = C.sheetVocab(STR.vi);
+    const used = (pk) => [...new Set(pk.rules.flatMap((r) => (r.manual ? [] : C.dnf(r.when).flat().map((l) => l.fact))))];
+    for (const pk of [hd, sch, hr]) {
+      const rows = C.parseCsv(C.packToCsv(pk, vi), ",");
+      const head = rows.find((r) => r[0] === vi.labels.id);
+      ok(head, `${pk.id}: no header named in Vietnamese`);
+      const facts = used(pk);
+      eq(head.length, 3 + ["note", "valid_from", "valid_until"].filter((k) => pk.rules.some((r) => (k === "note" ? r.note : r.valid?.[k.slice(6)]))).length + facts.length);
+      ok(head.length <= 16, `${pk.id}: ${head.length} columns`);
+      ok(!rows.some((r) => r[0].startsWith("# ...")), "the row of accepted values is gone");
+      ok(!rows.some((r) => r[0] === "@policy"), "the default policy is not written");
+    }
+    // alternatives say "hoặc" in the value cell; the redundant year bound of the FAIR rule is merged
+    const sheet = C.parseCsv(C.packToCsv(sch, vi), ",");
+    const h = sheet.find((r) => r[0] === vi.labels.id);
+    eq(sheet.filter((r) => r[0] === "7").map((r) => r[h.indexOf(vi.labels.value)]), ["6000000", "hoặc", "hoặc"]);
+    eq(sheet.find((r) => r[0] === "1")[h.indexOf(vi.labels.kind)], "Bài tạp chí");
+    const hs = C.parseCsv(C.packToCsv(hd, vi), ",");
+    const hh = hs.find((r) => r[0] === vi.labels.id);
+    eq(hs.find((r) => r[0] === "fair-2019")[hh.indexOf(vi.labels.year)], ">=2019");
+    // no column or value name means two different things in any language
+    const clash = [];
+    const seen = {};
+    for (const v of Object.values(STR).map(C.sheetVocab)) {
+      for (const [k, n] of Object.entries(v.labels)) { const x = n.toLowerCase(); if (seen[x] && seen[x] !== k) clash.push(n); seen[x] = k; }
+    }
+    eq(clash, []);
+    // a file written before: key header, a note row of names, empty value on alternative rows
+    const old = "\uFEFFsep=,\r\n@kind,bonus\r\n@title,Bảng cũ\r\n@source,Quy định cũ\r\n\r\nid,label,value,note,valid_from,valid_until,kind,wos_index,scopus_quartile\r\n# STT,Quy tắc,value\r\n" +
+      "5,Q2,12000000,,,,journal,,Q2\r\n5,,,,,,journal,ESCI,\r\n";
+    const back = C.packFromCsv(old, sch);
+    eq(back.errors, []);
+    eq(back.pack.rules[0].when.any.length, 2);
+  },
+  "sheet layout catches injected faults"() {
+    const vi = C.sheetVocab(STR.vi), aliases = C.sheetAliases(Object.values(STR).map(C.sheetVocab));
+    const good = C.packToCsv(sch, vi);
+    const bad = {
+      "unknown value name": good.replace(",Bài tạp chí,", ",Bài báo chí,"),
+      "unknown column name": good.replace(vi.labels.wos_index, "Web of Sciense"),
+      "a wrong word in place of hoặc": good.replace(",hoặc,", ",hoăc,"),
+    };
+    eq(C.packFromCsv(good, sch, aliases).errors, []);
+    const missed = Object.entries(bad).filter(([, csv]) => !C.packFromCsv(csv, sch, aliases).errors.length).map(([k]) => k);
+    eq(missed, []);
+    // without the aliases a sheet with names cannot be read: the aliases are what makes it work
+    ok(C.packFromCsv(good, sch).errors.length > 0, "names read without aliases");
   },
   "sheet import: Excel-style file, quoted cells, alternatives"() {
     const csv = "\uFEFF@kind;hours\r\n@title;Bảng thử\r\n@source;Quy định số 1\r\n@unit;hours\r\n@share;equal\r\n@quota;2025-09-01=150,5\r\n\r\n" +
@@ -355,8 +406,8 @@ function eq(a, b) {
 }
 function ok(c, m = "assertion failed") { if (!c) throw new Error(m); }
 
-export function run(rulesModule, packs, csvModule, editModule) {
-  R = rulesModule; hd = packs.points; sch = packs.bonus; hr = packs.hours; C = csvModule; E = editModule;
+export function run(rulesModule, packs, csvModule, editModule, strings) {
+  R = rulesModule; hd = packs.points; sch = packs.bonus; hr = packs.hours; C = csvModule; E = editModule; STR = strings;
   const results = [];
   for (const [name, fn] of Object.entries(tests)) {
     try { fn(); results.push({ name, pass: true }); } catch (e) { results.push({ name, pass: false, error: e.message }); }

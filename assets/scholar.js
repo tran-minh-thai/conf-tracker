@@ -54,8 +54,9 @@ export function fromCrossref(msg) {
   if (kind) facts.kind = kind;
   const [year, month] = firstDate(msg);
   if (year) facts.year = year;
+  // Crossref often lists only the print ISSN of a journal that also has an online one, so a
+  // print-only record leaves the online ISSN unknown; only a listed electronic ISSN counts.
   if (issnTypes.some((x) => x.type === "electronic")) facts.issn_online = true;
-  else if (issnTypes.length && issnTypes.every((x) => x.type === "print")) facts.issn_online = false;
   // Crossref often omits the ISBN of proceedings that have one, so absence is left
   // unknown for the user to confirm; only a listed ISBN counts as evidence.
   if ((msg.ISBN || []).length) facts.has_isbn = true;
@@ -124,6 +125,28 @@ export function parseSjrCsv(text, year = null) {
 }
 
 /** Facts an SJR table can supply for a publication's ISSNs, or null if none match. */
+/** ISSN -> journal record of data/journal_info.json (every ISSN of a journal points to it). */
+export function journalIndex(info) {
+  const map = new Map();
+  for (const j of Object.values(info?.journals || {})) for (const i of j.issn || []) if (!map.has(i)) map.set(i, j);
+  return map;
+}
+
+/**
+ * Facts the journal data can state for a journal article with these ISSNs:
+ * a publisher outside Vietnam makes it an international journal, and a journal with exactly
+ * two ISSNs has an online one besides the print one (more than two usually means former titles,
+ * so nothing is inferred then). Returns {} when the journal is not in the data.
+ */
+export function journalFacts(index, issns) {
+  const j = (issns || []).map((i) => index.get(fmtIssn(i))).find(Boolean);
+  if (!j) return {};
+  const out = {};
+  if (j.country && j.country !== "VN") out.international_journal = true;
+  if ((j.issn || []).length === 2) out.issn_online = true;
+  return out;
+}
+
 export function sjrFacts(sjr, issns) {
   if (!sjr || !sjr.byIssn) return null;
   for (const i of issns || []) {

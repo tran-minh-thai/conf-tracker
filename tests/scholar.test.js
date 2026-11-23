@@ -37,10 +37,26 @@ export const tests = {
     eq(S.fromCrossref({ ...PROC, ISBN: ["978-0-7695-5108-1"] }).facts.has_isbn, true);
     eq(p.doi, "10.1109/icdm.2013.148");
   },
-  "print-only ISSN means no online ISSN; unknown types give no kind"() {
-    eq(S.fromCrossref({ ...JOURNAL, "issn-type": [{ value: "1234-5678", type: "print" }] }).facts.issn_online, false);
+  "print-only ISSN leaves the online ISSN unknown; unknown types give no kind"() {
+    // EAAI: Crossref lists only the print ISSN 0952-1976, yet the journal has the online ISSN 1873-6769.
+    eq(S.fromCrossref({ ...JOURNAL, "issn-type": [{ value: "0952-1976", type: "print" }] }).facts.issn_online, undefined);
     eq(S.fromCrossref({ ...JOURNAL, "issn-type": [] }).facts.issn_online, undefined);
     eq(S.fromCrossref({ ...JOURNAL, type: "posted-content" }).facts.kind, undefined);
+  },
+  "journal data: foreign publisher means international, two ISSNs mean an online one"() {
+    const info = { journals: {
+      eaai: { issn: ["0952-1976", "1873-6769"], country: "GB" },
+      jaec: { issn: ["1859-2244", "2615-9767"], country: "VN" },
+      tkde: { issn: ["1041-4347", "1558-2191", "2326-3865"], country: "US" },
+      lone: { issn: ["1111-1111"], country: null } } };
+    const idx = S.journalIndex(info);
+    eq(S.journalFacts(idx, ["0952-1976"]), { international_journal: true, issn_online: true });
+    eq(S.journalFacts(idx, ["18736769"]), { international_journal: true, issn_online: true });
+    eq(S.journalFacts(idx, ["1859-2244"]), { issn_online: true });             // Vietnamese publisher: not stated
+    eq(S.journalFacts(idx, ["1041-4347"]), { international_journal: true });   // three ISSNs: no online inference
+    eq(S.journalFacts(idx, ["1111-1111"]), {});                                 // no country, one ISSN
+    eq(S.journalFacts(idx, ["9999-9999"]), {});                                 // not in the data
+    eq(S.journalFacts(idx, []), {});
   },
   "Scimago export: quartiles by ISSN, quotes, missing quartile"() {
     const csv = 'Rank;Sourceid;Title;Type;Issn;SJR;SJR Best Quartile\n1;123;"Journal; A";journal;"20738994, 1234567X";1,2;Q2\n2;124;Conf B;conference and proceedings;"00000001";0,1;-\n';

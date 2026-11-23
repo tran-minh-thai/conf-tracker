@@ -235,6 +235,14 @@ function channelScoresFor(text, list) {
   }
   return { scores, max };
 }
+/** Journal access and figures alone (the publications view needs them to fill facts by ISSN). */
+let journalInfoLoad = null;
+function ensureJournalInfo() {
+  if (app.journalInfo) return Promise.resolve(app.journalInfo);
+  journalInfoLoad ||= fetch("data/journal_info.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null)
+    .then((info) => { if (info && !app.journalInfo) app.journalInfo = info; journalInfoLoad = null; return app.journalInfo; });
+  return journalInfoLoad;
+}
 async function ensureJournals() {
   if (app.journalsState === "ready" || app.journalsState === "loading") return;
   app.journalsState = "loading";
@@ -1247,7 +1255,7 @@ async function init() {
   app.countryCodes = app.data.country_codes || {};
   for (const c of app.confs) app.byId.set(c.id, c);
   loadPlan();
-  pubs = createPubs({ app, store, toast, download, locale, renderView });
+  pubs = createPubs({ app, store, toast, download, locale, renderView, journalInfo: ensureJournalInfo });
   applyTexts();
   renderFilters();
   renderView();
