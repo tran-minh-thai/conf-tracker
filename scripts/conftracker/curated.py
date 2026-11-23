@@ -67,7 +67,19 @@ def parse_fees(raw, where):
         cur = str(f.get("currency", "")).strip().upper()
         if not CURRENCY.match(cur):
             raise CuratedError(f"{w}: currency must be a 3-letter code")
-        out.append({"label": str(f["label"]).strip(), "amount": amount, "currency": cur})
+        item = {"label": str(f["label"]).strip(), "amount": amount, "currency": cur}
+        if f.get("label_vi") is not None:
+            if not str(f["label_vi"]).strip():
+                raise CuratedError(f"{w}: label_vi must not be empty")
+            item["label_vi"] = str(f["label_vi"]).strip()
+        out.append(item)
+    return out
+
+
+def _deadline_out(d: dict) -> dict:
+    out = {"type": d["type"], "iso": to_utc_iso(d["dt"]), "comment": d["comment"]}
+    if d.get("comment_vi"):
+        out["comment_vi"] = d["comment_vi"]
     return out
 
 
@@ -128,7 +140,8 @@ def load_venues(path: Path, now: datetime):
             dt = parse_deadline(str(d.get("date", "")), tz)
             if dt is None:
                 raise CuratedError(f"{where} deadlines[{j}]: unreadable date {d.get('date')!r}")
-            deadlines.append({"type": d["type"], "dt": dt, "comment": str(d.get("comment") or "").strip()})
+            deadlines.append({"type": d["type"], "dt": dt, "comment": str(d.get("comment") or "").strip(),
+                              "comment_vi": str(d.get("comment_vi") or "").strip()})
         deadlines.sort(key=lambda d: d["dt"])
         if not any(d["type"] == "paper" for d in deadlines):
             raise CuratedError(f"{where}: needs a paper deadline")
@@ -152,7 +165,7 @@ def load_venues(path: Path, now: datetime):
             "url": _url(e["url"], where),
             "timezone": "AoE" if tz_label == "unstated" else tz_label,
             "tz_known": known,
-            "deadlines": [{"type": d["type"], "iso": to_utc_iso(d["dt"]), "comment": d["comment"]} for d in deadlines],
+            "deadlines": [_deadline_out(d) for d in deadlines],
             "date": str(e.get("date") or "TBD"),
             "event_start": start,
             "event_end": end,
@@ -195,7 +208,8 @@ def load_venues(path: Path, now: datetime):
             "year": base["year"] + 1,
             "status": "estimated",
             "estimated_from": base["year"],
-            "deadlines": [{"type": d["type"], "iso": to_utc_iso(d["dt"]), "comment": d["comment"]} for d in projected],
+            # Last year's notes ("extended from ...") say nothing about the estimated edition.
+            "deadlines": [{"type": d["type"], "iso": to_utc_iso(d["dt"]), "comment": ""} for d in projected],
             "date": "TBD", "event_start": None, "event_end": None, "place": "TBD", "city": "",
             # A national series stays in its country; an international one may move.
             "country": base["country"] if base["scope"] == "national" else "TBD",

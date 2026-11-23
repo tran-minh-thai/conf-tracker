@@ -8,7 +8,7 @@ import re
 from datetime import datetime
 from pathlib import Path
 
-from . import ics
+from . import ics, parsing
 from .topics import AREAS
 
 SCHEMA_VERSION = 2
@@ -206,6 +206,11 @@ def build_payload(editions, now: datetime, source_stats: dict) -> dict:
         "counts": counts,
         "source_stats": source_stats,
         "areas": AREAS,
+        # Country name -> ISO code, for showing names in the page language. Names without a code
+        # are listed so a new spelling from a source is noticed instead of shown untranslated.
+        "country_codes": parsing.COUNTRY_CODES,
+        "countries_without_code": sorted({e["country"] for e in editions}
+                                         - set(parsing.COUNTRY_CODES) - {"TBD", "Online"}),
         "conferences": editions,
     }
 

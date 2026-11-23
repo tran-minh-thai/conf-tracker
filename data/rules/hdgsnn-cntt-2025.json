@@ -1,5 +1,6 @@
 {
  "schema_version": 1,
+ "language": "vi",
  "id": "hdgsnn-cntt-2025",
  "kind": "points",
  "unit": "points",
@@ -772,5 +773,151 @@
     "Nhóm tạp chí: chọn mục này bằng tay"
    ]
   }
- ]
+ ],
+ "translations": {
+  "en": {
+   "title": "State Professorship Council (HĐGSNN) points, Information Technology, 2025",
+   "unit_label": "points (maximum)",
+   "value_note": "The document gives a range from 0 to a maximum; the field council decides the actual points. The app shows the maximum.",
+   "list_label": "Domestic journals with points",
+   "source": {
+    "document": "Decision No. 26/QĐ-HĐGSNN dated 11/7/2025 of the State Professorship Council",
+    "warning": "Transcribed from the VOJS summary, not from the original decision. Check it against the original decision before using it in an application file."
+   },
+   "ambiguities": [
+    "“SCI, SCIE and Scopus Qx”: this pack reads it literally, requiring BOTH SCI/SCIE AND Scopus Qx. If the council reads it as either condition, edit the intl-* rules.",
+    "Conference rank A*/A: the document names no ranking system; the source page says CORE is usually used, so this pack uses the CORE rank."
+   ],
+   "rules": {
+    "intl-q1-if5": {
+     "label": "SCI, SCIE and Scopus Q1, IF ≥ 5"
+    },
+    "intl-q1-if3": {
+     "label": "SCI, SCIE and Scopus Q1, IF ≥ 3"
+    },
+    "intl-q1": {
+     "label": "SCI, SCIE and Scopus Q1"
+    },
+    "intl-q2": {
+     "label": "SCI, SCIE and Scopus Q2"
+    },
+    "intl-q3": {
+     "label": "SCI, SCIE and Scopus Q3"
+    },
+    "intl-q4": {
+     "label": "Scopus Q4"
+    },
+    "intl-other-online": {
+     "label": "Other international journal with an ISSN (online)"
+    },
+    "intl-other-print": {
+     "label": "Other international journal with an ISSN (not online)"
+    },
+    "conf-astar": {
+     "label": "International conference ranked A*"
+    },
+    "conf-a": {
+     "label": "International conference ranked A"
+    },
+    "conf-other": {
+     "label": "Other international conference"
+    },
+    "national-conf": {
+     "label": "Paper at a national conference (with an ISBN from 2017)"
+    },
+    "fair-2019": {
+     "label": "FAIR paper at a national conference (with an ISBN), from 2019"
+    }
+   },
+   "list": {
+    "item-5": {
+     "publisher": "Vietnam Academy of Science and Technology",
+     "raw": "0–1.0 (0–1.25 from 2020)"
+    },
+    "item-6": {
+     "publisher": "Government Cipher Committee",
+     "raw": "0–0.5 from 2020; 0–0.75 from 2024"
+    },
+    "item-7": {
+     "publisher": "Ministry of Science and Technology",
+     "raw": "0–1.0; 0–0.5 from 2020; 0–0.75 from 2024"
+    },
+    "item-8": {
+     "publisher": "Vietnam National University, Hanoi",
+     "raw": "0–0.5; 0–0.75 from 2019; 0–1.0 from 2024"
+    },
+    "item-9": {
+     "publisher": "Radio and Electronics Association of Vietnam",
+     "raw": "0–1.0; 0–0.75 from 2019"
+    },
+    "item-10": {
+     "publisher": "Ministry of Science and Technology",
+     "raw": "0–1.0; 0–0.75 from 2020; 0–1.0 from 2024"
+    },
+    "item-11": {
+     "publisher": "Posts and Telecommunications Institute of Technology",
+     "raw": "0–0.5 from 2020; 0–0.75 from 2024"
+    },
+    "item-12": {
+     "publisher": "Vietnam Academy of Science and Technology",
+     "raw": "0–0.5; 0–0.75 from 2020; 0–1.0 from 2024 (Scopus from 2022)",
+     "notes": [
+      "In Scopus from 2022"
+     ]
+    },
+    "item-13": {
+     "publisher": "Military Technical Academy",
+     "raw": "0–0.5; 0–0.75 from 2021; 0–1.0 from 2024"
+    },
+    "item-14": {
+     "publisher": "Vietnam National University, Ho Chi Minh City",
+     "raw": "0–0.5"
+    },
+    "item-15": {
+     "publisher": "Vietnam Academy of Science and Technology",
+     "raw": "0–1.0; 0–1.25 from 2020; 0–1.0 from 2025 (ACI)",
+     "notes": [
+      "ACI"
+     ]
+    },
+    "item-16": {
+     "publisher": "Hanoi University of Science and Technology, Ho Chi Minh City University of Technology, University of Da Nang and other technical universities",
+     "raw": "0–0.5",
+     "notes": [
+      "Several ISSNs: choose this entry by hand"
+     ]
+    },
+    "item-17": {
+     "publisher": "Thai Nguyen University, Hue University, University of Da Nang, Can Tho University, Hanoi National University of Education, Ho Chi Minh City University of Education, Vinh University, Da Lat University",
+     "raw": "0–0.5",
+     "notes": [
+      "Group of journals: choose this entry by hand"
+     ]
+    },
+    "item-18": {
+     "publisher": "Academy of Military Science and Technology",
+     "raw": "0–0.5; 0–0.75 from 2024"
+    },
+    "item-19": {
+     "publisher": "Vietnam Mathematical Society",
+     "raw": "0–0.50 (0 points from 2025)"
+    },
+    "item-20": {
+     "publisher": "Vietnam Mathematical Society",
+     "raw": "0–1.0; 0–1.25 from 2020"
+    },
+    "item-21": {
+     "publisher": "Ministry of Science and Technology",
+     "raw": "0–0.5 from 2025"
+    },
+    "item-22": {
+     "publisher": "Quy Nhon University, Tra Vinh University, Nam Can Tho University, Ho Chi Minh City University of Foreign Languages and Information Technology, University of Transport Technology, Ho Chi Minh City Open University, University of Sciences (Hue University)",
+     "raw": "0–0.25 from 2025",
+     "notes": [
+      "Group of journals: choose this entry by hand"
+     ]
+    }
+   }
+  }
+ }
 }

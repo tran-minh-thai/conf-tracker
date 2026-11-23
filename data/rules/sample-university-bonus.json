@@ -1,5 +1,6 @@
 {
  "schema_version": 1,
+ "language": "vi",
  "id": "sample-university-bonus",
  "kind": "bonus",
  "unit": "VND",
@@ -332,5 +333,60 @@
    },
    "note": "Thưởng theo cá nhân, không theo bài; bảng không nêu cách chọn mức trong khoảng."
   }
- ]
+ ],
+ "translations": {
+  "en": {
+   "title": "Illustrative publication bonus table (made-up figures)",
+   "unit_label": "VND",
+   "value_note": "Each paper gets the highest level it meets. The table does not say how to split a bonus among co-authors; the app shows the full bonus of the paper.",
+   "source": {
+    "document": "Illustrative table with 12 items showing how bonuses are computed; not any university's document (made on 2026-11-22)",
+    "warning": "Made-up figures for trying the app. Load your university's current document."
+   },
+   "ambiguities": [
+    "The table does not say how to split a bonus among co-authors, so the app does not split it.",
+    "“Scopus Qx by the Scimago classification”: the table does not say whether the best quartile or the subject quartile is meant; enter the quartile your university accepts.",
+    "Item 11 uses maximum HĐGSNN points ≥ 0.75 from the HĐGSNN points pack you have chosen (your field)."
+   ],
+   "rules": {
+    "1": {
+     "label": "Article in SCI, SCIE or SSCI (WoS), IF ≥ 3.0"
+    },
+    "2": {
+     "label": "Article in SCI, SCIE or SSCI (WoS), 2.0 ≤ IF < 3.0"
+    },
+    "3": {
+     "label": "Article in SCI, SCIE or SSCI (WoS), 1.0 ≤ IF < 2.0"
+    },
+    "4": {
+     "label": "Article in a Scopus Q1 journal (Scimago)"
+    },
+    "5": {
+     "label": "SCI, SCIE or SSCI with 0 < IF < 1.0, or Scopus Q2"
+    },
+    "6": {
+     "label": "Article in a Scopus Q3 journal"
+    },
+    "7": {
+     "label": "Scopus Q4, or ESCI, or on the NAFOSTED list"
+    },
+    "8": {
+     "label": "Full paper in the proceedings of an international conference in Scopus Q4 (Scimago)"
+    },
+    "9": {
+     "label": "Full paper in the proceedings of an international conference in Scopus"
+    },
+    "10": {
+     "label": "Book chapter in ISI/Scopus or by a reputable publisher on the NAFOSTED list"
+    },
+    "11": {
+     "label": "Journal with maximum HĐGSNN points ≥ 0.75, or the university's own journal"
+    },
+    "12": {
+     "label": "Lecturer exceeding the yearly research-hour quota",
+     "note": "Paid per person, not per paper; the table does not say how a level within the range is chosen."
+    }
+   }
+  }
+ }
 }

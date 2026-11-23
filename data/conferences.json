@@ -1,6 +1,6 @@
 {
  "schema_version": 2,
- "last_updated": "2026-11-22T14:18:57+00:00",
+ "last_updated": "2026-11-23T02:06:37+00:00",
  "total": 546,
  "counts": {
   "total": 546,
@@ -52,6 +52,99 @@
   "MX": "Interdisciplinary / Emerging",
   "OT": "Outside Computing"
  },
+ "country_codes": {
+  "Argentina": "AR",
+  "Australia": "AU",
+  "Austria": "AT",
+  "Bangladesh": "BD",
+  "Barbados": "BB",
+  "Belgium": "BE",
+  "Brazil": "BR",
+  "Bulgaria": "BG",
+  "Cambodia": "KH",
+  "Canada": "CA",
+  "Chile": "CL",
+  "China": "CN",
+  "Colombia": "CO",
+  "Croatia": "HR",
+  "Cyprus": "CY",
+  "Czech Republic": "CZ",
+  "Denmark": "DK",
+  "Egypt": "EG",
+  "Estonia": "EE",
+  "Finland": "FI",
+  "France": "FR",
+  "Georgia": "GE",
+  "Germany": "DE",
+  "Greece": "GR",
+  "Guatemala": "GT",
+  "Hong Kong": "HK",
+  "Hungary": "HU",
+  "Iceland": "IS",
+  "India": "IN",
+  "Indonesia": "ID",
+  "Iran": "IR",
+  "Ireland": "IE",
+  "Israel": "IL",
+  "Italy": "IT",
+  "Japan": "JP",
+  "Jordan": "JO",
+  "Kazakhstan": "KZ",
+  "Kenya": "KE",
+  "Kuwait": "KW",
+  "Laos": "LA",
+  "Latvia": "LV",
+  "Lebanon": "LB",
+  "Lithuania": "LT",
+  "Luxembourg": "LU",
+  "Macau": "MO",
+  "Malaysia": "MY",
+  "Malta": "MT",
+  "Mexico": "MX",
+  "Monaco": "MC",
+  "Mongolia": "MN",
+  "Morocco": "MA",
+  "Myanmar": "MM",
+  "Nepal": "NP",
+  "Netherlands": "NL",
+  "New Zealand": "NZ",
+  "Nigeria": "NG",
+  "Norway": "NO",
+  "Oman": "OM",
+  "Pakistan": "PK",
+  "Panama": "PA",
+  "Peru": "PE",
+  "Philippines": "PH",
+  "Poland": "PL",
+  "Portugal": "PT",
+  "Qatar": "QA",
+  "Romania": "RO",
+  "Russia": "RU",
+  "Saudi Arabia": "SA",
+  "Serbia": "RS",
+  "Singapore": "SG",
+  "Slovakia": "SK",
+  "Slovenia": "SI",
+  "South Africa": "ZA",
+  "South Korea": "KR",
+  "Spain": "ES",
+  "Sri Lanka": "LK",
+  "Sweden": "SE",
+  "Switzerland": "CH",
+  "Taiwan": "TW",
+  "Thailand": "TH",
+  "Tunisia": "TN",
+  "Turkey": "TR",
+  "UAE": "AE",
+  "UK": "GB",
+  "USA": "US",
+  "Ukraine": "UA",
+  "Uruguay": "UY",
+  "Uzbekistan": "UZ",
+  "Vatican City": "VA",
+  "Vietnam": "VN"
+ },
+ "countries_without_code": [],
  "conferences": [
   {
    "id": "sigmod27",
@@ -1573,8 +1666,8 @@
    "event_start": "2027-05-17",
    "event_end": "2027-05-19",
    "place": "MONTREAL, CANADA",
-   "city": "MONTREAL",
-   "country": "CANADA",
+   "city": "Montreal",
+   "country": "Canada",
    "mode": "in-person",
    "status": "confirmed",
    "estimated_from": null,
@@ -2018,7 +2111,7 @@
    "event_start": "2027-06-07",
    "event_end": "2027-06-10",
    "place": "Atlanta, Georgia, USA",
-   "city": "Georgia",
+   "city": "Atlanta",
    "country": "USA",
    "mode": "in-person",
    "status": "confirmed",
@@ -2082,8 +2175,8 @@
    "event_start": "2027-01-10",
    "event_end": "2027-01-16",
    "place": "Mexico City",
-   "city": "",
-   "country": "Mexico City",
+   "city": "Mexico City",
+   "country": "Mexico",
    "mode": "in-person",
    "status": "confirmed",
    "estimated_from": null,
@@ -2428,7 +2521,7 @@
    "event_end": "2027-03-24",
    "place": "Salt Lake City, Utah",
    "city": "Salt Lake City",
-   "country": "Utah",
+   "country": "USA",
    "mode": "in-person",
    "status": "confirmed",
    "estimated_from": null,
@@ -2649,7 +2742,7 @@
    "event_start": "2027-03-20",
    "event_end": "2027-03-24",
    "place": "Salt Lake City, Utah, USA",
-   "city": "Utah",
+   "city": "Salt Lake City",
    "country": "USA",
    "mode": "in-person",
    "status": "confirmed",
@@ -4416,12 +4509,14 @@
     {
      "type": "abstract",
      "iso": "2026-09-21T11:59:59Z",
-     "comment": "extended from 2026-09-09"
+     "comment": "extended from 2026-09-09",
+     "comment_vi": "đã gia hạn từ 2026-09-09"
     },
     {
      "type": "paper",
      "iso": "2026-09-21T11:59:59Z",
-     "comment": "extended from 2026-09-16"
+     "comment": "extended from 2026-09-16",
+     "comment_vi": "đã gia hạn từ 2026-09-16"
     },
     {
      "type": "notification",
@@ -4701,7 +4796,7 @@
    "event_start": "2027-03-09",
    "event_end": "2027-03-12",
    "place": "Richmond, Virginia, United States",
-   "city": "Virginia",
+   "city": "Richmond",
    "country": "USA",
    "mode": "in-person",
    "status": "confirmed",
@@ -5851,7 +5946,7 @@
    "event_start": "2027-03-23",
    "event_end": "2027-03-26",
    "place": "Snowbird, Utah, United States",
-   "city": "Utah",
+   "city": "Snowbird",
    "country": "USA",
    "mode": "in-person",
    "status": "confirmed",
@@ -7273,7 +7368,7 @@
    "event_start": "2027-06-06",
    "event_end": "2027-06-11",
    "place": "Atlanta, Georgia, USA",
-   "city": "Georgia",
+   "city": "Atlanta",
    "country": "USA",
    "mode": "in-person",
    "status": "confirmed",
@@ -7424,7 +7519,7 @@
    "event_start": "2027-07-19",
    "event_end": "2027-07-21",
    "place": "Durham, England, United Kingdom",
-   "city": "England",
+   "city": "Durham",
    "country": "UK",
    "mode": "in-person",
    "status": "confirmed",
@@ -7487,7 +7582,7 @@
    "event_start": "2027-05-17",
    "event_end": "2027-05-20",
    "place": "Boulder, Colorado, USA",
-   "city": "Colorado",
+   "city": "Boulder",
    "country": "USA",
    "mode": "in-person",
    "status": "confirmed",
@@ -7615,7 +7710,7 @@
    "event_end": "2027-05-20",
    "place": "Boulder, Colorado",
    "city": "Boulder",
-   "country": "Colorado",
+   "country": "USA",
    "mode": "in-person",
    "status": "confirmed",
    "estimated_from": null,
@@ -7709,7 +7804,7 @@
    "event_start": "2027-06-05",
    "event_end": "2027-06-09",
    "place": "Atlanta, Georgia, USA",
-   "city": "Georgia",
+   "city": "Atlanta",
    "country": "USA",
    "mode": "in-person",
    "status": "confirmed",
@@ -8109,7 +8204,7 @@
    "event_start": "2027-06-05",
    "event_end": "2027-06-11",
    "place": "Atlanta, Georgia, USA",
-   "city": "Georgia",
+   "city": "Atlanta",
    "country": "USA",
    "mode": "in-person",
    "status": "confirmed",
@@ -10447,48 +10542,6 @@
    "checked": null
   },
   {
-   "id": "wikicfp_cisse2026",
-   "acronym": "CISSE",
-   "full_name": "IEEE 2026 8th International Conference on Communications, Information System and Software Engineering",
-   "year": 2026,
-   "kind": "conference",
-   "sub": "SE",
-   "topic": "Software Engineering",
-   "rank": {
-    "ccf": null,
-    "core": null,
-    "thcpl": null
-   },
-   "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=203864&copyownerid=182680",
-   "timezone": "AoE",
-   "tz_known": false,
-   "deadlines": [
-    {
-     "type": "paper",
-     "iso": "2026-11-28T11:59:59Z",
-     "comment": ""
-    }
-   ],
-   "date": "Dec 18, 2026 - Dec 20, 2026",
-   "event_start": "2026-12-18",
-   "event_end": "2026-12-20",
-   "place": "Guangzhou, China",
-   "city": "Guangzhou",
-   "country": "China",
-   "mode": "in-person",
-   "status": "confirmed",
-   "estimated_from": null,
-   "accept_rates": [],
-   "source": "wikicfp",
-   "wikicfp_category": "software engineering",
-   "scope": "international",
-   "fees": null,
-   "keywords": [],
-   "publisher": null,
-   "checked": null
-  },
-  {
    "id": "conext27",
    "acronym": "CoNEXT",
    "full_name": "International Conference on Emerging Networking Experiments and Technologies",
@@ -10508,12 +10561,12 @@
    "deadlines": [
     {
      "type": "abstract",
-     "iso": "2026-11-28T11:59:59Z",
+     "iso": "2026-11-28T11:59:00Z",
      "comment": "December Cycle"
     },
     {
      "type": "paper",
-     "iso": "2026-12-05T11:59:59Z",
+     "iso": "2026-12-05T11:59:00Z",
      "comment": "December Cycle"
     },
     {
@@ -10558,6 +10611,48 @@
    "checked": null
   },
   {
+   "id": "wikicfp_cisse2026",
+   "acronym": "CISSE",
+   "full_name": "IEEE 2026 8th International Conference on Communications, Information System and Software Engineering",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "SE",
+   "topic": "Software Engineering",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=203864&copyownerid=182680",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-28T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 18, 2026 - Dec 20, 2026",
+   "event_start": "2026-12-18",
+   "event_end": "2026-12-20",
+   "place": "Guangzhou, China",
+   "city": "Guangzhou",
+   "country": "China",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "software engineering",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
    "id": "mobisys27",
    "acronym": "MobiSys",
    "full_name": "ACM International Conference on Mobile Systems, Applications, and Services",
@@ -10578,17 +10673,22 @@
     {
      "type": "abstract",
      "iso": "2026-11-28T11:59:59Z",
-     "comment": ""
+     "comment": "Acceptance is conditional on shepherding. March 6 is date-only; clock and time zone are repository defaults."
     },
     {
      "type": "paper",
      "iso": "2026-12-05T11:59:59Z",
-     "comment": ""
+     "comment": "Acceptance is conditional on shepherding. March 6 is date-only; clock and time zone are repository defaults."
     },
     {
      "type": "rebuttal",
      "iso": "2027-02-13T11:59:59Z",
-     "comment": ""
+     "comment": "Acceptance is conditional on shepherding. March 6 is date-only; clock and time zone are repository defaults."
+    },
+    {
+     "type": "notification",
+     "iso": "2027-03-07T11:59:59Z",
+     "comment": "Acceptance is conditional on shepherding. March 6 is date-only; clock and time zone are repository defaults."
     }
    ],
    "date": "June 21-25, 2027",
@@ -10780,7 +10880,12 @@
     {
      "type": "paper",
      "iso": "2026-12-01T04:59:59Z",
-     "comment": ""
+     "comment": "Acceptance results: February 15 (date-only; AoE end-of-day default converted to UTC-5)."
+    },
+    {
+     "type": "notification",
+     "iso": "2027-02-16T11:59:59Z",
+     "comment": "Acceptance results: February 15 (date-only; AoE end-of-day default converted to UTC-5)."
     }
    ],
    "date": "May 5-7, 2027",
@@ -11031,7 +11136,7 @@
    "event_start": "2027-03-22",
    "event_end": "2027-03-23",
    "place": "New Orleans, Louisiana, USA",
-   "city": "Louisiana",
+   "city": "New Orleans",
    "country": "USA",
    "mode": "in-person",
    "status": "confirmed",
@@ -11088,7 +11193,7 @@
    "event_start": "2027-06-14",
    "event_end": "2027-06-17",
    "place": "Fort Collins, Colorado, USA",
-   "city": "Colorado",
+   "city": "Fort Collins",
    "country": "USA",
    "mode": "in-person",
    "status": "confirmed",
@@ -11250,42 +11355,50 @@
      {
       "label": "Author (reviewer), without ACM APC",
       "amount": 450.0,
-      "currency": "USD"
+      "currency": "USD",
+      "label_vi": "Tác giả (là người phản biện), chưa gồm phí ACM APC"
      },
      {
       "label": "Author (student), without ACM APC",
       "amount": 480.0,
-      "currency": "USD"
+      "currency": "USD",
+      "label_vi": "Tác giả (sinh viên), chưa gồm phí ACM APC"
      },
      {
       "label": "Author (regular), without ACM APC",
       "amount": 520.0,
-      "currency": "USD"
+      "currency": "USD",
+      "label_vi": "Tác giả (thông thường), chưa gồm phí ACM APC"
      },
      {
       "label": "Vietnamese author, without ACM APC",
       "amount": 350.0,
-      "currency": "USD"
+      "currency": "USD",
+      "label_vi": "Tác giả Việt Nam, chưa gồm phí ACM APC"
      },
      {
       "label": "ACM APC per paper, lower-middle-income country",
       "amount": 200.0,
-      "currency": "USD"
+      "currency": "USD",
+      "label_vi": "Phí ACM APC mỗi bài, nước thu nhập trung bình thấp"
      },
      {
       "label": "ACM APC per paper, regular",
       "amount": 400.0,
-      "currency": "USD"
+      "currency": "USD",
+      "label_vi": "Phí ACM APC mỗi bài, mức thông thường"
      },
      {
       "label": "Presentation only (no paper)",
       "amount": 400.0,
-      "currency": "USD"
+      "currency": "USD",
+      "label_vi": "Chỉ trình bày (không đăng bài)"
      },
      {
       "label": "Listener",
       "amount": 320.0,
-      "currency": "USD"
+      "currency": "USD",
+      "label_vi": "Người dự"
      }
     ],
     "url": "https://www.iciit.org/reg.html",
@@ -11409,8 +11522,8 @@
    "event_start": "2027-04-05",
    "event_end": "2027-04-08",
    "place": "Panama City",
-   "city": "",
-   "country": "Panama City",
+   "city": "Panama City",
+   "country": "Panama",
    "mode": "in-person",
    "status": "confirmed",
    "estimated_from": null,
@@ -11666,11 +11779,11 @@
      "comment": ""
     }
    ],
-   "date": "June 5-11, 2027",
+   "date": "June 5-8, 2027",
    "event_start": "2027-06-05",
-   "event_end": "2027-06-11",
+   "event_end": "2027-06-08",
    "place": "Atlanta, Georgia, USA",
-   "city": "Georgia",
+   "city": "Atlanta",
    "country": "USA",
    "mode": "in-person",
    "status": "confirmed",
@@ -11911,7 +12024,7 @@
    "event_start": "2027-03-20",
    "event_end": "2027-03-21",
    "place": "Salt Lake City, Utah, USA",
-   "city": "Utah",
+   "city": "Salt Lake City",
    "country": "USA",
    "mode": "in-person",
    "status": "confirmed",
@@ -13277,12 +13390,14 @@
     {
      "type": "paper",
      "iso": "2026-12-16T11:59:59Z",
-     "comment": "extended from 2026-11-15"
+     "comment": "extended from 2026-11-15",
+     "comment_vi": "đã gia hạn từ 2026-11-15"
     },
     {
      "type": "notification",
      "iso": "2027-01-16T11:59:59Z",
-     "comment": "extended from 2027-01-10"
+     "comment": "extended from 2027-01-10",
+     "comment_vi": "đã gia hạn từ 2027-01-10"
     }
    ],
    "date": "Apr 8-9, 2027",
@@ -14248,7 +14363,7 @@
    "event_start": "2027-05-10",
    "event_end": "2027-05-11",
    "place": "Provo, Utah, USA",
-   "city": "Utah",
+   "city": "Provo",
    "country": "USA",
    "mode": "in-person",
    "status": "confirmed",
@@ -15868,7 +15983,7 @@
    "event_start": "2027-07-13",
    "event_end": "2027-07-16",
    "place": "Boston, Massachusetts, USA",
-   "city": "Massachusetts",
+   "city": "Boston",
    "country": "USA",
    "mode": "in-person",
    "status": "confirmed",
@@ -17119,7 +17234,7 @@
    "event_end": "2027-06-17",
    "place": "Fort Collins, Colorado",
    "city": "Fort Collins",
-   "country": "Colorado",
+   "country": "USA",
    "mode": "in-person",
    "status": "confirmed",
    "estimated_from": null,
@@ -17688,7 +17803,7 @@
    "event_start": "2027-08-08",
    "event_end": "2027-08-10",
    "place": "Denver, Colorado, USA",
-   "city": "Colorado",
+   "city": "Denver",
    "country": "USA",
    "mode": "in-person",
    "status": "estimated",
@@ -18543,7 +18658,7 @@
    "event_start": "2027-07-25",
    "event_end": "2027-07-28",
    "place": "Edinburgh, Scotland, UK",
-   "city": "Scotland",
+   "city": "Edinburgh",
    "country": "UK",
    "mode": "in-person",
    "status": "confirmed",
@@ -25182,7 +25297,7 @@
     {
      "type": "notification",
      "iso": "2027-07-07T11:59:59Z",
-     "comment": "extended from 2026-06-30"
+     "comment": ""
     }
    ],
    "date": "TBD",
@@ -31387,12 +31502,12 @@
     {
      "type": "paper",
      "iso": "2027-08-16T11:59:59Z",
-     "comment": "full paper, extended"
+     "comment": ""
     },
     {
      "type": "notification",
      "iso": "2027-09-16T11:59:59Z",
-     "comment": "acceptance for the proceedings"
+     "comment": ""
     }
    ],
    "date": "TBD",
@@ -32611,7 +32726,7 @@
     {
      "type": "paper",
      "iso": "2027-09-16T11:59:59Z",
-     "comment": "extended from 2026-08-31; hard deadline"
+     "comment": ""
     }
    ],
    "date": "TBD",
@@ -33067,12 +33182,12 @@
     {
      "type": "abstract",
      "iso": "2027-09-21T11:59:59Z",
-     "comment": "extended from 2026-09-09"
+     "comment": ""
     },
     {
      "type": "paper",
      "iso": "2027-09-21T11:59:59Z",
-     "comment": "extended from 2026-09-16"
+     "comment": ""
     },
     {
      "type": "notification",

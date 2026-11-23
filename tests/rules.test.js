@@ -8,6 +8,38 @@ const bonus = (facts) => R.scoreWithPacks({ points: hd, bonus: sch }, facts).bon
 const points = (facts) => R.scorePublication(hd, facts);
 
 export const tests = {
+  "translations: English text for both samples, numbers kept"() {
+    for (const pk of [hd, sch]) {
+      eq(pk.language, "vi");
+      const en = R.localizePack(pk, "en");
+      ok(en.inLang, "English text applied");
+      ok(en.rules.every((r) => !/[\u0300-\u036f]|[\u0110\u0111]/.test(r.label.normalize("NFD").replace(/H\u0110GSNN/g, ""))), "a rule label is still Vietnamese");
+      eq(R.localizePack(pk, "vi").inLang, true);
+      eq(R.localizePack(pk, "vi").title, pk.title);
+      eq(R.localizePack(pk, "fr").inLang, false);
+      // Scoring reads conditions, not text: same results in both languages.
+      eq(R.scorePublication(en, { ...base, wos_index: "SCIE", scopus_quartile: "Q1", impact_factor: 6 }).value,
+         R.scorePublication(pk, { ...base, wos_index: "SCIE", scopus_quartile: "Q1", impact_factor: 6 }).value);
+    }
+    eq(R.localizePack(hd, "en").list.find((e) => e.id === "item-12").raw, "0\u20130.5; 0\u20130.75 from 2020; 0\u20131.0 from 2024 (Scopus from 2022)");
+  },
+  "translation checker catches injected faults"() {
+    const broken = (f) => { const p = JSON.parse(JSON.stringify(hd)); f(p.translations.en, p); return R.checkTranslations(p).length > 0; };
+    const faults = {
+      "changed threshold": (t) => { t.rules["intl-q1-if5"].label = "SCI, SCIE and Scopus Q1, IF \u2265 4"; },
+      "dropped year": (t) => { t.list["item-6"].raw = "0\u20130.5 from 2020; 0\u20130.75"; },
+      "unknown rule id": (t) => { t.rules["no-such-rule"] = { label: "x" }; },
+      "unknown list id": (t) => { t.list["item-99"] = { raw: "0" }; },
+      "missing ambiguity": (t) => { t.ambiguities.pop(); },
+      "empty title": (t) => { t.title = " "; },
+      "bad language code": (t, p) => { p.translations.english = t; },
+      "note without original": (t) => { t.rules["intl-q1"].note = "extra"; },
+      "decimal changed in document": (t) => { t.source.document = t.source.document.replace("2025", "2024"); },
+    };
+    const missed = Object.entries(faults).filter(([, f]) => !broken(f)).map(([k]) => k);
+    eq(missed, []);
+    eq(R.numbersIn("0\u20131,25 t\u1eeb 2020"), R.numbersIn("0\u20131.25 from 2020"));
+  },
   "both sample packs are valid"() {
     eq(R.checkPack(hd), []);
     eq(R.checkPack(sch), []);

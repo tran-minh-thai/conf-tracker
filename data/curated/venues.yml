@@ -20,14 +20,14 @@
   publisher: "ACM ICPS"
   keywords: [intelligent information technology, information systems]
   fees:
-    - {label: "Author (reviewer), without ACM APC", amount: 450, currency: USD}
-    - {label: "Author (student), without ACM APC", amount: 480, currency: USD}
-    - {label: "Author (regular), without ACM APC", amount: 520, currency: USD}
-    - {label: "Vietnamese author, without ACM APC", amount: 350, currency: USD}
-    - {label: "ACM APC per paper, lower-middle-income country", amount: 200, currency: USD}
-    - {label: "ACM APC per paper, regular", amount: 400, currency: USD}
-    - {label: "Presentation only (no paper)", amount: 400, currency: USD}
-    - {label: "Listener", amount: 320, currency: USD}
+    - {label: "Author (reviewer), without ACM APC", label_vi: "Tác giả (là người phản biện), chưa gồm phí ACM APC", amount: 450, currency: USD}
+    - {label: "Author (student), without ACM APC", label_vi: "Tác giả (sinh viên), chưa gồm phí ACM APC", amount: 480, currency: USD}
+    - {label: "Author (regular), without ACM APC", label_vi: "Tác giả (thông thường), chưa gồm phí ACM APC", amount: 520, currency: USD}
+    - {label: "Vietnamese author, without ACM APC", label_vi: "Tác giả Việt Nam, chưa gồm phí ACM APC", amount: 350, currency: USD}
+    - {label: "ACM APC per paper, lower-middle-income country", label_vi: "Phí ACM APC mỗi bài, nước thu nhập trung bình thấp", amount: 200, currency: USD}
+    - {label: "ACM APC per paper, regular", label_vi: "Phí ACM APC mỗi bài, mức thông thường", amount: 400, currency: USD}
+    - {label: "Presentation only (no paper)", label_vi: "Chỉ trình bày (không đăng bài)", amount: 400, currency: USD}
+    - {label: "Listener", label_vi: "Người dự", amount: 320, currency: USD}
   fees_url: https://www.iciit.org/reg.html
   checked: 2026-11-22
 
@@ -87,8 +87,8 @@
   url: https://fjcai.vn/
   timezone: unstated
   deadlines:
-    - {type: paper, date: "2026-12-15", comment: "extended from 2026-11-15"}
-    - {type: notification, date: "2027-01-15", comment: "extended from 2027-01-10"}
+    - {type: paper, date: "2026-12-15", comment: "extended from 2026-11-15", comment_vi: "đã gia hạn từ 2026-11-15"}
+    - {type: notification, date: "2027-01-15", comment: "extended from 2027-01-10", comment_vi: "đã gia hạn từ 2027-01-10"}
   date: "Apr 8-9, 2027"
   place: "Da Nang, Vietnam"
   keywords: [artificial intelligence]
@@ -102,8 +102,8 @@
   url: https://soict.org/
   timezone: unstated
   deadlines:
-    - {type: abstract, date: "2026-09-20", comment: "extended from 2026-09-09"}
-    - {type: paper, date: "2026-09-20", comment: "extended from 2026-09-16"}
+    - {type: abstract, date: "2026-09-20", comment: "extended from 2026-09-09", comment_vi: "đã gia hạn từ 2026-09-09"}
+    - {type: paper, date: "2026-09-20", comment: "extended from 2026-09-16", comment_vi: "đã gia hạn từ 2026-09-16"}
     - {type: notification, date: "2026-10-18"}
   date: "Dec 4-5, 2026"
   place: "Ho Chi Minh City, Vietnam"
@@ -117,7 +117,7 @@
   url: https://rivf2026.org/
   timezone: unstated
   deadlines:
-    - {type: paper, date: "2026-09-15", comment: "extended from 2026-08-31; hard deadline"}
+    - {type: paper, date: "2026-09-15", comment: "extended from 2026-08-31; hard deadline", comment_vi: "đã gia hạn từ 2026-08-31; hạn cuối, không gia hạn thêm"}
   date: "TBD"
   place: "TBD"
   checked: 2026-11-22
@@ -158,8 +158,8 @@
   url: https://vnict.vn/
   timezone: unstated
   deadlines:
-    - {type: paper, date: "2026-08-15", comment: "full paper, extended"}
-    - {type: notification, date: "2026-09-15", comment: "acceptance for the proceedings"}
+    - {type: paper, date: "2026-08-15", comment: "full paper, extended", comment_vi: "toàn văn, đã gia hạn"}
+    - {type: notification, date: "2026-09-15", comment: "acceptance for the proceedings", comment_vi: "kết quả nhận đăng kỷ yếu"}
   date: "Nov 7-8, 2026"
   place: "Hanoi, Vietnam"
   checked: 2026-11-22
@@ -174,7 +174,7 @@
   deadlines:
     - {type: abstract, date: "2026-05-10"}
     - {type: paper, date: "2026-05-15"}
-    - {type: notification, date: "2026-07-06", comment: "extended from 2026-06-30"}
+    - {type: notification, date: "2026-07-06", comment: "extended from 2026-06-30", comment_vi: "đã gia hạn từ 2026-06-30"}
   date: "Aug 13-14, 2026"
   place: "Hue, Vietnam"
   checked: 2026-11-22

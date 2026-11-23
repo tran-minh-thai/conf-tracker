@@ -72,6 +72,30 @@ function detectLang() {
 }
 const locale = () => (app.lang === "vi" ? "vi-VN" : "en-GB");
 const areaName = (code) => AREA_NAMES[app.lang]?.[code] || app.areas[code] || code;
+/** A deadline note in the page language: our own Vietnamese text when the data has it; otherwise
+ * the venue page's English note, marked on the Vietnamese page as quoted from that page. */
+function deadlineNote(d) {
+  if (app.lang === "vi" && d.comment_vi) return ` <span class="cmt">· ${h(d.comment_vi)}</span>`;
+  if (!d.comment) return "";
+  return app.lang === "en" ? ` <span class="cmt">· ${h(d.comment)}</span>`
+    : ` <span class="cmt">· ${h(app.t("sourceNote"))}: <q lang="en">${h(d.comment)}</q></span>`;
+}
+/** A fee label in the page language, marked as quoted when only the venue's English text exists. */
+function feeLabel(f) {
+  if (app.lang === "vi" && f.label_vi) return h(f.label_vi);
+  return app.lang === "en" ? h(f.label) : `<q lang="en">${h(f.label)}</q>`;
+}
+/** A country name from the data, shown in the page language through its ISO code; values stay English. */
+const regionNames = {};
+function countryName(name) {
+  const code = app.countryCodes?.[name];
+  if (!code) return name;
+  try {
+    regionNames[app.lang] ||= new Intl.DisplayNames([locale()], { type: "region" });
+    return regionNames[app.lang].of(code) || name;
+  } catch { return name; }
+}
+const byCountryName = (a, b) => countryName(a).localeCompare(countryName(b), locale());
 
 // ---- URL hash: #view?filters ----------------------------------------------
 function readHash() {
@@ -102,14 +126,14 @@ function saveLocation(loc) {
 }
 function renderLocation() {
   const t = app.t, l = app.loc;
-  const label = l.country ? `📍 ${[l.city, l.country].filter(Boolean).join(", ")}` : `📍 ${t("locUnknown")}`;
+  const label = l.country ? `📍 ${[l.city, countryName(l.country)].filter(Boolean).join(", ")}` : `📍 ${t("locUnknown")}`;
   $("#btn-loc").textContent = label;
   $("#btn-loc").title = l.source ? `${t("locTitle")}: ${t({ timezone: "locDetected", precise: "locPrecise", manual: "locManual" }[l.source])}` : t("locTitle");
 }
 function openLocationDialog() {
   const t = app.t;
   const countries = [...new Set([...app.confs.map((c) => c.country), ...CITIES.map((c) => c[1])])]
-    .filter((c) => c && c !== "TBD" && c !== "Online").sort((a, b) => a.localeCompare(b));
+    .filter((c) => c && c !== "TBD" && c !== "Online").sort(byCountryName);
   $("#loc-title").textContent = t("locTitle");
   $("#loc-note").textContent = t("locPreciseNote");
   $("#loc-precise").textContent = `🎯 ${t("locUsePrecise")}`;
@@ -118,7 +142,7 @@ function openLocationDialog() {
   $("#loc-country-label").textContent = t("country");
   $("#loc-city-label").textContent = t("city");
   $("#loc-country").innerHTML = `<option value="">—</option>` +
-    countries.map((c) => `<option ${c === app.loc.country ? "selected" : ""}>${h(c)}</option>`).join("");
+    countries.map((c) => `<option value="${h(c)}" ${c === app.loc.country ? "selected" : ""}>${h(countryName(c))}</option>`).join("");
   fillLocCities(app.loc.country, app.loc.city);
   $("#loc-status").textContent = "";
   $("#dlg-loc").showModal();
@@ -407,7 +431,7 @@ function renderFilters() {
     `<button type="button" class="chip" data-radio="${field}" data-value="${h(value)}" aria-pressed="${s[field] === value}" ${disabled ? "disabled" : ""}>${h(label)}</button>`;
   const check = (key, label) =>
     `<label class="check"><input type="checkbox" data-bool="${key}" ${s[key] ? "checked" : ""}/> <span>${h(label)}</span></label>`;
-  const countries = [...new Set(app.confs.map((c) => c.country).filter((c) => c && c !== "TBD"))].sort((a, b) => a.localeCompare(b));
+  const countries = [...new Set(app.confs.map((c) => c.country).filter((c) => c && c !== "TBD"))].sort(byCountryName);
   if (home && !countries.includes(home)) countries.push(home);
   const ordered = home ? [home, ...countries.filter((c) => c !== home)] : countries;
   const cityCountry = s.country || (s.where === "home" ? home : "");
@@ -433,7 +457,7 @@ function renderFilters() {
       <legend>${h(t("where"))}</legend>
       <div class="chips">
         ${radio("where", "", t("whereAll"))}
-        ${radio("where", "home", t("whereHome", { country: home || "…" }), !home)}
+        ${radio("where", "home", t("whereHome", { country: home ? countryName(home) : "…" }), !home)}
         ${radio("where", "abroad", t("whereAbroad"), !home)}
       </div>
       ${home ? "" : `<p class="hint">${h(t("whereNeedsLoc"))}</p>`}
@@ -444,7 +468,7 @@ function renderFilters() {
       <label class="field">${h(t("country"))}
         <select data-field="country">
           <option value="">${h(t("allCountries"))}</option>
-          ${ordered.map((c) => `<option value="${h(c)}" ${s.country === c ? "selected" : ""}>${c === home ? "📍 " : ""}${h(c)}</option>`).join("")}
+          ${ordered.map((c) => `<option value="${h(c)}" ${s.country === c ? "selected" : ""}>${c === home ? "📍 " : ""}${h(c === "Online" ? t("modeOnline") : countryName(c))}</option>`).join("")}
         </select>
       </label>
       ${cityCountry ? `<label class="field">${h(t("city"))}
@@ -497,7 +521,7 @@ function deadlineRows(c, now) {
       <span class="dtype">${h(app.t(d.type))}</span>
       <span><span class="when">${h(formatInZone(d.iso, c.timezone, locale()))}</span>
         <small>${h(formatLocal(d.iso, locale()))} (${h(app.t("yourTime"))})</small>
-        ${d.comment ? ` <span class="cmt">· ${h(d.comment)}</span>` : ""}</span>
+        ${deadlineNote(d)}</span>
     </li>`;
   }).join("");
 }
@@ -509,7 +533,7 @@ function trimDeadlines(list, now) {
 function summaryRow(c) {
   const t = app.t;
   const when = formatEventRange(c, locale()) || t("modeTbd");
-  const place = [c.city && c.city !== c.country ? c.city : "", c.country !== "TBD" && c.country !== "Online" ? c.country : ""]
+  const place = [c.city && c.city !== c.country ? c.city : "", c.country !== "TBD" && c.country !== "Online" ? countryName(c.country) : ""]
     .filter(Boolean).join(", ");
   const placeText = `${place || (c.mode === "online" ? t("modeOnline") : t("modeTbd"))}${c.mode === "hybrid" ? ` · ${t("modeHybrid")}` : ""}`;
   const home = app.loc.country && c.country === app.loc.country;
@@ -583,7 +607,7 @@ function detailsHtml(c) {
     ${c.status === "estimated" ? `<div>⚠️ ${h(t("estimatedNote"))}</div>` : ""}
     ${fees.length ? `<div><strong>${h(t("summaryFees"))}</strong> (${h(t("feesChecked", { date: c.fees.checked }))},
       <a href="${h(safeUrl(c.fees.url))}" target="_blank" rel="noopener">${h(t("feesSource"))}</a>)
-      <ul class="fees">${fees.map((f) => `<li>${h(f.label)}: ${h(new Intl.NumberFormat(locale()).format(f.amount))} ${h(f.currency)}</li>`).join("")}</ul></div>` : ""}
+      <ul class="fees">${fees.map((f) => `<li>${feeLabel(f)}: ${h(new Intl.NumberFormat(locale()).format(f.amount))} ${h(f.currency)}</li>`).join("")}</ul></div>` : ""}
     ${rates.length ? `<div><strong>${h(t("acceptanceHistory"))}</strong>
       <div class="rates">${rates.map((r) => `<span class="rate-bar" title="${h(r.accepted ?? "?")}/${h(r.submitted ?? "?")}">
         ${(r.rate * 100).toFixed(1)}%<i style="height:${Math.round((r.rate / max) * 46) + 4}px"></i>${h(r.year)}</span>`).join("")}</div></div>` : ""}
@@ -1092,6 +1116,7 @@ async function init() {
     for (const v of Object.values(ws)) app.watch[String(v.acronym || "").toUpperCase()] = v;
   } catch { /* the watch status is optional */ }
   app.areas = app.data.areas || {};
+  app.countryCodes = app.data.country_codes || {};
   for (const c of app.confs) app.byId.set(c.id, c);
   loadPlan();
   pubs = createPubs({ app, store, toast, download, locale, renderView });

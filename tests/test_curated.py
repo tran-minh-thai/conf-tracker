@@ -129,3 +129,18 @@ def test_merge_curated_replaces_estimate_and_keeps_confirmed(tmp_path):
     out, stats = build.merge_curated([conf], cur)
     assert stats["curated_skipped_confirmed"] == 1 and out == [conf]
     assert conf["fees"]["items"][0]["amount"] == 350.0  # fees carried over
+
+
+def test_vietnamese_text_is_carried_and_estimates_drop_old_notes(tmp_path):
+    v = {**VENUE, "fees": [{"label": "Regular", "label_vi": "Th\u01b0\u1eddng", "amount": 350, "currency": "USD"}],
+         "deadlines": [{"type": "paper", "date": "2026-12-15", "comment": "extended from 2026-12-01",
+                        "comment_vi": "\u0111\u00e3 gia h\u1ea1n t\u1eeb 2026-12-01"}]}
+    e = curated.load_venues(write(tmp_path, "venues.yml", [v]), NOW)[0][0]
+    assert e["fees"]["items"][0]["label_vi"] == "Th\u01b0\u1eddng"
+    assert e["deadlines"][0]["comment_vi"] == "\u0111\u00e3 gia h\u1ea1n t\u1eeb 2026-12-01"
+    assert "comment_vi" not in curated.load_venues(write(tmp_path, "v2.yml", [VENUE]), NOW)[0][0]["deadlines"][0]
+    past = {**NATIONAL, "deadlines": [{"type": "paper", "date": "2026-03-15", "comment": "extended from 2026-03-01"}]}
+    est = curated.load_venues(write(tmp_path, "v3.yml", [past]), NOW)[0][0]
+    assert est["status"] == "estimated" and est["deadlines"][0]["comment"] == ""
+    with pytest.raises(curated.CuratedError):
+        curated.load_venues(write(tmp_path, "v4.yml", [{**VENUE, "fees": [{"label": "x", "label_vi": " ", "amount": 1, "currency": "USD"}]}]), NOW)

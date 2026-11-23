@@ -51,7 +51,42 @@ US_STATES = {
     "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV",
     "WI", "WY", "DC",
 }
-US_STATE_NAMES = {"hawaii", "california", "texas", "new york", "washington", "florida"}
+US_STATE_NAMES = {
+    "alabama", "alaska", "arizona", "arkansas", "california", "colorado", "connecticut", "delaware",
+    "florida", "georgia", "hawaii", "idaho", "illinois", "indiana", "iowa", "kansas", "kentucky",
+    "louisiana", "maine", "maryland", "massachusetts", "michigan", "minnesota", "mississippi",
+    "missouri", "montana", "nebraska", "nevada", "new hampshire", "new jersey", "new mexico",
+    "new york", "north carolina", "north dakota", "ohio", "oklahoma", "oregon", "pennsylvania",
+    "rhode island", "south carolina", "south dakota", "tennessee", "texas", "utah", "vermont",
+    "virginia", "washington", "west virginia", "wisconsin", "wyoming", "district of columbia",
+}
+# ISO 3166 codes for the country names this pipeline produces, so each page can show the name in
+# its own language. Names come from normalize_country and from the web's location tables.
+COUNTRY_CODES = {
+    "Argentina": "AR", "Australia": "AU", "Austria": "AT", "Bangladesh": "BD", "Barbados": "BB",
+    "Belgium": "BE", "Brazil": "BR", "Bulgaria": "BG", "Cambodia": "KH", "Canada": "CA", "Chile": "CL",
+    "China": "CN", "Colombia": "CO", "Croatia": "HR", "Cyprus": "CY", "Czech Republic": "CZ",
+    "Denmark": "DK", "Egypt": "EG", "Estonia": "EE", "Finland": "FI", "France": "FR", "Georgia": "GE",
+    "Germany": "DE", "Greece": "GR", "Guatemala": "GT", "Hong Kong": "HK", "Hungary": "HU",
+    "Iceland": "IS", "India": "IN", "Indonesia": "ID", "Iran": "IR", "Ireland": "IE", "Israel": "IL",
+    "Italy": "IT", "Japan": "JP", "Jordan": "JO", "Kazakhstan": "KZ", "Kenya": "KE", "Kuwait": "KW",
+    "Laos": "LA", "Latvia": "LV", "Lebanon": "LB", "Lithuania": "LT", "Luxembourg": "LU", "Macau": "MO",
+    "Malaysia": "MY", "Malta": "MT", "Mexico": "MX", "Monaco": "MC", "Mongolia": "MN", "Morocco": "MA",
+    "Myanmar": "MM", "Nepal": "NP", "Netherlands": "NL", "New Zealand": "NZ", "Nigeria": "NG",
+    "Norway": "NO", "Oman": "OM", "Pakistan": "PK", "Panama": "PA", "Peru": "PE", "Philippines": "PH",
+    "Poland": "PL", "Portugal": "PT", "Qatar": "QA", "Romania": "RO", "Russia": "RU",
+    "Saudi Arabia": "SA", "Serbia": "RS", "Singapore": "SG", "Slovakia": "SK", "Slovenia": "SI",
+    "South Africa": "ZA", "South Korea": "KR", "Spain": "ES", "Sri Lanka": "LK", "Sweden": "SE",
+    "Switzerland": "CH", "Taiwan": "TW", "Thailand": "TH", "Tunisia": "TN", "Turkey": "TR",
+    "UAE": "AE", "UK": "GB", "USA": "US", "Ukraine": "UA", "Uruguay": "UY", "Uzbekistan": "UZ",
+    "Vatican City": "VA", "Vietnam": "VN",
+}
+# "Georgia" alone is the country; only "..., Georgia, USA" is the state.
+STATE_ALSO_COUNTRY = {"georgia"}
+UK_NATIONS = {"england", "scotland", "wales", "northern ireland"}
+# A city given alone whose name carries its country.
+CITY_COUNTRY = {"mexico city": "Mexico", "panama city": "Panama", "kuwait city": "Kuwait",
+                "guatemala city": "Guatemala", "vatican city": "Vatican City"}
 CITY_STATES = {"singapore", "hong kong", "macau", "macao", "monaco", "luxembourg"}
 
 MONTHS = {
@@ -73,9 +108,11 @@ def normalize_country(raw: str) -> str:
     c = raw.strip().strip(".").strip()
     if not c:
         return "TBD"
-    if c.upper() in US_STATES or c.lower() in US_STATE_NAMES:
+    if c.upper() in US_STATES or c.lower() in US_STATE_NAMES - STATE_ALSO_COUNTRY:
         return "USA"
-    return COUNTRY_ALIASES.get(c.lower(), c)
+    if c.lower() in COUNTRY_ALIASES:
+        return COUNTRY_ALIASES[c.lower()]
+    return c.title() if c.isupper() and len(c) > 3 else c  # "CANADA" -> "Canada"; keep "UAE"
 
 
 def parse_place(place: str) -> dict:
@@ -111,6 +148,8 @@ def parse_place(place: str) -> dict:
         p0 = parts[0]
         if p0.lower() in CITY_STATES:
             return {"city": p0, "country": p0, "mode": mode}
+        if p0.lower() in CITY_COUNTRY:
+            return {"city": p0, "country": CITY_COUNTRY[p0.lower()], "mode": mode}
         return {"city": "", "country": normalize_country(p0), "mode": mode}
     country = normalize_country(parts[-1])
     # "Venue, City, Country": the city sits just before the country, unless that
@@ -118,8 +157,10 @@ def parse_place(place: str) -> dict:
     city = parts[-2]
     state_not_city = US_STATE_NAMES - {"washington", "new york"}
     if len(parts) >= 3 and (city.upper() in US_STATES or city.lower() in state_not_city
-                            or re.fullmatch(r"[A-Z]{2,3}", city)):
+                            or city.lower() in UK_NATIONS or re.fullmatch(r"[A-Z]{2,3}", city)):
         city = parts[-3]
+    if city.isupper() and len(city) > 3:
+        city = city.title()  # "MONTREAL" -> "Montreal"
     return {"city": normalize_city(city), "country": country, "mode": mode}
 
 

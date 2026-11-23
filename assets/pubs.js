@@ -2,7 +2,7 @@
 // "Publications & points" view: the user's own rule documents, their publications
 // (added by DOI, link or title through Crossref), facts per publication with their
 // source, points and bonus per publication, and totals per academic period.
-import { checkPack, findInList, manualRules, parseListTable, scoreWithPacks, valueForYear } from "./rules.js";
+import { checkPack, findInList, localizePack, manualRules, parseListTable, scoreWithPacks, valueForYear } from "./rules.js";
 import { crossrefSearchUrl, crossrefUrl, fromCrossref, guessSeries, parseDoi, parseSjrCsv, periodOf, sjrFacts } from "./scholar.js";
 import { csvCell, escapeHtml as h, safeUrl } from "./core.js";
 
@@ -30,6 +30,14 @@ export function createPubs(ctx) {
     openFacts: new Set(),
     pasteFor: null,
   };
+  // Crossref work types in the page language; an unlisted type is shown as Crossref names it.
+  const CR_TYPES = { "journal-article": "v_kind_journal", "proceedings-article": "v_kind_conference", "book-chapter": "v_kind_book_chapter",
+    "book-part": "v_kind_book_chapter", "book-section": "v_kind_book_chapter", book: "crBook", "posted-content": "crPreprint",
+    dissertation: "crThesis", report: "crReport", dataset: "crDataset", "edited-book": "crBook", monograph: "crBook" };
+  const crType = (type) => (CR_TYPES[type] ? t(CR_TYPES[type]) : t("crOther", { type: type || "?" }));
+  // Packs as shown: their text in the page language where the pack gives it (scoring is unchanged).
+  const shown = (role) => localizePack(st.packs[role], ctx.app.lang);
+  const view = () => ({ points: shown("points"), bonus: shown("bonus") });
   const save = () => {
     if (!store.set(KEYS.pubs, st.pubs) || !store.set(KEYS.packs, st.packs)) toast(t("storageFull"));
   };
@@ -44,7 +52,7 @@ export function createPubs(ctx) {
     }
     return f;
   }
-  const score = (p) => scoreWithPacks(st.packs, factsOf(p));
+  const score = (p) => scoreWithPacks(view(), factsOf(p));
 
   // ---- auto-fill -------------------------------------------------------------------
   function autofill(pub) {
@@ -114,7 +122,7 @@ export function createPubs(ctx) {
     : `${new Intl.NumberFormat(ctx.locale(), { maximumFractionDigits: 2 }).format(v)} ${t("pointsUnit")}`);
 
   function packPanel(role) {
-    const pack = st.packs[role];
+    const pack = shown(role);
     const label = t(role === "points" ? "packPoints" : "packBonus");
     if (!pack) {
       return `<section class="panel pad pack">
@@ -126,10 +134,13 @@ export function createPubs(ctx) {
         </div>
       </section>`;
     }
-    const problems = checkPack(pack);
+    const problems = checkPack(st.packs[role]);
     const manual = manualRules(pack);
+    const otherLang = pack.language && pack.language !== ctx.app.lang && !pack.inLang;
     return `<section class="panel pad pack">
       <h3>${h(label)}: ${h(pack.title)}</h3>
+      ${otherLang ? `<p class="hint">${h(t("packOtherLang", { lang: t(`lang_${pack.language}`, {}, pack.language) }))}</p>` : ""}
+      ${!st.packs[role].translations && SAMPLES[role].endsWith(`/${st.packs[role].id}.json`) ? `<p class="hint">${h(t("packOldSample"))} <button type="button" class="btn small" data-pact="sample" data-role="${role}">${h(t("packReloadSample"))}</button></p>` : ""}
       <p class="hint">${h(t("packSource"))}: ${h(pack.source?.document || "")}${pack.source?.checked ? ` · ${h(t("feesChecked", { date: pack.source.checked }))}` : ""}</p>
       ${pack.source?.warning ? `<p class="warnbox">⚠️ ${h(pack.source.warning)}</p>` : ""}
       ${problems.length ? `<p class="warnbox">${h(t("packInvalid", { n: problems.length }))}: ${h(problems.slice(0, 3).join("; "))}</p>` : ""}
@@ -257,7 +268,7 @@ export function createPubs(ctx) {
       rows.set(per, row);
     }
     const sorted = [...rows].sort((a, b) => b[0].localeCompare(a[0]));
-    const manual = st.packs.bonus ? manualRules(st.packs.bonus) : [];
+    const manual = st.packs.bonus ? manualRules(shown("bonus")) : [];
     return `<section class="panel pad">
       <div class="toolbar"><h3 class="grow">${h(t("summaryTitle"))}</h3>
         <label class="field inline">${h(t("periodStart"))}
@@ -290,7 +301,7 @@ export function createPubs(ctx) {
         <p class="hint">${h(t("addPubHint"))}</p>
         ${L.error ? `<p class="warnbox">${h(L.error)}</p>` : ""}
         ${L.results ? `<ul class="search-results">${L.results.length ? L.results.map((r) => `<li><button type="button" class="btn small" data-pact="pick" data-doi="${h(r.doi)}">＋</button>
-          ${h(r.title)} <span class="muted">· ${h(r.venue)} · ${h(r.year)} · ${h(r.type)}</span></li>`).join("") : `<li>${h(t("noResults"))}</li>`}</ul>` : ""}
+          ${h(r.title)} <span class="muted">· ${h(r.venue)} · ${h(r.year)} · ${h(crType(r.type))}</span></li>`).join("") : `<li>${h(t("noResults"))}</li>`}</ul>` : ""}
       </section>
       ${summary()}
       <div class="pubs">${st.pubs.map(pubCard).join("")}</div>`;

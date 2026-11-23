@@ -30,6 +30,15 @@ from conftracker.parsing import (
     ("Washington DC Convention Center, Washington, USA", "Washington", "USA", "in-person"),
     ("Danang, Vietnam / Online", "Da Nang", "Vietnam", "hybrid"),
     ("Saigon, Vietnam", "Ho Chi Minh City", "Vietnam", "in-person"),
+    # US states and UK nations are not countries or cities; all-caps names; "X City" alone.
+    ("Boulder, Colorado", "Boulder", "USA", "in-person"),
+    ("Salt Lake City, Utah", "Salt Lake City", "USA", "in-person"),
+    ("Atlanta, Georgia, USA", "Atlanta", "USA", "in-person"),
+    ("Tbilisi, Georgia", "Tbilisi", "Georgia", "in-person"),
+    ("Durham, England, United Kingdom", "Durham", "UK", "in-person"),
+    ("MONTREAL, CANADA", "Montreal", "Canada", "in-person"),
+    ("Mexico City", "Mexico City", "Mexico", "in-person"),
+    ("Dubai, UAE", "Dubai", "UAE", "in-person"),
 ])
 def test_parse_place(raw, city, country, mode):
     assert parse_place(raw) == {"city": city, "country": country, "mode": mode}
@@ -91,3 +100,11 @@ def test_deadline_formats():
 def test_shift_year_handles_leap_day():
     assert shift_year(datetime(2028, 2, 29, tzinfo=AOE)).date().isoformat() == "2029-02-28"
     assert shift_year(datetime(2027, 3, 1, tzinfo=AOE)).date().isoformat() == "2028-03-01"
+
+
+def test_country_codes_cover_every_parsed_country():
+    from conftracker.parsing import COUNTRY_ALIASES, COUNTRY_CODES, CITY_COUNTRY
+    produced = set(COUNTRY_ALIASES.values()) | set(CITY_COUNTRY.values())
+    assert produced - set(COUNTRY_CODES) == set()
+    assert all(len(c) == 2 and c.isupper() for c in COUNTRY_CODES.values())
+    assert len(set(COUNTRY_CODES.values())) == len(COUNTRY_CODES)  # no two names share a code
