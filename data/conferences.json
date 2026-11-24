@@ -1,20 +1,20 @@
 {
  "schema_version": 2,
- "last_updated": "2026-11-23T02:06:37+00:00",
- "total": 546,
+ "last_updated": "2026-11-24T09:27:02+00:00",
+ "total": 627,
  "counts": {
-  "total": 546,
-  "open_confirmed": 188,
-  "estimated": 269,
+  "total": 627,
+  "open_confirmed": 272,
+  "estimated": 268,
   "ranked": 430,
-  "ccfddl": 464,
-  "wikicfp": 69
+  "ccfddl": 462,
+  "wikicfp": 152
  },
  "source_stats": {
   "ccfddl": {
    "series": 387,
-   "confirmed": 201,
-   "estimated": 263,
+   "confirmed": 200,
+   "estimated": 262,
    "unknown_tz": []
   },
   "wikicfp": {
@@ -29,10 +29,10 @@
    "estimated": 6
   },
   "merge": {
-   "wikicfp_dup": 11,
+   "wikicfp_dup": 95,
    "wikicfp_inherited": 0,
    "wikicfp_replaced_estimate": 0,
-   "wikicfp_added": 69,
+   "wikicfp_added": 152,
    "curated_added": 13,
    "curated_replaced_estimate": 0,
    "curated_skipped_confirmed": 0,
@@ -144,7 +144,9 @@
   "Vatican City": "VA",
   "Vietnam": "VN"
  },
- "countries_without_code": [],
+ "countries_without_code": [
+  "Chian"
+ ],
  "conferences": [
   {
    "id": "sigmod27",
@@ -1828,7 +1830,7 @@
     },
     {
      "type": "notification",
-     "iso": "2026-10-10T11:59:59Z",
+     "iso": "2026-10-15T11:59:59Z",
      "comment": "First round"
     },
     {
@@ -2419,57 +2421,6 @@
      "submitted": 23680
     }
    ],
-   "source": "ccfddl",
-   "scope": "international",
-   "fees": null,
-   "keywords": [],
-   "publisher": null,
-   "checked": null
-  },
-  {
-   "id": "sigir-ap26",
-   "acronym": "SIGIR-AP",
-   "full_name": "International ACM SIGIR Conference on Information Retrieval in the Asia Pacific",
-   "year": 2026,
-   "kind": "conference",
-   "sub": "DB",
-   "topic": "Data Mining & Databases",
-   "rank": {
-    "ccf": null,
-    "core": null,
-    "thcpl": null
-   },
-   "dblp": "sigir-ap",
-   "url": "https://www.sigir-ap.org/sigir-ap-2026/",
-   "timezone": "AoE",
-   "tz_known": true,
-   "deadlines": [
-    {
-     "type": "abstract",
-     "iso": "2026-07-23T11:59:59Z",
-     "comment": "Extended deadlines"
-    },
-    {
-     "type": "paper",
-     "iso": "2026-07-30T11:59:59Z",
-     "comment": "Extended deadlines"
-    },
-    {
-     "type": "notification",
-     "iso": "2026-09-24T11:59:59Z",
-     "comment": "Extended deadlines"
-    }
-   ],
-   "date": "December 13-15, 2026",
-   "event_start": "2026-12-13",
-   "event_end": "2026-12-15",
-   "place": "Singapore",
-   "city": "Singapore",
-   "country": "Singapore",
-   "mode": "in-person",
-   "status": "confirmed",
-   "estimated_from": null,
-   "accept_rates": [],
    "source": "ccfddl",
    "scope": "international",
    "fees": null,
@@ -3529,12 +3480,12 @@
     },
     {
      "type": "paper",
-     "iso": "2026-11-16T11:59:59Z",
+     "iso": "2026-12-02T11:59:59Z",
      "comment": "Round 2"
     },
     {
      "type": "notification",
-     "iso": "2026-12-16T11:59:59Z",
+     "iso": "2026-12-21T11:59:59Z",
      "comment": "Round 2"
     }
    ],
@@ -6814,7 +6765,7 @@
     },
     {
      "type": "notification",
-     "iso": "2026-12-15T23:59:59Z",
+     "iso": "2026-12-30T23:59:59Z",
      "comment": ""
     }
    ],
@@ -7946,9 +7897,9 @@
      "comment": ""
     }
    ],
-   "date": "June 22-25, 2027",
+   "date": "June 22-24, 2027",
    "event_start": "2027-06-22",
-   "event_end": "2027-06-25",
+   "event_end": "2027-06-24",
    "place": "Seattle, WA, United States",
    "city": "Seattle",
    "country": "USA",
@@ -8807,678 +8758,6 @@
    "checked": null
   },
   {
-   "id": "wikicfp_adiot2026",
-   "acronym": "ADIoT",
-   "full_name": "The 9th International Conference on Attacks and Defenses for Internet-of-Things",
-   "year": 2026,
-   "kind": "conference",
-   "sub": "SC",
-   "topic": "Security & Privacy",
-   "rank": {
-    "ccf": null,
-    "core": null,
-    "thcpl": null
-   },
-   "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=204240&copyownerid=197614",
-   "timezone": "AoE",
-   "tz_known": false,
-   "deadlines": [
-    {
-     "type": "paper",
-     "iso": "2026-11-23T11:59:59Z",
-     "comment": ""
-    }
-   ],
-   "date": "Dec 18, 2026 - Dec 20, 2026",
-   "event_start": "2026-12-18",
-   "event_end": "2026-12-20",
-   "place": "Hangzhou, China",
-   "city": "Hangzhou",
-   "country": "China",
-   "mode": "in-person",
-   "status": "confirmed",
-   "estimated_from": null,
-   "accept_rates": [],
-   "source": "wikicfp",
-   "wikicfp_category": "security",
-   "scope": "international",
-   "fees": null,
-   "keywords": [],
-   "publisher": null,
-   "checked": null
-  },
-  {
-   "id": "wikicfp_avc2026",
-   "acronym": "AVC",
-   "full_name": "Advances in Vision Computing: An International Journal",
-   "year": 2026,
-   "kind": "journal",
-   "sub": "CG",
-   "topic": "Computer Graphics & Multimedia",
-   "rank": {
-    "ccf": null,
-    "core": null,
-    "thcpl": null
-   },
-   "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191951&copyownerid=46167",
-   "timezone": "AoE",
-   "tz_known": false,
-   "deadlines": [
-    {
-     "type": "paper",
-     "iso": "2026-11-23T11:59:59Z",
-     "comment": ""
-    }
-   ],
-   "date": "N/A",
-   "event_start": null,
-   "event_end": null,
-   "place": "N/A",
-   "city": "",
-   "country": "TBD",
-   "mode": "tbd",
-   "status": "confirmed",
-   "estimated_from": null,
-   "accept_rates": [],
-   "source": "wikicfp",
-   "wikicfp_category": "data mining",
-   "scope": "international",
-   "fees": null,
-   "keywords": [],
-   "publisher": null,
-   "checked": null
-  },
-  {
-   "id": "wikicfp_ijccsa2026",
-   "acronym": "IJCCSA",
-   "full_name": "International Journal on Cloud Computing: Services and Architecture",
-   "year": 2026,
-   "kind": "journal",
-   "sub": "NW",
-   "topic": "Computer Networks",
-   "rank": {
-    "ccf": null,
-    "core": null,
-    "thcpl": null
-   },
-   "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=195330&copyownerid=33993",
-   "timezone": "AoE",
-   "tz_known": false,
-   "deadlines": [
-    {
-     "type": "paper",
-     "iso": "2026-11-23T11:59:59Z",
-     "comment": ""
-    }
-   ],
-   "date": "N/A",
-   "event_start": null,
-   "event_end": null,
-   "place": "N/A",
-   "city": "",
-   "country": "TBD",
-   "mode": "tbd",
-   "status": "confirmed",
-   "estimated_from": null,
-   "accept_rates": [],
-   "source": "wikicfp",
-   "wikicfp_category": "security",
-   "scope": "international",
-   "fees": null,
-   "keywords": [],
-   "publisher": null,
-   "checked": null
-  },
-  {
-   "id": "wikicfp_ijcis2026",
-   "acronym": "IJCIS",
-   "full_name": "International Journal on Cryptography and Information Security",
-   "year": 2026,
-   "kind": "journal",
-   "sub": "SC",
-   "topic": "Security & Privacy",
-   "rank": {
-    "ccf": null,
-    "core": null,
-    "thcpl": null
-   },
-   "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=200236&copyownerid=33993",
-   "timezone": "AoE",
-   "tz_known": false,
-   "deadlines": [
-    {
-     "type": "paper",
-     "iso": "2026-11-23T11:59:59Z",
-     "comment": ""
-    }
-   ],
-   "date": "N/A",
-   "event_start": null,
-   "event_end": null,
-   "place": "N/A",
-   "city": "",
-   "country": "TBD",
-   "mode": "tbd",
-   "status": "confirmed",
-   "estimated_from": null,
-   "accept_rates": [],
-   "source": "wikicfp",
-   "wikicfp_category": "security",
-   "scope": "international",
-   "fees": null,
-   "keywords": [],
-   "publisher": null,
-   "checked": null
-  },
-  {
-   "id": "wikicfp_ijcsea2026",
-   "acronym": "IJCSEA",
-   "full_name": "International Journal of Computer Science, Engineering and Applications",
-   "year": 2026,
-   "kind": "journal",
-   "sub": "MX",
-   "topic": "Interdisciplinary / Emerging",
-   "rank": {
-    "ccf": null,
-    "core": null,
-    "thcpl": null
-   },
-   "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191359&copyownerid=46167",
-   "timezone": "AoE",
-   "tz_known": false,
-   "deadlines": [
-    {
-     "type": "paper",
-     "iso": "2026-11-23T11:59:59Z",
-     "comment": ""
-    }
-   ],
-   "date": "N/A",
-   "event_start": null,
-   "event_end": null,
-   "place": "N/A",
-   "city": "",
-   "country": "TBD",
-   "mode": "tbd",
-   "status": "confirmed",
-   "estimated_from": null,
-   "accept_rates": [],
-   "source": "wikicfp",
-   "wikicfp_category": "software engineering",
-   "scope": "international",
-   "fees": null,
-   "keywords": [],
-   "publisher": null,
-   "checked": null
-  },
-  {
-   "id": "wikicfp_ijcses2026",
-   "acronym": "IJCSES",
-   "full_name": "International Journal of Computer Science and Engineering Survey",
-   "year": 2026,
-   "kind": "journal",
-   "sub": "MX",
-   "topic": "Interdisciplinary / Emerging",
-   "rank": {
-    "ccf": null,
-    "core": null,
-    "thcpl": null
-   },
-   "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=194798&copyownerid=33993",
-   "timezone": "AoE",
-   "tz_known": false,
-   "deadlines": [
-    {
-     "type": "paper",
-     "iso": "2026-11-23T11:59:59Z",
-     "comment": ""
-    }
-   ],
-   "date": "N/A",
-   "event_start": null,
-   "event_end": null,
-   "place": "N/A",
-   "city": "",
-   "country": "TBD",
-   "mode": "tbd",
-   "status": "confirmed",
-   "estimated_from": null,
-   "accept_rates": [],
-   "source": "wikicfp",
-   "wikicfp_category": "software engineering",
-   "scope": "international",
-   "fees": null,
-   "keywords": [],
-   "publisher": null,
-   "checked": null
-  },
-  {
-   "id": "wikicfp_ijdms2026",
-   "acronym": "IJDMS",
-   "full_name": "International Journal of Database Management Systems",
-   "year": 2026,
-   "kind": "journal",
-   "sub": "DB",
-   "topic": "Data Mining & Databases",
-   "rank": {
-    "ccf": null,
-    "core": null,
-    "thcpl": null
-   },
-   "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=194972&copyownerid=33993",
-   "timezone": "AoE",
-   "tz_known": false,
-   "deadlines": [
-    {
-     "type": "paper",
-     "iso": "2026-11-23T11:59:59Z",
-     "comment": ""
-    }
-   ],
-   "date": "N/A",
-   "event_start": null,
-   "event_end": null,
-   "place": "N/A",
-   "city": "",
-   "country": "TBD",
-   "mode": "tbd",
-   "status": "confirmed",
-   "estimated_from": null,
-   "accept_rates": [],
-   "source": "wikicfp",
-   "wikicfp_category": "data mining",
-   "scope": "international",
-   "fees": null,
-   "keywords": [],
-   "publisher": null,
-   "checked": null
-  },
-  {
-   "id": "wikicfp_ije2026",
-   "acronym": "IJE",
-   "full_name": "International Journal of Education",
-   "year": 2026,
-   "kind": "journal",
-   "sub": "OT",
-   "topic": "Outside Computing",
-   "rank": {
-    "ccf": null,
-    "core": null,
-    "thcpl": null
-   },
-   "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=200354&copyownerid=33993",
-   "timezone": "AoE",
-   "tz_known": false,
-   "deadlines": [
-    {
-     "type": "paper",
-     "iso": "2026-11-23T11:59:59Z",
-     "comment": ""
-    }
-   ],
-   "date": "N/A",
-   "event_start": null,
-   "event_end": null,
-   "place": "N/A",
-   "city": "",
-   "country": "TBD",
-   "mode": "tbd",
-   "status": "confirmed",
-   "estimated_from": null,
-   "accept_rates": [],
-   "source": "wikicfp",
-   "wikicfp_category": "security",
-   "scope": "international",
-   "fees": null,
-   "keywords": [],
-   "publisher": null,
-   "checked": null
-  },
-  {
-   "id": "wikicfp_ijesa2026",
-   "acronym": "IJESA",
-   "full_name": "International Journal of Embedded Systems and Applications",
-   "year": 2026,
-   "kind": "journal",
-   "sub": "DS",
-   "topic": "Computer Architecture & Systems",
-   "rank": {
-    "ccf": null,
-    "core": null,
-    "thcpl": null
-   },
-   "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=194152&copyownerid=33993",
-   "timezone": "AoE",
-   "tz_known": false,
-   "deadlines": [
-    {
-     "type": "paper",
-     "iso": "2026-11-23T11:59:59Z",
-     "comment": ""
-    }
-   ],
-   "date": "N/A",
-   "event_start": null,
-   "event_end": null,
-   "place": "N/A",
-   "city": "",
-   "country": "TBD",
-   "mode": "tbd",
-   "status": "confirmed",
-   "estimated_from": null,
-   "accept_rates": [],
-   "source": "wikicfp",
-   "wikicfp_category": "software engineering",
-   "scope": "international",
-   "fees": null,
-   "keywords": [],
-   "publisher": null,
-   "checked": null
-  },
-  {
-   "id": "wikicfp_ijgca2026",
-   "acronym": "IJGCA",
-   "full_name": "International Journal of Grid Computing & Applications",
-   "year": 2026,
-   "kind": "journal",
-   "sub": "MX",
-   "topic": "Interdisciplinary / Emerging",
-   "rank": {
-    "ccf": null,
-    "core": null,
-    "thcpl": null
-   },
-   "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=199503&copyownerid=33993",
-   "timezone": "AoE",
-   "tz_known": false,
-   "deadlines": [
-    {
-     "type": "paper",
-     "iso": "2026-11-23T11:59:59Z",
-     "comment": ""
-    }
-   ],
-   "date": "N/A",
-   "event_start": null,
-   "event_end": null,
-   "place": "N/A",
-   "city": "",
-   "country": "TBD",
-   "mode": "tbd",
-   "status": "confirmed",
-   "estimated_from": null,
-   "accept_rates": [],
-   "source": "wikicfp",
-   "wikicfp_category": "security",
-   "scope": "international",
-   "fees": null,
-   "keywords": [],
-   "publisher": null,
-   "checked": null
-  },
-  {
-   "id": "wikicfp_ijmpict2026",
-   "acronym": "IJMPICT",
-   "full_name": "International Journal of Managing Public Sector Information and Communication Technologies",
-   "year": 2026,
-   "kind": "journal",
-   "sub": "NW",
-   "topic": "Computer Networks",
-   "rank": {
-    "ccf": null,
-    "core": null,
-    "thcpl": null
-   },
-   "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191952&copyownerid=46167",
-   "timezone": "AoE",
-   "tz_known": false,
-   "deadlines": [
-    {
-     "type": "paper",
-     "iso": "2026-11-23T11:59:59Z",
-     "comment": ""
-    }
-   ],
-   "date": "N/A",
-   "event_start": null,
-   "event_end": null,
-   "place": "N/A",
-   "city": "",
-   "country": "TBD",
-   "mode": "tbd",
-   "status": "confirmed",
-   "estimated_from": null,
-   "accept_rates": [],
-   "source": "wikicfp",
-   "wikicfp_category": "data mining",
-   "scope": "international",
-   "fees": null,
-   "keywords": [],
-   "publisher": null,
-   "checked": null
-  },
-  {
-   "id": "wikicfp_ijngn2026",
-   "acronym": "IJNGN",
-   "full_name": "15th International Conference on Digital Image Processing and Vision",
-   "year": 2026,
-   "kind": "conference",
-   "sub": "CG",
-   "topic": "Computer Graphics & Multimedia",
-   "rank": {
-    "ccf": null,
-    "core": null,
-    "thcpl": null
-   },
-   "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191992&copyownerid=46167",
-   "timezone": "AoE",
-   "tz_known": false,
-   "deadlines": [
-    {
-     "type": "paper",
-     "iso": "2026-11-23T11:59:59Z",
-     "comment": ""
-    }
-   ],
-   "date": "N/A",
-   "event_start": null,
-   "event_end": null,
-   "place": "N/A",
-   "city": "",
-   "country": "TBD",
-   "mode": "tbd",
-   "status": "confirmed",
-   "estimated_from": null,
-   "accept_rates": [],
-   "source": "wikicfp",
-   "wikicfp_category": "data mining",
-   "scope": "international",
-   "fees": null,
-   "keywords": [],
-   "publisher": null,
-   "checked": null
-  },
-  {
-   "id": "wikicfp_ijnlc2026",
-   "acronym": "IJNLC",
-   "full_name": "International Journal on Natural Language Computing",
-   "year": 2026,
-   "kind": "journal",
-   "sub": "AI",
-   "topic": "Artificial Intelligence",
-   "rank": {
-    "ccf": null,
-    "core": null,
-    "thcpl": null
-   },
-   "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=199502&copyownerid=33993",
-   "timezone": "AoE",
-   "tz_known": false,
-   "deadlines": [
-    {
-     "type": "paper",
-     "iso": "2026-11-23T11:59:59Z",
-     "comment": ""
-    }
-   ],
-   "date": "N/A",
-   "event_start": null,
-   "event_end": null,
-   "place": "N/A",
-   "city": "",
-   "country": "TBD",
-   "mode": "tbd",
-   "status": "confirmed",
-   "estimated_from": null,
-   "accept_rates": [],
-   "source": "wikicfp",
-   "wikicfp_category": "data mining",
-   "scope": "international",
-   "fees": null,
-   "keywords": [],
-   "publisher": null,
-   "checked": null
-  },
-  {
-   "id": "wikicfp_ijwsc2026",
-   "acronym": "IJWSC",
-   "full_name": "International Journal on Web Service Computing",
-   "year": 2026,
-   "kind": "journal",
-   "sub": "MX",
-   "topic": "Interdisciplinary / Emerging",
-   "rank": {
-    "ccf": null,
-    "core": null,
-    "thcpl": null
-   },
-   "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=192427&copyownerid=33993",
-   "timezone": "AoE",
-   "tz_known": false,
-   "deadlines": [
-    {
-     "type": "paper",
-     "iso": "2026-11-23T11:59:59Z",
-     "comment": ""
-    }
-   ],
-   "date": "N/A",
-   "event_start": null,
-   "event_end": null,
-   "place": "N/A",
-   "city": "",
-   "country": "TBD",
-   "mode": "tbd",
-   "status": "confirmed",
-   "estimated_from": null,
-   "accept_rates": [],
-   "source": "wikicfp",
-   "wikicfp_category": "data mining",
-   "scope": "international",
-   "fees": null,
-   "keywords": [],
-   "publisher": null,
-   "checked": null
-  },
-  {
-   "id": "wikicfp_jcice2027",
-   "acronym": "JCICE",
-   "full_name": "2027 6th International Joint Conference on Information and Communication Engineering",
-   "year": 2027,
-   "kind": "conference",
-   "sub": "NW",
-   "topic": "Computer Networks",
-   "rank": {
-    "ccf": null,
-    "core": null,
-    "thcpl": null
-   },
-   "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=118195&copyownerid=93140",
-   "timezone": "AoE",
-   "tz_known": false,
-   "deadlines": [
-    {
-     "type": "paper",
-     "iso": "2026-11-23T11:59:59Z",
-     "comment": ""
-    }
-   ],
-   "date": "May 14, 2027 - May 16, 2027",
-   "event_start": "2027-05-14",
-   "event_end": "2027-05-16",
-   "place": "Chengdu, China",
-   "city": "Chengdu",
-   "country": "China",
-   "mode": "in-person",
-   "status": "confirmed",
-   "estimated_from": null,
-   "accept_rates": [],
-   "source": "wikicfp",
-   "wikicfp_category": "data mining",
-   "scope": "international",
-   "fees": null,
-   "keywords": [],
-   "publisher": null,
-   "checked": null
-  },
-  {
-   "id": "wikicfp_sipij2026",
-   "acronym": "SIPIJ",
-   "full_name": "Signal & Image Processing : An International Journal - H index - 33",
-   "year": 2026,
-   "kind": "journal",
-   "sub": "CG",
-   "topic": "Computer Graphics & Multimedia",
-   "rank": {
-    "ccf": null,
-    "core": null,
-    "thcpl": null
-   },
-   "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=195150&copyownerid=33993",
-   "timezone": "AoE",
-   "tz_known": false,
-   "deadlines": [
-    {
-     "type": "paper",
-     "iso": "2026-11-23T11:59:59Z",
-     "comment": ""
-    }
-   ],
-   "date": "N/A",
-   "event_start": null,
-   "event_end": null,
-   "place": "N/A",
-   "city": "",
-   "country": "TBD",
-   "mode": "tbd",
-   "status": "confirmed",
-   "estimated_from": null,
-   "accept_rates": [],
-   "source": "wikicfp",
-   "wikicfp_category": "security",
-   "scope": "international",
-   "fees": null,
-   "keywords": [],
-   "publisher": null,
-   "checked": null
-  },
-  {
    "id": "eurovis2027",
    "acronym": "EuroVis",
    "full_name": "Eurographics Conference on Visualization",
@@ -9560,6 +8839,48 @@
     }
    ],
    "source": "ccfddl",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_imiss2027",
+   "acronym": "iMISS",
+   "full_name": "CFP: The International Conference on Intelligent Maritime Imaging, Sensing and Systems",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=202873&copyownerid=194712",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-24T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Jan 21, 2027 - Jan 23, 2027",
+   "event_start": "2027-01-21",
+   "event_end": "2027-01-23",
+   "place": "Qingdao, China",
+   "city": "Qingdao",
+   "country": "China",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
    "scope": "international",
    "fees": null,
    "keywords": [],
@@ -9701,7 +9022,7 @@
    "estimated_from": null,
    "accept_rates": [],
    "source": "wikicfp",
-   "wikicfp_category": "software engineering",
+   "wikicfp_category": "artificial intelligence",
    "scope": "international",
    "fees": null,
    "keywords": [],
@@ -9710,8 +9031,8 @@
   },
   {
    "id": "wikicfp_bdee2027",
-   "acronym": "BDEE--EI",
-   "full_name": "2027 The 7th International Conference on Big Data Engineering and Education (BDEE 2027)",
+   "acronym": "BDEE",
+   "full_name": "IEEE--2027 The 7th International Conference on Big Data Engineering and Education (BDEE 2027)",
    "year": 2027,
    "kind": "conference",
    "sub": "DB",
@@ -9744,6 +9065,90 @@
    "accept_rates": [],
    "source": "wikicfp",
    "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_cceai2027",
+   "acronym": "CCEAI",
+   "full_name": "2027 11th International Conference on Control Engineering and Artificial Intelligence (CCEAI 2027)",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=199482&copyownerid=90512",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-26T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Jan 21, 2027 - Jan 24, 2027",
+   "event_start": "2027-01-21",
+   "event_end": "2027-01-24",
+   "place": "Shanghai, China",
+   "city": "Shanghai",
+   "country": "China",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_cvaihongkong2027",
+   "acronym": "CVAI-Hongkong",
+   "full_name": "2027 2nd International Symposium on Computer Vision and Artificial Intelligence (CVAI 2027)",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "CG",
+   "topic": "Computer Graphics & Multimedia",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=200206&copyownerid=86815",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-26T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Mar 25, 2027 - Mar 27, 2027",
+   "event_start": "2027-03-25",
+   "event_end": "2027-03-27",
+   "place": "Hong Kong, Chian",
+   "city": "Hong Kong",
+   "country": "Chian",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
    "scope": "international",
    "fees": null,
    "keywords": [],
@@ -10066,6 +9471,48 @@
    "checked": null
   },
   {
+   "id": "wikicfp_fcce2027",
+   "acronym": "FCCE",
+   "full_name": "2027 6th International Conference on Frontiers of Computers and Communication Engineering (FCCE 2027)",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "NW",
+   "topic": "Computer Networks",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=199936&copyownerid=13881",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-26T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Apr 16, 2027 - Apr 18, 2027",
+   "event_start": "2027-04-16",
+   "event_end": "2027-04-18",
+   "place": "Hefei, China",
+   "city": "Hefei",
+   "country": "China",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
    "id": "fm27-est",
    "acronym": "FM",
    "full_name": "International Symposium on Formal Methods",
@@ -10132,7 +9579,7 @@
   },
   {
    "id": "wikicfp_iccae2027",
-   "acronym": "ICCAE--EI",
+   "acronym": "ICCAE",
    "full_name": "2027 the 19th International Conference on Computer and Automation Engineering (ICCAE 2027)",
    "year": 2027,
    "kind": "conference",
@@ -10144,7 +9591,7 @@
     "thcpl": null
    },
    "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=195293&copyownerid=13881",
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=195292&copyownerid=13881",
    "timezone": "AoE",
    "tz_known": false,
    "deadlines": [
@@ -10165,7 +9612,7 @@
    "estimated_from": null,
    "accept_rates": [],
    "source": "wikicfp",
-   "wikicfp_category": "software engineering",
+   "wikicfp_category": "artificial intelligence",
    "scope": "international",
    "fees": null,
    "keywords": [],
@@ -10215,8 +9662,50 @@
    "checked": null
   },
   {
+   "id": "wikicfp_iciea2027",
+   "acronym": "ICIEA",
+   "full_name": "Springer--2027 14th International Conference on Industrial Engineering and Applications (ICIEA 2027)",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=200162&copyownerid=13881",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-26T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Apr 18, 2027 - Apr 21, 2027",
+   "event_start": "2027-04-18",
+   "event_end": "2027-04-21",
+   "place": "Bangkok, Thailand",
+   "city": "Bangkok",
+   "country": "Thailand",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
    "id": "wikicfp_icmlc2027",
-   "acronym": "ICMLC--EI",
+   "acronym": "ICMLC",
    "full_name": "2027 19th International Conference on Machine Learning and Computing (ICMLC 2027)",
    "year": 2027,
    "kind": "conference",
@@ -10228,7 +9717,7 @@
     "thcpl": null
    },
    "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=195415&copyownerid=13881",
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=195414&copyownerid=13881",
    "timezone": "AoE",
    "tz_known": false,
    "deadlines": [
@@ -10249,7 +9738,91 @@
    "estimated_from": null,
    "accept_rates": [],
    "source": "wikicfp",
-   "wikicfp_category": "software engineering",
+   "wikicfp_category": "artificial intelligence",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_icmre2027",
+   "acronym": "ICMRE",
+   "full_name": "IEEE--2027 the 13th International Conference on Mechatronics and Robotics Engineering (ICMRE 2027)",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=195313&copyownerid=13881",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-26T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Mar 3, 2027 - Mar 5, 2027",
+   "event_start": "2027-03-03",
+   "event_end": "2027-03-05",
+   "place": "University of Agder, Grimstad, Norway",
+   "city": "Grimstad",
+   "country": "Norway",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_mlhmi2027",
+   "acronym": "IEEE MLHMI",
+   "full_name": "IEEE--2027 8th International Conference on Machine Learning and Human-Computer Interaction (MLHMI 2027)",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "HI",
+   "topic": "Human-Computer Interaction",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=194784&copyownerid=13881",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-26T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Mar 3, 2027 - Mar 5, 2027",
+   "event_start": "2027-03-03",
+   "event_end": "2027-03-05",
+   "place": "Sapporo, Japan",
+   "city": "Sapporo",
+   "country": "Japan",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
    "scope": "international",
    "fees": null,
    "keywords": [],
@@ -10291,7 +9864,49 @@
    "estimated_from": null,
    "accept_rates": [],
    "source": "wikicfp",
-   "wikicfp_category": "security",
+   "wikicfp_category": "artificial intelligence",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijcsitce2026",
+   "acronym": "IJCSITCE",
+   "full_name": "The International Journal of Computational Science, Information Technology and Control Engineering",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191400&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-26T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
    "scope": "international",
    "fees": null,
    "keywords": [],
@@ -10434,20 +10049,20 @@
    ]
   },
   {
-   "id": "wikicfp_mlhmi2027",
-   "acronym": "MLHMI",
-   "full_name": "IEEE--2027 8th International Conference on Machine Learning and Human-Computer Interaction (MLHMI 2027)",
-   "year": 2027,
+   "id": "wikicfp_mlcipr2026",
+   "acronym": "MLCIPR",
+   "full_name": "2026 3rd International Conference on Machine Learning, Computational Intelligence and Pattern Recognition",
+   "year": 2026,
    "kind": "conference",
-   "sub": "HI",
-   "topic": "Human-Computer Interaction",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
    "rank": {
     "ccf": null,
     "core": null,
     "thcpl": null
    },
    "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=194785&copyownerid=13881",
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=204234&copyownerid=163220",
    "timezone": "AoE",
    "tz_known": false,
    "deadlines": [
@@ -10457,18 +10072,102 @@
      "comment": ""
     }
    ],
-   "date": "Mar 3, 2027 - Mar 5, 2027",
-   "event_start": "2027-03-03",
-   "event_end": "2027-03-05",
-   "place": "Sapporo, Japan",
-   "city": "Sapporo",
-   "country": "Japan",
+   "date": "Dec 25, 2026 - Dec 27, 2026",
+   "event_start": "2026-12-25",
+   "event_end": "2026-12-27",
+   "place": "Nanjing, China",
+   "city": "Nanjing",
+   "country": "China",
    "mode": "in-person",
    "status": "confirmed",
    "estimated_from": null,
    "accept_rates": [],
    "source": "wikicfp",
-   "wikicfp_category": "software engineering",
+   "wikicfp_category": "machine learning",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_sjucceai2027",
+   "acronym": "SJU-CCEAI",
+   "full_name": "2027 11th International Conference on Control Engineering and Artificial Intelligence (CCEAI 2027)",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=199492&copyownerid=90512",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-26T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Jan 21, 2027 - Jan 24, 2027",
+   "event_start": "2027-01-21",
+   "event_end": "2027-01-24",
+   "place": "Shanghai, China",
+   "city": "Shanghai",
+   "country": "China",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "computer science",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_wcsc2027",
+   "acronym": "WCSC",
+   "full_name": "4th World Congress on Smart Computing",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191273&copyownerid=195295",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-26T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Jan 8, 2027 - Jan 9, 2027",
+   "event_start": "2027-01-08",
+   "event_end": "2027-01-09",
+   "place": "Bangkok, Thailand",
+   "city": "Bangkok",
+   "country": "Thailand",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
    "scope": "international",
    "fees": null,
    "keywords": [],
@@ -10611,6 +10310,174 @@
    "checked": null
   },
   {
+   "id": "wikicfp_aibdf2026",
+   "acronym": "AIBDF",
+   "full_name": "IEEE 2026 6th International Conference on Artificial Intelligence and Big Data",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "DB",
+   "topic": "Data Mining & Databases",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=203957&copyownerid=182680",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-28T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 18, 2026 - Dec 20, 2026",
+   "event_start": "2026-12-18",
+   "event_end": "2026-12-20",
+   "place": "Chengdu, China",
+   "city": "Chengdu",
+   "country": "China",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_aidl2026",
+   "acronym": "AIDL",
+   "full_name": "2026 3rd International Conference on Artificial Intelligence and Digital Libraries",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=203727&copyownerid=182680",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-28T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 11, 2026 - Dec 13, 2026",
+   "event_start": "2026-12-11",
+   "event_end": "2026-12-13",
+   "place": "Guangzhou, China",
+   "city": "Guangzhou",
+   "country": "China",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_bdaiem2026",
+   "acronym": "BDAIEM",
+   "full_name": "2026 International Conference on Big Data, Artificial Intelligence and Economic Management",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "DB",
+   "topic": "Data Mining & Databases",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=190664&copyownerid=182680",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-28T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 11, 2026 - Dec 13, 2026",
+   "event_start": "2026-12-11",
+   "event_end": "2026-12-13",
+   "place": "Ningbo, China",
+   "city": "Ningbo",
+   "country": "China",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_cacc2026",
+   "acronym": "CACC",
+   "full_name": "2026 4th International Conference on Comprehensive Art and Cultural Communication",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "NW",
+   "topic": "Computer Networks",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=190900&copyownerid=182680",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-28T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 11, 2026 - Dec 13, 2026",
+   "event_start": "2026-12-11",
+   "event_end": "2026-12-13",
+   "place": "Dongguan, China",
+   "city": "Dongguan",
+   "country": "China",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
    "id": "wikicfp_cisse2026",
    "acronym": "CISSE",
    "full_name": "IEEE 2026 8th International Conference on Communications, Information System and Software Engineering",
@@ -10646,6 +10513,300 @@
    "accept_rates": [],
    "source": "wikicfp",
    "wikicfp_category": "software engineering",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_citce2026",
+   "acronym": "CITCE",
+   "full_name": "IEEE 2026 6th International Conference on Computer, Internet of Things and Control Engineering",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "NW",
+   "topic": "Computer Networks",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=203800&copyownerid=182680",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-28T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 11, 2026 - Dec 13, 2026",
+   "event_start": "2026-12-11",
+   "event_end": "2026-12-13",
+   "place": "Suzhou, China",
+   "city": "Suzhou",
+   "country": "China",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "computer science",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_clenlpcl2026",
+   "acronym": "CL-ENLPCL",
+   "full_name": "Special Issue on the Ethics of NLP and CL in Computational Linguistics",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=199979&copyownerid=320",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-28T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_eccst2026",
+   "acronym": "ECCST",
+   "full_name": "IEEE 2026 6th International Conference on Electronic Communication, Computer Science and Technology",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "NW",
+   "topic": "Computer Networks",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=203750&copyownerid=182680",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-28T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 11, 2026 - Dec 13, 2026",
+   "event_start": "2026-12-11",
+   "event_end": "2026-12-13",
+   "place": "Xi'an, China",
+   "city": "Xi'an",
+   "country": "China",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "computer science",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_icaid2026",
+   "acronym": "ICAID",
+   "full_name": "2026 5th International Conference on Artificial Intelligence, Internet and Digital Economy",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "NW",
+   "topic": "Computer Networks",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=192334&copyownerid=182680",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-28T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 25, 2026 - Dec 27, 2026",
+   "event_start": "2026-12-25",
+   "event_end": "2026-12-27",
+   "place": "Harbin, China",
+   "city": "Harbin",
+   "country": "China",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_iciseie2026",
+   "acronym": "ICISE-IE",
+   "full_name": "IEEE 2026 7th International Conference on Information Science and Education",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "OT",
+   "topic": "Outside Computing",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=203887&copyownerid=182680",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-28T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 18, 2026 - Dec 20, 2026",
+   "event_start": "2026-12-18",
+   "event_end": "2026-12-20",
+   "place": "Guangzhou, China",
+   "city": "Guangzhou",
+   "country": "China",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_irac2026",
+   "acronym": "IRAC",
+   "full_name": "IEEE 2026 3rd International Conference on Intelligent Robotics and Automatic Control",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=203741&copyownerid=182680",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-28T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 11, 2026 - Dec 13, 2026",
+   "event_start": "2026-12-11",
+   "event_end": "2026-12-13",
+   "place": "Hangzhou,China",
+   "city": "Hangzhou",
+   "country": "China",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_loyalagentsaaai2027",
+   "acronym": "LoyalAgents@AAAI",
+   "full_name": "Who Does Your AI Agent Work For? A Workshop on Loyal Agents",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=203987&copyownerid=200869",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-28T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Feb 22, 2027 - Feb 23, 2027",
+   "event_start": "2027-02-22",
+   "event_end": "2027-02-23",
+   "place": "MontrÃ©al, Canada",
+   "city": "MontrÃ©al",
+   "country": "Canada",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
    "scope": "international",
    "fees": null,
    "keywords": [],
@@ -10734,6 +10895,2358 @@
    "checked": null
   },
   {
+   "id": "wikicfp_aidds2026",
+   "acronym": "AIDDS",
+   "full_name": "12th International Conference on AI Driven Data Systems",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191741&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 19, 2026 - Dec 20, 2026",
+   "event_start": "2026-12-19",
+   "event_end": "2026-12-20",
+   "place": "Sydney, Australia",
+   "city": "Sydney",
+   "country": "Australia",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_aigc2026",
+   "acronym": "AIGC",
+   "full_name": "The 4th International Conference on AI-Generated Content (AIGC 2026)",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=201316&copyownerid=199527",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 26, 2026 - Dec 27, 2026",
+   "event_start": "2026-12-26",
+   "event_end": "2026-12-27",
+   "place": "Guangzhou, China",
+   "city": "Guangzhou",
+   "country": "China",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "machine learning",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_avc2026",
+   "acronym": "AVC",
+   "full_name": "Advances in Vision Computing: An International Journal",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "CG",
+   "topic": "Computer Graphics & Multimedia",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191951&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_blkca2026",
+   "acronym": "BLKCA",
+   "full_name": "4th International Conference on Blockchain and Applications",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "SC",
+   "topic": "Security & Privacy",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=192038&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 29, 2026 - Dec 30, 2026",
+   "event_start": "2026-12-29",
+   "event_end": "2026-12-30",
+   "place": "Virtual Conference",
+   "city": "",
+   "country": "Online",
+   "mode": "online",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "machine learning",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ceee2026",
+   "acronym": "CEEE",
+   "full_name": "7th International Conference on Applied Control, Electrical and Electronics Engineering",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191991&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 29, 2026 - Dec 30, 2026",
+   "event_start": "2026-12-29",
+   "event_end": "2026-12-30",
+   "place": "Virtual Conference",
+   "city": "",
+   "country": "Online",
+   "mode": "online",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_cgasp2026",
+   "acronym": "CGASP",
+   "full_name": "4th International Conference on Computer Graphics, Animation & Signal Processing",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "CG",
+   "topic": "Computer Graphics & Multimedia",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191851&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 29, 2026 - Dec 30, 2026",
+   "event_start": "2026-12-29",
+   "event_end": "2026-12-30",
+   "place": "Virtual Conference",
+   "city": "",
+   "country": "Online",
+   "mode": "online",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "machine learning",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_csea2026",
+   "acronym": "CSEA",
+   "full_name": "12th International Conference on Computer Science, Engineering and Applications",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=204283&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 19, 2026 - Dec 20, 2026",
+   "event_start": "2026-12-19",
+   "event_end": "2026-12-20",
+   "place": "Sydney, Australia",
+   "city": "Sydney",
+   "country": "Australia",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "machine learning",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_cseitt2026",
+   "acronym": "CSEITT",
+   "full_name": "4th International Conference on Computer Science, Engineering and Information Technology Trends",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=192128&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 29, 2026 - Dec 30, 2026",
+   "event_start": "2026-12-29",
+   "event_end": "2026-12-30",
+   "place": "Virtual Conference",
+   "city": "",
+   "country": "Online",
+   "mode": "online",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "machine learning",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_eleg2026",
+   "acronym": "ELEG",
+   "full_name": "7th International Conference on Electrical Engineering",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "OT",
+   "topic": "Outside Computing",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=192077&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 29, 2026 - Dec 30, 2026",
+   "event_start": "2026-12-29",
+   "event_end": "2026-12-30",
+   "place": "Virtual Conference",
+   "city": "",
+   "country": "Online",
+   "mode": "online",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_fuzzyai2026",
+   "acronym": "FuzzyAI",
+   "full_name": "12th International Conference on Fuzzy Systems and Intelligent AI",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=202539&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 19, 2026 - Dec 20, 2026",
+   "event_start": "2026-12-19",
+   "event_end": "2026-12-20",
+   "place": "Sydney, Australia",
+   "city": "Sydney",
+   "country": "Australia",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "computer science",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_hiij2026",
+   "acronym": "HIIJ",
+   "full_name": "Health Informatics: An International Journal",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=194438&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijaia2026",
+   "acronym": "IJAIA",
+   "full_name": "International Journal of Artificial Intelligence & Applications - H Index - 41",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191849&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "machine learning",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijait2026",
+   "acronym": "IJAIT",
+   "full_name": "International Journal of Advanced Information Technology",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=192885&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijccms2026",
+   "acronym": "IJCCMS",
+   "full_name": "International Journal of Chaos, Control, Modelling and Simulation",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=193037&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "machine learning",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijccsa2026",
+   "acronym": "IJCCSA",
+   "full_name": "International Journal on Cloud Computing: Services and Architecture",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "NW",
+   "topic": "Computer Networks",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=195330&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijcnc2026",
+   "acronym": "IJCNC",
+   "full_name": "International Journal of Computer Networks & Communications - Scopus, ERA Indexed, H Index - 40",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "NW",
+   "topic": "Computer Networks",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=195389&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "machine learning",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijcsea2026",
+   "acronym": "IJCSEA",
+   "full_name": "International Journal of Computer Science, Engineering and Applications",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191359&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "software engineering",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijcseit2026",
+   "acronym": "IJCSEIT",
+   "full_name": "International Journal of Computer Science, Engineering and Information Technology",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=203478&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "machine learning",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijcses2026",
+   "acronym": "IJCSES",
+   "full_name": "International Journal of Computer Science and Engineering Survey",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=194798&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "software engineering",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijcsit2026",
+   "acronym": "IJCSIT",
+   "full_name": "International Journal of Computer Science and Information Technology - H-index 60",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=192075&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "machine learning",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijcsity2026",
+   "acronym": "IJCSITY",
+   "full_name": "International Journal of Computational Science and Information Technology",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191647&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijdms2026",
+   "acronym": "IJDMS",
+   "full_name": "International Journal of Database Management Systems",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "DB",
+   "topic": "Data Mining & Databases",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=194972&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijdps2026",
+   "acronym": "IJDPS",
+   "full_name": "International Journal of Distributed and Parallel systems",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "DS",
+   "topic": "Computer Architecture & Systems",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=199638&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ije2026",
+   "acronym": "IJE",
+   "full_name": "International Journal of Education",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "OT",
+   "topic": "Outside Computing",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=200354&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "security",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijgca2026",
+   "acronym": "IJGCA",
+   "full_name": "International Journal of Grid Computing & Applications",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=199503&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "security",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijgtt2026",
+   "acronym": "IJGTT",
+   "full_name": "International Journal of Game Theory and Technology",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "CT",
+   "topic": "Theory of Computation",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=199977&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "machine learning",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijist2026",
+   "acronym": "IJIST",
+   "full_name": "International Journal of Information Sciences and Techniques",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=194649&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "machine learning",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijitcs2026",
+   "acronym": "IJITCS",
+   "full_name": "International Journal of Information Technology Convergence and services",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=195437&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "machine learning",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijite2026",
+   "acronym": "IJITE",
+   "full_name": "International Journal on Integrating Technology in Education",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "OT",
+   "topic": "Outside Computing",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=195298&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "machine learning",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijma2026",
+   "acronym": "IJMA",
+   "full_name": "International Journal of Multimedia & Its Applications -- ERA Indexed, H index - 24",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "CG",
+   "topic": "Computer Graphics & Multimedia",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=200174&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "computer science",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijmpict2026",
+   "acronym": "IJMPICT",
+   "full_name": "International Journal of Managing Public Sector Information and Communication Technologies",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "NW",
+   "topic": "Computer Networks",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191952&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijmvsc2026",
+   "acronym": "IJMVSC",
+   "full_name": "The International Journal of Managing Value and Supply Chains",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "OT",
+   "topic": "Outside Computing",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=194196&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "machine learning",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijngn2026",
+   "acronym": "IJNGN",
+   "full_name": "15th International Conference on Digital Image Processing and Vision",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "CG",
+   "topic": "Computer Graphics & Multimedia",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191992&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijnlc2026",
+   "acronym": "IJNLC",
+   "full_name": "International Journal on Natural Language Computing",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=199502&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijnsa2026",
+   "acronym": "IJNSA",
+   "full_name": "International Journal of Network Security & Its Applications - ERA Indexed, H Index - 52",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "SC",
+   "topic": "Security & Privacy",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=201562&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "machine learning",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijsc2026",
+   "acronym": "IJSC",
+   "full_name": "International Journal on Soft Computing - H Index:26",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=199639&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "machine learning",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijscai2026",
+   "acronym": "IJSCAI",
+   "full_name": "International Journal on Soft Computing, Artificial Intelligence and Applications",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=199700&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijsea2026",
+   "acronym": "IJSEA",
+   "full_name": "International Journal of Software Engineering & Applications - ERA  Indexed, H Index 36",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "SE",
+   "topic": "Software Engineering",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=194120&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "computer science",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijsptm2026",
+   "acronym": "IJSPTM",
+   "full_name": "International Journal of Security, Privacy and Trust Management",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "SC",
+   "topic": "Security & Privacy",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=195010&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "machine learning",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijwmn2026",
+   "acronym": "IJWMN",
+   "full_name": "International Journal of Wireless & Mobile Networks -- ERA Indexed, H index 37",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "NW",
+   "topic": "Computer Networks",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=194593&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "computer science",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijwsc2026",
+   "acronym": "IJWSC",
+   "full_name": "International Journal on Web Service Computing",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=192427&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_mecn2026",
+   "acronym": "MECN",
+   "full_name": "7th International Conference on Mechanical Engineering",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "OT",
+   "topic": "Outside Computing",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=192324&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 29, 2026 - Dec 30, 2026",
+   "event_start": "2026-12-29",
+   "event_end": "2026-12-30",
+   "place": "Virtual Conference",
+   "city": "",
+   "country": "Online",
+   "mode": "online",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_mlaij2026",
+   "acronym": "MLAIJ",
+   "full_name": "Machine Learning and Applications: An International Journal",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=199941&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "machine learning",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_mliot2026",
+   "acronym": "MLIoT",
+   "full_name": "4th International Conference on Machine Learning and IoT",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "NW",
+   "topic": "Computer Networks",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191990&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 29, 2026 - Dec 30, 2026",
+   "event_start": "2026-12-29",
+   "event_end": "2026-12-30",
+   "place": "Virtual Conference",
+   "city": "",
+   "country": "Online",
+   "mode": "online",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_mltec2026",
+   "acronym": "MLTEC",
+   "full_name": "7th International Conference on Machine Learning Techniques",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=192175&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 19, 2026 - Dec 20, 2026",
+   "event_start": "2026-12-19",
+   "event_end": "2026-12-20",
+   "place": "Sydney, Australia",
+   "city": "Sydney",
+   "country": "Australia",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_natl2026",
+   "acronym": "NATL",
+   "full_name": "12th International Conference on Natural Language Computing",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191646&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 19, 2026 - Dec 20, 2026",
+   "event_start": "2026-12-19",
+   "event_end": "2026-12-20",
+   "place": "Sydney, Australia",
+   "city": "Sydney",
+   "country": "Australia",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_seapp2026",
+   "acronym": "SEAPP",
+   "full_name": "15th International Conference on Software Engineering and Applications",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "SE",
+   "topic": "Software Engineering",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191688&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 19, 2026 - Dec 20, 2026",
+   "event_start": "2026-12-19",
+   "event_end": "2026-12-20",
+   "place": "Sydney, Australia",
+   "city": "Sydney",
+   "country": "Australia",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_sigem2026",
+   "acronym": "SIGEM",
+   "full_name": "12th International Conference on Signal, Image Processing and Embedded Systems",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "CG",
+   "topic": "Computer Graphics & Multimedia",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=202479&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 19, 2026 - Dec 20, 2026",
+   "event_start": "2026-12-19",
+   "event_end": "2026-12-20",
+   "place": "Sydney, Australia",
+   "city": "Sydney",
+   "country": "Australia",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "machine learning",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_sipij2026",
+   "acronym": "SIPIJ",
+   "full_name": "Signal & Image Processing : An International Journal - H index - 33",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "CG",
+   "topic": "Computer Graphics & Multimedia",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=195150&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "artificial intelligence",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_vcoi2026",
+   "acronym": "VCOI",
+   "full_name": "4th International Conference on Vision and Computational Intelligence",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "CG",
+   "topic": "Computer Graphics & Multimedia",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191850&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-29T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 29, 2026 - Dec 30, 2026",
+   "event_start": "2026-12-29",
+   "event_end": "2026-12-30",
+   "place": "Virtual Conference",
+   "city": "",
+   "country": "Online",
+   "mode": "online",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "machine learning",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ai2026",
+   "acronym": "AI",
+   "full_name": "International Conference on Artificial Intelligence and Applications",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=192129&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-30T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 26, 2026 - Dec 27, 2026",
+   "event_start": "2026-12-26",
+   "event_end": "2026-12-27",
+   "place": "Dubai, UAE",
+   "city": "Dubai",
+   "country": "UAE",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_aimds2026",
+   "acronym": "AIMDS",
+   "full_name": "3rd International Conference on AI, Machine Learning and Data Science",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "DB",
+   "topic": "Data Mining & Databases",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191480&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-30T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 30, 2026 - Dec 31, 2026",
+   "event_start": "2026-12-30",
+   "event_end": "2026-12-31",
+   "place": "Virtual Conference",
+   "city": "",
+   "country": "Online",
+   "mode": "online",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_aimlnet2026",
+   "acronym": "AIMLNET",
+   "full_name": "6th International conference on AI, Machine Learning in Communications and Networks",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "NW",
+   "topic": "Computer Networks",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191507&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-30T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 26, 2026 - Dec 27, 2026",
+   "event_start": "2026-12-26",
+   "event_end": "2026-12-27",
+   "place": "Dubai, UAE",
+   "city": "Dubai",
+   "country": "UAE",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "software engineering",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_arin2027",
+   "acronym": "ARIN",
+   "full_name": "13th International Conference on Artificial Intelligence",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191883&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-30T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Jan 30, 2027 - Jan 31, 2027",
+   "event_start": "2027-01-30",
+   "event_end": "2027-01-31",
+   "place": "Copenhagen, Denmark",
+   "city": "Copenhagen",
+   "country": "Denmark",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_bdhi2027",
+   "acronym": "BDHI",
+   "full_name": "7th International Conference on Big Data & Health Informatics",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "DB",
+   "topic": "Data Mining & Databases",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=192723&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-30T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Jan 23, 2027 - Jan 24, 2027",
+   "event_start": "2027-01-23",
+   "event_end": "2027-01-24",
+   "place": "Zurich, Switzerland",
+   "city": "Zurich",
+   "country": "Switzerland",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_binlp2026",
+   "acronym": "BINLP",
+   "full_name": "6th International Conference on Big Data, IOT & NLP",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "DB",
+   "topic": "Data Mining & Databases",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=192619&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-30T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 26, 2026 - Dec 27, 2026",
+   "event_start": "2026-12-26",
+   "event_end": "2026-12-27",
+   "place": "Dubai, UAE",
+   "city": "Dubai",
+   "country": "UAE",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
    "id": "wikicfp_biodevices2027",
    "acronym": "BIODEVICES",
    "full_name": "20th International Conference on Biomedical Electronics and Devices",
@@ -10769,6 +13282,174 @@
    "accept_rates": [],
    "source": "wikicfp",
    "wikicfp_category": "security",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_bios2026",
+   "acronym": "BIOS",
+   "full_name": "12th International Conference on Bioinformatics & Biosciences",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=192076&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-30T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 26, 2026 - Dec 27, 2026",
+   "event_start": "2026-12-26",
+   "event_end": "2026-12-27",
+   "place": "Dubai, UAE",
+   "city": "Dubai",
+   "country": "UAE",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "security",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ccseai2026",
+   "acronym": "CCSEAI",
+   "full_name": "3rd International Conference on Computer Science, Engineering and AI",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191506&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-30T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 30, 2026 - Dec 31, 2026",
+   "event_start": "2026-12-30",
+   "event_end": "2026-12-31",
+   "place": "Virtual Conference",
+   "city": "",
+   "country": "Online",
+   "mode": "online",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "security",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_dmap2027",
+   "acronym": "DMAP",
+   "full_name": "International Conference on Data Mining and Applications",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "DB",
+   "topic": "Data Mining & Databases",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=195438&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-30T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Jan 30, 2027 - Jan 31, 2027",
+   "event_start": "2027-01-30",
+   "event_end": "2027-01-31",
+   "place": "Copenhagen, Denmark",
+   "city": "Copenhagen",
+   "country": "Denmark",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_dnlp2027",
+   "acronym": "DNLP",
+   "full_name": "8th International Conference on Data Mining and NLP",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "DB",
+   "topic": "Data Mining & Databases",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=192539&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-30T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Jan 23, 2027 - Jan 24, 2027",
+   "event_start": "2027-01-23",
+   "event_end": "2027-01-24",
+   "place": "Zurich, Switzerland",
+   "city": "Zurich",
+   "country": "Switzerland",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
    "scope": "international",
    "fees": null,
    "keywords": [],
@@ -10818,6 +13499,132 @@
    "checked": null
   },
   {
+   "id": "wikicfp_iotsec2026",
+   "acronym": "IOTSEC",
+   "full_name": "3rd International Conference on IoT & Information Security",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "SC",
+   "topic": "Security & Privacy",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191479&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-30T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 30, 2026 - Dec 31, 2026",
+   "event_start": "2026-12-30",
+   "event_end": "2026-12-31",
+   "place": "Virtual Conference",
+   "city": "",
+   "country": "Online",
+   "mode": "online",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "security",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_meds2026",
+   "acronym": "MEDS",
+   "full_name": "9th International Conference on Medical Sciences",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "OT",
+   "topic": "Outside Computing",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191553&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-30T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 30, 2026 - Dec 31, 2026",
+   "event_start": "2026-12-30",
+   "event_end": "2026-12-31",
+   "place": "Virtual Conference",
+   "city": "",
+   "country": "Online",
+   "mode": "online",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_mliob2027",
+   "acronym": "MLIOB",
+   "full_name": "International Conference on Machine Learning, IOT and Blockchain (MLIOB 2027)",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "SC",
+   "topic": "Security & Privacy",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=192722&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-30T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Jan 23, 2027 - Jan 24, 2027",
+   "event_start": "2027-01-23",
+   "event_end": "2027-01-24",
+   "place": "Zurich, Switzerland",
+   "city": "Zurich",
+   "country": "Switzerland",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "security",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
    "id": "wikicfp_modelsward2027",
    "acronym": "MODELSWARD",
    "full_name": "15th International Conference on Model-Based Software and Systems Engineering",
@@ -10853,6 +13660,342 @@
    "accept_rates": [],
    "source": "wikicfp",
    "wikicfp_category": "software engineering",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_mavas2026",
+   "acronym": "MaVaS",
+   "full_name": "12th International Conference of Managing Value and Supply Chains",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "OT",
+   "topic": "Outside Computing",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=192273&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-30T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 26, 2026 - Dec 27, 2026",
+   "event_start": "2026-12-26",
+   "event_end": "2026-12-27",
+   "place": "Dubai, UAE",
+   "city": "Dubai",
+   "country": "UAE",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_natap2027",
+   "acronym": "NATAP",
+   "full_name": "10th International Conference on Natural Language Processing and Trends",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=192039&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-30T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Jan 30, 2027 - Jan 31, 2027",
+   "event_start": "2027-01-30",
+   "event_end": "2027-01-31",
+   "place": "Copenhagen, Denmark",
+   "city": "Copenhagen",
+   "country": "Denmark",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_net2027",
+   "acronym": "NET",
+   "full_name": "11th International Conference on Networks and Communications",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "NW",
+   "topic": "Computer Networks",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=195089&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-30T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Jan 23, 2027 - Jan 24, 2027",
+   "event_start": "2027-01-23",
+   "event_end": "2027-01-24",
+   "place": "Zurich, Switzerland",
+   "city": "Zurich",
+   "country": "Switzerland",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "computer networks",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ngnct2026",
+   "acronym": "NGNCT",
+   "full_name": "12th International Conference on Next Generation Networks and Communication Technologies",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "NW",
+   "topic": "Computer Networks",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=201716&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-30T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 26, 2026 - Dec 27, 2026",
+   "event_start": "2026-12-26",
+   "event_end": "2026-12-27",
+   "place": "Dubai, UAE",
+   "city": "Dubai",
+   "country": "UAE",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "computer networks",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_nmco2027",
+   "acronym": "NMCO",
+   "full_name": "13th International Conference on Networks, Mobile Communication",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "NW",
+   "topic": "Computer Networks",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=194910&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-30T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Jan 30, 2027 - Jan 31, 2027",
+   "event_start": "2027-01-30",
+   "event_end": "2027-01-31",
+   "place": "Copenhagen, Denmark",
+   "city": "Copenhagen",
+   "country": "Denmark",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "software engineering",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_soea2027",
+   "acronym": "SOEA",
+   "full_name": "11th International Conference on Software Engineering and Applications",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "SE",
+   "topic": "Software Engineering",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=195388&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-30T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Jan 23, 2027 - Jan 24, 2027",
+   "event_start": "2027-01-23",
+   "event_end": "2027-01-24",
+   "place": "Zurich, Switzerland",
+   "city": "Zurich",
+   "country": "Switzerland",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "software engineering",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_softpa2027",
+   "acronym": "SOFTPA",
+   "full_name": "14th International Conference on Emerging Practices in Software Process & Architecture",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "SE",
+   "topic": "Software Engineering",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191554&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-30T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Jan 30, 2027 - Jan 31, 2027",
+   "event_start": "2027-01-30",
+   "event_end": "2027-01-31",
+   "place": "Copenhagen, Denmark",
+   "city": "Copenhagen",
+   "country": "Denmark",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "software engineering",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_spt2026",
+   "acronym": "SPT",
+   "full_name": "3rd International Conference on Signal Processing Trends",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "CG",
+   "topic": "Computer Graphics & Multimedia",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=191586&copyownerid=46167",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-11-30T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 30, 2026 - Dec 31, 2026",
+   "event_start": "2026-12-30",
+   "event_end": "2026-12-31",
+   "place": "Virtual Conference",
+   "city": "",
+   "country": "Online",
+   "mode": "online",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "security",
    "scope": "international",
    "fees": null,
    "keywords": [],
@@ -11061,8 +14204,18 @@
      "comment": "Round 1 Submission Deadline"
     },
     {
+     "type": "notification",
+     "iso": "2027-01-01T11:59:59Z",
+     "comment": "Round 1 Submission Deadline"
+    },
+    {
      "type": "paper",
      "iso": "2027-02-01T11:59:59Z",
+     "comment": "Round 2 Submission Deadline"
+    },
+    {
+     "type": "notification",
+     "iso": "2027-03-16T11:59:59Z",
      "comment": "Round 2 Submission Deadline"
     }
    ],
@@ -11259,6 +14412,48 @@
     }
    ],
    "source": "ccfddl",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_eiscopusdsse2026",
+   "acronym": "Ei/Scopus-DSSE",
+   "full_name": "2026 International Conference on Data Science and Software Engineering (DSSE 2026)",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "DB",
+   "topic": "Data Mining & Databases",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=192874&copyownerid=165700",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-12-01T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 25, 2026 - Dec 27, 2026",
+   "event_start": "2026-12-25",
+   "event_end": "2026-12-27",
+   "place": "Shanghai, China",
+   "city": "Shanghai",
+   "country": "China",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
    "scope": "international",
    "fees": null,
    "keywords": [],
@@ -11530,6 +14725,48 @@
    "accept_rates": [],
    "source": "wikicfp",
    "wikicfp_category": "security",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ieeeisse2026",
+   "acronym": "IEEE-ISSE",
+   "full_name": "2026 IEEE International Conference on Intelligent Information, Systems Science and Engineering (ISSE 2026)",
+   "year": 2026,
+   "kind": "conference",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=172345&copyownerid=165700",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-12-01T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Dec 25, 2026 - Dec 27, 2026",
+   "event_start": "2026-12-25",
+   "event_end": "2026-12-27",
+   "place": "Shanghai, China",
+   "city": "Shanghai",
+   "country": "China",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
    "scope": "international",
    "fees": null,
    "keywords": [],
@@ -12038,6 +15275,90 @@
    "checked": null
   },
   {
+   "id": "wikicfp_auen2027",
+   "acronym": "AUEN",
+   "full_name": "6th International Conference on Automation and Engineering",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=200313&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-12-05T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Mar 30, 2027 - Mar 31, 2027",
+   "event_start": "2027-03-30",
+   "event_end": "2027-03-31",
+   "place": "Virtual Conference",
+   "city": "",
+   "country": "Online",
+   "mode": "online",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "software engineering",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_nldml2027",
+   "acronym": "NLDML",
+   "full_name": "6th International Conference on NLP, Data Mining and Machine Learning",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "DB",
+   "topic": "Data Mining & Databases",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=199892&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-12-05T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Mar 30, 2027 - Mar 31, 2027",
+   "event_start": "2027-03-30",
+   "event_end": "2027-03-31",
+   "place": "Virtual Conference",
+   "city": "",
+   "country": "Online",
+   "mode": "online",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
    "id": "pakdd27",
    "acronym": "PAKDD",
    "full_name": "Pacific-Asia Conference on Knowledge Discovery and Data Mining",
@@ -12203,6 +15524,48 @@
    "checked": null
   },
   {
+   "id": "wikicfp_aigt2027",
+   "acronym": "AIGT",
+   "full_name": "2027 International Conference on Artificial Intelligence and Generation Technologies (AIGT 2027)",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "AI",
+   "topic": "Artificial Intelligence",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=202617&copyownerid=13881",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-12-06T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "May 14, 2027 - May 16, 2027",
+   "event_start": "2027-05-14",
+   "event_end": "2027-05-16",
+   "place": "Nanjing, China",
+   "city": "Nanjing",
+   "country": "China",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "software engineering",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
    "id": "wikicfp_aitc2027",
    "acronym": "AITC",
    "full_name": "2027 9th International Artificial Intelligence Technology Conference (AITC 2027)",
@@ -12232,6 +15595,48 @@
    "place": "Lianyungang, Jiangsu, China",
    "city": "Jiangsu",
    "country": "China",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "software engineering",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_apct2027",
+   "acronym": "APCT",
+   "full_name": "2027 6th Asia-Pacific Computer Technologies Conference (APCT 2027)",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "MX",
+   "topic": "Interdisciplinary / Emerging",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=194986&copyownerid=13881",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-12-06T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Jan 15, 2027 - Jan 17, 2027",
+   "event_start": "2027-01-15",
+   "event_end": "2027-01-17",
+   "place": "Jakarta, Indonesia",
+   "city": "Jakarta",
+   "country": "Indonesia",
    "mode": "in-person",
    "status": "confirmed",
    "estimated_from": null,
@@ -12338,132 +15743,6 @@
    "checked": null
   },
   {
-   "id": "wikicfp_icmip2027",
-   "acronym": "ICMIP",
-   "full_name": "SPIE--2027 12th International Conference on Multimedia and Image Processing (ICMIP 2027)",
-   "year": 2027,
-   "kind": "conference",
-   "sub": "CG",
-   "topic": "Computer Graphics & Multimedia",
-   "rank": {
-    "ccf": null,
-    "core": null,
-    "thcpl": null
-   },
-   "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=199956&copyownerid=13881",
-   "timezone": "AoE",
-   "tz_known": false,
-   "deadlines": [
-    {
-     "type": "paper",
-     "iso": "2026-12-06T11:59:59Z",
-     "comment": ""
-    }
-   ],
-   "date": "Mar 27, 2027 - Mar 30, 2027",
-   "event_start": "2027-03-27",
-   "event_end": "2027-03-30",
-   "place": "Nagoya, Japan",
-   "city": "Nagoya",
-   "country": "Japan",
-   "mode": "in-person",
-   "status": "confirmed",
-   "estimated_from": null,
-   "accept_rates": [],
-   "source": "wikicfp",
-   "wikicfp_category": "software engineering",
-   "scope": "international",
-   "fees": null,
-   "keywords": [],
-   "publisher": null,
-   "checked": null
-  },
-  {
-   "id": "wikicfp_icsie2027",
-   "acronym": "ICSIE",
-   "full_name": "2027 15th International Conference on Software and Information Engineering (ICSIE 2027)",
-   "year": 2027,
-   "kind": "conference",
-   "sub": "SE",
-   "topic": "Software Engineering",
-   "rank": {
-    "ccf": null,
-    "core": null,
-    "thcpl": null
-   },
-   "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=194524&copyownerid=13881",
-   "timezone": "AoE",
-   "tz_known": false,
-   "deadlines": [
-    {
-     "type": "paper",
-     "iso": "2026-12-06T11:59:59Z",
-     "comment": ""
-    }
-   ],
-   "date": "Jan 15, 2027 - Jan 17, 2027",
-   "event_start": "2027-01-15",
-   "event_end": "2027-01-17",
-   "place": "Tokyo, Japan",
-   "city": "Tokyo",
-   "country": "Japan",
-   "mode": "in-person",
-   "status": "confirmed",
-   "estimated_from": null,
-   "accept_rates": [],
-   "source": "wikicfp",
-   "wikicfp_category": "software engineering",
-   "scope": "international",
-   "fees": null,
-   "keywords": [],
-   "publisher": null,
-   "checked": null
-  },
-  {
-   "id": "wikicfp_icsim2027",
-   "acronym": "ICSIM",
-   "full_name": "IET--2027 The 10th International Conference on Software Engineering and Information Management (ICSIM 2027)",
-   "year": 2027,
-   "kind": "conference",
-   "sub": "SE",
-   "topic": "Software Engineering",
-   "rank": {
-    "ccf": null,
-    "core": null,
-    "thcpl": null
-   },
-   "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=195310&copyownerid=13881",
-   "timezone": "AoE",
-   "tz_known": false,
-   "deadlines": [
-    {
-     "type": "paper",
-     "iso": "2026-12-06T11:59:59Z",
-     "comment": ""
-    }
-   ],
-   "date": "Jan 20, 2027 - Jan 22, 2027",
-   "event_start": "2027-01-20",
-   "event_end": "2027-01-22",
-   "place": "Tokyo, Japan",
-   "city": "Tokyo",
-   "country": "Japan",
-   "mode": "in-person",
-   "status": "confirmed",
-   "estimated_from": null,
-   "accept_rates": [],
-   "source": "wikicfp",
-   "wikicfp_category": "software engineering",
-   "scope": "international",
-   "fees": null,
-   "keywords": [],
-   "publisher": null,
-   "checked": null
-  },
-  {
    "id": "wikicfp_icccbda2027",
    "acronym": "IEEE ICCCBDA",
    "full_name": "IEEE--2027 the 12th International Conference on Cloud Computing and Big Data Analytics (ICCCBDA 2027)",
@@ -12499,6 +15778,48 @@
    "accept_rates": [],
    "source": "wikicfp",
    "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_icmss2027",
+   "acronym": "IEEE ICMSS",
+   "full_name": "IEEE--2027 the 11th International Conference on Management Engineering, Software Engineering and Service Sciences (ICMSS 2027)",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "SE",
+   "topic": "Software Engineering",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=200258&copyownerid=13881",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-12-06T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Mar 19, 2027 - Mar 21, 2027",
+   "event_start": "2027-03-19",
+   "event_end": "2027-03-21",
+   "place": "Hong Kong, China",
+   "city": "Hong Kong",
+   "country": "China",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "software engineering",
    "scope": "international",
    "fees": null,
    "keywords": [],
@@ -12618,6 +15939,11 @@
     {
      "type": "paper",
      "iso": "2026-12-16T11:59:59Z",
+     "comment": "Regular papers; official CFP dates. Clock 23:59:59 and timezone AoE are repository defaults, not published cutoff precision."
+    },
+    {
+     "type": "notification",
+     "iso": "2027-02-20T11:59:59Z",
      "comment": "Regular papers; official CFP dates. Clock 23:59:59 and timezone AoE are repository defaults, not published cutoff precision."
     }
    ],
@@ -12892,6 +16218,48 @@
    "checked": null
   },
   {
+   "id": "wikicfp_ngcs2027",
+   "acronym": "NGCS",
+   "full_name": "The IEEE International Conference on Next Generation Cyber Security Systems",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "SC",
+   "topic": "Security & Privacy",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=203566&copyownerid=185923",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-12-11T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Mar 15, 2027 - Mar 18, 2027",
+   "event_start": "2027-03-15",
+   "event_end": "2027-03-18",
+   "place": "San Antonio, Texas, USA and Online",
+   "city": "San Antonio",
+   "country": "USA",
+   "mode": "hybrid",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "security",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
    "id": "wikicfp_scsnai2027",
    "acronym": "SCSN-AI",
    "full_name": "15th International Workshop on Semantic Computing and AI for Social Networks and Organizational Knowledge - From User Information to Collective Intelligence in the Age of AI Agents",
@@ -12927,6 +16295,90 @@
    "accept_rates": [],
    "source": "wikicfp",
    "wikicfp_category": "data mining",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijcis2026",
+   "acronym": "IJCIS",
+   "full_name": "International Journal on Cryptography and Information Security",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "SC",
+   "topic": "Security & Privacy",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=200236&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-12-12T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "security",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
+   "id": "wikicfp_ijmnct2026",
+   "acronym": "IJMNCT",
+   "full_name": "International Journal of  Mobile Network Communications & Telematics",
+   "year": 2026,
+   "kind": "journal",
+   "sub": "NW",
+   "topic": "Computer Networks",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=192934&copyownerid=33993",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2026-12-12T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "N/A",
+   "event_start": null,
+   "event_end": null,
+   "place": "N/A",
+   "city": "",
+   "country": "TBD",
+   "mode": "tbd",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "security",
    "scope": "international",
    "fees": null,
    "keywords": [],
@@ -13561,48 +17013,6 @@
     }
    ],
    "source": "ccfddl",
-   "scope": "international",
-   "fees": null,
-   "keywords": [],
-   "publisher": null,
-   "checked": null
-  },
-  {
-   "id": "wikicfp_ijmnct2026",
-   "acronym": "IJMNCT",
-   "full_name": "International Journal of  Mobile Network Communications & Telematics",
-   "year": 2026,
-   "kind": "journal",
-   "sub": "NW",
-   "topic": "Computer Networks",
-   "rank": {
-    "ccf": null,
-    "core": null,
-    "thcpl": null
-   },
-   "dblp": null,
-   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=192934&copyownerid=33993",
-   "timezone": "AoE",
-   "tz_known": false,
-   "deadlines": [
-    {
-     "type": "paper",
-     "iso": "2026-12-20T11:59:59Z",
-     "comment": ""
-    }
-   ],
-   "date": "N/A",
-   "event_start": null,
-   "event_end": null,
-   "place": "N/A",
-   "city": "",
-   "country": "TBD",
-   "mode": "tbd",
-   "status": "confirmed",
-   "estimated_from": null,
-   "accept_rates": [],
-   "source": "wikicfp",
-   "wikicfp_category": "security",
    "scope": "international",
    "fees": null,
    "keywords": [],
@@ -27931,6 +31341,48 @@
    "checked": null
   },
   {
+   "id": "wikicfp_emerging2027",
+   "acronym": "EMERGING",
+   "full_name": "The Nineteenth International Conference on Emerging Networks and Systems Intelligence",
+   "year": 2027,
+   "kind": "conference",
+   "sub": "NW",
+   "topic": "Computer Networks",
+   "rank": {
+    "ccf": null,
+    "core": null,
+    "thcpl": null
+   },
+   "dblp": null,
+   "url": "http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=204439&copyownerid=83510",
+   "timezone": "AoE",
+   "tz_known": false,
+   "deadlines": [
+    {
+     "type": "paper",
+     "iso": "2027-06-08T11:59:59Z",
+     "comment": ""
+    }
+   ],
+   "date": "Sep 26, 2027 - Sep 30, 2027",
+   "event_start": "2027-09-26",
+   "event_end": "2027-09-30",
+   "place": "Porto, Portugal",
+   "city": "Porto",
+   "country": "Portugal",
+   "mode": "in-person",
+   "status": "confirmed",
+   "estimated_from": null,
+   "accept_rates": [],
+   "source": "wikicfp",
+   "wikicfp_category": "security",
+   "scope": "international",
+   "fees": null,
+   "keywords": [],
+   "publisher": null,
+   "checked": null
+  },
+  {
    "id": "cicai27-est",
    "acronym": "CICAI",
    "full_name": "CAAI International Conference on Artificial Intelligence",
@@ -28594,7 +32046,7 @@
     },
     {
      "type": "notification",
-     "iso": "2027-10-10T11:59:59Z",
+     "iso": "2027-10-15T11:59:59Z",
      "comment": "First round"
     },
     {
@@ -32184,69 +35636,6 @@
    "keywords": []
   },
   {
-   "id": "cvc28-est",
-   "acronym": "CVC",
-   "full_name": "Computer Vision Conference",
-   "year": 2028,
-   "kind": "conference",
-   "sub": "AI",
-   "topic": "Artificial Intelligence",
-   "rank": {
-    "ccf": null,
-    "core": null,
-    "thcpl": null
-   },
-   "dblp": "cvc",
-   "url": "https://saiconference.com/CVC",
-   "timezone": "AoE",
-   "tz_known": true,
-   "deadlines": [
-    {
-     "type": "paper",
-     "iso": "2027-09-02T11:59:59Z",
-     "comment": "Round 1"
-    },
-    {
-     "type": "notification",
-     "iso": "2027-10-02T11:59:59Z",
-     "comment": "Round 1"
-    },
-    {
-     "type": "paper",
-     "iso": "2027-11-16T11:59:59Z",
-     "comment": "Round 2"
-    },
-    {
-     "type": "notification",
-     "iso": "2027-12-16T11:59:59Z",
-     "comment": "Round 2"
-    }
-   ],
-   "date": "TBD",
-   "event_start": null,
-   "event_end": null,
-   "place": "TBD",
-   "city": "",
-   "country": "TBD",
-   "mode": "tbd",
-   "status": "estimated",
-   "estimated_from": 2027,
-   "accept_rates": [
-    {
-     "year": 2026,
-     "rate": 0.3933,
-     "accepted": 105,
-     "submitted": 267
-    }
-   ],
-   "source": "ccfddl",
-   "scope": "international",
-   "fees": null,
-   "keywords": [],
-   "publisher": null,
-   "checked": null
-  },
-  {
    "id": "pacificvis28-est",
    "acronym": "PacificVis",
    "full_name": "IEEE Pacific Visualization Symposium",
@@ -35060,7 +38449,7 @@
     },
     {
      "type": "notification",
-     "iso": "2027-12-15T23:59:59Z",
+     "iso": "2027-12-30T23:59:59Z",
      "comment": ""
     }
    ],
