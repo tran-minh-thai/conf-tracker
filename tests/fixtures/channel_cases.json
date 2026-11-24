@@ -1,0 +1,1029 @@
+{
+ "note": "Shared by tests/test_channels.py, tests/core.test.js and the iOS ConfCore tests.",
+ "source": {
+  "file": "data/venue_channels.json",
+  "generated_at": "2026-11-24T02:11:34+00:00",
+  "sha256": "938c9ebac54a68194663df0b81bbcadecc32bcfeef71c30d4ba4d2242b00e4b6"
+ },
+ "set": {
+  "schema_version": 1,
+  "years": [
+   2021,
+   2025
+  ],
+  "stopwords": [
+   "a",
+   "about",
+   "above",
+   "across",
+   "after",
+   "again",
+   "against",
+   "all",
+   "almost",
+   "along",
+   "also",
+   "although",
+   "among",
+   "an",
+   "analysis",
+   "and",
+   "another",
+   "any",
+   "approach",
+   "approaches",
+   "are",
+   "as",
+   "at",
+   "based",
+   "be",
+   "because",
+   "been",
+   "before",
+   "being",
+   "between",
+   "both",
+   "but",
+   "by",
+   "can",
+   "case",
+   "could",
+   "data",
+   "do",
+   "does",
+   "done",
+   "due",
+   "during",
+   "each",
+   "effective",
+   "efficient",
+   "either",
+   "else",
+   "etc",
+   "every",
+   "for",
+   "framework",
+   "from",
+   "further",
+   "had",
+   "has",
+   "have",
+   "having",
+   "here",
+   "how",
+   "however",
+   "if",
+   "improved",
+   "improving",
+   "in",
+   "into",
+   "is",
+   "it",
+   "its",
+   "itself",
+   "just",
+   "less",
+   "many",
+   "may",
+   "method",
+   "methods",
+   "model",
+   "models",
+   "more",
+   "most",
+   "much",
+   "must",
+   "near",
+   "new",
+   "no",
+   "nor",
+   "not",
+   "novel",
+   "of",
+   "off",
+   "often",
+   "on",
+   "once",
+   "only",
+   "or",
+   "other",
+   "our",
+   "out",
+   "over",
+   "own",
+   "paper",
+   "per",
+   "problem",
+   "problems",
+   "propose",
+   "proposed",
+   "rather",
+   "results",
+   "same",
+   "several",
+   "should",
+   "show",
+   "since",
+   "so",
+   "some",
+   "study",
+   "such",
+   "system",
+   "systems",
+   "than",
+   "that",
+   "the",
+   "their",
+   "them",
+   "then",
+   "there",
+   "these",
+   "they",
+   "this",
+   "those",
+   "through",
+   "thus",
+   "to",
+   "too",
+   "toward",
+   "towards",
+   "under",
+   "until",
+   "up",
+   "upon",
+   "us",
+   "use",
+   "used",
+   "using",
+   "very",
+   "via",
+   "was",
+   "we",
+   "well",
+   "were",
+   "what",
+   "when",
+   "where",
+   "whether",
+   "which",
+   "while",
+   "who",
+   "whose",
+   "why",
+   "will",
+   "with",
+   "within",
+   "without",
+   "would",
+   "yet"
+  ],
+  "fusion": {
+   "method": "weighted sum of per-channel scores, each divided by the query's best score",
+   "order": [
+    "titles",
+    "keywords",
+    "arxiv"
+   ],
+   "weights": {
+    "titles": 1.0,
+    "keywords": 1.0,
+    "arxiv": 0.25
+   }
+  },
+  "channels": {
+   "titles": {
+    "method": "cosine",
+    "phrase": 1.0,
+    "query_weight": {
+     "algorithm": 0.712829,
+     "bound": 1.69787,
+     "database": 1.580956,
+     "dataset": 0.93643,
+     "detection": 0.591168,
+     "expert": 1.379546,
+     "fraud": 2.466967,
+     "fraud_detection": 2.680515,
+     "graph": 0.552955,
+     "graph_neural": 1.158519,
+     "high": 0.712829,
+     "high_utility": 4.820299,
+     "large": 0.585518,
+     "learning": 0.45651,
+     "lower": 2.070188,
+     "lower_bound": 2.633813,
+     "mining": 1.205502,
+     "network": 0.462891,
+     "neural": 0.585518,
+     "neural_network": 0.65156,
+     "online": 0.777994,
+     "online_learning": 2.358814,
+     "pattern": 0.915417,
+     "pruning": 1.515926,
+     "real": 0.727471,
+     "real_world": 1.349068,
+     "regret": 2.781254,
+     "sequential": 1.411358,
+     "tighter": 4.287971,
+     "transaction": 1.780769,
+     "upper": 2.633813,
+     "upper_bound": 5.210389,
+     "utility": 1.933826,
+     "world": 1.107565
+    },
+    "venues": {
+     "icalp": {
+      "algorithm": 0.263394,
+      "bound": 0.185383,
+      "graph": 0.173201,
+      "upper_bound": 0.08978,
+      "lower_bound": 0.089059,
+      "lower": 0.075855,
+      "upper": 0.056977
+     },
+     "isit": {
+      "bound": 0.209311,
+      "lower_bound": 0.071652,
+      "lower": 0.070148,
+      "upper_bound": 0.066465,
+      "network": 0.065122,
+      "learning": 0.062095,
+      "algorithm": 0.050082,
+      "upper": 0.047465
+     },
+     "soda": {
+      "algorithm": 0.223985,
+      "bound": 0.219542,
+      "graph": 0.191323,
+      "lower_bound": 0.129867,
+      "lower": 0.110612,
+      "online": 0.081354
+     },
+     "stoc": {
+      "bound": 0.247068,
+      "lower_bound": 0.212381,
+      "lower": 0.180892,
+      "algorithm": 0.12357,
+      "graph": 0.108745
+     },
+     "colt": {
+      "learning": 0.268695,
+      "bound": 0.243259,
+      "regret": 0.145356,
+      "online": 0.125584,
+      "lower_bound": 0.113212,
+      "online_learning": 0.10379,
+      "lower": 0.096427,
+      "algorithm": 0.089253,
+      "graph": 0.067027,
+      "neural_network": 0.055388,
+      "neural": 0.051582,
+      "network": 0.047859
+     },
+     "dexa": {
+      "database": 0.255218,
+      "network": 0.252365,
+      "learning": 0.233831,
+      "graph": 0.231484,
+      "detection": 0.214867,
+      "algorithm": 0.10998,
+      "mining": 0.099604,
+      "neural": 0.074399,
+      "dataset": 0.068853,
+      "neural_network": 0.066981,
+      "sequential": 0.065081,
+      "graph_neural": 0.0485,
+      "pattern": 0.044818,
+      "high": 0.029828
+     },
+     "edbt": {
+      "database": 0.268172,
+      "graph": 0.258851,
+      "learning": 0.138979,
+      "dataset": 0.110978,
+      "network": 0.08268,
+      "pattern": 0.081642,
+      "algorithm": 0.077441,
+      "mining": 0.066792,
+      "detection": 0.048791
+     },
+     "icdm": {
+      "learning": 0.377606,
+      "graph": 0.331153,
+      "detection": 0.208664,
+      "network": 0.180297,
+      "neural": 0.123211,
+      "large": 0.09671,
+      "mining": 0.095794,
+      "neural_network": 0.090687,
+      "graph_neural": 0.076856,
+      "sequential": 0.050934,
+      "dataset": 0.043572,
+      "pattern": 0.042422
+     },
+     "pakdd": {
+      "graph": 0.297624,
+      "learning": 0.289194,
+      "network": 0.25383,
+      "detection": 0.181997,
+      "neural": 0.171758,
+      "neural_network": 0.161048,
+      "graph_neural": 0.140616,
+      "large": 0.12824,
+      "sequential": 0.079946
+     },
+     "dasfaa": {
+      "graph": 0.365323,
+      "learning": 0.275598,
+      "network": 0.21107,
+      "detection": 0.103679,
+      "neural": 0.093525,
+      "graph_neural": 0.089649,
+      "large": 0.088996,
+      "neural_network": 0.078006,
+      "database": 0.069815,
+      "sequential": 0.058399,
+      "mining": 0.04117
+     },
+     "kdd": {
+      "learning": 0.42233,
+      "graph": 0.36781,
+      "network": 0.173971,
+      "neural": 0.155093,
+      "graph_neural": 0.15443,
+      "large": 0.134455,
+      "neural_network": 0.124364,
+      "online": 0.091848,
+      "detection": 0.087411,
+      "sequential": 0.056916,
+      "mining": 0.051495
+     },
+     "sigmod": {
+      "database": 0.2048,
+      "graph": 0.091195,
+      "learning": 0.084415,
+      "large": 0.046059,
+      "network": 0.032263
+     }
+    }
+   },
+   "keywords": {
+    "method": "bm25",
+    "phrase": 1.5,
+    "query_weight": {
+     "algorithm": 0.422388,
+     "bound": 0.645465,
+     "database": 0.548849,
+     "dataset": 0.575076,
+     "detection": 0.422388,
+     "expert": 0.696979,
+     "fraud": 0.773434,
+     "fraud_detection": 0.831546,
+     "graph": 0.439475,
+     "graph_neural": 0.541687,
+     "high": 0.53936,
+     "large": 0.486059,
+     "learning": 0.399715,
+     "lower": 0.70035,
+     "lower_bound": 0.70035,
+     "mining": 0.533669,
+     "mining_algorithm": 0.722777,
+     "network": 0.402303,
+     "neural": 0.427268,
+     "neural_network": 0.430094,
+     "online": 0.523838,
+     "online_learning": 0.684328,
+     "pattern": 0.638862,
+     "pruning": 0.750417,
+     "real": 0.517552,
+     "regret": 0.78704,
+     "sequential": 0.740457,
+     "transaction": 0.70035,
+     "upper": 0.843374,
+     "upper_bound": 0.947183,
+     "utility": 0.735781,
+     "world": 0.843374
+    },
+    "venues": {
+     "icalp": {
+      "algorithm": 0.74437,
+      "bound": 5.075746,
+      "graph": 1.03172,
+      "learning": 0.286352,
+      "lower": 6.397223,
+      "lower_bound": 6.397223,
+      "network": 0.321792
+     },
+     "isit": {
+      "algorithm": 0.704769,
+      "bound": 4.952277,
+      "detection": 0.592464,
+      "graph": 0.826278,
+      "high": 1.93912,
+      "learning": 0.31404,
+      "lower": 5.179474,
+      "lower_bound": 5.179474,
+      "network": 0.377175,
+      "neural": 0.304515,
+      "neural_network": 0.322144,
+      "sequential": 2.367756,
+      "upper": 4.335762,
+      "utility": 4.068881
+     },
+     "soda": {
+      "algorithm": 0.742374,
+      "bound": 4.624127,
+      "database": 1.843821,
+      "detection": 0.415944,
+      "graph": 1.029778,
+      "high": 1.669929,
+      "learning": 0.167614,
+      "lower": 5.660458,
+      "lower_bound": 5.578993,
+      "network": 0.309249,
+      "online": 2.00942,
+      "pattern": 1.650274
+     },
+     "stoc": {
+      "algorithm": 0.742382,
+      "bound": 4.909307,
+      "database": 2.05258,
+      "detection": 0.272859,
+      "graph": 1.028264,
+      "high": 1.861237,
+      "learning": 0.308782,
+      "lower": 6.108936,
+      "lower_bound": 6.108936,
+      "network": 0.284622,
+      "online": 1.521953,
+      "upper": 3.058742
+     },
+     "colt": {
+      "algorithm": 0.737533,
+      "bound": 5.123922,
+      "detection": 0.358096,
+      "graph": 0.945985,
+      "high": 2.120911,
+      "learning": 0.369465,
+      "lower": 6.021731,
+      "lower_bound": 6.021731,
+      "network": 0.379507,
+      "neural": 0.688504,
+      "neural_network": 0.728363,
+      "online": 2.105727,
+      "online_learning": 4.484758,
+      "regret": 8.552982,
+      "upper": 5.51098
+     },
+     "dexa": {
+      "algorithm": 0.720713,
+      "database": 3.026346,
+      "detection": 0.699071,
+      "graph": 0.972404,
+      "graph_neural": 2.631268,
+      "large": 1.593141,
+      "learning": 0.365072,
+      "mining": 2.678634,
+      "mining_algorithm": 6.247819,
+      "network": 0.401117,
+      "neural": 0.756591,
+      "neural_network": 0.796724,
+      "online": 1.518063
+     },
+     "edbt": {
+      "algorithm": 0.747402,
+      "database": 3.189201,
+      "detection": 0.72068,
+      "graph": 0.9934,
+      "mining": 2.737774,
+      "mining_algorithm": 7.231694,
+      "network": 0.393702
+     },
+     "icdm": {
+      "algorithm": 0.693951,
+      "bound": 2.717159,
+      "database": 1.604106,
+      "dataset": 2.259203,
+      "detection": 0.69033,
+      "graph": 0.974917,
+      "graph_neural": 2.772032,
+      "high": 1.270494,
+      "large": 1.671348,
+      "learning": 0.369795,
+      "mining": 2.446631,
+      "mining_algorithm": 3.775761,
+      "network": 0.402294,
+      "neural": 0.784496,
+      "neural_network": 0.824572,
+      "online": 1.749722,
+      "pattern": 2.815939,
+      "pruning": 2.514602,
+      "real": 0.754033
+     },
+     "pakdd": {
+      "algorithm": 0.704087,
+      "database": 1.748295,
+      "detection": 0.684922,
+      "graph": 0.955462,
+      "graph_neural": 2.72318,
+      "high": 1.695928,
+      "large": 1.453002,
+      "learning": 0.370572,
+      "mining": 2.376528,
+      "mining_algorithm": 4.749389,
+      "network": 0.40305,
+      "neural": 0.790882,
+      "neural_network": 0.836668,
+      "online": 1.55032,
+      "pattern": 2.05383,
+      "utility": 3.50018
+     },
+     "dasfaa": {
+      "algorithm": 0.698605,
+      "database": 2.599308,
+      "detection": 0.602772,
+      "expert": 4.318636,
+      "graph": 0.988589,
+      "graph_neural": 2.813902,
+      "large": 1.608201,
+      "learning": 0.367558,
+      "mining": 2.4056,
+      "mining_algorithm": 4.108977,
+      "network": 0.402606,
+      "neural": 0.786937,
+      "neural_network": 0.832495,
+      "online": 0.794735,
+      "pattern": 2.598575,
+      "sequential": 3.533264
+     },
+     "kdd": {
+      "algorithm": 0.71305,
+      "database": 1.907539,
+      "dataset": 2.298309,
+      "detection": 0.571415,
+      "expert": 4.044512,
+      "fraud": 2.653389,
+      "fraud_detection": 3.214795,
+      "graph": 0.990564,
+      "graph_neural": 2.841723,
+      "high": 1.629469,
+      "large": 1.485964,
+      "learning": 0.367536,
+      "mining": 2.283028,
+      "network": 0.40512,
+      "neural": 0.792795,
+      "neural_network": 0.837699,
+      "online": 2.000952,
+      "real": 1.11469
+     },
+     "sigmod": {
+      "algorithm": 0.723314,
+      "database": 3.156437,
+      "dataset": 1.779711,
+      "detection": 0.547719,
+      "graph": 0.935092,
+      "graph_neural": 1.5846,
+      "high": 1.57716,
+      "large": 1.610135,
+      "learning": 0.342982,
+      "mining": 2.478001,
+      "mining_algorithm": 6.065325,
+      "network": 0.355204,
+      "neural": 0.561953,
+      "neural_network": 0.57656,
+      "online": 1.284555,
+      "pattern": 2.355808,
+      "real": 1.449566,
+      "transaction": 5.582024,
+      "utility": 2.527063
+     }
+    }
+   },
+   "arxiv": {
+    "method": "cosine",
+    "phrase": 1.0,
+    "query_weight": {
+     "algorithm": 0.814422,
+     "bound": 1.832194,
+     "database": 3.128955,
+     "dataset": 0.855272,
+     "detection": 1.216339,
+     "evaluated": 2.09202,
+     "expert": 2.456923,
+     "graph": 1.076286,
+     "graph_neural": 2.969511,
+     "growth": 5.154529,
+     "high": 0.740162,
+     "large": 0.755313,
+     "learning": 0.770864,
+     "lower": 1.788378,
+     "lower_bound": 2.600488,
+     "mining": 3.423764,
+     "network": 0.803234,
+     "neural": 0.945949,
+     "neural_network": 1.059573,
+     "online": 1.854972,
+     "online_learning": 5.7407,
+     "pattern": 1.564911,
+     "pruning": 4.446431,
+     "real": 0.797717,
+     "real_world": 1.035249,
+     "regret": 3.999273,
+     "sequential": 2.83116,
+     "transaction": 4.202191,
+     "upper": 3.046232,
+     "upper_bound": 3.218619,
+     "utility": 3.423764,
+     "world": 0.939028,
+     "world_dataset": 2.653391
+    },
+    "venues": {
+     "icalp": {
+      "bound": 0.242775,
+      "algorithm": 0.187919,
+      "lower_bound": 0.158122,
+      "lower": 0.129832,
+      "graph": 0.127572,
+      "upper": 0.093712,
+      "upper_bound": 0.078984
+     },
+     "isit": {
+      "bound": 0.219661,
+      "upper": 0.128495,
+      "upper_bound": 0.106657,
+      "algorithm": 0.096924,
+      "lower_bound": 0.08294,
+      "lower": 0.080236
+     },
+     "soda": {
+      "algorithm": 0.185177,
+      "bound": 0.18092,
+      "graph": 0.139976,
+      "lower_bound": 0.119646,
+      "lower": 0.102541,
+      "upper": 0.070749,
+      "upper_bound": 0.060241
+     },
+     "stoc": {
+      "bound": 0.182148,
+      "algorithm": 0.16921,
+      "lower_bound": 0.127223,
+      "lower": 0.11554,
+      "graph": 0.107415,
+      "upper": 0.093353,
+      "upper_bound": 0.084708
+     },
+     "colt": {
+      "bound": 0.226638,
+      "algorithm": 0.181865,
+      "regret": 0.178677,
+      "lower_bound": 0.136033,
+      "learning": 0.13465,
+      "lower": 0.123645,
+      "online": 0.103357,
+      "upper": 0.093869,
+      "online_learning": 0.076565,
+      "upper_bound": 0.07408
+     },
+     "icdm": {
+      "dataset": 0.210643,
+      "learning": 0.185805,
+      "graph": 0.139875,
+      "real": 0.131044,
+      "neural": 0.110743,
+      "real_world": 0.103337,
+      "world": 0.097716,
+      "large": 0.091613,
+      "network": 0.08654,
+      "graph_neural": 0.082762,
+      "world_dataset": 0.073012,
+      "detection": 0.070973,
+      "algorithm": 0.066589,
+      "neural_network": 0.066424,
+      "high": 0.065487
+     },
+     "pakdd": {
+      "dataset": 0.205919,
+      "network": 0.177451,
+      "learning": 0.150131,
+      "graph": 0.136576,
+      "neural": 0.128495,
+      "neural_network": 0.128469,
+      "pattern": 0.08645,
+      "mining": 0.083604,
+      "real": 0.080487,
+      "graph_neural": 0.076471,
+      "large": 0.073456,
+      "algorithm": 0.070197,
+      "world": 0.067764,
+      "detection": 0.060083
+     },
+     "dasfaa": {
+      "dataset": 0.191657,
+      "graph": 0.13394,
+      "world": 0.118588,
+      "real_world": 0.112264,
+      "real": 0.10502,
+      "learning": 0.092869,
+      "large": 0.082823,
+      "world_dataset": 0.080211,
+      "network": 0.065995,
+      "neural": 0.061486,
+      "high": 0.05211
+     },
+     "kdd": {
+      "learning": 0.195059,
+      "dataset": 0.18587,
+      "graph": 0.175539,
+      "real_world": 0.163835,
+      "real": 0.157467,
+      "world": 0.154922,
+      "network": 0.140245,
+      "world_dataset": 0.132192,
+      "graph_neural": 0.131291,
+      "neural_network": 0.107811,
+      "online": 0.105343,
+      "large": 0.104699,
+      "neural": 0.104156,
+      "high": 0.075254,
+      "algorithm": 0.059273
+     },
+     "sigmod": {
+      "database": 0.218047,
+      "world": 0.12089,
+      "real": 0.11915,
+      "real_world": 0.11909,
+      "dataset": 0.118867,
+      "large": 0.107079,
+      "algorithm": 0.102706,
+      "bound": 0.067913,
+      "world_dataset": 0.06139,
+      "graph": 0.060928,
+      "network": 0.060499
+     }
+    }
+   }
+  }
+ },
+ "cases": [
+  {
+   "name": "high-utility sequential pattern mining",
+   "text": "Mining high-utility sequential patterns from large transaction databases. We propose a pattern-growth algorithm with tighter utility upper bounds for pruning, evaluated on real-world datasets.\nA tighter utility upper bound\nAn efficient pattern-growth mining algorithm",
+   "ranking": [
+    [
+     "isit",
+     1.8526213080573486
+    ],
+    [
+     "icalp",
+     1.4728070141834344
+    ],
+    [
+     "sigmod",
+     1.392745509231701
+    ],
+    [
+     "colt",
+     1.2441605798336295
+    ],
+    [
+     "stoc",
+     1.1516557308035693
+    ],
+    [
+     "icdm",
+     1.1094065401972928
+    ],
+    [
+     "soda",
+     1.0401753002636356
+    ],
+    [
+     "dexa",
+     1.0062224274422458
+    ],
+    [
+     "edbt",
+     0.9773223978103358
+    ],
+    [
+     "pakdd",
+     0.9764585271369424
+    ],
+    [
+     "dasfaa",
+     0.8759762791490804
+    ],
+    [
+     "kdd",
+     0.5607796165879361
+    ]
+   ],
+   "shared": {
+    "isit": [
+     "bound",
+     "upper",
+     "upper bound",
+     "utility"
+    ],
+    "icalp": [
+     "bound",
+     "upper bound",
+     "algorithm",
+     "upper"
+    ],
+    "sigmod": [
+     "database",
+     "mining algorithm",
+     "transaction",
+     "utility"
+    ],
+    "colt": [
+     "bound",
+     "upper",
+     "algorithm",
+     "upper bound"
+    ]
+   }
+  },
+  {
+   "name": "graph neural networks",
+   "text": "Graph neural networks for fraud detection in large transaction graphs.",
+   "ranking": [
+    [
+     "kdd",
+     2.2065167759952953
+    ],
+    [
+     "pakdd",
+     1.6716265083923791
+    ],
+    [
+     "icdm",
+     1.4999364354951166
+    ],
+    [
+     "dasfaa",
+     1.357109805766582
+    ],
+    [
+     "dexa",
+     1.081176482323347
+    ],
+    [
+     "sigmod",
+     0.8777075701340618
+    ],
+    [
+     "edbt",
+     0.4348529581895631
+    ],
+    [
+     "soda",
+     0.34228204491797976
+    ],
+    [
+     "colt",
+     0.31905250635457594
+    ],
+    [
+     "icalp",
+     0.304074735227334
+    ],
+    [
+     "stoc",
+     0.24091833747403618
+    ],
+    [
+     "isit",
+     0.15372098281036764
+    ]
+   ],
+   "shared": {
+    "kdd": [
+     "graph",
+     "graph neural",
+     "fraud detection",
+     "fraud"
+    ],
+    "pakdd": [
+     "graph neural",
+     "graph",
+     "neural network",
+     "network"
+    ],
+    "icdm": [
+     "graph",
+     "graph neural",
+     "detection",
+     "large"
+    ],
+    "dasfaa": [
+     "graph",
+     "graph neural",
+     "large",
+     "network"
+    ]
+   }
+  },
+  {
+   "name": "learning theory",
+   "text": "Regret lower bounds for online learning with expert advice",
+   "ranking": [
+    [
+     "colt",
+     2.25
+    ],
+    [
+     "stoc",
+     1.4087376902457478
+    ],
+    [
+     "soda",
+     1.1772297670689453
+    ],
+    [
+     "icalp",
+     1.0602150095564387
+    ],
+    [
+     "isit",
+     0.949860386607604
+    ],
+    [
+     "kdd",
+     0.3357020696501867
+    ],
+    [
+     "icdm",
+     0.2181078957422566
+    ],
+    [
+     "dasfaa",
+     0.21316903973085577
+    ],
+    [
+     "pakdd",
+     0.12233813319037729
+    ],
+    [
+     "dexa",
+     0.09556048670415246
+    ],
+    [
+     "sigmod",
+     0.06503566365494225
+    ],
+    [
+     "edbt",
+     0.035637778256824786
+    ]
+   ],
+   "shared": {
+    "colt": [
+     "regret",
+     "lower bound",
+     "bound",
+     "online learning"
+    ],
+    "stoc": [
+     "lower bound",
+     "lower",
+     "bound",
+     "online"
+    ],
+    "soda": [
+     "lower bound",
+     "bound",
+     "lower",
+     "online"
+    ],
+    "icalp": [
+     "lower bound",
+     "bound",
+     "lower",
+     "learning"
+    ]
+   }
+  }
+ ],
+ "full_set_case": {
+  "title_profiles": {
+   "isit": 2,
+   "icdm": 20,
+   "pakdd": 26,
+   "dasfaa": 38,
+   "kdd": 57,
+   "dexa": 4,
+   "edbt": 3
+  },
+  "channels": {
+   "isit": 1,
+   "icdm": 12,
+   "pakdd": 17,
+   "dasfaa": 21,
+   "kdd": 49,
+   "dexa": 11,
+   "edbt": 13
+  }
+ }
+}

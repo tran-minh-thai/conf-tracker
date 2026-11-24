@@ -17,8 +17,9 @@
     // Stopwords come from the published profiles, so a drift between Python and JS fails here.
     const prof = await (await fetch("../data/venue_profiles.json", { cache: "no-cache" })).json();
     const paper = await (await fetch("./fixtures/paper_match_cases.json", { cache: "no-cache" })).json();
+    const channels = await (await fetch("./fixtures/channel_cases.json", { cache: "no-cache" })).json();
     const results = run(await import(target), await import("../assets/match.js"),
-      { cases: shared.cases, stopwords: prof.stopwords, paper });
+      { cases: shared.cases, stopwords: prof.stopwords, paper, channels });
     const failed = results.filter((r) => !r.pass);
     document.getElementById("summary").textContent = `${results.length - failed.length}/${results.length} passed`;
     document.getElementById("out").innerHTML = results.map((r) =>

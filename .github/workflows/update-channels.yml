@@ -1,0 +1,56 @@
+name: Update venue ranking channels
+
+on:
+  schedule:
+    - cron: "0 5 5 * *"   # monthly, two hours after the venue profiles (same DBLP release)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-update
+  cancel-in-progress: false
+
+jobs:
+  channels:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Run tests
+        run: python -m pytest -q tests
+
+      - name: Download the DBLP dump (CC0, Dagstuhl mirror)
+        run: |
+          curl -sS -L -A "conf-tracker (+https://github.com/${{ github.repository }})" -o "$RUNNER_TEMP/dblp.xml.gz" https://dblp.dagstuhl.de/xml/dblp.xml.gz
+          gzip -t "$RUNNER_TEMP/dblp.xml.gz"
+
+      - name: Add the last complete year to the keyword and arXiv counts (OpenAlex, arXiv)
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+        run: |
+          # Without the secret the script prints why it skips and leaves data/channel_counts.json unchanged.
+          python scripts/update_channel_counts.py --dump "$RUNNER_TEMP/dblp.xml.gz" --year "$(( $(date -u +%Y) - 1 ))"
+
+      - name: Build the ranking channels (titles from the dump, counts from the repository)
+        run: python scripts/build_channels.py --dump "$RUNNER_TEMP/dblp.xml.gz"
+
+      - name: Commit counts and channels
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/channel_counts.json data/venue_channels.json
+          git diff --staged --quiet || git commit -m "chore: update venue ranking channels"
+          git pull --rebase
+          git push

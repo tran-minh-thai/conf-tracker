@@ -84,15 +84,24 @@ Each profile build also runs a held-out evaluation: profiles from the five years
 before the latest year, queried with that latest year's titles. Results, with the
 command and file hashes that produced them, are written to `evaluation/`.
 
-"Find venues for a paper" joins the abstract and main contributions into one text
-and weights each term by how few venue profiles hold it (`paperVector` in
-`assets/match.js`). `scripts/evaluate_paper_matching.py` measures it on held-out
-2025 abstracts (4,806 queries over 197 venues, abstracts from Semantic Scholar and
-Crossref, cached outside the repository): MRR 0.289 to 0.302 with a short second
-field, 0.285 to 0.291 on abstracts alone, and 0.230 to 0.235 on titles
-(`evaluation/paper-matching-*.json`). The gain is small: title profiles cannot hold
-a topic that appears in a fraction of a percent of a venue's titles, so a very
-specific paper can still rank a venue first on a generic shared phrase.
+"Find venues for a paper" ranks conferences with three channels
+(`data/venue_channels.json`, `scripts/conftracker/channels.py`, mirrored in
+`assets/match.js`): the venue's DBLP titles, the OpenAlex keywords and topics of its
+papers (both CC0), and terms of its papers' arXiv abstracts (arXiv metadata, abstract
+included, is CC0 1.0). Abstracts are tokenized in memory while the counts are built;
+only per-venue counts of terms found in at least three papers are kept
+(`data/channel_counts.json`), never abstract text. The paper text is scored in each
+channel (cosine for titles and arXiv, BM25 for keywords), each channel is divided by
+its best score, and the three are summed with weights 1, 1 and 0.25; each result
+shows that score and the terms that contributed most. Chosen on half of 4,806
+held-out 2025 abstracts and checked once on the other half: MRR 0.291 to 0.316,
+recall@10 0.539 to 0.578, titles as queries 0.235 to 0.240
+(`evaluation/channel-ranking-*.json`, code in `evaluation/channel-study/`). Venues
+whose papers have no DBLP titles keep the name-only match. Journals are still ranked
+by title profiles with the joined query (`paperVector`).
+The workflow `update-channels.yml` rebuilds the channels monthly and adds each new
+year's counts; that step needs the repository secret `OPENALEX_API_KEY` and is skipped,
+with a log line, without it.
 
 ## Rule files
 

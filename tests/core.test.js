@@ -201,6 +201,18 @@ export const tests = {
     for (const db of ["edbt", "dexa"]) for (const th of ["soda", "coco", "stoc"]) ok(order.indexOf(db) < order.indexOf(th), `${db} above ${th}`);
     match.setStopwords(fixtures.stopwords);
   },
+  "channel ranking agrees with the Python fixture"() {
+    const f = fixtures.channels;
+    match.setStopwords(f.set.stopwords);
+    for (const c of f.cases) {
+      const data = JSON.parse(JSON.stringify(f.set));
+      const got = [...match.fusedScores(c.text, data)].sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1));
+      eq(got.map(([k]) => k), c.ranking.map(([k]) => k));
+      got.forEach(([, s], i) => ok(Math.abs(s - c.ranking[i][1]) < 1e-12, `${c.name}: score ${i}`));
+      for (const [k, terms] of Object.entries(c.shared)) eq(match.channelSharedTerms(c.text, data, k, 4), terms);
+    }
+    match.setStopwords(fixtures.stopwords);
+  },
   "plan import validates entries"() {
     const good = { plan: { a: { status: "submitted", title: "T", snapshot: { acronym: "A" } }, b: { status: "weird", snapshot: { acronym: "B" } }, c: {} } };
     const r = core.parsePlanImport(JSON.stringify(good));

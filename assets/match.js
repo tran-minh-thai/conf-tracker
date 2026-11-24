@@ -121,3 +121,68 @@ export function nameMatchWeight(profiles) {
   const name = ev.name_only_baseline?.mrr, title = ev.title_profiles?.mrr;
   return name > 0 && title > 0 ? Math.min(1, name / title) : 1;
 }
+
+// ---- ranking channels (data/venue_channels.json); mirrors scripts/conftracker/channels.py ----
+
+function channelQuery(text, channel, phrase) {
+  const qw = channel.query_weight;
+  const counts = new Map();
+  for (const t of tokens(text)) if (qw[t] !== undefined) counts.set(t, (counts.get(t) || 0) + 1);
+  const q = new Map();
+  for (const [t, x] of counts) q.set(t, (1 + Math.log(x)) * qw[t] * (t.includes("_") ? phrase : 1));
+  return q;
+}
+
+function channelIndex(channel) {
+  if (!channel._inv) {
+    const inv = new Map();
+    for (const [k, terms] of Object.entries(channel.venues)) {
+      for (const [t, w] of Object.entries(terms)) {
+        if (!inv.has(t)) inv.set(t, []);
+        inv.get(t).push([k, w]);
+      }
+    }
+    Object.defineProperty(channel, "_inv", { value: inv, enumerable: false });
+  }
+  return channel._inv;
+}
+
+/** One channel's score per venue (dblp key) for a text. */
+export function channelScores(text, channel) {
+  const q = channelQuery(text, channel, channel.phrase);
+  const inv = channelIndex(channel);
+  const sc = new Map();
+  for (const [t, w] of q) for (const [k, x] of inv.get(t) || []) sc.set(k, (sc.get(k) || 0) + w * x);
+  return sc;
+}
+
+/** Weighted sum of channel scores, each divided by the query's best score in that channel. */
+export function fusedScores(text, data) {
+  const out = new Map();
+  for (const name of data.fusion.order) {
+    const weight = data.fusion.weights[name] || 0;
+    const sc = channelScores(text, data.channels[name]);
+    let top = 0;
+    for (const v of sc.values()) if (v > top) top = v;
+    if (top <= 0 || weight === 0) continue;
+    for (const [k, v] of sc) out.set(k, (out.get(k) || 0) + weight * v / top);
+  }
+  return out;
+}
+
+/** Terms contributing most to a venue's fused score, for the explanation shown with each result. */
+export function channelSharedTerms(text, data, venue, n = 5) {
+  const contrib = new Map();
+  for (const name of data.fusion.order) {
+    const weight = data.fusion.weights[name] || 0;
+    const ch = data.channels[name];
+    const q = channelQuery(text, ch, ch.phrase);
+    const sc = channelScores(text, ch);
+    let top = 0;
+    for (const v of sc.values()) if (v > top) top = v;
+    const terms = ch.venues[venue];
+    if (top <= 0 || !terms) continue;
+    for (const [t, w] of q) if (terms[t] !== undefined) contrib.set(t, (contrib.get(t) || 0) + weight * w * terms[t] / top);
+  }
+  return [...contrib].sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1)).slice(0, n).map(([t]) => t.replace(/_/g, " "));
+}

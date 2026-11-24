@@ -7,7 +7,7 @@ import {
 } from "./core.js";
 import { AREA_NAMES, makeT } from "./i18n.js";
 import { CITIES, browserTimeZone, citiesOf, countryFromTimeZone, nearestCity } from "./geo.js";
-import { combine, dot, paperVector as paperQuery, setStopwords, termSpecificity, textVector, topShared, venueVector } from "./match.js";
+import { channelSharedTerms, combine, dot, fusedScores, paperVector as paperQuery, setStopwords, termSpecificity, textVector, topShared, venueVector } from "./match.js";
 import { icon } from "./icons.js";
 import { createPubs } from "./pubs.js";
 import { scoreWithPacks } from "./rules.js";
@@ -62,6 +62,7 @@ const app = {
   activity: { searches: [], opened: [] },
   profiles: null,          // venue topic profiles, loaded on demand
   profilesState: "idle",   // idle | loading | ready | error
+  channelsState: "idle",   // ranking channels for a paper (data/venue_channels.json); same states
   venueVecs: new Map(),
   matchMode: "profile",    // which text the For you tab ranks by: profile | abstract
 };
@@ -201,6 +202,38 @@ async function ensureProfiles() {
     app.profilesState = "error";
   }
   renderView();
+}
+/** Ranking channels for "find venues for a paper"; on failure the For you tab keeps the title-profile ranking. */
+async function ensureChannels() {
+  if (app.channelsState === "ready" || app.channelsState === "loading") return;
+  app.channelsState = "loading";
+  try {
+    const res = await fetch("data/venue_channels.json", { cache: "no-cache" });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    app.channels = await res.json();
+    app.channelsState = "ready";
+  } catch (err) {
+    console.error(err);
+    app.channelsState = "error";
+  }
+  renderView();
+}
+/**
+ * Scores of conferences for the paper text from the ranking channels (keyed by conference id), plus the
+ * maximum possible score. A venue without DBLP titles keeps its name-only score, scaled to the same
+ * maximum and weighted down as before (labelled "weak match" in the card).
+ */
+function channelScoresFor(text, list) {
+  const fused = fusedScores(text, app.channels);
+  const max = Object.values(app.channels.fusion.weights).reduce((a, b) => a + b, 0);
+  const q = paperVector(app.profiles);
+  const scores = new Map();
+  for (const c of list) {
+    if (c.dblp && fused.has(c.dblp)) { scores.set(c.id, fused.get(c.dblp)); continue; }
+    const v = vecOf(c);
+    if (v.basis === "name" && q) scores.set(c.id, dot(q, v.vec) * v.weight * max);
+  }
+  return { scores, max };
 }
 async function ensureJournals() {
   if (app.journalsState === "ready" || app.journalsState === "loading") return;
@@ -647,6 +680,7 @@ function cardHtml(c, now, match = null) {
       <p class="full">${h(c.full_name)}</p>
       ${match ? `<div class="match"><span class="match-bar"><i style="width:${match.pct}%"></i></span>
         <strong>${h(t("matchScore", { pct: match.pct }))}</strong>
+        ${match.score ? `<span class="muted">${h(t("matchRelevance", { score: match.score, max: match.max }))}</span>` : ""}
         ${match.terms.length ? `<span>${h(t("matchWhy", { terms: match.terms.join(", ") }))}</span>` : ""}
         ${match.basis === "name" ? `<span class="badge warn">${h(t("matchBasisName"))}</span>` : ""}</div>` : ""}
     </div>
@@ -763,14 +797,24 @@ function renderForYou() {
     } else if (!qvec || !qvec.size) {
       body = `<p class="empty">${h(useAbstract ? t("matchNone") : t("matchEmpty"))}</p>`;
     } else {
-      const scores = scoresFor(qvec, app.confs);
+      if (useAbstract && app.channelsState === "idle") ensureChannels();
+      const paperText = [app.profile.abstract, app.profile.contrib].filter((f) => f && f.trim()).join("\n");
+      const byChannels = useAbstract && app.channelsState === "ready";
+      const { scores, max } = byChannels ? channelScoresFor(paperText, app.confs) : { scores: scoresFor(qvec, app.confs), max: null };
       const { items, hidden } = filterConfs(app.confs, { ...app.state, sort: "match" }, now, ctx({ scores }));
       const ranked = items.filter((c) => (scores.get(c.id) || 0) > 0).slice(0, 30);
       const top = Math.max(1e-9, ...ranked.map((c) => scores.get(c.id)));
+      const info = (c) => {
+        const m = matchInfo(c, scores, top, qvec);
+        if (!m || !byChannels) return m;
+        if (m.basis !== "name") m.terms = channelSharedTerms(paperText, app.channels, c.dblp, 4);
+        m.score = scores.get(c.id).toFixed(2); m.max = max.toFixed(2);
+        return m;
+      };
       body = `<h3 class="section-title">${h(t("matchFor", { what: t(useAbstract ? "whatAbstract" : "whatProfile") }))}</h3>
         <p class="hint">${h(t("matchResults"))} · ${h(t("matchNote"))}</p>
         ${hiddenNote(hidden)}
-        <div class="list">${ranked.length ? ranked.map((c) => cardHtml(c, now, matchInfo(c, scores, top, qvec))).join("")
+        <div class="list">${ranked.length ? ranked.map((c) => cardHtml(c, now, info(c))).join("")
           : `<div class="empty">${h(t("matchNone"))}</div>`}</div>`;
     }
   }
